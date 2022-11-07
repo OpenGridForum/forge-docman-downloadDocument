@@ -1,0 +1,50 @@
+Agenda Approved without change.
+
+Parallel Application Extension
+- Andreas Presented the Parallel Application Extension.
+- Will submit for public review by the end of October.
+- Darren and Andreas to work on this together. Needs to be sent to the
+  HPC Profile group. Run it by Steven Pickles, and the Barcelona
+  people.
+
+Errata for JSDL 1.0
+- 10 open errors.
+- We will make sure that all minor releases are backwards compatible.
+- Major releases are not under the same restriction.
+- Part of the 1.1 specification will have what has changed.
+- Assignments have been made in the trackers.
+- Very few changes to the schema where made.
+- Andreas to send email to the CIM guys to let them know that
+  PalmPilot should be PalmOS.
+- MountPoint needs to be resolved. Michel needs to look at
+  compatibility for this.
+- Backwards compatibility acceptability
+	- Adding new optional Elements
+	- Widening the cardinality of an element 
+	- Michel and Donal to come up with a simple document (one Page
+	  Max) on our statement of documentation.
+
+Features for JSDL 1.0
+- Assignments made in the Tracker.
+- Ask the vendors to submit Experience Documents.
+- Donal to give a summary on JSDL Referencing.
+- Add security consideration for every element.
+
+Timeline discussion
+- Parallel Application - End of Oct 2006
+- HPC Profile - Ask them for a date. End of 2006
+- JSDL 1.1 - End of the Year 2006
+- JSDL 1.2  - Not planned probably not going to happen
+- JSDL 2.0 - End 2007
+- Parameter Sweep - Too early to tell
+- Dependencies - Too early to tell
+- Experiences Document - BES (Andrew, Mark), Steve, Michel, Saga
+- Michel is the new EDITOR to replace Andreas.
+
+Wednesdays - 
+	10am EDT
+	11pm Japan
+	3pm UK
+
+First call will be Sep 27, 2006
+Details

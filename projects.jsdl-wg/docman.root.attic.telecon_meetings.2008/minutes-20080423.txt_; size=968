@@ -1,0 +1,34 @@
+JSDL Teleconference - 23 April 2008
+====================================
+
+* Participants
+
+  Fred Brisard
+  Michel Drescher
+  Donal Fellows
+  Steve McGough
+  David Meredith
+  Andreas Savva
+  Geoff Williams
+
+  Minutes: Andreas Savva
+
+* Updates
+  - JSDL 1.0 Errata: Andreas will update the document and put it in
+    final call on the list
+
+* Parameter sweep discussion
+
+ - artf6147: reviewed and agreed to incorporate in document. Geoff
+   will make update.
+ - artf6187: Geoff to provide use case
+ - artf6184: Agreed to define loops specific to different types of
+   values; specific list not decided yet.
+ - artf6183: Agreed in principle to do floats; some issues with
+   representation but these have to do more with what happens on the
+   execution system (hence implementation note). Revisit for detailed
+   resolution on a future call
+
+* Activity instance schema use cases
+
+  - No quorum. Andreas willl arrange for call next week.

@@ -1,0 +1,54 @@
+JSDL Teleconference - 19 August 2009
+====================================
+
+* Participants
+
+  Philipp Wieder
+  Donal Fellows
+  Andreas Savva
+  
+
+* Agenda:
+      1. Agenda bashing & quick status update
+         - OGF27 sessions
+
+         Submission deadline is 28/8 (maybe)
+         Two sessions
+         - General session (45 min)
+         - Activity instance (90 min)
+         
+         Andreas will send mail to the list this week &
+         submit session request early next week
+
+      2. Activity instance document schema
+
+Question from list:
+>
+>> If I recall correctly, we already discussed the minOccurs="1" here,  
+>> but
+>> I cannot remember why we decided to have a definition in every
+>> ActivityHistoryEntry:
+>> <xsd:element maxOccurs="1" minOccurs="1" ref="ai:ActivityDefinition"/>
+>> Maybe someone remembers.
+>
+>probably wrong. Should be minOccurs only.
+
+ minOccurs is 0, philipp has done it
+
+>> In the OGF-specific schema there is no "concrete" instantiation for  
+>> the
+>> ActivityDependency. Is this valid?
+
+Yes, no problem, it is minOccurs 0
+
+- Use xsd:all instead of xsd:sequence if it allows for the xsd:any with ambiguity? 
+  - Philipp to check if it works using oXygenXML
+
+         - Progress on issues/actions on tracker
+           https://forge.gridforum.org/sf/go/projects.jsdl-wg/tracker.activity_schema
+         - Draft review
+      3. Other business
+
+* Next call - review of text?
+
+  Sep 9th - same time 9pm JST / 12GMT

@@ -1,0 +1,73 @@
+JSDL Teleconference - 20 August 2008
+====================================
+
+* Participants
+
+  Fred Brisard
+  Michel Drescher
+  Donal Fellows
+  David Meredith
+  Alexander Papaspyrou
+  Andreas Savva (Minutes)
+  Philipp Wieder 
+  Geoff Williams
+
+* Parameter sweep issue review
+
+** artf6269 -- extensibility for constraints
+   
+   - Discussed current proposal. It uses xsd unique to ensure
+     uniqueness, which creates the problem of introducing something in
+     the main spec to accomodate a specific extension without any
+     other use.
+     -  Agreed that it would be less disruptive if the name was just
+        an ncname and there was text saying it should be unique when
+        the extension is formulated.
+   - And add extensibility to the sweep element to allow for the
+     introduction of a constraints element later on
+
+** artf6148 -- example to show how sweep index and output files can be
+   matched
+
+   - Andreas to add example to the spec.
+
+   [Review after the call showed a minor change in the spec is also
+   needed to enable this example. Added to the artifact comments.]
+
+** Pen with Andreas and then to Michel
+
+** No further call on parameter sweep is planned as the issues have
+   been resolved/fixed. Review can proceed on the list, followed by a
+   final call and submission to the OGF Editor by OGF24
+
+* Activity instance document schema
+
+  - Alexander posted a clean list before the call. 
+    - Agreed to add which use case each requirement comes from
+  - List seems more specific to 'job' rather than abstract as UDAP;
+    this may be a consequence of the more narrow use cases
+  - Next step is to prioritize requirements 
+    - Initially into high / medium / low? 
+
+    ACTION: Alexander & Philipp will put requirements in a table and
+            send round for people to mark up wrt priorities
+
+  - Also need to show dependencies between requirements if any
+  - It would be nice to also have a draft schema by OGF, for
+    discussion at the session
+
+  - Use cases collected can be an appendix to the final document
+    (discuss later)
+
+* Next call
+
+  Chairs are away for the next couple of weeks.
+
+  Next call is scheduled for Sep 10. It will be OGF preparaion and any
+  last minute issue resolution
+
+* OGF sessions
+
+  Fred and Michel wish to dial in. Andreas will arrange that the
+  sessions be at a reasonable time.
+

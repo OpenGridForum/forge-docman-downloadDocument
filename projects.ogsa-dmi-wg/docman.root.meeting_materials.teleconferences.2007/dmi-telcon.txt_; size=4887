@@ -1,0 +1,152 @@
+DMI Telcon - 12/12/07
+=====================
+
+Attendees:
+	Mario Antonioletti, EPCC
+	Steven Newhouse, Microsoft
+	Michel Drescher, Fujitsu
+	Ravi Madduri, ANL
+
+Agenda:
+
+1.       IPR Notice
+2.       Agenda Bashing
+3.       Ravi's modified proposal
+4.       Planning
+5.       AOB
+
++---
+
+1. IPR Notice
+
+2. Agenda Bashing
+
+Michel proposed an extra agenda item to discuss the updating
+of the spec.
+
+3. Ravi's Proposals
+
+Ravi circulated his Retries Proposal - the aggregation one still needs
+to be done. Removed the status state transition - state transition
+now takes place when it Fails. After a number of retries it goes into
+a failed state. InstanceAttributes now has a Retries attribute.
+
+Michel had some comments:
+
+Want MaxAttempts to be optional. If it is not specified it is
+one. Need to place in a question mark on the MaxAttempts element in
+the TransferRequirements complex element.
+
+Need to semantically link EndNoLaterThan with MaxAttemts - compliance
+for both values should go in the text. EndNoLaterThan takes
+precedence.
+
+The alignment of MaxAttempts and Retries - Ravi's proposal states that
+if the values are equal then the transfer has to fail - mixing
+semantics of MaxAttempts and Retries - which is a bit confusing..
+
+The Retries is how many failed attempts have been had - Steven
+suggested renaming Retries to
+
+Attempt
+
+First time it is set to 1. When it fails and it tries again if it's
+equal to MaxAttempts then it fails unless the EndNoLaterThan is
+violated first.
+
+Michel suggests using postiveIntegers for the data type for Attempt
+and MaxAttempts.
+
+Ravi going to work on the aggregation proposal and send out to the
+list.
+
+3b. Updating the spec.
+
+For version 43 of the spec Michel wanted to make some updates - have 6
+& 7 comments, some changes and delete some things from the spec.
+
+Section 3.3 - Steven added text - would like to accept it. Fine.
+
+Two comments on p10 from Michel - do not want to wait for a wide
+specification of URIs for protocols from OGSA. Steven suggested taking
+the comment out of the document but adding as a tracker for using a
+standard for URI protocol identifiers from OGSA.
+
+Removed the undo strategy comment from the same page.
+
+Removed Mario's comment on p13.
+
+The sourceMode and sinkMode are removed - Mario's comment goes with it.
+
+Section 4.2.1.3 - Ravi stated "Can these include like parallelStreams,
+TCP Buffer size etc ?" 
+
+Michel would like it removed.
+Ravi asks for an extensibility point.
+
+Steven has no objection but they are protocol dependent parameters and
+there had been a concern about having it in a protocol neutral part.
+
+Michel fine about having an extensibility and if an implementation does
+not understand it it can throw an Notsatisfiable fault.
+
+Consensus: fine to add an extensibility element. Michel has added one.
+
+Remove Ravi's comment.
+
+Accept typo fixes on p16 and section 5 that Ravi spotted.
+
+Section 5.1.2 - Michel's DTI failure text - accepted.
+
+Ravi's comment about having an enumeration of strings - the value of
+the status. Discussion as to whether we can borrow from the state 
+models proposed in SAGA and/or BES for jobs.
+
+Steven had taken action from the meeting in Seattle to look at the
+SAGA and BES models but it has not been done.
+
+May have the same states but used in different models they may have
+different semantics for each model.
+
+Ravi thought that BES used to have 3 overlapping states - not
+sure if it makes sense to re-use it but would have to check.
+
+Steven agrees - people might assume that the states mean the
+same thing across all specs.
+
+Michel - concepts and semantics are similar but would feel uneasy to
+align - might be an interesting topic for OGSA discussion.
+
+Would prefer to start with our own DMI state and re-examine the state
+alignment at some later point.
+
+Not clear if it makes sense to align all of this.
+
+We can put a tracker for the state model for a future version of
+the spec to try and harmonise future state models.
+
+For now we make our own enumeration of strings - not URIs.
+
+Remove Mario's comment from p28.
+
+4. Planning
+
+Michel will wrangle the XML Schema and WSDL - draw out a common bit
+and then come up with WS-I and WSRF renderings of these. The WSRF
+rendering must include the WS-I rendering because of the base faults -
+will follow the ByteIO model for doing this.
+
+Will put up a new version of the doc and then Ravi can add to the
+spec.  Retries could go into the spec directly.
+
+Aggregation can go to the list and then we can have a look at it.  If
+there are no objections then it can go into the spec too. Complete the
+spec and review the spec in the new year.
+
+Have a telcon if there is a need otherwise agrees Ravi's changes on
+the list.
+
+5. AOB
+
+None. A Merry Xmas and a happy new year to all.
+

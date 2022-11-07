@@ -1,0 +1,98 @@
+JSDL Teleconference - 5 September 2007
+======================================
+
+* Participants
+
+  Philipp Wieder
+  Steve McGough
+  Michel Drescher
+  Andreas Savva
+
+  Minutes: Andreas Savva
+
+* OGF21 sessions
+
+  - All sessions are on Wednesday on the tentative schedule
+  - Not sure if people will be dialing in from Europe for the instance
+    schema session. If so, we can probably swap the instance (evening)
+    slot with the general (morning) slot.
+
+** Instance schema session
+
+   - Main presentation so far is UDAP by Philipp: probably 20 minutes
+     or 
+   - Steve will do the introduction to the session and also give a
+     GridSAM/BES perspective
+   - Andreas will talk to NAREGI for a short presentation on their
+     requirements
+   - Goal is to decide how to move forward with this work.
+   - Need to let people know this is happening.
+
+   AI: Andreas will send an email to the lists: JSDL, HPCP, BES, and
+       also GSA (Philipp to forward)
+
+** General session
+
+   AI: Steve will send an email to the list to solicit presentations
+       on implementations. Probably cross-post to BES/HPCP also
+
+   Agreed to have a short intro to Parameter Sweep here (mainly to
+   remind people that this work exists) instead of a separate
+   technical session. There hasn't been any technical work on this
+   since last OGF but the draft is believed to be technically
+   complete.
+   
+   Also agreed to arrange a separate, informal, meeting and talk how
+   to move forward with the Parameter Sweep draft. Need to get some
+   people to read it by OGF21. Probably at a minimum Donal, Steve and
+   Andreas.
+
+   AI: Michel will send an email to stakeholders/interested parties to
+       remind them the parameter sweep draft is on gridforge.
+
+** Technical session
+
+   - Looks like it will be mainly on XQuery.
+   - Andreas has an action from a previous call to do a strawman for
+     the document, which he will do before OGF21
+   - There is the list of use cases discussed at the August F2F, which
+     could be another discussion point
+   - The group also agreed to help out RSS-WG with XQuery in the
+     context of the use cases
+   - Showing how a JSDL XQuery requirements 'section' would work with
+     an RSS XQuery selection 'section' is an useful exercise
+
+   AI: Michel will do a presentation on how JSDL XQuery + RSS
+       XQuery might work together for OGF21. Review a draft on a call
+       before OGF21
+
+* Experience document
+
+  - Two responses so far: Unicore (Morris) and GenesisII (Mark)
+  - Waiting for GridSAM response
+
+  - SC07 HPCP Interop will probably do data staging but not clear yet
+    what else
+
+  - There will likely be some features that people have not
+    implemented fully. Need to decide what to do about those when
+    writing the experience report.
+
+  AI: Andreas will send an open invitation to the list for survey
+      responses. Also cross-post to BES, HPCP
+
+  The group should review responses and talk at OGF21 how to move
+  forward
+
+* JSDL 1.0 Errata
+
+  - Andreas posted two new editorial issues.
+  - There are a couple of pending issues on Donal, otherwise it looks
+    like this work is coming to a close
+
+  AI: Andreas will talk to the OGF Editor on how to go about
+      publishing this document and get back to the group by the next
+      call
+
+* Next call tentatively in two weeks time
+

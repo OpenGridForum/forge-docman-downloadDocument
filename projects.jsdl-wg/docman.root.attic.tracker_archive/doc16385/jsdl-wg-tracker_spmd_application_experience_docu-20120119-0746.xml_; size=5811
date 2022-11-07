@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<!DOCTYPE datalist PUBLIC "-//VA Software, Inc.//DTD DataList Export 1.1//EN"
+    "http://schema.vasoftware.com/sf/dtd/sf-datalist-export_1_1.dtd">
+
+<datalist>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6342</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>SMPD survey template</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Prepare template to be sent to stakeholders.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Philipp Wieder</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>28.10.2009</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>30.11.2009</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Open</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6342/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6436</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Experience feedback from SAGA-WG</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>The SAGA Core API specification (GFD.90) is citing both the JSDL
+specification (GFD.136) and the JSDL SPMD extension (GFD.115).
+While SAGA is not directly using JSDL documents (XML documents), it
+does reference the names of JSDL document elements, and their
+semantics.
+ 
+GFD.90 references the following SPMD Extension elements:
+ 
+  - SPMDVariation
+  - NumberOfProcesses
+  - ProcessesPerHost
+  - ThreadsPerProcess
+ 
+It does not reference the SPMDApplication element, as that is
+implicitely used for all SAGA job descriptions which use any of the
+SPMD elements listed above.
+ 
+Referencing the SPMD extension as defined in GFD.115 allows SAGA to
+cover the majority of its SPMD related use cases.  In particular,
+the dominating set of MPI use cases seems well covered.  Three
+different SAGA implementations map the SAGA job description
+(including its SPMD keys) to about ten different job submission
+backends, where four of those backends actually support SPMD job
+execution (gram, condor, lsf, sector/sphere).
+ 
+A small number of SAGA use cases though is currently not covered by
+either GFD.115, nor by GFD.90: those use cases require a more fine
+grained specification of application layout, down to the assignment
+of individual application threads to specific logical or physical
+CPU cores.  We agree that these use cases are out of scope for the
+JSDL working group, but would like to raise awareness of the
+problem.
+ 
+Summary: the SAGA Core API specification (GFD.90) successfully
+references the JSDL SPMD extension (GFD.115), and we support the
+advancement of GFD.155 to full OGF recommendation.
+ </field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>20.01.2010</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>20.01.2010</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Open</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6436/</field-value>
+    </field>
+  </element>
+</datalist>

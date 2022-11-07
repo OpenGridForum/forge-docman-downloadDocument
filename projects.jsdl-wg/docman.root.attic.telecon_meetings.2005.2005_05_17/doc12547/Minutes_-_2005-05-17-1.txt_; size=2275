@@ -1,0 +1,89 @@
+May 17, 2005
+------------
+
+Agenda
+------
+ Address open issues and trackers on spec and normative schema.
+
+Attendees
+---------
+ Steve
+ Ali
+ Donal
+ Andreas
+
+Other
+-----
+ - Possible JSDL meeting to go with the OGSA F2F meeting in London.
+   Wed. 25th May 2005.
+
+ - Change the spec so that elements which are defined by child elements 
+   must have those elements in them, while elements that have parent 
+   elements can also exist outside the parent element.
+
+Agenda & Minutes
+----------------
+
+16) Process Topology needs review. In particular are the examples OK or
+    not, are the definition correct and so on. Delete the yellow
+    comments once that is done. Not sure if we should define the precise
+    allocation behaviour or allow for that to be defined instead.
+
+    - Karl's e-mail to the list:
+    http://www-unix.gridforum.org/mail_archive/jsdl-wg/2005/04/msg00151.html
+
+    --> On Going
+
+    - Action: ALL to review Steve and Donal's suggestion on the mailing 
+              list.
+
+CONSIDER:
+
+Karl + Today's telecon:
+
+ <jsdl:Resources>
+    <jsdl:TotalCPUs>jsdl:rangeValue</jsdl:TotalCPUs> ?
+    ... other totals for RAM, VM, etc. ...
+    <jsdl:Resource>
+       <jsdl:Count>jsdl:rangeValue</jsdl:Count> ?
+       <jsdl:CPUs>jsdl:rangeValue</jsdl:CPUs> ?
+       ... other per-resource constraints ...
+    </jsdl:Resource> *
+ </jsdl:Resources> ?
+
+  0-1 Resources clauses since a job may have none?
+  0-N Resource clauses per Resources because it may have only
+      "global" constraints
+
+
+31) Complete example sub-sections
+
+    - Need examples for elements.
+
+    --> On Going
+
+
+32) Requirement for a "4 CPU machine" vs. "4 CPUs on A machine".
+
+Add a new "node=true|false" attribute to the <Resource> element 
+only. This then specifies that the requirements in this element 
+are on the machine and are not the min. requirements for the job.
+
+CONSIDER:
+
+<Resource node="true">
+  <CPUCount><exact>2.0</exact></CPUCount>
+
+  <PhysicalMemory>
+    <exact>1073741824.0</exact>
+  </PhysicalMemory>
+</Resource>
+
+
+v1.0 GridForge Trackers
+-----------------------
+1275 - Steve                         - is now 'Fixed'
+1285 - Michel: Andreas' Intro Slides - is now 'Fixed'
+1327 - Ali: Andreas' Intro Slides    - is now 'Fixed'
+1391 - Donal                         - is now 'Fixed'
+

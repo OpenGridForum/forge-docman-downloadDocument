@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 U (http://www.xmlspy.com) by Stephen McGough (LeSC) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ggf.org/namespaces/2004/11/jsdl-1.0.xsd" targetNamespace="http://www.ggf.org/namespaces/2004/11/jsdl-1.0.xsd" elementFormDefault="qualified">
+	<!--=====================================================================-->
+	<!-- The following are the core enumeration types for the JSDL -->
+	<xsd:simpleType name="frequencyUnits">
+		<xsd:restriction base="xsd:QName">
+			<xsd:enumeration value="Hz"/>
+			<xsd:enumeration value="kHz"/>
+			<xsd:enumeration value="MHz"/>
+			<xsd:enumeration value="GHz"/>
+			<xsd:enumeration value="THz"/>
+			<xsd:enumeration value="PHz"/>
+			<xsd:enumeration value="EHz"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--========================================================================-->
+	<xsd:simpleType name="bandwidthUnits">
+		<xsd:restriction base="xsd:QName">
+			<xsd:enumeration value="bps"/>
+			<xsd:enumeration value="Kbps"/>
+			<xsd:enumeration value="Mbps"/>
+			<xsd:enumeration value="Gbps"/>
+			<xsd:enumeration value="Tbps"/>
+			<xsd:enumeration value="Pbps"/>
+			<xsd:enumeration value="Ebps"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--========================================================================-->
+	<xsd:simpleType name="operator">
+		<xsd:restriction base="xsd:QName">
+			<xsd:enumeration value="equalTo"/>
+			<xsd:enumeration value="notEqualTo"/>
+			<xsd:enumeration value="moreThan"/>
+			<xsd:enumeration value="moreThanEqualTo"/>
+			<xsd:enumeration value="lessThan"/>
+			<xsd:enumeration value="lessThanEqualTo"/>
+			<xsd:enumeration value="match"/>
+			<xsd:enumeration value="notMatch"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--========================================================================-->
+	<xsd:simpleType name="storageUnits">
+		<xsd:restriction base="xsd:QName">
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="KB"/>
+			<xsd:enumeration value="MB"/>
+			<xsd:enumeration value="GB"/>
+			<xsd:enumeration value="TB"/>
+			<xsd:enumeration value="PB"/>
+			<xsd:enumeration value="EB"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--========================================================================-->
+	<xsd:simpleType name="timeUnits">
+		<xsd:restriction base="xsd:QName">
+			<xsd:enumeration value="seconds"/>
+			<xsd:enumeration value="hours"/>
+			<xsd:enumeration value="days"/>
+			<xsd:enumeration value="weeks"/>
+			<xsd:enumeration value="months"/>
+			<xsd:enumeration value="years"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--========================================================================-->
+	<xsd:simpleType name="limitUnits">
+		<xsd:union memberTypes="frequencyUnits bandwidthUnits storageUnits timeUnits xsd:nonNegativeInteger">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:QName">
+					<xsd:enumeration value="noUnits"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<!--========================================================================-->
+	<xsd:simpleType name="limitValue">
+		<xsd:union memberTypes="xsd:nonNegativeInteger">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:QName">
+					<xsd:enumeration value="unlimited"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<!--========================================================================-->
+	<xsd:simpleType name="rangeValue">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="(\d+( ?- ?\d*)?|- ?\d+)( ?, ?(\d+( ?- ?\d*)?|- ?\d+))*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--========================================================================-->
+	<xsd:simpleType name="ApplicationTypeEnumeration">
+		<xsd:union memberTypes="xsd:QName">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:QName">
+					<xsd:enumeration value="executable"/>
+					<xsd:enumeration value="sh"/>
+					<xsd:enumeration value="csh"/>
+					<xsd:enumeration value="ksh"/>
+					<xsd:enumeration value="bash"/>
+					<xsd:enumeration value="tcsh"/>
+					<xsd:enumeration value="perl"/>
+					<xsd:enumeration value="tcl"/>
+					<xsd:enumeration value="python"/>
+					<xsd:enumeration value="java"/>
+					<xsd:enumeration value="sql"/>
+					<xsd:enumeration value="webService"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<!--========================================================================-->
+	<xsd:simpleType name="ProcessorArchitectureEnumeration">
+		<xsd:union memberTypes="xsd:QName">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:QName">
+					<xsd:enumeration value="sparc"/>
+					<xsd:enumeration value="powerpc"/>
+					<xsd:enumeration value="x86"/>
+					<xsd:enumeration value="parisc"/>
+					<xsd:enumeration value="mips"/>
+					<xsd:enumeration value="ia86"/>
+					<xsd:enumeration value="arm"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<!--========================================================================-->
+	<xsd:simpleType name="FileSystemTypeEnumeration">
+		<xsd:union memberTypes="xsd:QName">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:QName">
+					<xsd:enumeration value="swap"/>
+					<xsd:enumeration value="tmp"/>
+					<xsd:enumeration value="spool"/>
+					<xsd:enumeration value="normal"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<!--========================================================================-->
+	<xsd:simpleType name="OperatingSystemTypeEnumeration">
+		<xsd:union memberTypes="xsd:QName">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:QName">
+					<xsd:enumeration value="Unknown"/>
+					<xsd:enumeration value="Other"/>
+					<xsd:enumeration value="MACOS"/>
+					<xsd:enumeration value="ATTUNIX"/>
+					<xsd:enumeration value="DGUX"/>
+					<xsd:enumeration value="DECNT"/>
+					<xsd:enumeration value="Tru64_UNIX"/>
+					<xsd:enumeration value="OpenVMS"/>
+					<xsd:enumeration value="HPUX"/>
+					<xsd:enumeration value="AIX"/>
+					<xsd:enumeration value="MVS"/>
+					<xsd:enumeration value="OS400"/>
+					<xsd:enumeration value="OS_2"/>
+					<xsd:enumeration value="JavaVM"/>
+					<xsd:enumeration value="MSDOS"/>
+					<xsd:enumeration value="WIN3x"/>
+					<xsd:enumeration value="WIN95"/>
+					<xsd:enumeration value="WIN98"/>
+					<xsd:enumeration value="WINNT"/>
+					<xsd:enumeration value="WINCE"/>
+					<xsd:enumeration value="NCR3000"/>
+					<xsd:enumeration value="NetWare"/>
+					<xsd:enumeration value="OSF"/>
+					<xsd:enumeration value="DC_OS"/>
+					<xsd:enumeration value="Reliant_UNIX"/>
+					<xsd:enumeration value="SCO_UnixWare"/>
+					<xsd:enumeration value="SCO_OpenServer"/>
+					<xsd:enumeration value="Sequent"/>
+					<xsd:enumeration value="IRIX"/>
+					<xsd:enumeration value="Solaris"/>
+					<xsd:enumeration value="SunOS"/>
+					<xsd:enumeration value="U6000"/>
+					<xsd:enumeration value="ASERIES"/>
+					<xsd:enumeration value="TandemNSK"/>
+					<xsd:enumeration value="TandemNT"/>
+					<xsd:enumeration value="BS2000"/>
+					<xsd:enumeration value="LINUX"/>
+					<xsd:enumeration value="Lynx"/>
+					<xsd:enumeration value="XENIX"/>
+					<xsd:enumeration value="VM"/>
+					<xsd:enumeration value="Interactive_UNIX"/>
+					<xsd:enumeration value="BSDUNIX"/>
+					<xsd:enumeration value="FreeBSD"/>
+					<xsd:enumeration value="NetBSD"/>
+					<xsd:enumeration value="GNU_Hurd"/>
+					<xsd:enumeration value="OS9"/>
+					<xsd:enumeration value="MACH_Kernel"/>
+					<xsd:enumeration value="Inferno"/>
+					<xsd:enumeration value="QNX"/>
+					<xsd:enumeration value="EPOC"/>
+					<xsd:enumeration value="IxWorks"/>
+					<xsd:enumeration value="VxWorks"/>
+					<xsd:enumeration value="MiNT"/>
+					<xsd:enumeration value="BeOS"/>
+					<xsd:enumeration value="HP_MPE"/>
+					<xsd:enumeration value="NextStep"/>
+					<xsd:enumeration value="PalmPilot"/>
+					<xsd:enumeration value="Rhapsody"/>
+					<xsd:enumeration value="Windows_2000"/>
+					<xsd:enumeration value="Dedicated"/>
+					<xsd:enumeration value="OS_390"/>
+					<xsd:enumeration value="VSE"/>
+					<xsd:enumeration value="TPF"/>
+					<xsd:enumeration value="Windows_R_Me"/>
+					<xsd:enumeration value="Caldera_Open_UNIX"/>
+					<xsd:enumeration value="OpenBSD"/>
+					<xsd:enumeration value="Not_Applicable"/>
+					<xsd:enumeration value="Windows_XP"/>
+					<xsd:enumeration value="z_OS"/>
+					<xsd:enumeration value="Microsoft_Windows_Server_2003"/>
+					<xsd:enumeration value="Microsoft_Windows_Server_2003_64-Bit"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<!--========================================================================-->
+	<xsd:simpleType name="CreationFlagEnumeration">
+		<xsd:restriction base="xsd:QName">
+			<xsd:enumeration value="overwrite"/>
+			<xsd:enumeration value="append"/>
+			<xsd:enumeration value="prepend"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--========================================================================-->
+	<xsd:simpleType name="LimitTypeEnumeration">
+		<xsd:union memberTypes="xsd:QName">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:QName">
+					<xsd:enumeration value="wallTime"/>
+					<xsd:enumeration value="fileSize"/>
+					<xsd:enumeration value="coreDump"/>
+					<xsd:enumeration value="dataSegment"/>
+					<xsd:enumeration value="lockedMemory"/>
+					<xsd:enumeration value="memory"/>
+					<xsd:enumeration value="openDescriptors"/>
+					<xsd:enumeration value="pipeSize"/>
+					<xsd:enumeration value="stackSize"/>
+					<xsd:enumeration value="CPUTime"/>
+					<xsd:enumeration value="processCount"/>
+					<xsd:enumeration value="virtualMemory"/>
+					<xsd:enumeration value="threadCount"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<!--========================================================================-->
+	<xsd:simpleType name="description">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<!--=====================================================================-->
+	<!-- The core document -->
+	<!-- In this section we define the main Sections and the way to extend   -->
+	<!-- this. -->
+	<!--=====================================================================-->
+	<xsd:element name="JobDefinition">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="JobDescription"/>
+				<xsd:element ref="Profile" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:ID"/>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="JobDescription">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="JobIdentification" minOccurs="0"/>
+				<xsd:element ref="User" minOccurs="0"/>
+				<xsd:element ref="Application" minOccurs="0"/>
+				<xsd:element ref="Resource" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="DataStaging" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="Limits" minOccurs="0"/>
+				<xsd:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="Profile">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="ProfileDescription" type="xsd:string" minOccurs="0"/>
+				<xsd:element ref="User" minOccurs="0"/>
+				<xsd:element ref="Application" minOccurs="0"/>
+				<xsd:element ref="Resource" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="DataStaging" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="Limits" minOccurs="0"/>
+				<xsd:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:NCName"/>
+		</xsd:complexType>
+	</xsd:element>
+	<!--=======================================================================-->
+	<xsd:element name="JobIdentification">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="JobName" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="Description" type="description" minOccurs="0"/>
+				<xsd:element name="JobAnnotation" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element name="JobProject" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+				<!--<xsd:any minOccurs="0" maxOccurs="unbounded"/>-->
+				<xsd:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="Application">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="ApplicationName" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="ApplicationVersion" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="ApplicationType" type="ApplicationTypeEnumeration" minOccurs="0"/>
+				<xsd:element name="ApplicationDescription" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="Executable" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="Argument" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="Input" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="Output" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="Error" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="WorkingDirectory" type="xsd:string" minOccurs="0"/>
+				<xsd:element ref="Environment" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element name="TileSize" type="xsd:positiveInteger" minOccurs="0"/>
+				<xsd:element ref="ProcessCount" minOccurs="0"/>
+				<xsd:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="User">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="UserCredential" type="xsd:anyType" minOccurs="0"/>
+				<xsd:element name="ExecutionUserID" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="ExecutionGroupID" type="xsd:string" minOccurs="0"/>
+				<xsd:element ref="UserGroup" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="Environment">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+					<xsd:attribute name="id" type="xsd:NCName"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="OperatingSystem">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="OperatingSystemType" type="OperatingSystemTypeEnumeration" minOccurs="0"/>
+				<xsd:element name="OperatingSystemVersion" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="OperatingSystemDescription" type="xsd:string" minOccurs="0"/>
+				<xsd:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="Limits">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="Limit" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="Resource">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="HostName" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="CPUArchitecture" type="ProcessorArchitectureEnumeration" minOccurs="0"/>
+				<xsd:element ref="CPUSpeed" minOccurs="0"/>
+				<xsd:element ref="CPUTime" minOccurs="0"/>
+				<xsd:element ref="CPUCount" minOccurs="0"/>
+				<xsd:element ref="ResourceCount" minOccurs="0"/>
+				<xsd:element ref="PhysicalMemory" minOccurs="0"/>
+				<xsd:element ref="VirtualMemory" minOccurs="0"/>
+				<xsd:element ref="NetworkBandwidth" minOccurs="0"/>
+				<xsd:element ref="FileSystem" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element name="ExclusiveExecution" type="xsd:boolean" minOccurs="0"/>
+				<xsd:element ref="OperatingSystem" minOccurs="0"/>
+				<xsd:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:NCName"/>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="FileSystem">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="FileSystemType" type="FileSystemTypeEnumeration" minOccurs="0"/>
+				<xsd:element name="Description" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="MountPoint" type="xsd:string"/>
+				<xsd:element ref="DiskSpace" minOccurs="0"/>
+				<xsd:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:NCName"/>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="DataStaging">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="FileName" type="xsd:string"/>
+				<xsd:element name="FilesystemID" type="xsd:NCName" minOccurs="0"/>
+				<xsd:element name="CreationFlag" type="CreationFlagEnumeration"/>
+				<xsd:element name="DeleteOnTermination" type="xsd:boolean" minOccurs="0"/>
+				<xsd:element ref="Source" minOccurs="0"/>
+				<xsd:element ref="Target" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:NCName"/>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="Source">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="User" minOccurs="0"/>
+				<xsd:element name="URL" type="xsd:anyURI"/>
+				<xsd:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="Target">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="User" minOccurs="0"/>
+				<xsd:element name="URL" type="xsd:anyURI"/>
+				<xsd:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:complexType name="ExtensibilityType">
+		<xsd:attribute name="id" type="xsd:NCName"/>
+	</xsd:complexType>
+	<xsd:element name="ExtensibilityElement" type="ExtensibilityType" abstract="true"/>
+	<!--========================================================================-->
+	<xsd:element name="CPUSpeed">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="rangeValue">
+					<xsd:attribute name="operator" type="operator"/>
+					<xsd:attribute name="units" type="frequencyUnits"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="CPUCount">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="rangeValue">
+					<xsd:attribute name="operator" type="operator"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="ResourceCount">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="rangeValue">
+					<xsd:attribute name="operator" type="operator"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="PhysicalMemory">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="rangeValue">
+					<xsd:attribute name="units" type="storageUnits"/>
+					<xsd:attribute name="operator" type="operator"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="VirtualMemory">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="rangeValue">
+					<xsd:attribute name="operator" type="operator"/>
+					<xsd:attribute name="units" type="storageUnits"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="NetworkBandwidth">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="rangeValue">
+					<xsd:attribute name="units" type="bandwidthUnits"/>
+					<xsd:attribute name="operator" type="operator"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="Limit">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="limitValue">
+					<xsd:attribute name="units" type="limitUnits"/>
+					<xsd:attribute name="name" type="LimitTypeEnumeration"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="CPUTime">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="rangeValue">
+					<xsd:attribute name="operator" type="operator"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="ProcessCount">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="rangeValue">
+					<xsd:attribute name="operator" type="operator"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="UserGroup">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+					<xsd:attribute name="id" type="xsd:NCName"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="DiskSpace">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="rangeValue">
+					<xsd:attribute name="units" type="storageUnits"/>
+					<xsd:attribute name="operator" type="operator"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+</xsd:schema>

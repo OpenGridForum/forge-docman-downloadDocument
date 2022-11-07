@@ -1,0 +1,162 @@
+DAIS Telcon - 27 March 2008
+===========================
+
+Attendees:
+	Mario Antonioletti, EPCC
+	Dave Pearson, Oracle
+	Isao Kojima, AIST
+	Said Mirza, AIST
+	Miguel Esteban Gutierrez, UPM
+	Andre Merzky, LSU
+
+Agenda:
+
+  - Summary of OGF DAIS Session
+  - Rechartering to cover RDF work
+  - Provision of SAGA API use cases
+  - RDF/RDF(S) progress
+  - RDF/RDF(S) paper (though this will be too late for a call)
+  - Socialising the RDF/RDF(S) specs
+  - DAIX issues arising from OGF22
+  - Coordinating DAIS implementations
+
++--
+
+Actions:
+
+[Mario] Check that Isao has Admin privileges for the DAIS GridForge account.
+[Isao]  Add the proposed RDF work to the DAIS charter with deliverables and
+        notify once this is done.
+[Mario] Make some additional modifications and then submit for AD approval.
+[All]   Come with use case examples for SAGA. Templates sent to the mailing
+        list by Andre:
+
+        http://www.ogf.org/pipermail/dais-wg/2008-February/000231.html
+
+[Andre] Send out example APIs for files.
+[Miguel] Post DAIS spec issues to the list.
+[Mario] Collect existing spec issues in one location.
+[Mario] Try to coordinate existing DAIS implementations.
+
+- Summary of OGF
+
+Mario gave a brief summary of OGF - basically attendance was pretty
+poor with only the OGF folks involved plus one other.  There were
+another two that came and went who did not sign the sheet. Aside from
+that the meeting turned out to be very productive with a discussion
+about the DAIX implementation work and issues that have arisen about
+the DAIX spec from these from Edinburgh and Ohio. The meeting turned
+into a face-to-face and there was a lot of discussion to the point 
+where the session over run.
+
+Others that were present agreed with the summary and thought the
+session had been very productive.
+
+Also had a joint session with the SAGA folk who are going to try to
+develop a SAGA API for databases.
+
+- Rechartering to cover RDF work
+
+Mario noted that the current RDF work was not in the charter.  There
+was an internal mail discussion with David Martin regarding process -
+David thought that it might be worthwhile possibly spinning off the
+RDF work on to a separate group to try and get more interest. However,
+it was pointed out that previous discussions at OGF had reached
+consensus that the RDF work should stay within DAIS. It would be
+folly to try and spin this work out now that it is near completion.
+
+Mario and Isao to re-charter.
+
+- Provision of SAGA API use cases
+
+Dave asked about why SAGA required use cases. Andre replied that they
+do not have general use cases for using databases which is why they
+are looking for input from DAIS.
+
+It is not required for the whole of the SAGA use case template - the
+most important section is on what an API should look like.  It would
+be nice to have something for the next OGF.  Once a use case is
+completed it should be circulated to the SAGA & DAIS mailing lists.
+Dave will try to see if he can also provide any use cases.
+
+SAGA API would probably treat queries as opaque strings - what is of
+interest is what else is required in such an API - this is unclear in
+SAGA.
+
+Dave asked if any standards/guidelines already existed for APIs - it
+would useful to distribute those - Andre said they have lots but which
+do not include databases - Andre will send example APIs for files
+which is the closest they have to a data API.
+
+- RDF/RDF(S) specifications progress
+
+Ontology spec R- DF(S):
+
+There have only been 2 weeks worth of work done - so not much progress
+since the last OGF.  A lot of time has been spent finishing and
+polishing off the paper submitted to the OGF call. It took 2 weeks to
+change everything and polish. The outstanding issues - have looked at
+the missing configuration properties before including them in the
+draft.
+
+Query spec - RDF:
+
+Updating the spec - but have not finished yet. Now basing it on the
+glossary of terms - hope to be done by done the beginning of
+April. Changing the motivational document. Hope to finish that over
+the same time period as well.
+
+- RDF/RDF(S) paper 
+
+Paper submitted on the 15th of March. Paper to go in to a review
+process. Should know by the end of April.
+
+- Socialising the RDF/RDF(S) specs
+
+Mario suggested writing articles for newsletter: could try to publish
+abridged stuff from the paper on to the NeSC, OMII-UK, etc
+newsletters. Miguel is involved in Admire and will try to re-use stuff
+form the RDF project.  Need to attend conferences - write papers, have
+not published many things. Miguel will try to have a look at
+newsletter.
+
+AIST are thinking about how to do this as well.
+
+Dave Pearson is also trying to disseminate the RDF work - whenever he
+gives a presentations he mentions this work and gives references to
+the pertinent documents.
+
+- DAIX issues arising from OGF22
+
+Should try to collect the information discussed at the OGF session.
+Miguel talked to Elias about XQuery issues. Try to do experiments to
+see if there are issues.
+
+- Coordinating DAIS implementations
+
+Have had various offers to do DAIR implementations: OGSA-DAI, AMGA
+and GRelC. There is also another project that claims to have a DAIR
+implementation that Mario needs to chase up. OGSA-DAI have almost 
+finished a DAIX implementation - need to persuade someone else to
+do one or try to cajole the Ohio folks back to finish off their 
+implementation.
+
+UPM will do a full implementation of the RDF implementations in
+mid-April, extra people are coming to the group so they will have the
+manpower to do both implementations.
+
+AIST have an implementation of the query spec - based on OGSA-DAI. They
+will also try do an ontology implementation also based on
+OGSA-DAI. Question is what number of profiles need to be implemented.
+
+Mario suggested possibly splitting the RDF(S) profiles into separate
+documents which would make it easier to manage implementations and
+make the document more palatable.
+
+- AOB
+
+Dave and Miguel suggested having themed calls as opposed one that
+tries to cover too much stuff. Could then have a call that deals with
+the implementations as opposed to RDF, etc.
+
+Shall try to have a call in about 2 weeks time.

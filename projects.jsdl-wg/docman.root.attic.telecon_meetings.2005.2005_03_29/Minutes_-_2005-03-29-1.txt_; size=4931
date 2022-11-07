@@ -1,0 +1,147 @@
+JSDL Telecon Minutes
+====================
+March 29th, 2005 - 15:00 GMT
+============================
+
+
+Attendees:
+==========
+
+Michel Drescher (Fujitsu)
+Darren Pulsipher (Cadence)
+Ali Anjomshoaa (EPCC, Uni. of Edinburgh)
+Karl Czajkowski (Univa)
+Donal Fellows (Uni. of Manchester)
+Bill Harris (Cadence)
+Kazushige Saga (NAREGI Project)
+
+
+Apologies:
+==========
+
+
+Discussion:
+===========
+
+Michel's Issues List
+--------------------
+
+(1) JobDefinition/JSDLVersion attribute
+
+    The version of the JSDL spec is uniquely defined elsewhere, and encoded 
+    in the namespace. I do not see any use of this attribute.
+
+    - Agreed to leave out this attribute.
+
+
+(2) JobDefinition/JobIdentification/User/UserCredential
+
+    The spec contains a comment that this element "... can be handled 
+    through the standard extension mechanism."
+
+    Let's decide on the phone conference to keep it or to drop it (and 
+    release it to the extension mechanism).
+
+    o Karl - 'User' doesn't have strong ontological definition as it stands.
+    o Darren - most systems use it and so this can be a general String to 
+      be used by the system as it pleases.
+
+    - [Action on All]: Justify keeping User and related attributes on the 
+                       list. Put your case to the group.
+
+
+(3) Range values: Karl and Stephen made a valuable proposal for a clear and 
+                  efficient definition of range values:
+
+    <lowerBound>xsd:integer</lowerBound> ?
+    <upperBound>xsd:integer</upperBound> ?
+    <exact>xsd:integer</exact> *
+    <range>
+    <lowerBound>xsd:integer</lowerBound>
+    <upperBound>xsd:integer</upperBound>
+    </range> *
+
+    I propose to replace our current definition of a range value with this 
+    complex structure.
+
+    - [Action on Michel]: Let's go with Donal's e-mail:
+
+    http://www-unix.gridforum.org/mail_archive/jsdl-wg/2005/03/msg00060.html
+
+    Keep epsilon only on the <exact> element. Rename the boundary names: 
+    UpperBoundRange? Update spec and send schema snippets to Steve.
+
+
+(4) xsd:integer or xsd:double
+
+    Partly touching topic 3, there's a discussion on whether to use integers 
+    or fraction numbers. I propose to use xsd:double together with an 
+    optional attribute "epsilon=xsd:double" for precision restrictions, 
+    changing the range type to:
+
+    <lowerBound epsilon="xsd:double"? >xsd:double</lowerBound> ?
+    <upperBound epsilon="xsd:double"? >xsd:double</upperBound> ?
+    <exact epsilon="xsd:double"? >xsd:double</exact> *
+    <range>
+    <lowerBound epsilon="xsd:double"? >xsd:double</lowerBound>
+    <upperBound epsilon="xsd:double"? >xsd:double</upperBound>
+    </range> *
+
+    - Agreed, accept xsd:double
+
+
+(5) (Non-)Critical extensions
+
+    There's a discussion at the moment to tag particular elements of JSDL to 
+    be (non-)critical in terms of understandability and support, similar to 
+    the SOAP attribute "mustUnderstand=xsd:boolean".
+
+    I propose to postpone this mechanism to after the first official JSDL 
+    release.
+
+    - Leave to post-v1.0 release for discussion.
+
+
+(6) naming elements
+
+    To promote re-usage, elements of JSDL documents should be identifiable. 
+    An appropriate technique is using QNames. This requires the elements 
+    that we want to be reused to get a naming attribute of type xsd:NCName.
+
+    I propose to use this technique to promote re-usage. If we agree to use 
+    this, a follow-up action point will be assinged to identify the elements 
+    that need this new naming attribute and to propose a naming syntax.
+
+    - Go with this suggestion.
+
+
+(7) Resource constraints global total and/or per process
+
+    During GGF13, the issue came up that a resource can be defined to be 
+    total global or as per process. A use case may be to constrain a job to 
+    10 Gigabytes of physical memory and at the same time to constrain the 
+    job's processes to consume no more than 10 Megabytes of physical memory.
+
+    I propose to reflect this in JSDL expressis verbis rather to punt it out 
+    to an extension. If we agree on incorporating this, a follow-up action 
+    point will be the investigation and proposal of solution alternatives.
+
+   [Action on Ali]
+    - Duplicate the relevant elements that require global or local 
+      distinction.
+
+    - Karl's suggestion: make them all local (per resource) and ask the 
+      question which one's really need to be defined as global, i.e. which 
+      DRMs actually care or can do anything about this?
+
+
+(8) Comments and flames on the current specification document
+
+    Although this is very short term, I attached the current latest version 
+    of the spec document - unofficial as I am not the official editor! - in 
+    which I tried to reflect all the changes we agreed on at GGF13. It was 
+    quite much, so expect to face errors in what I created.
+
+    o HostName - cardinality '0 - unbounded', pseudo-schema '? (0 to 1)' 
+                 change to '*'
+

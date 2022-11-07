@@ -1,0 +1,70 @@
+JSDL Telephone conference
+=========================
+
+13 December 2006
+
+Participants
+============
+Darren Pulsipher, EMC
+Andreas Savva, Fujitsu
+Michel Drescher, Fujitsu
+Donal Fellows, UoM
+Stephen McGough, Imperial College
+An Ly, CA
+Rich Kao, CA
+Ali Anjomshoaa, EPCC
+Fred Brisard, CA
+
+Minutes: Michel Drescher
+
+
+JSDL 1.1 issues
+===============
+- The group discusses the tracker artifacts available on GridForge
+- artf5649 "CPU time elements"
+  -- The group did not reach consensus on a resolution for this artifact.
+  -- AI-12.13-a: Andreas to contact Chris Smith to clarify this artifact
+- artf5648 "Disk space resources"
+  -- The group discusses various alternatives of interpretation of the elements
+     referenced in this artifact
+  -- The group reaches consensus that for the DiskSpace element of the 
+     FileSystem element, the alternative 2 was meant. Quota systems might 
+     narrow the interpretation of this element to atch alternative 3. This, 
+     however, is implementation-dependant.
+  -- For IndividualDiskSpace, unconfigured (raw) local disk space is meant.
+  -- AI-12.13-b: Andreas Savva to clarify this issue.
+- artf5650 "IndividualNetworkBandwidth"
+  -- The group reaches consensus that this should be interpreted as the rated 
+     bandwidth of the interface.
+  -- A final rework of this issue is expected to be done in JSDL 2.0
+  -- AI-12.13-c: Darren to fix this issue
+- 
+
+OGF19 planning
+==============
+- The two JSDL sessions have been tentatively scheduled as of 13 Dec 2006
+- The first session seem pretty clear what to do for JSDL 1.1
+- The group discusses potential agenda items for the JSDL 2.0 session
+- ParameterSweep extension
+  -- The group needd to explore and make contact with existing parameter sweep 
+     solutions
+  -- Nimrod project may help out
+     --- AI-12.13-d: Ali to make first contact with Nimrod
+  -- AI-12.13-e: Andreas to set up a Wiki collecting technlogy that offers
+                 parameter sweep technology
+
+AOB
+===
+- Date of next call: 10 January 2007, 10:00 UTC
+
+
+Action Item Summary
+===================
+AI-12.13-a: Andreas to contact Chris Smith to clarify artifact "artf5649"
+AI-12.13-b: Andreas Savva to clarify artifact "artf5648"
+AI-12.13-c: Darren to write a clarification for artifact "artf5650"
+AI-12.13-d: Ali to make first contact with Nimrod regarding Parameter Sweeps
+AI-12.13-e: Andreas to set up a Wiki collecting technlogy that offers
+            parameter sweep technology
+
+

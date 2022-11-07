@@ -1,0 +1,92 @@
+Participants
+============
+* Fred Brisard, CA
+* Andreas Savva, Fujitsu
+* Donal Fellows, UoM
+* Christopher Smith, Platform
+* Michel Drescher, Fujitsu
+* Ali Anjomshoaa, EPCC
+* An Ly, CA
+
+
+Agenda Bashing
+==============
+* Agenda has been agreed without changes
+* Michel Drescher has been assigned note taker.
+
+
+GGF18 report/review
+===================
+* Andreas presets the progress of JSDL (GGF18) an the F2F back to back
+  with GGF18
+* The group discusses the future of the DataStaging element in JSDL 2.0
+* Slides and schemas are available on Gridforge in the GGF18 folder
+
+
+Progress on assignments from GGF18
+==================================
+* D Fellows & M Drescher on backwards compatibility
+  - No progress
+  - Chris Smith announces that he will contribute to the appropriate tracker
+* A Savva on PalmPilot naming with CIM
+  - No progress
+* M Drescher on MointPoint issue
+  - no progress
+  - Interlinked with the backwards compatibility statement
+* Other assignments could nor be reviewed as the relevant persons were not
+  on the call
+
+Reviiew of new drafts
+=====================
+* C Smith gives an overview on the HPC Profile Application Specification v1.0
+* A Savva comments on OGF copyright and IPR statements
+* A Savva comments on the Executable element
+  - The definition states that the pathname is either relative or absolute
+  - There is a footnote later in the text that gives ambiguous statements 
+    regarding the Executable element
+  - AI-0927a: C Smith: Resolve this issue, e.g. delete the footnote etc.
+  - AI-0927b: A Savva: Do the same for the POSIXApplication extension in 
+                       JSDL 1.0  
+* The group discusses the Argumnt element definition
+  - The definition is unclear, just as the definition in JSDL 1.0 is unclear.
+  - The group has rough consesus that the type xsd:string is okay. In this case 
+    the definition needs to be rewritten, i.e. remove the part "is a contrained
+    normalized string [...] and MUST NOT collapsed."
+  - AI-0927c: C Smith: Brush up the definition of the Argument element in 
+                       relation to 
+                       - what means "collapsed", empty elements
+                       - combining consecutive Argument elements
+                       - constrained normalized string
+* The group discusses the issues around working directory, input, output, 
+  error and executable elements
+  - AI-0927d: C Smith: To clarify the document with respect to container 
+                       behaviour for Input Output and Error and the current
+                       workung directory (see Executable element definition)
+* The group discusses the UserName element
+  - A Savva proposes to follow the lead of the JSDL 1.1 approach having a 
+    general Security Consideration section that refers back to differing 
+    considerations given with the relevant element definition.
+  - The group reaches consesus that the HPC Profile Application Element 
+    definition should follow that approach.
+
+
+Next call
+=========
+* No date and time agreed yet. Proposal issued for a call in two weeks time.
+* A Savva will announce the call depending on participants needs
+  
+Action Items Overview
+=====================
+AI-0927a: C Smith: Resolve the ambiguity between the definition of the
+                   Executable element and a later referring footnote
+AI-0927b: A Savva: Do the same for the POSIXApplication extension in 
+                   JSDL 1.0  
+AI-0927c; C Smith: Brush up the definition of the Argument element in 
+                   relation to 
+                   - what means "collapsed"
+                   - combining consecutive Argument elements
+                   - constrained normalized string
+AI-0927d: C Smith: To clarify the document with respect to container 
+                   behaviour for Input Output and Error and the current
+                   workung directory (see Executable element definition)
+

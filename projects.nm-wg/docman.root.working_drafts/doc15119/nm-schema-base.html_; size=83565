@@ -1,0 +1,1744 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+
+This is a static archive of the previous Open Grid Forum GridForge content management system saved from host forge.ogf.org file /sf/docman/do/downloadDocument/projects.nm-wg/docman.root.working_drafts/doc15119/1 at Sun, 06 Nov 2022 15:11:45 GMT
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title> An Extensible Schema for Network Measurement and
+      Performance Data </title>
+<style type="text/css" title="Xml2Rfc (sans serif)">
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  text-decoration: underline;
+}
+address {
+  margin-top: 1em;
+  margin-left: 2em;
+  font-style: normal;
+}
+
+body {
+  
+  color: #000000;
+  font-family: verdana, helvetica, arial, sans-serif;
+  font-size: 10pt;
+}
+cite {
+  font-style: normal;
+}
+dl {
+  margin-left: 2em;
+}
+
+dl.empty dd {
+  margin-top: .5em;
+}
+dt {
+  margin-top: .5em;
+}
+h1 {
+  color: #333333;
+  font-size: 14pt;
+  line-height: 21pt;
+  page-break-after: avoid;
+}
+h1.np {
+  page-break-before: always;
+}
+h1 a {
+  color: #333333;
+}
+h2 {
+  color: #000000;
+  font-size: 12pt;
+  line-height: 15pt;
+  page-break-after: avoid;
+}
+h2 a {
+  color: #000000;
+}
+h3 {
+  color: #000000;
+  font-size: 10pt;
+  page-break-after: avoid;
+}
+h3 a {
+  color: #000000;
+}
+h4 {
+  color: #000000;
+  font-size: 10pt;
+  page-break-after: avoid;
+}
+h4 a {
+  color: #000000;
+}
+h5 {
+  color: #000000;
+  font-size: 10pt;
+  page-break-after: avoid;
+}
+h5 a {
+  color: #000000;
+}
+img {
+  margin-left: 3em;
+}
+li {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+ol {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+p {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+pre {
+  margin-left: 3em;
+  background-color: lightyellow;
+}
+
+table {
+  margin-left: 2em;
+}
+
+table.header {
+  width: 95%;
+  font-size: 10pt;
+  color: white;
+}
+td.top {
+  vertical-align: top;
+}
+td.topnowrap {
+  vertical-align: top;
+  white-space: nowrap; 
+}
+td.front {
+  background-color: gray;
+  width: 50%;
+}
+thead {
+  display:table-header-group;
+}
+ul.toc {
+  list-style: none;
+  margin-left: 1.5em;
+  margin-right: 0em;
+  padding-left: 0em;
+}
+li.tocline0 {
+  line-height: 150%;
+  font-weight: bold;
+  font-size: 10pt;
+  margin-left: 0em;
+  margin-right: 0em;
+}
+li.tocline1 {
+  line-height: normal;
+  font-weight: normal;
+  font-size: 9pt;
+  margin-left: 0em;
+  margin-right: 0em;
+}
+li.tocline2 {
+  font-size: 0pt;
+}
+ul.ind {
+  list-style: none;
+  margin-left: 1.5em;
+  margin-right: 0em;
+  padding-left: 0em;
+}
+li.indline0 {
+  font-weight: bold;
+  line-height: 200%;
+  margin-left: 0em;
+  margin-right: 0em;
+}
+li.indline1 {
+  font-weight: normal;
+  line-height: 150%;
+  margin-left: 0em;
+  margin-right: 0em;
+}
+
+.comment {
+  background-color: yellow;
+}
+
+.center {
+  text-align: center;
+}
+.error {
+  font-size: 14pt;
+  background-color: red;
+}
+.figure {
+  font-weight: bold;
+  text-align: center;
+  font-size: 9pt;
+}
+.filename {
+  color: #333333;
+  font-weight: bold;
+  font-size: 12pt;
+  line-height: 21pt;
+  text-align: center;
+}
+.fn {
+  font-weight: bold;
+}
+.hidden {
+  display: none;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.title {
+  color: #990000;
+  font-size: 18pt;
+  line-height: 18pt;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 36pt;
+}
+.vcardline {
+  display: block;
+}
+.warning {
+  font-size: 14pt;
+  background-color: yellow;
+}
+
+
+@media print {
+  .noprint {
+    display: none;
+  }
+  
+  table.header {
+    width: 90%;
+  }
+
+  td.header-l {
+    width: 50%;
+    color: black;
+    background-color: white;
+    vertical-align: top;
+    font-size: 10pt;
+  }
+
+  td.header-r {
+    width: 33%;
+    color: black;
+    background-color: white;
+    vertical-align: top;
+    text-align: right;
+    font-size: 10pt;
+  }
+
+  ul.toc a::after {
+    content: leader('.') target-counter(attr(href), page);
+  }
+  
+  a.iref {
+    content: target-counter(attr(href), page);
+  }
+  
+  .print2col {
+    column-count: 2;
+    -moz-column-count: 2;
+  }
+}
+
+@page {
+  @top-left {
+       content: "RFC "; 
+  } 
+  @top-right {
+       content: "February 2008"; 
+  } 
+  @top-center {
+       content: " An Extensible Schema for Network Measurement and
+      Performance Data "; 
+  } 
+  @bottom-left {
+       content: "Swany"; 
+  } 
+  @bottom-center {
+       content: "Informational"; 
+  } 
+  @bottom-right {
+       content: "[Page " counter(page) "]"; 
+  } 
+}
+
+@page:first { 
+    @top-left {
+      content: normal;
+    }
+    @top-right {
+      content: normal;
+    }
+    @top-center {
+      content: normal;
+    }
+}
+</style>
+<link rel="Author" href="#rfc.authors">
+<link rel="Copyright" href="#rfc.copyright">
+<link rel="Chapter" title="1 Introduction" href="#rfc.section.1">
+<link rel="Chapter" title="2 Design Philosophy" href="#rfc.section.2">
+<link rel="Chapter" title="3 Basic Elements" href="#rfc.section.3">
+<link rel="Chapter" title="4 XML Namespaces" href="#rfc.section.4">
+<link rel="Chapter" title="5 Extending the Schema" href="#rfc.section.5">
+<link rel="Chapter" title="6 Versioning" href="#rfc.section.6">
+<link rel="Chapter" title="7 Metadata Chaining" href="#rfc.section.7">
+<link rel="Chapter" title="8 Operation Metadata" href="#rfc.section.8">
+<link rel="Chapter" title="9 Base Schema" href="#rfc.section.9">
+<link rel="Chapter" title="10 Time Schema" href="#rfc.section.10">
+<link rel="Chapter" title="11 Topology Schema" href="#rfc.section.11">
+<link rel="Chapter" title="12 Examples" href="#rfc.section.12">
+<link rel="Chapter" title="13 Security Concerns" href="#rfc.section.13">
+<link rel="Chapter" title="14 Appendices" href="#rfc.section.14">
+<link rel="Chapter" href="#rfc.section.15" title="15 References">
+<meta name="generator" content="http://greenbytes.de/tech/webdav/rfc2629.xslt, Revision 1.291, 2006/10/29 09:03:19, XSLT vendor: SAXON 8.8 from Saxonica http://www.saxonica.com/">
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+<meta name="DC.Creator" content="Swany, M">
+<meta name="DC.Date.Issued" scheme="ISO8601" content="2008-02">
+</head>
+<body>
+<table summary="header information" class="header" border="0" cellpadding="1" cellspacing="1">
+<tr>
+<td class="front left">Network Measurement Working Group</td>
+<td class="front right">M Swany, Editor</td>
+</tr>
+<tr>
+<td class="front left">
+</td>
+<td class="front right">UDel</td>
+</tr>
+<tr>
+<td class="front left">Intended status: Informational</td>
+<td class="front right">February 2008</td>
+</tr>
+</table>
+<p class="title">An Extensible Schema for Network Measurement and Performance Data</p>
+<h1>
+<a id="rfc.status" href="#rfc.status">Status of this Memo</a>
+</h1>
+<p>This memo provides information for the Grid community. It does not specify any standards or technical recommendations. Distribution is unlimited.</p>
+<h1>
+<a id="rfc.copyrightnotice" href="#rfc.copyrightnotice">Copyright Notice</a>
+</h1>
+<p>Copyright © The Open Grid Forum (2008). All Rights Reserved.</p>
+<hr class="noprint">
+<h1 id="rfc.section.1" class="np">
+<a href="#rfc.section.1">1.</a>&nbsp;<a id="intro" href="#intro">Introduction</a>
+</h1>
+<p id="rfc.section.1.p.1">This document presents an extensible encoding standard for network measurement and performance data. Uniform encoding of this class of information is a key problem for federated network management, and multi-domain dynamic provisioning of network circuits, as well as in advanced distributed computing environments such as Grid computing.</p>
+<p id="rfc.section.1.p.2">This work is born of the need for a common mechanism for the exchange of network measurement and performance data. In the case of research-oriented networks, parties often want to exchange network performance data with neighbors for debugging purposes. In general, however, there is no single monitoring system that is in use. In the Grid community, the need to exchange network metrics of various sorts is often highlighted. In short, it is highly desirable to have an extensible schema for network performance information that gives a common, general framework for representation and exchange.</p>
+<p id="rfc.section.1.p.3">This document builds on previous versions of the network measurement schemata. This document describes "Version 2" of the Grid Forum's Network Measurement Working Group (NM-WG) schema.</p>
+<h2 id="rfc.section.1.1">
+<a href="#rfc.section.1.1">1.1</a>&nbsp;<a id="goals" href="#goals">Goals</a>
+</h2>
+<p id="rfc.section.1.1.p.1">The goal is to define a neutral representation for network measurements that can be easily extended to support new types of data. This representation should identify forms of network performance data as well as to create standardized mechanism to both describe and publish these metrics.</p>
+<hr class="noprint">
+<h1 id="rfc.section.2" class="np">
+<a href="#rfc.section.2">2.</a>&nbsp;<a id="design_philosophy" href="#design_philosophy">Design Philosophy</a>
+</h1>
+<p id="rfc.section.2.p.1">One of the high-level goals of this representation is to "normalize" the data representation by removing as much redundancy as possible. The basic schema design is based on the observation that network measurement data can be divided into two major classes. The first class is the Metadata, which describes the type of measurement data, the entity or entities being measured and the particular parameters of the measurement. The second class is the data itself, which is, at its simplest, a timestamp and a value, or vector of values. This division of Metadata and Data is present throughout the system. This structure is present both in the "Messages" sent between various data elements and in data "Stores" -- persistent storage of XML documents representing system state.</p>
+<hr class="noprint">
+<h1 id="rfc.section.3" class="np">
+<a href="#rfc.section.3">3.</a>&nbsp;<a id="basic_elements" href="#basic_elements">Basic Elements</a>
+</h1>
+<p id="rfc.section.3.p.1">This schema defines the basic elements that can be used to represent performance data. The first distinction is between the "Metadata", the relatively static information regarding the data, and the "Data" itself, which generally changes over time. The key idea is that, for repeated measurements, which is a common case for performance data in networks and Grids, the Metadata need not be repeated with each measurement, saving space and effort.</p>
+<p id="rfc.section.3.p.2">Each top-level element in this schema has an Identifier attribute called "Id". There are many cases in which one element needs to refer to another. For these cases an Id Reference is used. Note that we have not used the XML Schema ID and IDREF types, although they seem to be appropriate. The reason is that with an IDREF, the corresponding ID must appear in the same document. We envision remote Id references (with e.g., a generic URL or a WS-Addressing EPR) and thus find this limitation overly restrictive. (Note that another possibility is the use of a simple element to resolve the local ID and point to remote Metadata.)</p>
+<h2 id="rfc.section.3.1">
+<a href="#rfc.section.3.1">3.1</a>&nbsp;<a id="metadata" href="#metadata">Metadata</a>
+</h2>
+<p id="rfc.section.3.1.p.1">The Metadata must describe the Data unambiguously. To accomplish this, the Metadata must include three key things:</p>
+<p id="rfc.section.3.1.p.2">
+</p>
+<dl class="empty">
+<dd>"Subject" -- The Subject identifies the entity being measured. This could include the network path between a pair of hosts, an interface on a router, or a specific location on the network from which flow or packet data is captured.</dd>
+<dd>"EventType" -- The EventType identifies exactly what sort of measurement Event occurred.</dd>
+<dd>"Parameters" -- The Parameters describe the details of the measurement.</dd>
+</dl>
+<h3 id="rfc.section.3.1.1">
+<a href="#rfc.section.3.1.1">3.1.1</a>&nbsp;<a id="subject" href="#subject">Subject</a>
+</h3>
+<p id="rfc.section.3.1.1.p.1">The "Subject" identifies the measured entity. For networks, this may represent a path between two hosts or an interface on a network device.</p>
+<h3 id="rfc.section.3.1.2">
+<a href="#rfc.section.3.1.2">3.1.2</a>&nbsp;<a id="eventtype" href="#eventtype">EventType</a>
+</h3>
+<p id="rfc.section.3.1.2.p.1">The "EventType" is the canonical name of the aspect of the subject being measured, or the actual event (i.e. "characteristic") being reported.</p>
+<h3 id="rfc.section.3.1.3">
+<a href="#rfc.section.3.1.3">3.1.3</a>&nbsp;<a id="parameters" href="#parameters">Parameters</a>
+</h3>
+<p id="rfc.section.3.1.3.p.1">The "Parameters" describe the exact way in which a particular measurement was gathered. These can include parameters to active measurement tools. Essentially, anything needed to determine which measurements are fungible should be included here. Parameters take the form of name, value pairs. The value of a parameter can itself be a complex XML element.</p>
+<h2 id="rfc.section.3.2">
+<a href="#rfc.section.3.2">3.2</a>&nbsp;<a id="data" href="#data">Data</a>
+</h2>
+<p id="rfc.section.3.2.p.1">The "Data" element has an Identifier (Id) and an Identifier Reference (metadataIdRef) that refers to the "Metadata" that describes it. It contains some number of "Datum" elements.</p>
+<h3 id="rfc.section.3.2.1">
+<a href="#rfc.section.3.2.1">3.2.1</a>&nbsp;<a id="datum" href="#datum">Datum</a>
+</h3>
+<p id="rfc.section.3.2.1.p.1">The "Datum" elements hold the timestamp and value of the measurement or value of the event. For many network measurement data sources, this can be a time-series of timestamp, value pairs. For other measurement types, the result value may be a vector.</p>
+<h2 id="rfc.section.3.3">
+<a href="#rfc.section.3.3">3.3</a>&nbsp;<a id="containers" href="#containers">Container Elements</a>
+</h2>
+<p id="rfc.section.3.3.p.1">The above-named elements are currently contained in two types of outer elements, "Message" and "Store". They have exactly the same structure, i.e. containing "Metadata" and "Data" elements. Each may have an attribute called "Type" to indicate its type. Each may also contain one "Parameters" element to indicate Message- or Store-level parameters and options.</p>
+<hr class="noprint">
+<h1 id="rfc.section.4" class="np">
+<a href="#rfc.section.4">4.</a>&nbsp;<a id="xml_namespace" href="#xml_namespace">XML Namespaces</a>
+</h1>
+<p id="rfc.section.4.p.1">A key facet in this schema is the observation that the above elements can be used to describe any network measurement, but the exact content of the each will vary with the measurement type. We have adopted XML namespaces to allow reuse of these same basic element names, but to vary the contents of the basic elements for each different type of data.</p>
+<p id="rfc.section.4.p.2">In this way, some superficial examination of the structure of a message or information store can take place without looking at the details of the contents. Some processing functionality should be able to consume new data types with no modification.</p>
+<p id="rfc.section.4.p.3">We envision there being two major classes of namespace URIs. The first is a canonical name based on the Hierarchy of Network Measurements from this working group<a href="#refs.hierarchy">
+<cite title="Enabling Network Measurement Portability Through a Hierarchy of Characteristics">[2]</cite>
+</a>. The second is based on an organization's domain name and allows for autonomous extension in much the same way as the Enterprise branch of the OID space (cite) allows. Finally, as this specification doesn't address the embedding of this schema into other systems, we note that the relevant parts of the namespace can be appended to another namespace if one is already in use.</p>
+<hr class="noprint">
+<h1 id="rfc.section.5" class="np">
+<a href="#rfc.section.5">5.</a>&nbsp;<a id="extending" href="#extending">Extending the Schema</a>
+</h1>
+<p id="rfc.section.5.p.1">The namespace-based approach described above provides extensibility by defining new basic elements in a tool- or characteristic-specific namespace. An example of this is presented in the Ping example later.</p>
+<p id="rfc.section.5.p.2">This needs some textual description.</p>
+<hr class="noprint">
+<h1 id="rfc.section.6" class="np">
+<a href="#rfc.section.6">6.</a>&nbsp;<a id="versioning" href="#versioning">Versioning</a>
+</h1>
+<p id="rfc.section.6.p.1">While the working group has made every effort to completely describe a few measurement types, we are well aware that tools, and ideas about how to represent them, may change. For this reason, each of the schema areas must have a version number.</p>
+<p id="rfc.section.6.p.2">To accomplish this, each of the URIs that comprise the namespaces end in a version number. TBD, conforming to recent GFD on namespaces.</p>
+<hr class="noprint">
+<h1 id="rfc.section.7" class="np">
+<a href="#rfc.section.7">7.</a>&nbsp;<a id="metadata_chaining" href="#metadata_chaining">Metadata Chaining</a>
+</h1>
+<p id="rfc.section.7.p.1">While a complete Metadata block can be used to unambiguously describe a data block, it is often desirable to combine multiple, partial Metadata blocks together. The main reason for this is reuse of information. Using the "metadataIdRef" attribute of a Metadata block allows us to form a "chain" of Metadata blocks.</p>
+<p id="rfc.section.7.p.2">This means that not all Metadata blocks will explicitly include an eventType. There must be an eventType somewhere in the the joined Metadata elements.</p>
+<hr class="noprint">
+<h1 id="rfc.section.8" class="np">
+<a href="#rfc.section.8">8.</a>&nbsp;<a id="operation_metadata" href="#operation_metadata">Operation Metadata</a>
+</h1>
+<p id="rfc.section.8.p.1">In addition to describing sets of raw data, Metadata blocks can also be used to describe transformation operations performed on a set of data. Thus, a list of Metadata blocks, including origin and transformations, can be used to unambiguously describe the provenance of any network data. This can also be used in cases where the transformation is "internal" and the original data is not available. This can be thought of as describing set operations on the original set as it passes through a list of operators. </p>
+<p id="rfc.section.8.p.2">One example of this is the selection of a subset of data from a a set, based on time or value. A "select" metadata block can be used to describe this filtering operation independent of the source. Formally, we can think of this as as an operation on one set that produces another set. This metadata block must unambiguously defining that set operation.</p>
+<p id="rfc.section.8.p.3">This relationship between Metadata blocks is expressed by having the Subject metadataIdRef refer to another Metadata, which denotes having it be input to an operation.</p>
+<hr class="noprint">
+<h1 id="rfc.section.9" class="np">
+<a href="#rfc.section.9">9.</a>&nbsp;<a id="base_schema" href="#base_schema">Base Schema</a>
+</h1>
+<p id="rfc.section.9.p.1">
+</p>
+<div id="rfc.figure.u.1">
+</div>
+<pre>
+<font color=red># ##############################################################</font>
+<font color=red># </font>
+<font color=red># File:      nmbase.rnc - Main schema definition</font>
+<font color=red># Version:   $Id: nmbase.rnc 230 2007-05-07 13:12:03Z swany $</font>
+<font color=red># Purpose:   This is the main schema file, it defines the</font>
+<font color=red>#             general structure of an NMWG message or store</font>
+<font color=red># </font>
+<font color=red># ##############################################################</font>
+
+
+<font color=red># ##############################################################</font>
+<font color=red># Namespace definitions</font>
+<font color=red># ##############################################################</font>
+<font color=orange>namespace nmwg = "http://ggf.org/ns/nmwg/base/2.0/"</font>
+
+
+<font color=red># ##############################################################</font>
+<font color=red># Include additional functionality from other files</font>
+<font color=red># ##############################################################</font>
+<font color=green>include</font> "nmtime.rnc" 
+<font color=green>include</font> "filter.rnc" 
+
+<font color=red># ##############################################################</font>
+<font color=red># Every NMWG document should begin with either a 'store' or </font>
+<font color=red># 'message' element</font>
+<font color=red># Patterns are defined for the content of each element.</font>
+<font color=red># </font>
+<font color=red># Example (using message):</font>
+<font color=red># </font>
+<font color=red># &lt;nmwg:message id="OPTIONAL_ID" </font>
+<font color=red>#               messageIdRef="OPTIONAL_REFERENCE_ID"</font>
+<font color=red>#               type="REQUIRED_TYPE"</font>
+<font color=red>#               xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;!-- OPTIONAL PARAMETERS --&gt;</font>
+<font color=red>#</font>
+<font color=red>#   &lt;!-- OPTIONAL (MULTIPLE) METADATA --&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;!-- OPTIONAL (MULTIPLE) DATA --&gt;</font>
+<font color=red>#  </font>
+<font color=red># &lt;/nmwg:message&gt;</font>
+<font color=red># </font>
+<font color=red># ##############################################################</font>
+
+<font color=orange>start =</font>
+        (
+                <font color=green>element</font> <font color=blue>nmwg:message</font> { 
+                        MessageContent
+                } |
+                <font color=green>element</font> <font color=blue>nmwg:store</font> { 
+                        StoreContent
+                }
+        )
+
+<font color=orange>MessageContent =</font>
+        Identifier? &amp; 
+        MessageIdentifierRef? &amp;
+        Type &amp;
+        Parameters? &amp;                        
+        (
+                Metadata |  
+                Data
+        )+
+        
+        
+<font color=orange>StoreContent = </font>
+        Identifier? &amp; 
+        MessageIdentifierRef? &amp;
+        Type &amp;
+        Parameters? &amp;                        
+        (
+                Metadata |  
+                Data
+        )+        
+
+
+<font color=red># ##############################################################</font>
+<font color=red># Metadata is the information that describes data.  This</font>
+<font color=red># information doesn't change over time</font>
+<font color=red>#</font>
+<font color=red>#</font>
+<font color=red># Example: </font>
+<font color=red># </font>
+<font color=red># &lt;nmwg:metadata id="REQUIRED_ID" </font>
+<font color=red>#                metadataIdRef="OPTIONAL_REFERENCE_ID"</font>
+<font color=red>#                xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;!-- TBD OPTIONAL SUBJECT --&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;!-- TBD OPTIONAL PARAMETERS --&gt;</font>
+<font color=red>#</font>
+<font color=red>#   &lt;!-- TBD OPTIONAL EVENTTYPE --&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;!-- TBD OPTIONAL KEY --&gt;</font>
+<font color=red>#  </font>
+<font color=red>#   &lt;!-- ANY OPTIONAL (MULTIPLE) ELEMENT IN ANY NAMESPACE --&gt; </font>
+<font color=red>#</font>
+<font color=red># &lt;/nmwg:metadata&gt;</font>
+<font color=red># </font>
+<font color=red># ##############################################################</font>
+        
+<font color=orange>Metadata = </font>
+        <font color=green>element</font> <font color=blue>nmwg:metadata</font> { 
+                (
+                        Identifier &amp;
+                        MetadataIdentifierRef? &amp;
+                        MetadataContent
+                ),
+                anyElement*
+        }
+
+<font color=orange>MetadataBlock =</font>
+        Subject? &amp;
+        Parameters?
+        
+<font color=orange>MetadataContent = </font>
+        (
+                MetadataBlock |
+                FilterMetadataBlock                
+        ) &amp;        
+        EventType? &amp;
+        Key?        
+
+
+<font color=red># ##############################################################</font>
+<font color=red># Subject identifies an endPoint (or points), perhaps the name of</font>
+<font color=red># a service or some other form of physical location. For the</font>
+<font color=red># purpose of the general case, we make no assumptions on potential</font>
+<font color=red># elements and allow all elements, in any namespace. Verification</font>
+<font color=red># can be handled in subsequent schema files.  </font>
+<font color=red>#</font>
+<font color=red># Example: </font>
+<font color=red># </font>
+<font color=red># &lt;nmwg:subject id="REQUIRED_ID" </font>
+<font color=red>#               metadataIdRef="OPTIONAL_REFERENCE_ID"</font>
+<font color=red>#               xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;!-- ANY ELEMENT IN ANY NAMESPACE --&gt;</font>
+<font color=red>#  </font>
+<font color=red># &lt;/nmwg:subject&gt;</font>
+<font color=red># </font>
+<font color=red># ##############################################################</font>
+
+<font color=orange>Subject = </font>
+        <font color=green>element</font> <font color=blue>nmwg:subject</font> { 
+                SubjectContent
+        }
+
+<font color=orange>SubjectContent = </font>
+        (
+                Identifier &amp;
+                MetadataIdentifierRef?        
+        ),
+        anyElement*
+        
+
+<font color=red># ##############################################################</font>
+<font color=red># Parameters and Parameter elements can be used in a number of</font>
+<font color=red># ways in: 1) the message to signify items such as time stamp</font>
+<font color=red># or authorization or 2) metadata or data to specify filters or</font>
+<font color=red># special cases for the information. A 'parameters' block</font>
+<font color=red># has an id and encloses one to many 'parameter' elements.</font>
+<font color=red># These elements have a required 'name', and may contain</font>
+<font color=red># an attribute, element, or text value (only one please;</font>
+<font color=red># software using this should consider complex elements, then</font>
+<font color=red># text, and finally the value attribute; exceptions should</font>
+<font color=red># be thrown on duplicates).</font>
+<font color=red>#</font>
+<font color=red># Example: </font>
+<font color=red># </font>
+<font color=red># &lt;nmwg:parameters id="REQUIRED_ID" </font>
+<font color=red>#                  xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;nmwg:parameter name="REQUIRED_NAME" value="OPTIONAL_VALUE"</font>
+<font color=red>#                   xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;</font>
+<font color=red># </font>
+<font color=red>#     &lt;!-- ANY TEXT, OR ANY ELEMENT ANY NAMESPACE (IF YOU DID NOT </font>
+<font color=red>#          USE THE VALUE ATTRIBUTE) --&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;/nmwg:parameter&gt;</font>
+<font color=red>#  </font>
+<font color=red>#   &lt;!-- MORE PARAMETERS --&gt;</font>
+<font color=red>#   </font>
+<font color=red># &lt;/nmwg:parameters&gt;</font>
+<font color=red># </font>
+<font color=red># The namespaces can of course be different.</font>
+<font color=red># </font>
+<font color=red># ##############################################################</font>
+
+<font color=orange>Parameters = </font>
+        <font color=green>element</font> <font color=blue>nmwg:parameters</font> { 
+                ParametersContent
+        }
+   
+<font color=orange>ParametersContent =    </font>
+        Identifier &amp;
+        Parameter+
+   
+<font color=orange>Parameter = </font>
+        <font color=green>element</font> <font color=blue>nmwg:parameter</font> { 
+                attribute name { xsd:string } &amp;
+                (
+                        attribute value { xsd:string } |
+                        (
+                                anyElement |
+                                text
+                        )
+                )
+        }   
+
+
+<font color=red># ##############################################################</font>
+<font color=red># Event type is a simple text element used to describe the</font>
+<font color=red># characteristic or event of the data.</font>
+<font color=red>#</font>
+<font color=red># Example: </font>
+<font color=red># </font>
+<font color=red># &lt;nmwg:eventType xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;!-- TEXT --&gt;</font>
+<font color=red>#  </font>
+<font color=red># &lt;/nmwg:eventType&gt;</font>
+<font color=red># </font>
+<font color=red># ##############################################################        </font>
+
+<font color=orange>EventType =</font>
+        <font color=green>element</font> <font color=blue>nmwg:eventType</font> { xsd:string } 
+
+   
+<font color=red># ##############################################################</font>
+<font color=red># The key is used to return a 'pointer' or otherwise special piece</font>
+<font color=red># of identifying information in response to a request. For now, </font>
+<font color=red># this information is enclosed only within a parameters block.</font>
+<font color=red># The optional ID can be used to track past searches.</font>
+<font color=red>#</font>
+<font color=red># Example: </font>
+<font color=red># </font>
+<font color=red># &lt;nmwg:key id="OPTIONAL_ID" </font>
+<font color=red>#           xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;!-- OPTIONAL PARAMETERS --&gt;</font>
+<font color=red>#  </font>
+<font color=red># &lt;/nmwg:key&gt;</font>
+<font color=red># </font>
+<font color=red># ##############################################################</font>
+   
+<font color=orange>Key = </font>
+        <font color=green>element</font> <font color=blue>nmwg:key</font> { 
+                Identifier? &amp;
+                (
+                        Parameters |
+                        FilterParameters                                
+                )
+        }        
+        
+           
+<font color=red># ##############################################################</font>
+<font color=red># The data block is complex and has the potential to contain</font>
+<font color=red># many things. The data block can be used to return a metadata</font>
+<font color=red># block from a request, commonTime or datum elements, keys,</font>
+<font color=red># or something that we have perhaps not defined as of yet. </font>
+<font color=red>#</font>
+<font color=red># Example: </font>
+<font color=red># </font>
+<font color=red># &lt;nmwg:data id="REQUIRED_ID" </font>
+<font color=red>#            metadataIdRef="OPTIONAL_REFERENCE_ID" </font>
+<font color=red>#            xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;!-- OPTIONAL (MULTIPLE) METADATA --&gt;</font>
+<font color=red># </font>
+<font color=red>#           &lt;!-- OR --&gt;</font>
+<font color=red>#</font>
+<font color=red>#   &lt;!-- TBD OPTIONAL (MULTIPLE) COMMON TIME ELEMENTS AND </font>
+<font color=red>#        OPTIONAL (MULTIPLE) DATUM ELEMENTS--&gt;</font>
+<font color=red># </font>
+<font color=red>#           &lt;!-- OR --&gt;</font>
+<font color=red>#  </font>
+<font color=red>#   &lt;!-- TBD OPTIONAL (MULTIPLE) DATUM ELEMENTS --&gt;</font>
+<font color=red># </font>
+<font color=red>#           &lt;!-- OR --&gt;</font>
+<font color=red>#  </font>
+<font color=red>#   &lt;!-- OPTIONAL (MULTIPLE) KEY ELEMENTS --&gt;</font>
+<font color=red># </font>
+<font color=red>#           &lt;!-- OR --&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;!-- ANY OPTIONAL (MULTIPLE) ELEMENT IN ANY NAMESPACE --&gt;</font>
+<font color=red>#   </font>
+<font color=red># &lt;/nmwg:data&gt;</font>
+<font color=red># </font>
+<font color=red># ##############################################################</font>
+   
+<font color=orange>Data =</font>
+        <font color=green>element</font> <font color=blue>nmwg:data</font> { 
+                (
+                        Identifier &amp;
+                        MetadataIdentifierRef? &amp;
+                        (
+                                Metadata* |
+                                (
+                                        commonTime+ &amp; 
+                                        Datum*
+                                ) |
+                                Datum* |
+                                Key*
+                        )
+                ),
+                anyElement*
+        }
+
+<font color=red># ##############################################################</font>
+<font color=red># CommonTime is used as a shortcut that is able to 'factor out' </font>
+<font color=red># a frequently occurring time range that a group of datum (or </font>
+<font color=red># other) elements might share, thus reducing the verbosity of the </font>
+<font color=red># XML representation. CommonTime is similar to the other NMWG time </font>
+<font color=red># stamps (from nmtime.rnc) in its potential time representations.</font>
+<font color=red>#</font>
+<font color=red># It is unfortunate that it needs to be in this file and not</font>
+<font color=red># nmtime.rnc, but as it occurs outside the datum, it is here.</font>
+<font color=red>#</font>
+<font color=red># Example: </font>
+<font color=red># </font>
+<font color=red># &lt;nmwg:commonTime type="REQUIRED_TYPE" value="OPTIONAL_VALUE"</font>
+<font color=red>#                  duration="OPTIONAL_DURATION" </font>
+<font color=red>#                  inclusive="OPTIONAL_INCLUSIVE_FLAG"</font>
+<font color=red>#                  xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;!-- TBD OPTIONAL START TIME ELEMENT (USE END TIME OR</font>
+<font color=red>#         DURATION) --&gt;</font>
+<font color=red>#  </font>
+<font color=red>#   &lt;!-- TBD OPTIONAL END TIME ELEMENT (ONLY WITH START TIME) --&gt;</font>
+<font color=red>#  </font>
+<font color=red>#   &lt;!-- TBD OPTIONAL TIME VALUE ELEMENT (USE IF NO VALUE</font>
+<font color=red>#         ATTRIBUTE) --&gt;</font>
+<font color=red>#  </font>
+<font color=red>#   &lt;!-- TBD OPTIONAL (MULTIPLE) DATUM ELEMENTS --&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;!-- ANY OPTIONAL (MULTIPLE) ELEMENT IN ANY NAMESPACE --&gt;</font>
+<font color=red># &lt;/nmwg:commonTime&gt;</font>
+<font color=red># </font>
+<font color=red># ##############################################################</font>
+
+<font color=orange>commonTime = </font>
+        <font color=green>element</font> <font color=blue>nmwg:commonTime</font> { 
+                (
+                        Type &amp;
+                        (
+                                TimeStamp |
+                                (
+                                        StartTime &amp; 
+                                        (
+                                                EndTime | 
+                                                Duration 
+                                        )
+                                )
+                        ) &amp;
+                        Datum*
+                ),
+                anyElement*
+        }
+
+
+<font color=red># ##############################################################</font>
+<font color=red># The datum is meant to be generic in this case because specific</font>
+<font color=red># namespace declarations should be used to better define what</font>
+<font color=red># format that datum should have.</font>
+<font color=red>#</font>
+<font color=red># Example: </font>
+<font color=red># </font>
+<font color=red># &lt;nmwg:datum ANY_ATTRIBUTE</font>
+<font color=red>#             xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;!-- ANY ELEMENT IN ANY NAMESPACE OR ANY TEXT --&gt;</font>
+<font color=red>#  </font>
+<font color=red># &lt;/nmwg:datum&gt;</font>
+<font color=red># </font>
+<font color=red># ##############################################################</font>
+
+<font color=orange>Datum =</font>
+        <font color=green>element</font> <font color=blue>nmwg:datum</font> { 
+                anyThing  
+        }
+        
+         
+<font color=red># ##############################################################</font>
+<font color=red># Common elements are defined as named patterns as they are re- </font>
+<font color=red># used several times.</font>
+<font color=red># ##############################################################</font>
+                
+<font color=orange>Identifier =</font>
+        attribute id { xsd:string }
+
+<font color=orange>MetadataIdentifierRef =</font>
+        attribute metadataIdRef { xsd:string }
+
+<font color=orange>MessageIdentifierRef =</font>
+        attribute messageIdRef { xsd:string }
+    
+<font color=orange>Type = </font>
+        attribute type { xsd:string }    
+
+
+<font color=red># ##############################################################</font>
+<font color=red># This sequence allows any element, attribute, or text (regardless </font>
+<font color=red># of name or namespace) into the document when invoked.</font>
+<font color=red># ##############################################################</font>
+
+<font color=orange>anyElement = </font>
+        <font color=green>element</font> <font color=blue>*</font> { 
+                anyThing 
+        }
+
+<font color=orange>anyAttribute = </font>
+        attribute * { text }
+
+<font color=orange>anyThing = </font>
+        ( 
+                anyElement | 
+                anyAttribute | 
+                text 
+        )*
+        
+        
+<font color=red># ##############################################################</font>
+<font color=red># This sequence allows any element, attribute, or text (only in the </font>
+<font color=red># NMWG namespace) into the document when invoked.</font>
+<font color=red># ##############################################################</font>
+        
+<font color=orange>anyNMWGElement = </font>
+        <font color=green>element</font> <font color=blue>nmwg:*</font> { 
+                anyNMWGThing 
+        }
+
+<font color=orange>anyNMWGAttribute = </font>
+        attribute * { text }
+
+<font color=orange>anyNMWGThing = </font>
+        ( 
+                anyNMWGElement | 
+                anyNMWGAttribute | 
+                text 
+        )*        
+	    </pre>
+<hr class="noprint">
+<h1 id="rfc.section.10" class="np">
+<a href="#rfc.section.10">10.</a>&nbsp;<a id="time_schema" href="#time_schema">Time Schema</a>
+</h1>
+<p id="rfc.section.10.p.1">
+</p>
+<div id="rfc.figure.u.2">
+</div>
+<pre>
+<font color=red># ##############################################################</font>
+<font color=red># </font>
+<font color=red># File:      nmtime.rnc - NMWG Time definitions</font>
+<font color=red># Version:   $Id: nmtime.rnc 230 2007-05-07 13:12:03Z swany $</font>
+<font color=red># Purpose:   This describes a set of time formats for </font>
+<font color=red>#             representing measurements.  </font>
+<font color=red>#                         </font>
+<font color=red># ##############################################################</font>
+
+
+<font color=red># ##############################################################</font>
+<font color=red># Namespace definitions</font>
+<font color=red># ##############################################################</font>
+<font color=orange>namespace nmtm = "http://ggf.org/ns/nmwg/time/2.0/"</font>
+
+
+<font color=red># ##############################################################</font>
+<font color=red># Regular time is attached to a specific datum instance; it is</font>
+<font color=red># essentially the same as before, but cannot have anything</font>
+<font color=red># 'inside' of it. The type can be simple, like UNIX, or it</font>
+<font color=red># could be something like timeRange or timeInterval. If this is</font>
+<font color=red># the case, we would then see the two extra time designators for</font>
+<font color=red># the start and end (or duration)</font>
+<font color=red># </font>
+<font color=red># Example:</font>
+<font color=red># </font>
+<font color=red># &lt;nmtm:time type="REQUIRED_TYPE" value="OPTIONAL_VALUE"</font>
+<font color=red>#            duration="OPTIONAL_DURATION" </font>
+<font color=red>#            inclusive="OPTIONAL_INCLUSIVE_FLAG"</font>
+<font color=red>#            xmlns:nmtm="http://ggf.org/ns/nmwg/time/2.0/"&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;!-- TBD OPTIONAL START TIME ELEMENT (USE END TIME OR </font>
+<font color=red>#        DURATION) --&gt;</font>
+<font color=red>#  </font>
+<font color=red>#   &lt;!-- TBD OPTIONAL END TIME ELEMENT (ONLY WITH START TIME) --&gt;</font>
+<font color=red>#  </font>
+<font color=red>#   &lt;!-- TBD OPTIONAL TIME VALUE ELEMENT (USE IF NO VALUE </font>
+<font color=red>#        ATTRIBUTE) --&gt;</font>
+<font color=red>#  </font>
+<font color=red># &lt;/nmtm:time&gt;</font>
+<font color=red># </font>
+<font color=red># ##############################################################</font>
+
+<font color=orange>Time = </font>
+        <font color=green>element</font> <font color=blue>nmtm:time</font> { 
+                attribute type { xsd:string } &amp;
+                (
+                         TimeStamp |
+                         (
+                                StartTime &amp; 
+                                ( 
+                                        EndTime | 
+                                        Duration
+                                )
+                         )
+                )
+        } 
+
+<font color=orange>TimeStamp =   </font>
+        ( 
+                attribute value { xsd:string } |
+                <font color=green>element</font> <font color=blue>nmtm:value</font> { xsd:string } 
+        )
+
+<font color=orange>Duration =</font>
+        attribute duration { xsd:string }
+
+<font color=orange>TimeContent = </font>
+        attribute type { text } &amp;
+        attribute inclusive { text }? &amp;
+        TimeStamp        
+
+<font color=orange>StartTime = </font>
+        <font color=green>element</font> <font color=blue>nmtm:start</font> { 
+                TimeContent
+        }
+   
+<font color=orange>EndTime = </font>
+        <font color=green>element</font> <font color=blue>nmtm:end</font> { 
+                TimeContent
+        }
+	    </pre>
+<hr class="noprint">
+<h1 id="rfc.section.11" class="np">
+<a href="#rfc.section.11">11.</a>&nbsp;<a id="topo_schema" href="#topo_schema">Topology Schema</a>
+</h1>
+<p id="rfc.section.11.p.1">
+</p>
+<div id="rfc.figure.u.3">
+</div>
+<pre>
+<font color=red># ##############################################################</font>
+<font color=red># </font>
+<font color=red># File:      nmtopo.rnc - Schema to describe topological</font>
+<font color=red>#                            elements.</font>
+<font color=red># Version:   $Id: nmtopo.rnc 230 2007-05-07 13:12:03Z swany $</font>
+<font color=red>#                         </font>
+<font color=red># ##############################################################</font>
+
+
+<font color=red># ##############################################################</font>
+<font color=red># Namespace definitions</font>
+<font color=red># ##############################################################</font>
+<font color=orange>namespace nmwgtopo = "http://ggf.org/ns/nmwg/topology/2.0/"</font>
+
+
+<font color=red># ##############################################################</font>
+<font color=red># Covers the basic point to point measurement situation.  The two </font>
+<font color=red># points are a source and destination; may contain information </font>
+<font color=red># such as hostname or ip address, and port number when applicable.</font>
+<font color=red># </font>
+<font color=red># Example:</font>
+<font color=red># </font>
+<font color=red># &lt;nmwgtopo:endPointPair </font>
+<font color=red>#  xmlns:nmwgtopo="http://ggf.org/ns/nmwg/topology/2.0/"&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;nmwgtopo:src type="REQUIRED_TYPE" value="REQUIRED_VALUE" </font>
+<font color=red>#                 port="OPTIONAL_PORT"/&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;nmwgtopo:dst type="REQUIRED_TYPE" value="REQUIRED_VALUE" </font>
+<font color=red>#                 port="OPTIONAL_PORT"/&gt;</font>
+<font color=red>#  </font>
+<font color=red># &lt;/nmwgtopo:endPointPair&gt;</font>
+<font color=red># </font>
+<font color=red># ##############################################################</font>
+
+<font color=orange>EndpointPair = </font>
+        <font color=green>element</font> <font color=blue>nmwgtopo:endPointPair</font> { 
+                EndpointPairContent
+        }
+
+<font color=orange>EndpointPairContent =</font>
+        <font color=green>element</font> <font color=blue>nmwgtopo:src</font> { 
+                EndpointContent
+        } &amp;
+        <font color=green>element</font> <font color=blue>nmwgtopo:dst</font> { 
+                EndpointContent
+        }  
+
+
+<font color=red># ##############################################################</font>
+<font color=red># Similar to above, from one point only.</font>
+<font color=red># </font>
+<font color=red># Example:</font>
+<font color=red># </font>
+<font color=red># &lt;nmwgtopo:endPoint type="REQUIRED_TYPE" value="REQUIRED_VALUE" </font>
+<font color=red>#               port="OPTIONAL_PORT"/&gt;</font>
+<font color=red># </font>
+<font color=red># ##############################################################</font>
+
+<font color=orange>Endpoint = </font>
+        <font color=green>element</font> <font color=blue>nmwgtopo:endPoint</font> { 
+                EndpointContent
+        }
+
+<font color=orange>EndpointContent = </font>
+        (
+                attribute value { xsd:string } |
+                text
+        ) &amp;
+        attribute type { xsd:string } &amp;
+        attribute port { xsd:string }?
+
+
+<font color=red># ##############################################################</font>
+<font color=red># When looking at network utilization numbers (from a router or </font>
+<font color=red># related software) there is a different set of applicable </font>
+<font color=red># information</font>
+<font color=red># </font>
+<font color=red># Example:</font>
+<font color=red># </font>
+<font color=red># &lt;nmwgtopo:interface xmlns:nmwgtopo="http://ggf.org/ns/nmwg/topology/2.0/"&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;nmwgtopo:ipAddress type='REQUIRED_TYPE'&gt; TEXT &lt;/nmwgtopo:ipAddress&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;nmwgtopo:hostName&gt; TEXT &lt;/nmwgtopo:hostName&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;nmwgtopo:ifName&gt; TEXT &lt;/nmwgtopo:ifName&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;nmwgtopo:ifDescription&gt; TEXT &lt;/nmwgtopo:ifDescription&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;nmwgtopo:ifAddress type='REQUIRED_TYPE'&gt; TEXT &lt;/nmwgtopo:ifAddress&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;nmwgtopo:ifHostName&gt; TEXT &lt;/nmwgtopo:ifHostName&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;nmwgtopo:ifIndex&gt; TEXT &lt;/nmwgtopo:ifIndex&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;nmwgtopo:type&gt; TEXT &lt;/nmwgtopo:type&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;nmwgtopo:direction&gt; TEXT &lt;/nmwgtopo:direction&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;nmwgtopo:authRealm&gt; TEXT &lt;/nmwgtopo:authRealm&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;nmwgtopo:classOfService&gt; TEXT &lt;/nmwgtopo:classOfService&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;nmwgtopo:capacity&gt; TEXT &lt;/nmwgtopo:capacity&gt;</font>
+<font color=red>#  </font>
+<font color=red># &lt;/nmwgtopo:interface&gt;</font>
+<font color=red># </font>
+<font color=red># ##############################################################</font>
+
+<font color=orange>Interface = </font>
+        <font color=green>element</font> <font color=blue>nmwgtopo:interface</font> { 
+                InterfaceContent
+        }
+
+<font color=orange>InterfaceContent = </font>
+        <font color=green>element</font> <font color=blue>nmwgtopo:ipAddress</font> { 
+                Address
+        }? &amp;
+        <font color=green>element</font> <font color=blue>nmwgtopo:hostName</font> { xsd:string }? &amp; 
+        <font color=green>element</font> <font color=blue>nmwgtopo:ifName</font> { xsd:string }? &amp; 
+        <font color=green>element</font> <font color=blue>nmwgtopo:ifDescription</font> { xsd:string }? &amp; 
+        <font color=green>element</font> <font color=blue>nmwgtopo:ifAddress</font> { 
+                Address
+        }? &amp;
+        <font color=green>element</font> <font color=blue>nmwgtopo:ifHostName</font> { xsd:string }? &amp; 
+        <font color=green>element</font> <font color=blue>nmwgtopo:ifIndex</font> { xsd:string }? &amp; 
+        <font color=green>element</font> <font color=blue>nmwgtopo:type</font> { xsd:string }? &amp; 
+        <font color=green>element</font> <font color=blue>nmwgtopo:direction</font> { xsd:string }? &amp; 
+        <font color=green>element</font> <font color=blue>nmwgtopo:authRealm</font> { xsd:string }? &amp; 
+        <font color=green>element</font> <font color=blue>nmwgtopo:classOfService</font> { xsd:string }? &amp; 
+        <font color=green>element</font> <font color=blue>nmwgtopo:capacity</font> { xsd:string }? 
+
+<font color=orange>Address = </font>
+        (
+                attribute value { xsd:string } |
+                text
+        ) &amp;
+        attribute type { xsd:string }
+
+	    </pre>
+<hr class="noprint">
+<h1 id="rfc.section.12" class="np">
+<a href="#rfc.section.12">12.</a>&nbsp;<a id="examples" href="#examples">Examples</a>
+</h1>
+<p id="rfc.section.12.p.1">This section includes examples of network measurements rendered in our schema. These examples are not intended to be normative, although at this time of this writing, they are in use.</p>
+<h2 id="rfc.section.12.1">
+<a href="#rfc.section.12.1">12.1</a>&nbsp;<a id="ping.rnc" href="#ping.rnc">Schema for ping</a>
+</h2>
+<p id="rfc.section.12.1.p.1">
+</p>
+<div id="rfc.figure.u.4">
+</div>
+<pre>
+              
+<font color=red># ##############################################################</font>
+<font color=red># </font>
+<font color=red># File:         ping.rnc - Specialized schema for the ping </font>
+<font color=red>#                          tool</font>
+<font color=red># Version:      $Id: ping.rnc 230 2007-05-07 13:12:03Z swany $</font>
+<font color=red># Purpose:      Defines elements to be used in the representation </font>
+<font color=red>#               of ping measurements.</font>
+<font color=red>#                         </font>
+<font color=red># ##############################################################</font>
+
+
+<font color=red># ##############################################################</font>
+<font color=red># Namespace definitions</font>
+<font color=red># ##############################################################</font>
+<font color=orange>namespace nmwg = "http://ggf.org/ns/nmwg/base/2.0/"</font>
+<font color=orange>namespace ping = "http://ggf.org/ns/nmwg/tools/ping/2.0/"</font>
+<font color=orange>namespace nmwgr = "http://ggf.org/ns/nmwg/result/2.0/"</font>
+
+
+<font color=red># ##############################################################</font>
+<font color=red># Include additional functionality from other files</font>
+<font color=red># ##############################################################</font>
+<font color=green>include</font> "nmtopo.rnc" 
+<font color=green>include</font> "nmtopo_ver3.rnc" 
+<font color=green>include</font> "result.rnc" 
+<font color=green>include</font> "nmbase.rnc" { 
+<font color=orange>        Metadata |= PingMetadata</font>
+<font color=orange>        Data |= PingData        </font>
+} 
+
+
+<font color=red># ##############################################################</font>
+<font color=red># Metadata </font>
+<font color=red># ##############################################################</font>
+        
+<font color=orange>PingMetadata = </font>
+        <font color=green>element</font> <font color=blue>nmwg:metadata</font> { 
+                Identifier &amp;
+                MetadataIdentifierRef? &amp;
+                PingMetadataContent
+        }
+          
+<font color=orange>PingMetadataBlock = </font>
+        PingSubject? &amp;
+        (
+                PingParameters |
+                Parameters
+        )?        
+        
+<font color=orange>PingMetadataContent = </font>
+        (
+                PingMetadataBlock |
+                FilterMetadataBlock                
+        ) &amp;        
+        EventType? &amp;
+        Key?        
+
+
+<font color=red># ##############################################################</font>
+<font color=red># Redefined ping subject allows only an endPointPair, and the</font>
+<font color=red># two id attributes.    </font>
+<font color=red>#</font>
+<font color=red># Example: </font>
+<font color=red># </font>
+<font color=red># &lt;ping:subject id="REQUIRED_ID" </font>
+<font color=red>#               metadataIdRef="OPTIONAL_REFERENCE_ID"</font>
+<font color=red>#               xmlns:nmwg="http://ggf.org/ns/nmwg/tools/ping/2.0/"&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;nmwgtopo:endPointPair xmlns:nmwgtopo="http://ggf.org/ns/nmwg/topology/2.0/"&gt;</font>
+<font color=red># </font>
+<font color=red>#     &lt;nmwgtopo:src type="REQUIRED_TYPE" value="REQUIRED_VALUE" </font>
+<font color=red>#                   port="OPTIONAL_PORT"/&gt;</font>
+<font color=red># </font>
+<font color=red>#     &lt;nmwgtopo:dst type="REQUIRED_TYPE" value="REQUIRED_VALUE" </font>
+<font color=red>#                   port="OPTIONAL_PORT"/&gt;</font>
+<font color=red>#  </font>
+<font color=red>#   &lt;/nmwgtopo:endPointPair&gt;</font>
+<font color=red>#  </font>
+<font color=red># &lt;/ping:subject&gt;</font>
+<font color=red>#</font>
+<font color=red># ##############################################################</font>
+
+<font color=orange>PingSubject =</font>
+        <font color=green>element</font> <font color=blue>ping:subject</font> { 
+                Identifier &amp;
+                MetadataIdentifierRef? &amp;     
+                (                   
+                        EndpointPair |
+                        L4EndpointPair
+                )
+        }
+
+
+<font color=red># ##############################################################</font>
+<font color=red># This is simply the regular method of doing parameters with an</font>
+<font color=red># enumeration to limit what 'names' are accepted and an outer</font>
+<font color=red># ping: namespace for the parameters.</font>
+<font color=red>#</font>
+<font color=red># Example: </font>
+<font color=red># </font>
+<font color=red># &lt;ping:parameters id="REQUIRED_ID" </font>
+<font color=red>#                   xmlns:nmwg="http://ggf.org/ns/nmwg/tools/ping/2.0/"&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;nmwg:parameter name="REQUIRED_ENUM_NAME" value="OPTIONAL_VALUE"</font>
+<font color=red>#                   xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;</font>
+<font color=red># </font>
+<font color=red>#     &lt;!-- ANY TEXT, (IF YOU DID NOT USE THE VALUE ATTRIBUTE) --&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;/nmwg:parameter&gt;</font>
+<font color=red>#  </font>
+<font color=red>#   &lt;!-- MORE PARAMETERS --&gt;</font>
+<font color=red>#   </font>
+<font color=red># &lt;/ping:parameters&gt;</font>
+<font color=red># </font>
+<font color=red># ##############################################################</font>
+
+<font color=orange>PingParameters =</font>
+        <font color=green>element</font> <font color=blue>ping:parameters</font> { 
+                Identifier &amp;        
+                PingParameter+
+        }
+        
+<font color=orange>PingParameter = </font>
+        <font color=green>element</font> <font color=blue>nmwg:parameter</font> { 
+                attribute name { "count" | "interval" | "deadline" | 
+                                 "packetSize" | "ttl" | "arguments" |   
+                                 "valueUnits" | "numBytes" | 
+                                 "numBytesUnits" } &amp;
+                (
+                        attribute value { text } |
+                        text
+                )
+        }
+
+
+<font color=red># ##############################################################</font>
+<font color=red># The data block is complex, and has the potential to contain</font>
+<font color=red># many things.  The data block can be used to return a metadata</font>
+<font color=red># block from a request, commonTime or datum elements, keys, </font>
+<font color=red># or something that we have perhaps not defined as of yet.  </font>
+<font color=red>#</font>
+<font color=red># Example: </font>
+<font color=red># </font>
+<font color=red># &lt;nmwg:data id="REQUIRED_ID" </font>
+<font color=red>#            metadataIdRef="OPTIONAL_REFERENCE_ID" </font>
+<font color=red>#            xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;!-- OPTIONAL (MULTIPLE) METADATA --&gt;</font>
+<font color=red># </font>
+<font color=red>#           &lt;!-- OR --&gt;</font>
+<font color=red>#</font>
+<font color=red>#   &lt;!-- TBD OPTIONAL (MULTIPLE) COMMON TIME ELEMENTS AND </font>
+<font color=red>#        OPTIONAL (MULTIPLE) DATUM ELEMENTS--&gt;</font>
+<font color=red># </font>
+<font color=red>#           &lt;!-- OR --&gt;</font>
+<font color=red>#  </font>
+<font color=red>#   &lt;!-- TBD OPTIONAL (MULTIPLE) DATUM ELEMENTS --&gt;</font>
+<font color=red># </font>
+<font color=red>#           &lt;!-- OR --&gt;</font>
+<font color=red>#  </font>
+<font color=red>#   &lt;!-- OPTIONAL (MULTIPLE) KEY ELEMENTS --&gt;</font>
+<font color=red># </font>
+<font color=red>#           &lt;!-- OR --&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;!-- ANY OPTIONAL (MULTIPLE) ELEMENT IN ANY NAMESPACE --&gt;</font>
+<font color=red>#   </font>
+<font color=red># &lt;/nmwg:data&gt;</font>
+<font color=red># </font>
+<font color=red># ##############################################################</font>
+   
+<font color=orange>PingData =</font>
+        <font color=green>element</font> <font color=blue>nmwg:data</font> { 
+                Identifier &amp;
+                MetadataIdentifierRef? &amp;
+                (
+                        (
+                                Metadata* |
+                                PingMetadata*
+                        ) |
+                        (
+                                PingCommonTime+ &amp; 
+                                (
+                                        PingDatum* |
+                                        ResultDatum*
+                                )
+                        ) |
+                        (
+                                PingDatum* |
+                                ResultDatum*
+                        ) |
+                        Key*
+                )
+        }
+
+
+<font color=red># ##############################################################</font>
+<font color=red># CommonTime </font>
+<font color=red># ##############################################################</font>
+        
+<font color=orange>PingCommonTime = </font>
+        <font color=green>element</font> <font color=blue>nmwg:commonTime</font> { 
+                Type &amp;
+                (
+                        TimeStamp |
+                        (
+                                StartTime &amp; 
+                                (
+                                        EndTime | 
+                                        Duration 
+                                )
+                         )
+                ) &amp;
+                (
+                        PingDatum* |
+                        ResultDatum*
+                )
+        } 
+
+
+<font color=red># ##############################################################</font>
+<font color=red># These are the basic elements we would expect to see in the </font>
+<font color=red># specific ping datum.</font>
+<font color=red>#</font>
+<font color=red># Example: </font>
+<font color=red># </font>
+<font color=red># &lt;ping:datum value="REQUIRED_VALUE"</font>
+<font color=red>#              valueUnits="OPTIONAL_VALUE_UNITS"</font>
+<font color=red>#              numBytes="OPTIONAL_NUM_BYTES"</font>
+<font color=red>#              numBytesUnits="OPTIONAL_NUM_BYTES_UNITS"</font>
+<font color=red>#              seqNum="OPTIONAL_SEQ_NUM"</font>
+<font color=red>#              ttl="OPTIONAL_TTL"</font>
+<font color=red>#              timeType="OPTIONAL_TIME_TYPE"</font>
+<font color=red>#              timeValue="OPTIONAL_TIME_VALUE"</font>
+<font color=red>#              xmlns:nmwg="http://ggf.org/ns/nmwg/tools/ping/2.0/"&gt;</font>
+<font color=red># </font>
+<font color=red>#   &lt;!-- TIME ELEMENT (IF ATTRIBUTES NOT USED) --&gt;</font>
+<font color=red>#  </font>
+<font color=red># &lt;/ping:datum&gt;</font>
+<font color=red># </font>
+<font color=red># ##############################################################</font>
+
+<font color=orange>PingDatum =</font>
+        <font color=green>element</font> <font color=blue>ping:datum</font> { 
+                attribute value { xsd:float } &amp;
+                attribute valueUnits { xsd:string }? &amp;        
+                attribute numBytes { xsd:int }? &amp;
+                attribute numBytesUnits { xsd:string }? &amp;
+                attribute seqNum { xsd:int }? &amp;
+                attribute ttl { xsd:int }? &amp;
+                (
+                        (
+                                attribute timeType { xsd:string } &amp; 
+                                attribute timeValue { xsd:string }
+                        ) |
+                        Time
+                )?                       
+        }
+	    
+            </pre>
+<h2 id="rfc.section.12.2">
+<a href="#rfc.section.12.2">12.2</a>&nbsp;<a id="ping.xml" href="#ping.xml">Instance document for ping</a>
+</h2>
+<p id="rfc.section.12.2.p.1">
+</p>
+<div id="rfc.figure.u.5">
+</div>
+<pre>
+              
+<font color=orange>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</font>
+<font color=orange>&lt;nmwg:message type="store" </font>
+<font color=orange>              xmlns="http://ggf.org/ns/nmwg/base/2.0/"</font>
+<font color=orange>              xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/" </font>
+<font color=orange>              xmlns:ping="http://ggf.org/ns/nmwg/tools/ping/2.0/" </font>
+<font color=orange>              xmlns:nmwgt="http://ggf.org/ns/nmwg/topology/2.0/" </font>
+<font color=orange>              xmlns:nmtm="http://ggf.org/ns/nmwg/time/2.0/"</font>
+<font color=orange>              xmlns:nmtl4="http://ggf.org/ns/nmwg/topology/l4/3.0/"</font>
+<font color=orange>              xmlns:nmtl3="http://ggf.org/ns/nmwg/topology/l3/3.0/"</font>
+<font color=orange>              xmlns:select="http://ggf.org/ns/nmwg/ops/select/2.0/"</font>
+<font color=orange>              xmlns:average="http://ggf.org/ns/nmwg/ops/average/2.0/"</font>
+<font color=orange>              xmlns:nmwgr="http://ggf.org/ns/nmwg/result/2.0/"&gt;</font>
+              
+  &lt;!-- Metadata using original topology schema --&gt;
+        
+<font color=orange>  &lt;nmwg:metadata id="pingmeta1"&gt;</font>
+<font color=orange>    &lt;ping:subject id="pingsub1"&gt;</font>
+      &lt;nmwgt:endPointPair&gt;
+<font color=orange>        &lt;nmwgt:src type="hostname" value="dreadnought.cis.udel.edu" port="4543"/&gt;</font>
+<font color=orange>        &lt;nmwgt:dst type="hostname" value="alderaan.cse.psu.edu" port="34343"/&gt;</font>
+      &lt;/nmwgt:endPointPair&gt;
+    &lt;/ping:subject&gt;
+<font color=orange>    &lt;ping:parameters id="pingparam1"&gt;</font>
+<font color=orange>      &lt;nmwg:parameter name="count"&gt;2&lt;/nmwg:parameter&gt;</font>
+<font color=orange>      &lt;nmwg:parameter name="interval"&gt;3&lt;/nmwg:parameter&gt;</font>
+<font color=orange>      &lt;nmwg:parameter name="deadline"&gt;10&lt;/nmwg:parameter&gt;         </font>
+    &lt;/ping:parameters&gt;   
+  &lt;/nmwg:metadata&gt;
+
+
+  &lt;!-- Metadata(s) using new topology schema --&gt;
+        
+<font color=orange>  &lt;nmwg:metadata id="pingmeta2"&gt;</font>
+<font color=orange>    &lt;ping:subject id="pingsub2"&gt;</font>
+      &lt;nmtl4:endPointPair&gt;
+<font color=orange>        &lt;nmtl4:endPoint role="src" port="4543" protocol="icpm"&gt;</font>
+<font color=orange>          &lt;nmtl4:address value="dreadnought.cis.udel.edu" type="hostname"/&gt;</font>
+        &lt;/nmtl4:endPoint&gt;
+<font color=orange>        &lt;nmtl4:endPoint role="dst" port="34343" protocol="icpm"&gt;</font>
+<font color=orange>          &lt;nmtl4:address value="alderaan.cse.psu.edu" type="hostname"/&gt;</font>
+        &lt;/nmtl4:endPoint&gt;
+      &lt;/nmtl4:endPointPair&gt;
+    &lt;/ping:subject&gt;
+<font color=orange>    &lt;ping:parameters id="pingparam2"&gt;</font>
+<font color=orange>      &lt;nmwg:parameter name="count"&gt;2&lt;/nmwg:parameter&gt;</font>
+<font color=orange>      &lt;nmwg:parameter name="interval"&gt;3&lt;/nmwg:parameter&gt;</font>
+<font color=orange>      &lt;nmwg:parameter name="deadline"&gt;10&lt;/nmwg:parameter&gt;         </font>
+    &lt;/ping:parameters&gt;   
+  &lt;/nmwg:metadata&gt;
+
+<font color=orange>  &lt;nmwg:metadata id="pingmeta3"&gt;</font>
+<font color=orange>    &lt;ping:subject id="pingsub3"&gt;</font>
+      &lt;nmtl4:endPointPair&gt;
+<font color=orange>        &lt;nmtl4:endPoint role="src" port="4543" protocol="icpm"&gt;</font>
+<font color=orange>          &lt;nmtl3:interface id="d1"&gt;</font>
+<font color=orange>            &lt;nmtl3:ipAddress value="128.4.133.200" type="ipv4"/&gt;</font>
+            &lt;nmtl3:netmask&gt;255.255.255.0&lt;/nmtl3:netmask&gt;
+            &lt;nmtl3:ifName&gt;eth0&lt;/nmtl3:ifName&gt;
+            &lt;nmtl3:ifDescription&gt;External Connection&lt;/nmtl3:ifDescription&gt;
+<font color=orange>            &lt;nmtl3:ifAddress value="128.4.133.200" type="ipv4"/&gt;</font>
+            &lt;nmtl3:ifHostName&gt;dreadnought.cis.udel.edu&lt;/nmtl3:ifHostName&gt;
+            &lt;nmtl3:ifIndex&gt;0&lt;/nmtl3:ifIndex&gt;                                                  
+            &lt;nmtl3:type&gt;1000BaseT Ethernet&lt;/nmtl3:type&gt;
+            &lt;nmtl3:capacity&gt;1000000000&lt;/nmtl3:capacity&gt;                    
+          &lt;/nmtl3:interface&gt;
+        &lt;/nmtl4:endPoint&gt;
+<font color=orange>        &lt;nmtl4:endPoint role="dst" port="34343" protocol="icpm"&gt;</font>
+<font color=orange>          &lt;nmtl3:interface id="a1"&gt;</font>
+<font color=orange>            &lt;nmtl3:ipAddress value="130.203.16.20" type="ipv4"/&gt;</font>
+            &lt;nmtl3:netmask&gt;255.255.255.0&lt;/nmtl3:netmask&gt;
+            &lt;nmtl3:ifName&gt;eth0&lt;/nmtl3:ifName&gt;
+            &lt;nmtl3:ifDescription&gt;External Connection&lt;/nmtl3:ifDescription&gt;
+<font color=orange>            &lt;nmtl3:ifAddress value="130.203.16.20" type="ipv4"/&gt;</font>
+            &lt;nmtl3:ifHostName&gt;alderaan.cse.psu.edu&lt;/nmtl3:ifHostName&gt;
+            &lt;nmtl3:ifIndex&gt;0&lt;/nmtl3:ifIndex&gt;                                                  
+            &lt;nmtl3:type&gt;1000BaseT Ethernet&lt;/nmtl3:type&gt;
+            &lt;nmtl3:capacity&gt;1000000000&lt;/nmtl3:capacity&gt;                    
+          &lt;/nmtl3:interface&gt;
+        &lt;/nmtl4:endPoint&gt;
+      &lt;/nmtl4:endPointPair&gt;
+    &lt;/ping:subject&gt;
+<font color=orange>    &lt;ping:parameters id="pingparam3"&gt;</font>
+<font color=orange>      &lt;nmwg:parameter name="count"&gt;2&lt;/nmwg:parameter&gt;</font>
+<font color=orange>      &lt;nmwg:parameter name="interval"&gt;3&lt;/nmwg:parameter&gt;</font>
+<font color=orange>      &lt;nmwg:parameter name="deadline"&gt;10&lt;/nmwg:parameter&gt;         </font>
+    &lt;/ping:parameters&gt;   
+  &lt;/nmwg:metadata&gt;    
+
+  &lt;!-- metadata(s) with filter chaining --&gt;
+
+<font color=orange>  &lt;nmwg:metadata id="pingmeta4"&gt;</font>
+<font color=orange>    &lt;ping:subject id="pingsub4"&gt;</font>
+      &lt;nmwgt:endPointPair&gt;
+<font color=orange>        &lt;nmwgt:src type="hostname" value="dreadnought.cis.udel.edu" port="4543"/&gt;</font>
+<font color=orange>        &lt;nmwgt:dst type="hostname" value="alderaan.cse.psu.edu" port="34343"/&gt;</font>
+      &lt;/nmwgt:endPointPair&gt;
+    &lt;/ping:subject&gt;
+<font color=orange>    &lt;ping:parameters id="pingparam4"&gt;</font>
+<font color=orange>      &lt;nmwg:parameter name="count"&gt;2&lt;/nmwg:parameter&gt;</font>
+<font color=orange>      &lt;nmwg:parameter name="interval"&gt;3&lt;/nmwg:parameter&gt;</font>
+<font color=orange>      &lt;nmwg:parameter name="deadline"&gt;10&lt;/nmwg:parameter&gt;         </font>
+    &lt;/ping:parameters&gt;   
+  &lt;/nmwg:metadata&gt;
+
+<font color=orange>  &lt;nmwg:metadata id="pingmeta5"&gt;     </font>
+<font color=orange>    &lt;select:subject id="pingsub5" metadataIdRef="pingmeta4" /&gt;  </font>
+<font color=orange>    &lt;select:parameters id="pingparam5"&gt;</font>
+<font color=orange>      &lt;nmwg:parameter name="timeValue"&gt;</font>
+<font color=orange>        &lt;nmwg:parameter name="greaterThan"&gt;1107492199&lt;/nmwg:parameter&gt;      </font>
+      &lt;/nmwg:parameter&gt;
+    &lt;/select:parameters&gt;
+  &lt;/nmwg:metadata&gt;
+
+<font color=orange>  &lt;nmwg:metadata id="pingmeta6"&gt;     </font>
+<font color=orange>    &lt;select:subject id="pingsub6" metadataIdRef="pingmeta5" /&gt;  </font>
+<font color=orange>    &lt;select:parameters id="pingparam6"&gt;</font>
+<font color=orange>      &lt;nmwg:parameter name="timeValue"&gt;</font>
+<font color=orange>        &lt;nmwg:parameter name="lessThan"&gt;1107492207&lt;/nmwg:parameter&gt;      </font>
+      &lt;/nmwg:parameter&gt;    
+    &lt;/select:parameters&gt;
+  &lt;/nmwg:metadata&gt;
+
+<font color=orange>  &lt;nmwg:metadata id="pingmeta7"&gt;     </font>
+<font color=orange>    &lt;average:subject id="pingsub7" metadataIdRef="pingmeta6" /&gt;  </font>
+<font color=orange>    &lt;average:parameters id="pingparam7"&gt;</font>
+<font color=orange>      &lt;nmwg:parameter name="value" /&gt;</font>
+    &lt;/average:parameters&gt;
+  &lt;/nmwg:metadata&gt;  
+  
+
+  &lt;!-- Data block, with a time block, with multiple datum blocks --&gt;
+<font color=orange>  &lt;nmwg:data id="data1" metadataIdRef="pingmeta1"&gt;</font>
+<font color=orange>    &lt;nmwg:commonTime type="unix" value="1107492095"&gt;</font>
+<font color=orange>      &lt;ping:datum seqNum="0" value="19.1" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes" /&gt; </font>
+<font color=orange>      &lt;ping:datum seqNum="1" value="19.2" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes" /&gt;</font>
+    &lt;/nmwg:commonTime&gt;
+  &lt;/nmwg:data&gt; 
+
+  &lt;!-- Data block, with a time block, with multiple datum blocks (other way to show time) --&gt;
+<font color=orange>  &lt;nmwg:data id="data2" metadataIdRef="pingmeta1"&gt;  </font>
+<font color=orange>    &lt;nmwg:commonTime type="unix"&gt;</font>
+      &lt;nmtm:value&gt;1107492096&lt;/nmtm:value&gt;
+<font color=orange>      &lt;ping:datum seqNum="0" value="19.3" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes" /&gt; </font>
+<font color=orange>      &lt;ping:datum seqNum="1" value="19.4" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes" /&gt;</font>
+    &lt;/nmwg:commonTime&gt;
+  &lt;/nmwg:data&gt;  
+
+  &lt;!-- Data block, with a time block (range), with multiple datum blocks --&gt;
+<font color=orange>  &lt;nmwg:data id="data3" metadataIdRef="pingmeta1"&gt;  </font>
+<font color=orange>    &lt;nmwg:commonTime type="range"&gt;</font>
+<font color=orange>      &lt;nmtm:start type="unix" value="1107492097"/&gt;</font>
+<font color=orange>      &lt;nmtm:end type="unix" value="1107492395"/&gt;</font>
+<font color=orange>      &lt;ping:datum seqNum="0" value="19.2" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes" /&gt; </font>
+<font color=orange>      &lt;ping:datum seqNum="1" value="17.3" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes" /&gt;</font>
+<font color=orange>      &lt;ping:datum seqNum="3" value="45.4" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes" /&gt;</font>
+<font color=orange>      &lt;ping:datum seqNum="88" value="21.9" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes" /&gt;      </font>
+    &lt;/nmwg:commonTime&gt;
+  &lt;/nmwg:data&gt;  
+
+  &lt;!-- Data block, with a time block (durration), with multiple datum blocks --&gt;
+<font color=orange>  &lt;nmwg:data id="data4" metadataIdRef="pingmeta1"&gt;  </font>
+<font color=orange>    &lt;nmwg:commonTime type="durration" duration="300"&gt;</font>
+<font color=orange>      &lt;nmtm:start type="unix" value="1107492097"/&gt;</font>
+<font color=orange>      &lt;ping:datum seqNum="0" value="19.2" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes" /&gt; </font>
+<font color=orange>      &lt;ping:datum seqNum="1" value="17.3" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes" /&gt;</font>
+<font color=orange>      &lt;ping:datum seqNum="3" value="45.4" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes" /&gt;</font>
+<font color=orange>      &lt;ping:datum seqNum="88" value="21.9" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes" /&gt;</font>
+    &lt;/nmwg:commonTime&gt;
+  &lt;/nmwg:data&gt; 
+
+  &lt;!-- data with datum blocks, time is inline (two ways to represent time) --&gt;
+<font color=orange>  &lt;nmwg:data id="data5" metadataIdRef="pingmeta1"&gt;  </font>
+<font color=orange>    &lt;ping:datum seqNum="0" value="14.3" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes" timeType="unix" timeValue="1107492199" /&gt; </font>
+<font color=orange>    &lt;ping:datum seqNum="1" value="17.4" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes" timeType="unix" timeValue="1107492201" /&gt;</font>
+  &lt;/nmwg:data&gt; 
+
+  <font color=green>&lt;!--</font> <font color=blue>data</font> with datum blocks, time is a sub element --&gt; 
+<font color=orange>  &lt;nmwg:data id="data6" metadataIdRef="pingmeta1"&gt;   </font>
+<font color=orange>    &lt;ping:datum seqNum="0" value="19.6" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes"&gt;</font>
+<font color=orange>      &lt;nmtm:time type="unix" value="1107493095" /&gt;</font>
+    &lt;/ping:datum&gt; 
+<font color=orange>    &lt;ping:datum seqNum="0" value="18.5" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes"&gt;</font>
+<font color=orange>      &lt;nmtm:time type="unix" value="1107493095" /&gt;</font>
+    &lt;/ping:datum&gt; 
+  &lt;/nmwg:data&gt; 
+      
+  <font color=green>&lt;!--</font> <font color=blue>data</font> with datum blocks, time is a sub element --&gt; 
+<font color=orange>  &lt;nmwg:data id="data7" metadataIdRef="pingmeta1"&gt; </font>
+<font color=orange>    &lt;ping:datum seqNum="0" value="19.6" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes"&gt;</font>
+<font color=orange>      &lt;nmtm:time type="unix"&gt;</font>
+        &lt;nmtm:value&gt;1107493095&lt;/nmtm:value&gt;
+      &lt;/nmtm:time&gt;
+    &lt;/ping:datum&gt; 
+<font color=orange>    &lt;ping:datum seqNum="0" value="18.5" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes"&gt;</font>
+<font color=orange>      &lt;nmtm:time type="unix"&gt;</font>
+        &lt;nmtm:value&gt;1107493095&lt;/nmtm:value&gt;
+      &lt;/nmtm:time&gt;
+    &lt;/ping:datum&gt; 
+  &lt;/nmwg:data&gt; 
+
+  <font color=green>&lt;!--</font> <font color=blue>data</font> with datum blocks, time is a sub element (other way to show time) --&gt; 
+<font color=orange>  &lt;nmwg:data id="data8" metadataIdRef="pingmeta1"&gt;</font>
+<font color=orange>    &lt;ping:datum seqNum="0" value="19.6" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes"&gt;</font>
+<font color=orange>      &lt;nmtm:time type="range"&gt;</font>
+<font color=orange>        &lt;nmtm:start type="unix" value="1107492095"/&gt;</font>
+<font color=orange>        &lt;nmtm:end type="unix" value="1107492395"/&gt;</font>
+      &lt;/nmtm:time&gt;
+    &lt;/ping:datum&gt; 
+<font color=orange>    &lt;ping:datum seqNum="0" value="18.5" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes"&gt;</font>
+<font color=orange>      &lt;nmtm:time type="range"&gt;</font>
+<font color=orange>        &lt;nmtm:start type="unix" value="1107492095"/&gt;</font>
+<font color=orange>        &lt;nmtm:end type="unix" value="1107492395"/&gt;</font>
+      &lt;/nmtm:time&gt;
+    &lt;/ping:datum&gt; 
+  &lt;/nmwg:data&gt; 
+
+<font color=orange>  &lt;nmwg:data id="data9" metadataIdRef="pingmeta1"&gt;</font>
+<font color=orange>    &lt;ping:datum seqNum="0" value="19.6" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes"&gt;</font>
+<font color=orange>      &lt;nmtm:time type="durration" duration="300"&gt;</font>
+<font color=orange>        &lt;nmtm:start type="unix" value="1107492095"/&gt;</font>
+      &lt;/nmtm:time&gt;
+    &lt;/ping:datum&gt; 
+<font color=orange>    &lt;ping:datum seqNum="0" value="18.5" valueUnits="ms" ttl="241" numBytes="64" numBytesUnits="bytes"&gt;</font>
+<font color=orange>      &lt;nmtm:time type="durration" duration="300"&gt;</font>
+<font color=orange>        &lt;nmtm:start type="unix" value="1107492095"/&gt;</font>
+      &lt;/nmtm:time&gt;
+    &lt;/ping:datum&gt; 
+  &lt;/nmwg:data&gt; 
+  
+  &lt;!-- result datum elements --&gt;
+<font color=orange>  &lt;nmwg:data id="data10" metadataIdRef="pingmeta1"&gt;  </font>
+<font color=orange>    &lt;nmwgr:datum type="error.ping.mp"&gt;From lager (192.168.0.200) icmp_seq=1 Destination Host Unreachable&lt;/nmwgr:datum&gt;</font>
+  &lt;/nmwg:data&gt; 
+    
+&lt;/nmwg:message&gt;
+	    
+            </pre>
+<hr class="noprint">
+<h1 id="rfc.section.13" class="np">
+<a href="#rfc.section.13">13.</a>&nbsp;Security Concerns</h1>
+<p id="rfc.section.13.p.1">There are important security concerns associated with the generation and distribution of network measurement information. For example, ISPs frequently consider network configuration and performance information to be proprietary. Furthermore, observing traffic, and, in particular, collecting packet headers, is frequently considered a violation of the presumption of privacy on the network. Systems that collect the measurements described here are sometimes regarded as invasive, and, indeed, poorly designed or configured monitoring tools can consume a disproportionate amount of network bandwidth. Port blocking, protocol blocking, and traffic shaping can impact many measurement tools. Tools, such as traceroute, that send UDP probes to increasing port numbers can appear to be port scans and raise security alerts.</p>
+<p id="rfc.section.13.p.2">We do not address those concerns in this document, but implementers are encouraged to consider the security implications of generating and distributing measurement information. While distribution of end-to-end application-level measurements is generally accepted, measurements that identify individual users or consume noticeable amounts of resources should be taken carefully, and the distribution of information to other sites that cannot be obtained readily by other users at those sites should be considered carefully.</p>
+<hr class="noprint">
+<h1 id="rfc.section.14" class="np">
+<a href="#rfc.section.14">14.</a>&nbsp;Appendices</h1>
+<h2 id="rfc.section.14.1">
+<a href="#rfc.section.14.1">14.1</a>&nbsp;Acknowledgements</h2>
+<p id="rfc.section.14.1.p.1">We gratefully acknowledge the contributions of: Jeff Boote, Eric Boyd, Mark Leese, Dan Gunter, Richard Hughes-Jones, Jason Zurawski and the other members of the Network Measurements Working Group.</p>
+<h1 class="np" id="rfc.references">
+<a href="#rfc.section.15">15.</a> References</h1>
+<table summary="References" border="0" cellpadding="2">
+<tr>
+<td class="topnowrap">
+<b id="refs.tridentcom">[1]</b>
+</td>
+<td class="top">Zurawski, J., Swany, M., and D. Gunter, &#8220;A Scalable Framework for Representation and Exchange
+            of Network Measurements&#8221;, In Proceedings of 2nd International IEEE/Create-Net      Conference on Testbeds and Research Infrastructures for the      Development of Networks and Communities (Tridentcom      2006), 2006.</td>
+</tr>
+<tr>
+<td class="topnowrap">
+<b id="refs.hierarchy">[2]</b>
+</td>
+<td class="top">Lowekamp, B., Tierney, B., Cottrell, L., Hughes-Jones, R., Kielmann, T., and M. Swany, &#8220;Enabling Network Measurement Portability Through a
+            Hierarchy of Characteristics&#8221;, 4th International Workshop on Grid Computing (Grid2003), November&nbsp;2003.</td>
+</tr>
+</table>
+<hr class="noprint">
+<h1 id="rfc.authors" class="np">Author's Address</h1>
+<address class="vcard">
+<span class="vcardline">
+<span class="fn">D. Martin Swany</span>
+          (editor)
+        <span class="n hidden">
+<span class="family-name">Swany</span>
+<span class="given-name">D. Martin</span>
+</span>
+</span>
+<span class="org vcardline"> University of Delaware Department
+        of Computer and Information Sciences Newark, DE 19716
+      </span>
+</address>
+<h1>
+<a id="rfc.copyright" href="#rfc.copyright">Full Copyright Statement</a>
+</h1>
+<p>Copyright © The Open Grid Forum (2008). All Rights Reserved.</p>
+<p>This document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to the OGF or other organizations, except as needed for the purpose of developing Grid Recommendations in which case the procedures for copyrights defined in the OGF Document process must be followed, or as required to translate it into languages other than English.</p>
+<p>The limited permissions granted above are perpetual and will not be revoked by the OGF or its successors or assignees.</p>
+<p>This document and the information contained herein is provided on an &#8220;As Is&#8221; basis and the OGF disclaims all warranties, express or implied, including but not limited to any warranty that the use of the information herein will not infringe any rights or any implied warranties of merchantability or fitness for a particular purpose.</p>
+<hr class="noprint">
+<h1 class="np">
+<a id="rfc.ipr" href="#rfc.ipr">Intellectual Property</a>
+</h1>
+<p>The OGF takes no position regarding the validity or scope of any intellectual property or other rights that might be claimed to pertain to the implementation or use of the technology described in this document or the extent to which any license under such rights might or might not be available; neither does it represent that it has made any effort to identify any such rights. Copies of claims of rights made available for publication and any assurances of licenses to be made available, or the result of an attempt made to obtain a general license or permission for the use of such proprietary rights by implementers or users of this specification can be obtained from the OGF Secretariat.</p>
+<p>The OGF invites any interested party to bring to its attention any copyrights, patents or patent applications, or other proprietary rights, which may cover technology that may be required to practice this recommendation. Please address the information to the OGF Executive Director.</p>
+<!-- forge.gridforum.org footer.html -->
+<br> <hr>
+<table width='100%'> 
+ <tr>
+  <td align='left'>   <a href='http://www.ogf.org/' target='_blank' style='border: 0 px;'><img src='../../../../../../../ogf-it/opengridforum.gif' alt='The Open Grid Forum' style='border:0px white solid;'></a><td>
+  <td align='center'> <a href='mailto:webmaster@ogf.org'>Contact Webmaster</a> 
+                    | <a href="../../../../../../tracker/do/createArtifact/projects.ggf-info/tracker.html">Report a problem</a>
+                    | <a href="../../../../../../wiki/do/viewPage/projects.ggf-info/wiki/HomePage.html">GridForge Help</a>
+                    </td>
+  <td align='right'>  
+<!--		<img src='/ogf-it/powered_by_dell.gif' alt='Powered by Dell'> -->
+<!-- Begin DigiCert/ClickID site seal HTML and JavaScript -->
+<div id="DigiCertClickID_sxSDRU4L">
+  <a href="http://www.digicert.com/">SSL Certificates</a>
+</div>
+<script type="text/javascript">
+var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_sxSDRU4L", "10", "m", "black", "sxSDRU4L"]);(function(){var cid=document.createElement("script");cid.type="text/javascript";cid.async=true;cid.src=("https:" === document.location.protocol ? "https://" : "http://")+"seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
+</script>
+<!-- End DigiCert/ClickID site seal HTML and JavaScript -->
+  </td>
+ </tr>
+</table>
+<!-- google analytics code -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6775861-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+
+This is a static archive of the previous Open Grid Forum GridForge content management system saved from host forge.ogf.org file /sf/docman/do/downloadDocument/projects.nm-wg/docman.root.working_drafts/doc15119/1 at Sun, 06 Nov 2022 15:11:45 GMT
+</html

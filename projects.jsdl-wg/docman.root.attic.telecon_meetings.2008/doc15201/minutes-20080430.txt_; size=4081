@@ -1,0 +1,100 @@
+JSDL Teleconference - 30 April 2008
+===================================
+
+* Participants
+
+  Donal Fellows
+  Steve McGough
+  Shabaz Memon
+  Andreas Savva
+  Philipp Wieder
+  Geoff Williams
+
+  Apologies: Alexander Papaspyrou, Michel Drescher
+
+  Minutes: Andreas Savva
+
+* Activity schema use cases
+
+  ACTION: Philipp will put Chris' use case in the current format
+  ACTION: Philipp will put the resource discovery UDAP use case in
+          the current format
+
+  Discussed the two use cases on gridforge to identify
+  requirements. As the use cases are still being worked on this list
+  is a partial one. Also the requirements lists are not unified or
+  prioritized at this point. Some notes on potential priority are
+  included.
+
+  Activity use case folder:
+  - http://forge.ogf.org/short/jsdl-wg/activity-use-cases
+
+** Requirements list - Scheduling use case
+
+  - Description of activity and its requirements including
+    - scheduling attributes
+    - dependencies to other activities
+  - Current state of the activity (e.g., as defined by BES state
+    model)
+  - "provenance record", for example, which scheduler has taken over
+    responsibility for the activity
+  - A history of such records
+  - Decisions made by scheduler for activity
+    - Including a record of the information (e.g., candidates) used
+      for the decision. 
+      - Since this information can be huge there are probably
+        different levels of support:
+        - provide a 'container' and an example of what kind of
+          information may go in it; or
+        - a pointer to a location where that information is available
+      - This is probably a low priority requirement
+  - Submission to the secondary scheduler is potentially different
+    than to the primary scheduler. Information about the activity
+    'instance' (e.g., EPR) could be passed to the secondary scheduler
+    instead of a template. This information could be part of the
+    schema but does not have to. As this touches on implementation of
+    'activity', which is out of scope, agreed to postpone discussion
+    for a later time.
+  - Resource consumption as part of the activity record
+  - Ability to seal or mark final an activity record
+    - This also raised broader security or confidentiality
+      issues. Agreed that there are a number of requirements including
+      - Access control (on the whole activity or specific records)
+      - Policy definition (which nodes can be accessed by whom and
+        when) 
+      These should be handled by existing security specifications but
+      issues should be identified in a security considerations
+      section.
+  - If a job is rejected should there be any information on who
+    rejected it and why? And how should it be captured?
+    - At a basic(simple)level this could be captured by state changes
+      in the activity
+    - There is no standard way to capture the reason for rejection;
+      this could be free format in the general case
+    - In certain narrow cases more information could be provided: For
+      example in the scheduling use case, a maximum number of retries
+      could be a reason.
+    - Schema or format for the reason is necessarily out of scope
+
+** Requirements list - Workflow fault detection and recovery use case
+
+  - Job checkpointing information
+    - could be part of the record or a pointer to another location
+  - Detailed information about fault types; what caused the job fail
+  - Resource usage information for accounting and billing
+  - Status history (any transition) 
+    - Timestamped
+  - Address of the BES (epr) executing activity
+  - Data locations used by each activity
+  - Status of each sub-activity
+    - And of the whole activity
+  - Description of dependencies 
+  - History of records
+
+* Next call 
+
+  - Moving to a weekly schedule alternating topics each week between
+    parameter sweep and activity schema (at least until OGF23)
+  - Parameter sweep call next week
+    - Geoff will check whether KISTI can also join
+

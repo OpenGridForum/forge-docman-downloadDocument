@@ -1,0 +1,296 @@
+* JSDL F2F 11/17
+================
+
+* Participants
+
+  Darren Pulsipher
+  Stephen McGough
+  William Lee
+  Donal Fellows
+  Andreas Savva
+  Sayaka Akioka
+  Fred Brisard
+  David Snelling 
+  Kazushige Saga
+  Nathalie Furmento
+  Michel Drescher
+
+* Position statements
+ 
+** Steve's presentation
+
+  - JSDL and what is the scope
+    ! Use the figures/add text to the spec under purpose/scope >Steve, Andreas
+  - How do the 'things' outside the JSDL box fit in
+    - Outside, and we don't define them 
+    - Probably some intersections with jsdl, e.g, agreement and policy
+      ! Need to define this relation better > JSDL-WG
+
+  - Workflow is outside and encapsulates JSDL
+    - Co-allocation or workflow or parametric study and so on
+    
+** Dave's presentation
+
+   - User section as required?
+   - GridId as a required component?
+     - Is it something implied by the submission and does not have to
+       specified in the schema
+     - Not all submissions will need it; if it used on a DRM system
+       that does not have grid ids.
+
+   - Application
+     - modifications here are Version, (executableType?), Argument as
+       a single element rather than a list.
+       - executableType is * because it has an id
+     - argument as a single 'string'
+       - ordering in the schema is tough (constructs make schema
+         verbose)
+   
+   - Resource 
+     - Added AbstractName; (ggf12 changed host to hostname; morphed to
+       this)
+     - limits are here should they be in a different section?
+     - filesystem has id but not a name anymore
+
+   - Data transfer
+     - source probably need to be a type to be able ot add
+       extensibility
+     - cardinality of source/destination is ?, can make it * using the
+       profiles.
+
+   - 3 rules to process/refine the document; single description
+     (unique ids), pick only one profile, if it overlaps the top
+     section profile supersedes.
+     - e.g., multiple source or destinations by defining multiple
+       profiles
+
+   - another type of refinement (rather enrichment) is adding profiles
+     to a job document.
+
+   - executableType make it ? unless someone can come up with
+     justification for making it *
+
+   - pseudoSchema is w3c lightweight method to describe schemas
+
+======
+   ! Add pseudo schema description in the document in addition to the
+     full schema; and switch to the full version (normative) at the
+     end.
+
+   - Add examples to the document as we move along.
+
+   - Typing information added; initially just the xsd types used
+
+   - Can the profiles support all the use cases in the document (under
+     the operators)
+     - Seem to cover uc 1 & 2 but not 3 (which is an exclusion
+       scenario)
+       - exclusion is needed because for example the application might
+         not work right on some special kind of resource.
+     - Does this point to a need for operators (NOT) in the profile or
+       operators in the job description?
+       - Need to allow operators on some of the elements
+	 - Not-equal
+	 - Other operators may already be in the document
+
+     - rule is replace & add. If the id appears in the job definition
+       then it replaces. If not then it is added.
+     
+   - preference: profiles are named. preference can be applied to them
+     by an outside framework, e.g., agreement.
+     - Do a WS-Agreement example > Andreas
+
+   - Comparison operators
+     - normative list added in the spec
+     - default is equalTo
+     - do we want to be able to combine them or do we create new ones
+       - Agreed to not allow combinations
+       - Do not allow extensibility on the operator
+       - Need to define the whole element again if you want to use a
+         different operator set.
+
+   - JobIdentification in Profile
+     - do not allow in the profile. cannot change the 'identification'
+       of a job definition. Write a different document instead.
+
+   - Moved JobGroupName, UserGroupName and will revisit to decide
+     what to keep and how to define. The explanation currently is not
+     clear enough.
+     - Sent an email to the list to solicit more input for further
+       discussion.
+
+   - JobCategory: Not sure if this is part of the identification. It
+     looks more like a resource (or scheduling?) Moved to resource and
+     revisit.
+
+   - UserCredentials: refer to ds:Keyinfo as an example from the UR
+     spec.
+
+   - ExecutionUserId: split out group id to ExecutionGroupId to allow
+     for overriding them separately by the profiles.
+
+
+=====
+
+  - Other actions:
+    - Purpose/scope: darren/steve/andreas prepare text for later in the
+      meeting.
+
+====== To discuss ===
+
+   - Empty sections in the schema and are they allowed or what do they
+     mean.
+   - Do we want to make process topology a separate section or is it
+     ok to be part of the resource
+   - Revisit the UserCredentials: Do we need to allow for multiple
+     credentials. And do we have to allow them to be attached at
+     different parts of the document? preference and so on.
+
+
+* JSDL F2F 11/18
+================
+
+* Participants
+
+  Darren Pulsipher
+  Stephen McGough
+  William Lee
+  Donal Fellows
+  Andreas Savva
+  Sayaka Akioka
+  Fred Brisard
+  David Snelling 
+  Michel Drescher
+  Kazushige Saga
+
+  - Skip resource section and start with application section
+  - Agreed to move application out of resource and a level up
+
+  - Allow more than one Application?
+    - Implication: What is the startup ordering? Ends up looking like
+      workflow. 
+    - Agreed to restrict it to 0-1. (0 to allow for only data
+      transfers and also not to require profiles to have them.)
+
+  - Executable:
+    - Part of the contents move one level up as their own elements,
+      e.g., ExecutableType. 
+    - Change ExecutableType to ApplicationType
+
+  - How to invoke a web service
+    - special ApplicationType?
+    - How does StdIn, Out, Err, here? Generalize to
+      Input/Output/Error.
+
+    - Action: Fred to provide an example WS invocation
+
+  - Environment
+    - shell variables (under application)
+    - software requirements (e.g., libraries so under resource)
+
+  - Agreed to "Description" as a general element to be inherited by
+    all elements. Work in the schema.
+
+  - To keep the rules simple allow for everything that is allowed in
+    Profile to override the job description. It might not always make
+    sense to do so.
+
+  ! Boilerplate text on how SHOULD elements should be treated.
+    - Review later in the day and make sure this is what we want.
+    - Have to make sure other such elements have the same explanation
+      for consistency
+    - We rejected a mustUnderstand attribute on elements as too
+      complex.   
+
+  - How far do we want to define values for ApplicationType?
+    - it is an xsd:token
+    - extensible (so more types can be defined but won't be in the
+      jsdl: namespace)
+    - No default default in this case.
+    - Defined a number of them
+    - General statement on extensibility that the jsdl: namespace may
+      not be used.
+    - Input, Output, Error are interpeted accordingly
+
+  - Argument is ? or *
+    - Agreed that it is ? since we have ApplicationType and so on.
+
+  - Log {0..n}
+    - Doesn't sound application specific but system specific
+    - Deleted. Can be supported by extension
+
+  - WorkingDirectory 
+    - Interpretation depends on the applicationtype
+    - the name is 'unix' specific. talked about generalizing it but
+      not clear what the general concept is. Leave as is.
+
+  - Decided to change ids from anyURI to NCName.
+
+  - Resource 
+    - Do limits belong under Resource or not?
+      - limits as statement of 'policy' by the user
+    - Not clear that they belong in the spec or not. Might be better
+      off pushing it into extensibility (and ask another group to
+      tackle them)
+    - For now push them into a separate section in the spec. And
+      revisit to decide which place to put them.
+    
+    - JobCategory:
+      - deleted; Can be done as extensibility. It is an extends
+        mechanism in DRMAA and we have other ways of adding extensions
+        in jsdl.
+ 
+    - HostName
+      - decided against changing it to AbstractName because it might
+        make it more difficult to understand.
+      - cardinality changed from * to ? since choice is done by profiles.
+
+    - CPU changed to CPUArchitecture
+    - CPU speed as a separate element & at the same level.
+    - CPUCount to capture the total number of CPUs in a resource
+    - ResourceCount to capture the number of resources (aka HostCount)
+
+    - Network 
+      - Agreed on need for bandwidth. To simplify remove the rest and
+        define networkBandwidth as a single term. Rest with extensible
+        content.
+      - network throughput as a broader performance requirement seems
+        out of scope at the moment. 
+	
+    - FileSystemSpace change to FileSystem
+    - Deleted swap space and temporary and replace with FileSystem type.
+    - Disk performance or availability to be addressed at a later
+      point. Added extensibility to allow for these.
+
+    - UserGroupName and JobGroupName: Distinction is not
+      clear. Decided to drop JobGroupName and keep UserGroupName;
+      rename to UserGroup as part of User Elements.
+
+    - Deleted Queue because it is not clear whether this was on the
+      resource or to something that you submit to. (Took second
+      interpretation so it is out of scope.)
+
+===
+
+  - Talk about role of 
+    - limits
+    - disk space separate from filesystem?
+
+  - Review naming of elements for consistency.
+  - WorkingDirectory revisit when looking at Filesystem and decide connection
+  - Define jsdl:operators which operators we support, their meaning
+    and their grammar.
+    - lessThan
+    - moreThan
+    - range
+  - parametric jobs: future work
+  - bandwidth units
+  - mounting remote resource to a local location: is this
+    configuration or do we need to do something about it. > Steve to
+    come up with examples.
+  - ProcessTopology - done 1st pass
+  - Replace xsd:any##other with a special jsdl:extension that
+    extensions have to extend to plug in. (To make sure that stuff
+    like id are there if we need them.)
+  - should the source and target be made complex types so that they
+    can be extended.

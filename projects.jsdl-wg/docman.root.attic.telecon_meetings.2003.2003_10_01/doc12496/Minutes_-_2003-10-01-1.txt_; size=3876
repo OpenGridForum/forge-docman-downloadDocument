@@ -1,0 +1,126 @@
+JSDL Telecon Meeting
+====================
+October 1st, 2003 - 22:00 GMT
+=============================
+
+
+Attendees:
+==========
+
+Ali Anjomshoaa (EPCC)
+Steve McGough (LeSC)
+Darren Pulsipher (Cadence)
+Alain Andrieux (ISI)
+Hiro Kishimoto (Fujitsu)
+Fred Brisard (CA)
+An Ly (CA)
+Andreas Savva (Fujitsu)
+
+
+Discussion:
+===========
+
+--------------------------------------------------------------------------
+Rotation of Telecon Times:
+--------------------------
+
+Ali: Propose rotation of telecon meeting times after every four telecons.
+     This would give everyone fair share of the less social hours.
+
+     Propose the times for the next set of four telecons to be:
+
+       California      - 06:00
+       Chicago         - 08:00
+       New York        - 09:00
+       UK              - 14:00
+       Mainland Europe - 15:00
+       Japan           - 22:00 (23:00 after Oct 26th)
+
+     The telecons will be on Wednesdays as usual and the next set will 
+     begin shortly after GGF9, suggest 15th October as first one.
+
+ALL: No objections were noted.
+
+
+--------------------------------------------------------------------------
+JSDL Spec Work:
+---------------
+
+Ali: Suggest a Work Plan where, the JSDL attribute set is broken down into 
+     a number of categories that are presented as subsections in the JSDL 
+     specification doc. The categories are for example:
+
+       o Job ID Requirements
+       o Hardware Requirements
+       o Software Requirements
+       o Security Requirements
+       o File and Data IO Requirements
+       o etc.
+
+     Then fill each category with a number of attributes, starting, perhaps, 
+     with the set in the Job Terms Proposal.
+
+     Then tackle each category at a time, with ALL contributing at the same 
+     time. Each category will be discussed for, say, two weeks, before 
+     moving onto the next. We can always come back to the categories we have 
+     left behind, because their time was up, at a later stage.
+
+     This plan should ensure that everyone (all batch language/system 
+     consultants) contribute to each category and so the requirements for 
+     all the languages out there are covered by the set of attributes in 
+     each category. It will also ensure that the work gets done in 
+     manageable chunks so that no one feels overloaded all at once.
+
+     Ali to present this work-plan at the 1st JSDL-WG meeting at GGF9.
+
+
+--------------------------------------------------------------------------
+Agenda for Sessions One and Two of JSDL-WG at GGF9:
+---------------------------------------------------
+
+Session One: (Tue. Oct 7th, 4:00 pm - 5:30 pm)
+------------
+
+* Outreach - Present Overview of JSDL-WG
+
+  o Motivation
+  o Positioning
+  o Deliverables
+  o etc.
+
+* Present Telecon Schedule
+
+* Present Work Plan
+
+* Check list of language/system consultants
+
+* Present JSDL Spec Doc Structure and Discuss
+  (includes the discussion of the high level JSDL structure)
+
+
+Session Two: (Wed. Oct 8th, 12:00 pm - 13:30 pm)
+------------
+
+This session will include discussions on:
+
+i.  The OGSA Program Execution Architecture,
+    presented by Ming Xu (Platform)
+
+ii. The WS-Agreement Negotiation Framework and the "Job Terms Proposal" from 
+    the Platform-Globus collaboration,
+    presented by Karl Czajkowski (ISI) and Alain Andrieux (ISI)
+
+
+--------------------------------------------------------------------------
+Relation of the Job Terms Proposal to the JSDL Spec:
+----------------------------------------------------
+
+o The Job Terms Proposal is not the JSDL Spec.
+
+o It is a proposal for a set of job description requirement attributes 
+  AND a JSDL structure that builds on top of the proposed WS-Agreement 
+  Negotiation Framework and its terms language infrastructure.
+
+o The Job Terms Proposal will be discussed at GGF9 and if accepted as a 
+  JSDL informational document, will feed into the JSDL specification.
+

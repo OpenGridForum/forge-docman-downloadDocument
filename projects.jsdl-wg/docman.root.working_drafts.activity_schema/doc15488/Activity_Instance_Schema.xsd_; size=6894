@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<xsd:schema 
+	targetNamespace="http://schemas.ogf.org/jsdl/2009/02/activity-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:activity-instance="http://schemas.ogf.org/jsdl/2009/02/activity-instance"
+	xmlns:bes-factory="http://schemas.ggf.org/bes/2006/08/bes-factory"
+	xmlns:wsa="http://www.w3.org/2005/08/addressing"
+	attributeFormDefault="unqualified"
+	elementFormDefault="qualified">
+
+	<!-- 
+	The XML schema for Activity Instance Schema
+	
+	Authors:
+		Philipp Wieder (TU Dortmund University)
+		
+	Revision History of this schema file:
+		Februar 2009	Initial version
+  	-->
+
+	<!-- remote retrieval: -->
+	  <xsd:import
+	  	namespace="http://schemas.ggf.org/bes/2006/08/bes-factory"
+	  	schemaLocation="./bes-factory.xsd"/>
+	  	
+	  <xsd:import
+      	namespace="http://www.w3.org/2005/08/addressing"
+      	schemaLocation="http://www.w3.org/2002/ws/addr/ns/ws-addr"/>
+	  	
+
+	<!-- ****** TYPES used in the Model ****** -->
+		
+	<!-- The ActivityInstanceType describes an Activity.
+		
+		 An Activity can be: a unit of work, a job, a task, a data processing operation,
+		 a data access operation, an application execution, a Web Service invocation, 
+		 a "thing" you need to do/take care of/execute, et cetera.
+	-->
+	<xsd:complexType name="ActivityInstanceType">
+		<xsd:sequence>
+			<!-- Unique within an activity instance -->
+			<xsd:element name="ActivityInstanceID" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+			<!-- The activity instance description. Should be just xsd:string, but one can
+				 think of more complex usage. -->
+			<xsd:element name="ActivityInstanceDescription" type="activity-instance:InstanceDescriptionType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	
+	<!-- The InstanceDescriptionType generally is a string to describe in a human readable
+		 way the purpose on an activity. The reason for defining it as "xsd:any" is to 
+		 allow more complex ways to use this, e.g. some kind of activity type system.
+	-->
+	<xsd:complexType name="InstanceDescriptionType">
+		<xsd:sequence>
+			<xsd:any namespace="##other" minOccurs="0" processContents="lax"/>
+		</xsd:sequence>
+	</xsd:complexType>	
+
+
+	<!-- The ActivityDescriptionType defines the requirements of an activity, i.e.
+		 the description template the activity has been created from.
+		 The template may be changed over time (e.g. due to activity delegation, negotiation
+		 processes, etc.).
+	-->
+	<!-- :REQ R001a -->
+	<xsd:complexType name="ActivityDescriptionType">
+		<xsd:sequence>
+			<!-- This describes the actual activity. -->
+			<xsd:element name="Activity" type="activity-instance:ActivityType"/>
+			<!-- Link(s) to the associated activity request(s). The actual dependency structure 
+				 (aka workflow) should be captured by a different schema and maintained by a 
+				 separate service. -->
+			<!-- REQ R001b (and somehow xR026 (depending on the final definition)) -->
+			<xsd:element name="Dependencies" type="activity-instance:DependencyType"/>
+			<!-- -The EPR of the executing service -->
+			<!-- REQ R024x -->
+			<xsd:element name="ActivityReference" type="wsa:EndpointReferenceType" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+	<!-- The DescriptionType describes the actual activity.
+		 This is basically xsd:any, allowing to embed e.g. JSDL here
+	-->
+	<xsd:complexType name="ActivityType">
+		<xsd:sequence>
+			<xsd:any namespace="##other" minOccurs="0" processContents="lax"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	
+	<xsd:complexType name="DependencyType">
+		<xsd:sequence>
+			<xsd:any namespace="##other" minOccurs="0" processContents="lax"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+
+	<!-- The HistoryListType  
+		 This represents the state of the activity at a certain point in time -->
+	<xsd:complexType name="HistoryListType">
+		<xsd:sequence>
+			<xsd:element name="TimeStamp" type="xsd:dateTime" minOccurs="1" maxOccurs="1" />
+			<!-- State types are defined according to the BES Basic State Model (GFD.108, page 7) -->	
+			<!-- REQ R002 -->
+			<xsd:element name="ActivityStatus" type="bes-factory:ActivityStatusType" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="Entry" type="activity-instance:HistoryEntryType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="Category" type="activity-instance:HistoryEntryCategoryType" />
+	</xsd:complexType>	
+
+
+	<!-- A history element entry -->
+	<xsd:complexType name="HistoryEntryType">
+		<xsd:sequence>
+			<xsd:element name="ActivityDescription" type="activity-instance:ActivityDescriptionType" />
+			<xsd:element name="Exceptions" type="activity-instance:ExceptionType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="AccessControl" type="activity-instance:AccessControlType" />
+		</xsd:sequence>	
+	</xsd:complexType>
+	
+	
+	<!-- Exceptions -->
+	<!-- REQ R022 -->
+	<xsd:complexType name="ExceptionType">
+		<xsd:sequence>
+			<xsd:element name="TimeStamp" type="xsd:dateTime" minOccurs="1" maxOccurs="1" />
+			<xsd:any namespace="##other" minOccurs="0" processContents="lax"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	
+	<!-- Information about activity related access control -->
+	<!-- REQ R008b -->
+	<xsd:complexType name="AccessControlType">
+		<xsd:sequence>
+			<xsd:any namespace="##other" minOccurs="0" processContents="lax"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	
+	<!-- An entry in the activity's historic entry can be:
+	     - the original one, i.e. the one initially submitted,
+	     - the current one, which represents the current valid document,
+	     - an interim one, provided for monitoring and persistence, and
+	     - the final one (REQ R008a) -->
+	<xsd:simpleType name="HistoryEntryCategoryType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="original"/>
+			<xsd:enumeration value="current"/>
+			<xsd:enumeration value="interim"/>
+			<xsd:enumeration value="final"/>		
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+	<!-- Here the final resource usage is captured (as e.g. defined by RUS) -->
+	<!-- :NOTE Per definition this is only the final usage. Continuous usage
+			   is not captured yet. -->
+	<!-- REQ R007 -->
+	<xsd:complexType name="ResourceUsageType">
+		<xsd:sequence>
+			<xsd:any namespace="##other" minOccurs="0" processContents="lax"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	 
+
+	<!-- ****** The Activity Document ****** -->	
+	<xsd:element name="ActivityDocument">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="DocumentID" type="xsd:string" minOccurs="1" maxOccurs="1" />
+				<xsd:element name="ActivityInstance" type="activity-instance:ActivityInstanceType" minOccurs="1" maxOccurs="unbounded" />
+				<xsd:element name="HistoryList" type="activity-instance:HistoryListType" minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element name="ResourceUsage" type="activity-instance:ResourceUsageType" minOccurs="0" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>	
+</xsd:schema>

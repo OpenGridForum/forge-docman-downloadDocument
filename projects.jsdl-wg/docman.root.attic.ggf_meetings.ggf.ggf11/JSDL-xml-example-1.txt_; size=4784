@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsdl:job xmlns:jsdl="http://www.gridforum.org/JSDL"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 
+      xsi:schemaLocation=
+               "http://www.gridforum.org/JSDL
+               jsdl.xsd">
+               
+  <jsdl:JobIdentification>
+    <jsdl:JobName>MyFirstJob</jsdl:JobName>
+    <jsdl:JobAnnotation>This is the first job ever submitted through JSDL</jsdl:JobAnnotation>
+    <jsdl:JobAnnotation>This job won't really do anything</jsdl:JobAnnotation>
+    <jsdl:ExecutionUserID>
+      <jsdl:User name="steve" group="myGroup" />
+    </jsdl:ExecutionUserID>
+    <jsdl:JobProjectName>WritingTheSpecProject</jsdl:JobProjectName>
+    <jsdl:JobCategory>writingJob</jsdl:JobCategory>
+    <jsdl:Extend name="PBSQueueName">myQueue</jsdl:Extend>
+  </jsdl:JobIdentification>
+
+  <jsdl:Resource>
+    <jsdl:HostType name="foo" description="sldajflksadjlkfjaslkfjasflfdsajlksa sd">
+      <jsdl:HostName>mybox.ggf.org</jsdl:HostName>
+      <jsdl:HostName>secondbox.ggf.org</jsdl:HostName>
+      <jsdl:HostName>resourcePool1</jsdl:HostName>
+	  <jsdl:HostArchitecture>
+	    <jsdl:CPUDescription>intel8086</jsdl:CPUDescription>
+	    <jsdl:CPUCount>1</jsdl:CPUCount>
+	    <jsdl:CPUSpeed>8Mhz</jsdl:CPUSpeed>
+	  </jsdl:HostArchitecture>
+	  <jsdl:PhysicalMemory>1024Mb</jsdl:PhysicalMemory>
+	  <!-- See usage record for units -->
+	  <jsdl:Network>
+	    <jsdl:NetworkDescription>FastEthernet</jsdl:NetworkDescription>
+	    <jsdl:NetworkCount>2</jsdl:NetworkCount>
+	    <jsdl:NetworkBandwidth>100MB</jsdl:NetworkBandwidth>
+	  </jsdl:Network>
+	  <jsdl:FileSystem name="scratch" size="4096Mb"/>
+	  <jsdl:FileSystem name="myBrainDump" size="10GB">nfs:hostname:/export/vol01</jsdl:FileSystem>
+	  <jsdl:TempSpace>200KB</jsdl:TempSpace>
+	  <jsdl:SwapSpace>100GB</jsdl:SwapSpace>
+	  <jsdl:ExclusiveExecution>true</jsdl:ExclusiveExecution>
+	  <jsdl:ProcessTopology>?????</jsdl:ProcessTopology>
+  </jsdl:HostType>
+  </jsdl:Resource>
+
+	<jsdl:Environment>
+	  <jsdl:EnvironmentVariable name="TASKID">Some Value</jsdl:EnvironmentVariable>
+	  <jsdl:EnvironmentVariable name="PROBLEMSIZE">1000</jsdl:EnvironmentVariable>
+	  <HostSpecific name="foo">
+		 <jsdl:EnvironmentVariable name=""></>
+	  </>
+	</jsdl:Environment>	
+
+  <jsdl:SoftwareRequirements>
+    <jsdl:OperatingSystem>
+      <jsdl:OperatingSystemDescription>Windows2000</jsdl:OperatingSystemDescription>
+      <jsdl:OperatingSystemVersion>2000</jsdl:OperatingSystemVersion>
+    </jsdl:OperatingSystem>
+    <jsdl:OperatingSystem>
+      <jsdl:OperatingSystemDescription>Linux</jsdl:OperatingSystemDescription>
+      <jsdl:OperatingSystemVersion>RedHat7.2</jsdl:OperatingSystemVersion>
+    </jsdl:OperatingSystem>
+    <jsdl:Limits>  
+      <jsdl:ProcessVirtualMemoryLimit>1Gb</jsdl:ProcessVirtualMemoryLimit>
+      <jsdl:VirtualMemoryLimit>1Gb</jsdl:VirtualMemoryLimit>
+      <jsdl:DataSegmentSizeLimit>10Gb</jsdl:DataSegmentSizeLimit>
+      <jsdl:CoreDumpSizeLimit>0</jsdl:CoreDumpSizeLimit>
+      <jsdl:CPUTimeLimit>10Hours</jsdl:CPUTimeLimit>
+      <jsdl:WallTimeLimit>24Hours</jsdl:WallTimeLimit>
+    </jsdl:Limits>
+    <jsdl:Queue>myQueue</jsdl:Queue>
+    <jsdl:Queue>anotherQueue</jsdl:Queue> 
+</jsdl:SoftwareRequirements>
+
+  <jsdl:Application>
+    <jsdl:ExecutableDescription>Run the vi command</jsdl:ExecutionDescription>
+    <jsdl:ExecutableName type="bash">vi</jsdl:ExecutableName>
+    <jsdl:Argument>-noX</jsdl:Argument>
+    <jsdl:Argument>myFile.txt</jsdl:Argument>
+    <jsdl:StdIn>myin.txt</jsdl:StdIn>
+    <jsdl:StdOut>myOut.txt</jsdl:StdOut>
+    <jsdl:StdErr>myErr.txt</jsdl:StdErr>
+    <jsdl:WorkingDirectory>myBrainDump</jsdl:WorkingDirectory>
+    <jsdl:Log>processLog.txt</jsdl:Log>
+  </jsdl:Application>
+	
+	<jsdl:DataAttributes>
+    <jsdl:File>
+	    <jsdl:FileName>myFirstFile.txt</jsdl:FileName>
+	    <jsdl:FileSystemName>myBrainDump</jsdl:FileSystemName>
+      <jsdl:Source>http://www.ggf.org/myFirstFile.txt</jsdl:Source>
+      <jsdl:CreationFlag>overwrite</jsdl:CreationFlag>
+    </jsdl:File>
+    <jsdl:File>
+      <jsdl:FileName>mySecondFile.data</jsdl:FileName>
+	    <jsdl:FileSystemName>myBrainDump</jsdl:FileSystemName>
+      <jsdl:Target>gsiftp::box.ggf.org/homes/ggf/mySecondFile.data</jsdl:Target>
+      <jsdl:CreationFlag>append</jsdl:CreationFlag>
+    </jsdl:File>
+    <jsdl:File>
+      <jsdl:FileName>StageThrough.data</jsdl:FileName>
+	    <jsdl:FileSystemName>scratch</jsdl:FileSystemName>
+      <jsdl:Source>ftp://ftp.ggf.org/largeData/input.dat</jsdl:Source>
+      <jsdl:Source>ftp://ftp.slowbox.org/largeDataBackup/record.data</jsdl:Source>
+      <jsdl:Target>gsiftp::box.ggf.org/homes/ggf/result.data</jsdl:Target>
+      <jsdl:CreationFlag>overwrite</jsdl:CreationFlag>
+    </jsdl:File>
+	</jsdl:DataAttributes>
+
+</jsdl:job>
+
+
+foo = Hello
+bar = world
+
+har = foo + bar
+

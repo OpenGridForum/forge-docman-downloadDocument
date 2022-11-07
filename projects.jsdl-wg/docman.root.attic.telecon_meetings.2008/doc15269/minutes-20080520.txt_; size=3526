@@ -1,0 +1,92 @@
+JSDL Teleconference - 20 May 2008
+==================================
+
+* Participants
+
+  Fred Brisard
+  Donal Fellows
+  Steve McGough
+  Alexander Papaspyrou
+  Andreas Savva
+  Philipp Wieder
+
+  Apologies: Michel Drescher, Shahbaz Memon
+
+* Summary of Actions
+
+  ACTION: Philipp will do a first draft of an aggregated list of
+          requirements
+
+* Activity use case - Job lifecycle tracking
+
+** Requirements
+  - Job attributes / state changes for entire lifecycle;
+    - Entering system - to not active
+    - Not clear if the use case requires the information to stay
+      around in the system after activity is no longer active
+      (probably), and if so how long (implementation-dependent).
+      - [Talk with Chris.]
+  - Information to track
+    - initial submission requirements (e.g., jsdl), (Location: BES resource?)
+    - state changes, incl time
+      - handover in responsibilties (similar to delegation scheduling
+        use case)
+          - recording of who made a decision and what that decision
+            was
+        - resource usage during runtime
+        - final accounting record: summary record perhaps
+          - summary records are not clearly a part of the usage record
+            1.0; should probably be separate from the usage record
+            entry
+  - Access mechanisms: query while activity is running can be on BES;
+    or other service afterwards, (maybe what 'file' refers to)
+  - information when an exception happens (probably related to state
+    change); and what the exception was
+
+* Fred's description of CA use/usage case
+
+  - record of what to execute (e.g., jsdl)
+  - record of what happens to activity through execution (generate a
+    series of events)
+    - state changes captured as individual records (events)
+  - jobs have problems during execution; and might get rescheduled
+    (-through third-party products) etc. 
+    - This might require temporary (this execution only) changes to
+      the job definition (JSDL).
+    - It's also important to track all changes as events (changes in
+      state)
+  - A common format like JSDL and this activity schema helps interoperability
+  - Admnistrators need this information for troubleshooting, decision
+    making, capacity planning, etc.
+  - Customers also needs to see this information to see how/if things
+    work properly
+  - This information can also be used to perform simulations on new
+    job flows that are created from pre-existing jobs
+  - Historical record helps in estimation of future job executions
+        - used for simulation and critical path monitoring
+  - A repository is needed for this information - this can get quite complex
+    federated?  
+
+  - Schema requirements: fixed part where a specification exists
+    (e.g., initial submission jsdl) plus extensibility for more
+    private/proprietary information; how far to go either way is a
+    balancing act. From a software vendor's point of view we prefer a
+    fixed specification - this provides the best opportunity for
+    interoperability.
+
+* Summary
+
+  ACTION: Philipp will do a first draft of an aggregated list of
+          requirements
+
+* OGF23 session
+  - Motivation / Overview of what has been disucssed
+  - collected use cases
+  - requirements list
+  - work on strawman
+
+  Invite people who showed interest in the BoF last time: Steven
+  Newhouse, Andrew Grimshaw.  And/or talk to them in advance
+
+  Provide skype and glance during the session
+

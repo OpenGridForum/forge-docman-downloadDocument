@@ -1,0 +1,56 @@
+JSDL Telecon Agenda - 10th Sept. 2003
+-------------------------------------
+
+o Discussion of the contents of the two GGF9 sessions
+
+--> Session 1:
+
+ - "What is JSDL" marketing. (10 mins.)
+
+   * Include motivation
+   * Include interactions and dependancies
+
+
+ - JSDL structure.
+
+   * JSDL Core set.
+   * JSDL Extensibility Mechanism - a tag that allows any XML that 
+     corresponds to a specific system, as defined by a JSDL compliant 
+     schema.
+
+
+ - JSDL Spec.
+
+   * Discuss outline of document
+
+
+--> Session 2:
+
+ - OGSI/WS-Agreement
+
+   * See below...
+
+
+o Discussion of the impact of the OGSI-Agreement framework on 
+  JSDL
+
+ - Does the Agreement language and framework restrict JSDL in its 
+   applicability to non-Grid Service or OGSI architectures?
+
+ - Does it restrict JSDL in its applicability to non-Agreement 
+   frameworks?
+
+
+o JSDL Spec
+
+ - Currently drawing up the outline for discussion at GGF9
+
+
+o Discussion of dissemination at Globus World in San Francisco
+
+ - Is it early days?
+
+ - Can GRAAP say a few words about JSDL in their dissemination?
+
+ - Can anyone else outside JSDL say anything?
+

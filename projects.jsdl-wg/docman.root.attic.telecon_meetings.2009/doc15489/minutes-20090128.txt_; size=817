@@ -1,0 +1,28 @@
+JSDL Teleconference - 28 January 2009
+=====================================
+
+* Participants
+
+  Donal Fellows
+  Steve McGough
+  Andreas Savva
+  Philipp Wieder
+
+* Parameter sweep 
+* Donal argued for not making performing the operations in decimal a
+  must. He will follow up on the list.
+* Agreed to relax the statement on xpath 2 to a
+  recommendation. Recommend that it be the common subset of xpath 1
+  and 2. But we do not define it in the spec. 
+
+* Activity instance survey 
+  - Review requirements and feedback
+    - Philipp will review with his colleagues
+    - Fred Brisard (not on the call; to ask)
+    - Andreas
+  - Reviewed on the call, prioritized and uploaded to gridforge
+
+* OGF-Europe funding
+  - Andreas and Steve will follow up on it
+
+* Next call to be scheduled for Feb 18

@@ -1,0 +1,41 @@
+GGF17 JSDL-WG Session 1
+=======================
+
+* Agenda bashing
+
+  Agreed to a short time-bounded (20 minutes) discussion on
+  information/data models for resource requirements description.
+
+* Information/data model for resource requirements
+
+  Jay Unger introduced the work being done by the OGSA Information
+  Model design team. One topic under discussion in that team is a way
+  of defining new resource characteristics or capabilities that does
+  not rely on creating a new XML schema for them.  For example, while
+  JSDL 1.0 provides an xsd:any extension point that allows addition of
+  new elements the new proposal may define instead an element that can
+  be used to add arbitrary new <names,value> tuples. In XML, the
+  difference between:
+              <mynewelement>v1</mynewelement>
+                vs
+              <extension name="mynewelement" value="v1"> 
+
+  A number of people expressed interest. This work will continue
+  within the OGSA-WG Information Model team. 
+
+* Use cases and requirements for Parallel Jobs
+
+  There were presentations by NAREGI and GridSAM. The group also
+  reviewed some of the BSC slides.
+  - NAREGI: MPI extension to POSIXApplication and co-allocation
+  - GridSAM: MPI extension to POSIXApplication
+  - BSC: Multi-level parallelism definition---partly to define process
+    count and thread count
+  - Platform: parallelism is defined in resource requirements. No
+    requirements to extend JSDL 1.0 for this feature right now.
+
+  Finally the group identified a preliminary set of features that seem
+  to be common to the various approaches (see agenda slides). 
+
+  Steve McGough took an action to come up with a pseudo-schema for
+  review at the next session. 

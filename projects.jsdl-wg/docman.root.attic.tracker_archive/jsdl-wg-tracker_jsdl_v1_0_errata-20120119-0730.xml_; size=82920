@@ -1,0 +1,2773 @@
+<?xml version="1.0"?>
+<!DOCTYPE datalist PUBLIC "-//VA Software, Inc.//DTD DataList Export 1.1//EN"
+    "http://schema.vasoftware.com/sf/dtd/sf-datalist-export_1_1.dtd">
+
+<datalist>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5479</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>character restrictions in path elements</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>From Marvin Theimer, Microsoft:
+The main thing I'm after is that the behavior of trying to step &#034;outside&#034; the mountpoint by cd'ing out the top must be either (a) prohibited or (b) explicitly marked as undefined in its behavior, with an error fault potentially being generated.  This is because in the Windows world I can imagine that a mountpoint definition might map to setting up a drive letter and you can't cd up out of a drive letter.
+
+In fact, I'd be happy enough with the profile stating that paths in JSDL documents should not contain either the &#034;.&#034; or the &#034;..&#034; elements at all. That's a fairly strong requirement and guarantees that the job won't fail on systems where your style of semantics are enforced.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Michel Drescher</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>16.06.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>11.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>11.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>3</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5479/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5494</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Minor error in posix examples (Output, Error)</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>On 24 Mar 2006, at 11:01, Ratering, Ralf wrote:
+
+Hi Michel&amp;Donal,
+
+I just noticed a minor copy/paste bug in the
+JSDL specs.
+
+In the examples for the Posix extensions -51)
+there is:
+
+page 50:
+&lt;jsdl-posix:Input filesystemName=&#034;HOME&#034;&gt;
+output.txt
+&lt;/jsdl-posix:Input&gt;
+
+page 51:
+&lt;jsdl-posix:Input filesystemName=&#034;HOME&#034;&gt;
+error.txt
+&lt;/jsdl-posix:Input&gt;
+
+it should obviously be:
+&lt;jsdl-posix:Output filesystemName=&#034;HOME&#034;&gt;
+output.txt
+&lt;/jsdl-posix:Output&gt;
+
+and
+
+&lt;jsdl-posix:Error filesystemName=&#034;HOME&#034;&gt;
+error.txt
+&lt;/jsdl-posix:Error&gt;
+
+</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>30.06.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>08.08.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>08.08.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5494/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5495</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Example uses &#034;tmp&#034; instead of &#034;temporary&#034;</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>
+---------- Forwarded message ----------
+Date: Wed, 22 Feb 2006 14:01:27 -0500
+From: Tom Seelbach &lt;seelbach@us.ibm.com&gt;
+To: jsdl-wg@gridforum.org
+Subject: JSDL Spec (GFD-R-P.056) typo? - FileSystemType - tmp or temporary
+
+The FileSystemTypeEnumeration includes &#034;temporary&#034; but on page 23 and 24 I
+see &lt;jsdl:FileSystemType&gt;tmp&lt;/jsdl:FileSystemType&gt;.  Should &#034;tmp&#034; be
+&#034;temporary&#034; in these  cases?
+
+Regards,
+Tom Seelbach - Grid Development - seelbach@us.ibm.com
+</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>30.06.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>20.06.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>20.06.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5495/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5496</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Meaning of DataStaging with no Source or Target</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Hello,
+
+I'm writing a JSDL-&gt;classad-based JDL converter, and I have a question related to the interpretation of the jsdl:DataStaging element.
+According to the definition, the jsdl:DataStaging element may have two child elements (both of which are optional) jsdl:Source and jsdl:Target. As I understand:
+
+- if only the jsdl:Source child is given, the DataStaging element refers to a request to copy files TO the execution node;
+- if only the jsdl:Target child is given, the DataStaging element refers to a request to copy files FROM the execution node, upon job termination;
+- if both jsdl:Source AND jsdl:Target children are given, then the previous two cases are combined (first the file is staged in, and upon job termination is staged out).
+
+Now, I do not fully understand the meaning of having a DataStaging element without jsdl:Source nor jsdl:Target. How should we interpret this situation?
+
+Thanks in advance,
+
+Moreno. </field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>30.06.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Donal Fellows</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5496/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5497</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Filesystem MountSource is not defined in schema</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>The Filesystem is defined as containing a MountSource element. The element is described in the pseudo schema but the schema in the appendix does not include it.
+
+Also the order of the sub-elements of Filesystem in the pseudo schema and the schema are different.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>30.06.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Michel Drescher</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5497/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5498</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Add GGF copyright statement  to schemas in Appendix</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>The schemas in the appendix of the document should probably also include the GGF (or OGF) copyright statement.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>30.06.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>20.06.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>20.06.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5498/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5544</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>More general Resources elements descriptions</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>I would like to see the description of IndividualCPUCount say simply that it specifies the required number of CPUs instead of the number to be allocated. The way it's worded now, match making based on the actual number of CPUs (i.e Condor) seems improperly represented by this element. Making it a little more general allows for the interpretation that a host must at very least have a certain number of CPUs, but it does not dictate the number of CPUs actually being allocated for the job. Resource managers such as LSF and PBS that only operate using CPU allocations could still be considered included in the description because if an allocation is successful then obviously the host must have that many CPUs.
+
+In addition, the following elements are worded similarly to IndividualCPUCount so as to effectively prohibit purely match making as opposed to strict allocation of host resources:
+
+IndividualVirtualMemory
+IndividualDiskSpace
+TotalDiskSpace
+
+The rest of Resources' elements seem to be worded more generally (i.e. &#034;required by the job&#034; as opposed to &#034;allocated to the job&#034;).</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Peter Lane</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>22.08.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5544/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5545</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>PalmPilot not a proper OS name</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>In jsdl:OperatingSystemTypeEnumeration there is an item named &#034;PalmPilot&#034;. This should really be &#034;PalmOS&#034;. A Palm Pilot is only one of many devices that use PalmSource, Inc.'s PalmOS operating system.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Peter Lane</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>22.08.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>13.09.2006</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>13.09.2006</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Darren Pulsipher</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5545/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5563</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Meaning of Empty Argument element</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>The specification is not clear that an empty argument element maps to an empty string as an argument value. It only says that it &#034;must not be collapsed&#034;.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>04.09.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>18.07.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>18.07.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5563/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5564</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Type of Argument element</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>The type of the argument element is xsd:normalizedString. It is not clear why this type was chosen rather than xsd:string.
+
+See also thread
+http://www.ogf.org/pipermail/jsdl-wg/2006-September/000720.html
+
+</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>04.09.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>18.07.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>18.07.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Stephen McGough</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5564/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5573</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Update URI citation</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Update URI reference from RFC2396 to RFC3986.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>06.09.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>27.06.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>27.06.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5573/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5629</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Spelling Typo Page 20</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>page 20, 6.4.1.5 Pseudo Schema for Resources Element,
+
+&lt;Resources&gt;
+   ...
+   &lt;ExlusiveExecution .../&gt;?
+   ...
+
+I presume should be:
+
+&lt;Resources&gt;
+   ...
+   &lt;ExclusiveExecution .../&gt;?
+   ...
+
+(Spotted by Bill Naylor)</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Stephen McGough</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>08.11.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>08.08.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>08.08.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5629/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5630</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Miscapitalised Exact examples</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>In many examples the RangeValue_Type element 'Exact' is miscapitalised 
+as 'exact', specifically Examples:
+6.4.18.6
+6.4.24.6
+6.4.28.6
+
+(Spotted by Bill Naylor)</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Stephen McGough</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>08.11.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>08.08.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>08.08.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5630/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5640</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>FileSystemName capital error</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>In 6.5.3 te schema states &#034;FileSystemName&#034; while the normative schema has &#034;FilesystemName&#034;
+
+(Spotted by Bill Naylor)</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Stephen McGough</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>23.11.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>08.08.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>08.08.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5640/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5647</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Memory resources need clarification</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>The elements IndividualPhysicalMemory, IndividualVirtualMemory, TotalPhysicalMemory and TotalVirtualMemory need to be clarified. Do they refer to the amount of memory configured into the system (i.e. number of RAM chips, size of swap volumes), or do they refer to the amount of &#034;free pages&#034; on the system available to processes. If it is the &#034;free pages&#034;, how should this be calculated (for example, LSF includes pages in the buffer cache when calculating free pages). 
+
+The simplest interpretation is to make this the configured amounts.
+</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Chris Smith</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>30.11.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>11.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>11.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>3</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5647/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5648</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Disk space resources</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>I'm not sure how to perform any kind of match making based on the resources IndividualDiskSpace, and similarly, the DiskSpace element of the FileSystem element. 
+
+For both, is the amount of space:
+
+1. The size of the volume
+2. The number of free bytes on the volume
+3. The number of free bytes available to the user on the volume. 
+
+If 3, how is it proposed to make this calculation efficiently. 
+
+
+For IndividualDiskSpace, is this:
+
+1. An aggregation of all locally mounted volumes? 
+2. Does it include network volumes? 
+3. Is it calculated before or after FileSystem mounts happen (thus affecting the number if network volumes are also considered). 
+
+Because of these questions, it's not clear to me that this element has any use (given that I can be specific about volume disk requirements using FileSystem).
+</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Chris Smith</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>30.11.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>11.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>11.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>3</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5648/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5649</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>CPU time elements</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>It's not clear to me whether the intention of IndividualCPUTime and TotalCPUTime are as limits for the job, or as resource requirements for the job. 
+
+If they are purely used as limits, then perhaps they should not be RangeValue_Types, but just upper bound types. 
+
+If they are also intended as resource requirements, then they have no value as is, because there is no time period over which I can see how many cpu seconds are available. That is, if my machine is on &#034;forever&#034; then I have an infinite number of cpu seconds, and this resource requirement is always true. The job might also &#034;run&#034; forever, but that's ok by this element's definition.
+</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Chris Smith</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>30.11.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>27.06.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>27.06.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>3</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Donal Fellows</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5649/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5650</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>IndividualNetworkBandwidth is ambiguous</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>There are too many interpretations of this metric to make it useful for match making. 
+
+1. Is this the maximum b/w of the interface, or the amount of currently unused b/w?
+
+2. What are the semantics for multi-homed nodes where the interfaces are not &#034;bonded&#034;? Is this the highest b/w of all the individual interfaces? The lowest? Is it aggregate? 
+
+3. For a multi-homed scenario, what if my job is constrained to use one interface (given the endpoint I'm connecting to), but the value for another interface is the one reported? Then it's basically useless for match making. 
+
+
+So ... I find that this metric is not very meaningful without some kind of clarification as to what is being measured.
+</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Chris Smith</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>30.11.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>11.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>11.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>3</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5650/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5651</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>JobAnnotation not &#034;strong&#034; enough</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Given that there is the Description element for &#034;annotating&#034; a JSDL document, I think that JobAnnotation's semantics are too vague. I think that if JobAnnotation is specified, then it MUST be understood (i.e. the contents of the element) by the consuming system. 
+
+Otherwise, I'd like some clarification on how this element is to be used in some examples. That is, an example of a JobAnnotation that MAY or MAY NOT be understood.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Chris Smith</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>30.11.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>3</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Michel Drescher</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5651/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5652</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Well known filesystem names</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>I'm not sure that I understand the purpose of this section, considering that nothing is declared &#034;special&#034; about these file system names. What I mean is that the spec says HOME (for example) is well known, but then does not either reserve this file system name, or pre-define it. If these names are going to be called out as well known, perhaps they should be pre-defined with a default, with allowable changes to certain sub-elements (e.g. mount point/mount source).
+
+Also ... I don't think we can say that ROOT is well known, as a Windows system has multiple ROOT filesystems (one for each mounted volume, in fact). 
+
+</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Chris Smith</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>30.11.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>20.06.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>20.06.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>3</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Donal Fellows</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5652/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5844</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>FileSystem clarification</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Add clarification that this is a requirement of the job. Resources that do not have a filesystem present do not match the job requirement. There is no requirement that the filesystem be mounted by the system in response to the request.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>27.06.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>27.06.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5844/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5847</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>MountSource related pseudo-schema and examples</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>The pseudo schema for FileSystem should be updated to reflect the actual schema order of elements.
+
+Also the examples where MountSource appear should be updated to use the errata schema.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>11.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>20.06.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>20.06.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Michel Drescher</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5847/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5855</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>epsilon explanation</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>
+The pseudo-expression “5, 6.7777, 7.0, [50.3,99.5), [100-” (which
+indicates a disjoint range consisting of the values 5, 6.7777, 7.0, all
+values inclusive of from 50.3 up to, but not including, 99.5 and all
+values from 100 on up) can be encoded in a RangeValue as follows:
+
+&lt;jsdl:Exact epsilon=”0.00001”&gt; 6.7777 &lt;/jsdl:Exact&gt;
+
+!!!!
+
+[6.7776900000000007, 6.7777099999999999]
+
+http://www.ogf.org/pipermail/jsdl-wg/2007-April/000859.html</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>25.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>18.07.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>18.07.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Michel Drescher</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5855/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5856</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Fractional CPUCount</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>3. CPU count:
+
+double or integer?
+
+For example: 5.6 CPU count value is good or not?
+
+I think that the CPU count MUST integer!</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>25.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>20.06.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>20.06.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Michel Drescher</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5856/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5869</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Clarification of relation between Total* and Individual* elements</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>For example, how does TotalCPUCount and IndividualCPUCount relate to its other?</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>07.05.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>12.12.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>12.12.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5869/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5936</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>FileSystem examples need editing to update order of sub-elements</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>This is a  continuation of artf5847. 
+
+All FileSystem examples need to be checked because the order of the elements in the pseudo-schema was fixed to match the real schema. This is irrespective of whether MountSource appears in the example. 
+
+For example, the FileSystemType often appears after Description or MountPoint and should be changed to be the first element.
+
+Current pseudo schema:
+&lt;FileSystem name=”xsd:NCName”&gt;
+	&lt;FileSystemType ... /&gt;?
+	&lt;Description ... /&gt;?
+	&lt;MountPoint ... /&gt;?
+	&lt;DiskSpace ... /&gt;?
+	&lt;xsd:any##other/&gt;*
+&lt;/FileSystem&gt;*
+
+(I've added this as a new issue rather than reverting artf5847 which is now closed.)
+</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>26.06.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>11.10.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>11.10.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Michel Drescher</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5936/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5958</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Argument element order</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>[This is taken from the HPC Profile Application public comment tracker. Posted by Steven Newhouse.]
+
+The order the Argument elements are concatinated in is not specified. There seems to be an assumption they are done in 
+the order parsed in the document. AFAIK there is no assurance that element ordering will be preservered.
+
+Arguments:
+
+ -cp x.jar
+
+and 
+
+x.jar -cp 
+
+are (obviously) very different.
+
+A short sentence requiring implementors to maintain argument ordering could be added to eliminate confusion. </field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>23.07.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>12.12.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>12.12.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5958/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5959</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Environment element order</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>This is a mirror issue of the Argument element ordering.
+
+Environment variable order may be significant if the values are not constrained to be literal. 
+
+The order the Envrionment elements are concatenated in is not specified. There seems to be an assumption they are done in 
+the order parsed in the document. AFAIK there is no assurance that element ordering will be preservered.
+
+A short sentence requiring implementors to maintain envrionment ordering could be added to eliminate confusion. </field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>23.07.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>12.12.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>12.12.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5959/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5960</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Environment element value</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Some clarification on the 'value' might be in order: literal or not, any kind of variable substitution allowed or 'not disallowed' and so on.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>23.07.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>12.12.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>12.12.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5960/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5983</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>gnuplot example typo</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>[Received by email from Jeff Lawson]
+
+In the JSDL 1.0 spec, I noticed the following example.  I think the existence of the “?” character may be a mistake since the example is intended to express a literal example and not make use of “pseudo-schema” notation.  Additionally, to be a more complete and concrete example, I would recommend that some actual text be included for the JobDescription element.
+ 
+6.1.1.6 Examples
+
+A document with the id “gnuplot”:
+
+&lt;jsdl:JobDefinition id=”gnuplot”?&gt;
+
+   &lt;jsdl:JobDescription&gt; ... &lt;/jsdl:JobDescription&gt;
+
+&lt;/jsdl:JobDefinition&gt;
+
+Thanks,
+
+Jeff
+</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>29.08.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>12.12.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>12.12.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Michel Drescher</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5983/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5984</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Check formatting of examples</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>[Extracted from the Editor tracker of the HPC Profile Application extension, as it also applies to GFD.56. From Stephen Pickles.]
+
+There are some places in the text where non-normative examples are rendered using &#034;smart quotes&#034; instead of normal ASCII quotes. The same thing occurs
+ in GFD.56 (JSDL 1.0) itself, and does not appear to cause confusion for implementers.
+
+The same is true of the examples in 3.3.6:
+(1) [runas] /user/...
+(2) [echo]foo bar 
+The former has a space after ] while the latter does not. Similar examples in GFD.56 have the same flaw.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>29.08.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>13.12.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>12.12.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Michel Drescher</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5984/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5995</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>List of changes</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Add a short description of changes and a detailed appendix</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>05.09.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>12.12.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>12.12.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5995/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6091</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Clarification on CreationFlag</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Taken from the HPC File Staging Profile document:
+
+DataStaging - CreationFlag
+
+&#034;As in [JSDL10], but with the clarification that it is not considered an error if the CreationFlag is set to dontOverwrite and a file with the same name exists at the target location.&#034;
+
+A similar clarification might be worthwhile.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>03.12.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>12.12.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>12.12.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Michel Drescher</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6091/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6165</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>PC: Example in 6.5.1.6 wrong order of elements</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>[From the public comment forum]
+
+The example in section 6.5.1.6 has a wrong order of elements
+and does not conform to the Schema. It writes:
+
+&lt;jsdl:DataStaging&gt;
+&lt;jsdl:FileName&gt;control.txt&lt;/jsdl:FileName&gt;
+&lt;jsdl:Source&gt;
+&lt;jsdl:URI&gt;http://foo.bar.com/~me/control.txt&lt;/jsdl:URI&gt;;
+&lt;/jsdl:Source&gt;
+&lt;jsdl:CreationFlag&gt;overwrite&lt;/jsdl:CreationFlag&gt;
+&lt;jsdl:DeleteOnTermination&gt;true&lt;/jsdl:DeleteOnTermination&gt;
+&lt;/jsdl:DataStaging&gt;
+
+where jsdl:Source is _bevore_  jsdl:CreationFlag, while the XML Schmema
+says it must be _after_  (Page 71): 
+
+&lt;xsd:sequence&gt;
+&lt;xsd:element ref=&#034;jsdl:FileName&#034;/&gt;
+&lt;xsd:element ref=&#034;jsdl:FilesystemName&#034; minOccurs=&#034;0&#034;/&gt;
+&lt;xsd:element ref=&#034;jsdl:CreationFlag&#034;/&gt;
+&lt;xsd:element ref=&#034;jsdl:DeleteOnTermination&#034; minOccurs=&#034;0&#034;/&gt;
+&lt;xsd:element ref=&#034;jsdl:Source&#034; minOccurs=&#034;0&#034;/&gt;
+...</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>18.03.2008</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>19.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>19.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6165/</field-value>
+    </field>
+  </element>
+</datalist>

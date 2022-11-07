@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<wsag:AgreementOffer 
+	xmlns:wsag="http://www.ggf.org/namespaces/ws-agreement" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:wsa="http://www.ggf.org/namespaces/agreement" 
+	xmlns:rrd="http://www.bizgrid.org/2003/schema/broker/rrd" 
+	xmlns:jsdl="http://www.gridforum.org/2004/07/jsdl">
+  <wsag:Name>Three Tier Offer</wsag:Name>
+  <wsag:Context/>
+  <wsag:Terms>
+    <wsag:All>
+
+      <!-- network requirements constraint selection of other resources -->
+      <wsag:ServiceDescriptionTerm wsag:Name="Network" wsag:ServiceName="Network">
+        <jsdl:network>
+          <jsdl:NetworkDescription>Web3Tier</jsdl:NetworkDescription>
+          <jsdl:NetworkBandwidth>
+              <!-- This is in the spec but not the schema -->
+		<minimum> 100Mbps </minimum>
+		<maximum> 1000Mbps </maximum>
+	   </jsdl:NetworkBandwidth>
+      <jsdl:Extend name="networkreservation">
+        <rrd:reservationBeginTime xmlns:wsa1="http://www.gridforum.org/namespaces/agreement" wsp:Usage="wsp:Required" wsa:Negotiability="wsa:Negotiable" wsa:dateTime="2004-02-05T08:00:00.000-09:00"/>
+        <rrd:reservationEndTime xmlns:wsa1="http://www.gridforum.org/namespaces/agreement" wsp:Usage="wsp:Required" wsa:Negotiability="wsa:Negotiable" wsa:dateTime="2004-02-11T23:00:00.000-09:00"/>
+      </jsdl:Extend>
+        </jsdl:network>
+      </wsag:ServiceDescriptionTerm>
+
+      <!-- The web tier -->
+      <wsag:ServiceDescriptionTerm wsag:Name="ASWeb" wsag:ServiceName="Web">
+      <!-- If wrtiting just jsdl would the equivalent grouping be a resource? -->
+
+        <jsdl:Resource>
+          <jsdl:CPUCount>1</jsdl:CPUCount>
+          <jsdl:CPUDescription>Pentium(R) III</jsdl:CPUDescription>
+          <jsdl:CPUSpeed>1130MHz</jsdl:CPUSpeed>
+          <jsdl:PhysicalMemory>256Mbyte</jsdl:PhysicalMemory>
+          <jsdl:FileSystem name="scratch" size="60Gbyte"/>
+          <jsdl:ExclusiveExecution>true</jsdl:ExclusiveExecution>
+        </jsdl:Resource>
+
+        <jsdl:SoftwareRequirements>
+          <jsdl:OperatingSystemDescription>Red Hat Enterprise Linux AS</jsdl:OperatingSystemDescription>
+          <jsdl:OperatingSystemVersion>2.1</jsdl:OperatingSystemVersion>
+
+          <jsdl:Extend>
+            <rrd:WebContainerName> "Java(TM) 2 Platform, Enterprise Edition Application Server" <rrd:WebContainerName/>
+            <rrd:WebContainerVersion> "1.4" <rrd:WebContainerVersion/>
+          </jsdl:Extend>
+        </jsdl:SoftwareRequirements>
+
+      <jsdl:Extend>
+        <rrd:reservationBeginTime xmlns:wsa1="http://www.gridforum.org/namespaces/agreement" wsp:Usage="wsp:Required" wsa:Negotiability="wsa:Negotiable" wsa:dateTime="2004-02-05T08:00:00.000-09:00"/>
+        <rrd:reservationEndTime xmlns:wsa1="http://www.gridforum.org/namespaces/agreement" wsp:Usage="wsp:Required" wsa:Negotiability="wsa:Negotiable" wsa:dateTime="2004-02-11T23:00:00.000-09:00"/>
+      </jsdl:Extend>
+
+        </wsag:ServiceDescriptionTerm>
+
+
+                     <!-- A load balancer resource-->
+        <wsag:ServiceDescriptionTerm wsag:Name="ASLB" wsag:ServiceName="LB">
+
+          <jsdl:Resource>
+            <jsdl:CPUCount>1</jsdl:CPUCount>
+          </jsdl:Resource>
+
+          <jsdl:SoftwareRequirements>
+            <jsdl:Extend>
+              <rrd:LBProductName> "IPVS for kernel 2.4"<rrd:LBProductName/>
+              <rrd:LBProductVersion> "1.0.10" <rrd:LBProductVersion/>
+              <rrd:LBAlgorithm> "RoundRobin" <rrd:LBAlgorithm/>
+            </jsdl:Extend>
+          </jsdl:SoftwareRequirements>
+
+      <jsdl:Extend>
+        <rrd:reservationBeginTime xmlns:wsa1="http://www.gridforum.org/namespaces/agreement" wsp:Usage="wsp:Required" wsa:Negotiability="wsa:Negotiable" wsa:dateTime="2004-02-05T08:00:00.000-09:00"/>
+        <rrd:reservationEndTime xmlns:wsa1="http://www.gridforum.org/namespaces/agreement" wsp:Usage="wsp:Required" wsa:Negotiability="wsa:Negotiable" wsa:dateTime="2004-02-11T23:00:00.000-09:00"/>
+      </jsdl:Extend>
+
+        </wsag:ServiceDescriptionTerm>
+
+                             <!-- EJB layer -->
+        <wsag:ServiceDescriptionTerm wsag:Name="ASEJB" wsag:ServiceName="EJB">
+
+          <jsdl:Resource>
+            <jsdl:CPUCount>1</jsdl:CPUCount>
+            <jsdl:CPUDescription>Pentium(R) 4</jsdl:CPUDescription>
+            <jsdl:CPUSpeed>1000MHz</jsdl:CPUSpeed>
+            <jsdl:PhysicalMemory>512Mbyte</jsdl:PhysicalMemory>
+            <jsdl:FileSystem name="scratch" size="100Gbyte"/>
+            <jsdl:ExclusiveExecution>true</jsdl:ExclusiveExecution>
+          </jsdl:Resource>
+
+          <jsdl:SoftwareRequirements>
+            <jsdl:OperatingSystemDescription>Red Hat Enterprise Linux AS</jsdl:OperatingSystemDescription>
+            <jsdl:OperatingSystemVersion>2.1</jsdl:OperatingSystemVersion>
+
+            <jsdl:Extend>
+              <rrd:EJBContainerProductName> "Java(TM) 2 Platform, Enterprise Edition Application Server"/>
+              <rrd:EJBContainerProductVersion> "1.4" <rrd:EJBContainerProductVersion/>
+            </jsdl:Extend>
+
+          </jsdl:SoftwareRequirements>
+
+      <jsdl:Extend>
+        <rrd:reservationBeginTime xmlns:wsa1="http://www.gridforum.org/namespaces/agreement" wsp:Usage="wsp:Required" wsa:Negotiability="wsa:Negotiable" wsa:dateTime="2004-02-05T08:00:00.000-09:00"/>
+        <rrd:reservationEndTime xmlns:wsa1="http://www.gridforum.org/namespaces/agreement" wsp:Usage="wsp:Required" wsa:Negotiability="wsa:Negotiable" wsa:dateTime="2004-02-11T23:00:00.000-09:00"/>
+      </jsdl:Extend>
+
+        </wsag:ServiceDescriptionTerm>
+
+        <!-- Database layer -->
+        <wsag:ServiceDescriptionTerm wsag:Name="ASDB" wsag:ServiceName="DB">
+
+          <jsdl:Resource>
+            <jsdl:CPUCount>1</jsdl:CPUCount>
+            <jsdl:CPUDescription>Pentium(R) III</jsdl:CPUDescription>
+            <jsdl:CPUSpeed>1130MHz</jsdl:CPUSpeed>
+            <jsdl:PhysicalMemory>256Mbyte</jsdl:PhysicalMemory>
+            <jsdl:FileSystem name="scratch" size="100Gbyte"/>
+            <jsdl:ExclusiveExecution>true</jsdl:ExclusiveExecution>
+          </jsdl:Resource>
+
+          <jsdl:SoftwareRequirements>
+            <jsdl:OperatingSystemDescription>Red Hat Enterprise Linux AS</jsdl:OperatingSystemDescription>
+            <jsdl:OperatingSystemVersion>2.1</jsdl:OperatingSystemVersion>
+              <rrd:DBMSProductName> "PostgreSQL Database Management System" <rrd:DBMSProductName/>
+              <rrd:DBMSProductVersion> "7.4" <rrd:DBMSProductVersion/>
+
+            <jsdl:Extend>
+              <rrd:DBMSProductName> "PostgreSQL Database Management System" <rrd:DBMSProductName/>
+              <rrd:DBMSProductVersion> "7.4" <rrd:DBMSProductVersion/>
+            </jsdl:Extend>
+          </jsdl:SoftwareRequirements>
+
+      <jsdl:Extend>
+        <rrd:reservationBeginTime xmlns:wsa1="http://www.gridforum.org/namespaces/agreement" wsp:Usage="wsp:Required" wsa:Negotiability="wsa:Negotiable" wsa:dateTime="2004-02-05T08:00:00.000-09:00"/>
+        <rrd:reservationEndTime xmlns:wsa1="http://www.gridforum.org/namespaces/agreement" wsp:Usage="wsp:Required" wsa:Negotiability="wsa:Negotiable" wsa:dateTime="2004-02-11T23:00:00.000-09:00"/>
+      </jsdl:Extend>
+
+        </wsag:ServiceDescriptionTerm>
+
+    </wsag:All>
+  </wsag:Terms>
+</wsag:AgreementOffer>

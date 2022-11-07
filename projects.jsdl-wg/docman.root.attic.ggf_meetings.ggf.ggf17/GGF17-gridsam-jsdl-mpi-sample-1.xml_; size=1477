@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JobDefinition xmlns="http://schemas.ggf.org/jsdl/2005/11/jsdl"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://schemas.ggf.org/jsdl/2005/11/jsdl file:/Users/wwhl/work/gridsam2/modules/schema/src/main/resources/org/icenigrid/gridsam/resource/schema/jsdl.xsd
+    http://schemas.ggf.org/jsdl/2005/11/jsdl-posix file:/Users/wwhl/work/gridsam2/modules/schema/src/main/resources/org/icenigrid/gridsam/resource/schema/jsdl-posix.xsd
+    urn:gridsam:mpi file:/Users/wwhl/work/gridsam2/modules/schema/src/main/resources/org/icenigrid/gridsam/resource/schema/jsdl-mpi.xsd
+    ">
+    <JobDescription>
+        <Application xmlns:posix="http://schemas.ggf.org/jsdl/2005/11/jsdl-posix">
+            <mpi:MPIApplication xmlns:mpi="urn:gridsam:mpi">
+                <posix:Executable>/bin/some-parallel-app</posix:Executable>
+                <posix:Argument>hello world</posix:Argument>
+                <posix:Environment name="ABC">DEF</posix:Environment>
+                <mpi:ProcessorCount>10</mpi:ProcessorCount>
+                <xyz:OtherExtension xmlns:xyz="urn:xyz">My Extension</xyz:OtherExtension>
+            </mpi:MPIApplication>
+            <!-- <posix:POSIXApplication>
+                <posix:Executable>/bin/uname</posix:Executable>
+                <posix:Argument>-a</posix:Argument>
+                </posix:POSIXApplication> -->
+        </Application>
+    </JobDescription>
+</JobDefinition>

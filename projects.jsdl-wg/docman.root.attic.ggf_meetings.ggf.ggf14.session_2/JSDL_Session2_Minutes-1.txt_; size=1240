@@ -1,0 +1,51 @@
+JSDL Session 2:
+---------------
+
+GridSAM presentation by Steve McGough
+-------------------------------------
+
+Slides and Demo
+
+Peter: How do you map job states to DRMs and make sure they are 
+       correct?
+
+       Why not use DRMAA to connect to the DRMs?
+
+Steve: We are not able to map states accurately if the DRM doesn't support 
+       them.
+
+       We are interested in using DRMAA.
+
+
+NAREGI presentation by Hwang Soonwook
+-------------------------------------
+
+Slides and Demo
+
+Multiplicity of POSIXApplication and Resources is more than 1. i.e. '*'
+
+This is like having two JSDL docs lumped into one!
+
+Is this like workflow in a JSDL doc?
+
+
+HPCEuropa presentation by Ariel Oleksiak
+----------------------------------------
+
+Slides
+
+Extensions: Software element inside the Resource.
+
+            Queue element inside the Resource.
+
+            DistrType element inside the Application.
+
+            Objectives element inside the JobDescription 
+              (Preference and Weighting factors).
+
+Use JSDL to update the user portlet to specify what requirement elements are 
+available for which DRM and what values the DRM instance picked by the user 
+supports.
+
+ - Requirement to specify whether the specified file is a directory.
+

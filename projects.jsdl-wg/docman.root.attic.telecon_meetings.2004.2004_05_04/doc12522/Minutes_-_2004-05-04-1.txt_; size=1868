@@ -1,0 +1,82 @@
+May 4, 2004
+
+Agenda
+	Discuss Document progress
+	Discuss the UML Model
+	Discuss the XML Mappings
+	Translation Table
+
+Attendees
+	Darren Pulsihper
+	Fred Brisard
+	Andreas Savva
+	An Ly
+
+
+---------------------------------
+Document Status
+---------------------------------
+(Andreas) Format the document to have a table for each attribute. March 24, 2004 Teleconference has a the format.
+
+---------------------------------
+UML Model
+---------------------------------
+Simplify the model and make it flat.
+Look at the LSF XML, GRAM XML and Usage Record Group for examples.
+Also look at the PGM-RG.
+(Darren) Look at the LSF XML, GRAM XML stuff to adopt it into the JSDL.
+
+-----------------------------------
+GGF discussion
+-----------------------------------
+(Darren) set up face to face meeting on 10th in the morning.
+
+
+XML Example:
+
+<jsdl:job>
+	<jsdl:ApplicationRequirements>
+	</jsdl:ApplicationRequirements>
+	
+	<jsdl:JobIdentification>
+	</jsdl:JobIdentification>
+
+	<jsdl:SecurityAttributes>
+	</jsdl:SecurityAttributes>
+
+	<jsdl::SchedulingAttributes>
+	</jsdl::SchedulingAttributes>
+
+	<jsdl:Environment>
+	</jsdl:Environment>	
+	
+	<jsdl:Resource>
+	</jsdl:Resource>
+
+	<jsdl:DataAttributes>
+	</jsdl:DataAttributes>
+
+</jsdl:job>
+
+<!ELEMENT jsdl:job
+(jsdl:ApplicationRequirements,jsdl:JobIdentification?,jsdl:SecurityAttri
+butes*,jsdl:SchedulingAttributes*,jsdl:Environment*,jsdl:Resource*,jsdl:
+DataAttributes*)>
+<!ELEMENT jsdl:ApplicationRequirements>
+<!ATTLIST jsdl:ApplicationRequirements
+Executable CDATA #IMPLIED
+Argument CDATA #IMPLIED
+StandardInput CDATA #IMPLIED
+StandardOutput CDATA #IMPLIED
+StandardError CDATA #IMPLIED
+InitialDirectory CDATA #IMPLIED
+Shell CDATA #IMPLIED
+Log CDATA #IMPLIED 
+>
+
+This is too complex we should look at a more flat xml document. 
+Also the Attributes should be elements in most of the cases presented.
+
+
+Darren Pulsipher
+darrenp@cadence.com 

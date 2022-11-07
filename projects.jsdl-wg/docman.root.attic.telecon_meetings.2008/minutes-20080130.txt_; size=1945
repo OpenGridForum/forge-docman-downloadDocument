@@ -1,0 +1,65 @@
+JSDL Teleconference - 30 January 2008
+=====================================
+
+* Participants
+
+  Fred Brisard
+  Michel Drecher
+  Donal Fellows
+  Steve McGough
+  Andreas Savva 
+
+  Minutes: Andreas Savva
+
+* Update/Review of status of ongoing work items
+
+** 1.0 Errata/1.1
+   - Currently in PC; no comments yet; wait
+** XQuery 
+   - Some progress as part of the Information Modeling Architecture
+     document; wait until that is stable
+** Parameter sweep
+   - Michel has received some feedback and expressions of interest via
+     private email. He will follow up and invite people to the list;
+     possibly arrange a call before OGF22 and an overview/introduction
+     during one of the OGF22 sessions
+** Activity
+   - Proceeding; have sessions planned for OGF22. Need to prepare for
+     the sessions
+** Experience document
+   - Waiting for GridSAM and NAREGI responses and then will put a
+     draft together
+   - Not sure what the status of the joint experience document with
+     the HPC Profile group, which should cover part of GFD.56
+
+* OGF22
+  - Two sessions plus the bof planned
+
+** General WG session
+   - Brief introduction to ongoing work
+     - XQuery and Information modeling connection
+     - Experience document
+     - 1.1 errata 
+     - Activity
+   - Parameter sweep highlight (perhaps 30 minutes)
+
+** Activity BOF
+   - Need to talk with Philipp on session logistics but probably
+     arrange for 2-3 presentations to allow for more time for
+     discussion
+   - Presentations perhaps by
+     - UDAP
+     - GridSAM
+
+** Activity WG session
+   - Followup on BOF and start technical work
+
+* What to focus on till OGF22
+  - Parameter sweep
+  - Activity instance document schema
+
+* Teleconference schedule
+
+  - Feb.6   - Activity 
+  - Feb.13 - Parameter Sweep (if sufficient participants by that time)
+  - Feb.20 - OGF22 final preparation and any other technical topics

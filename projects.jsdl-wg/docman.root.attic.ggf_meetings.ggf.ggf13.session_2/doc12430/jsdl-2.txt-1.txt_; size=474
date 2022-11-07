@@ -1,0 +1,23 @@
+
+* profile review
+
+  delete profile - consenus
+  single jobdescription
+  sid are deleted from the whole document
+
+  source, target is *
+  uri is ?
+  and an any element that can be given as alternate 
+
+  - Change source/target URL to URI
+  - open content on datastaging
+
+- Units
+  - declare as qnames?
+
+- Igor's proposal
+- ref/name: check tooling support
+
+- agreement on application and splitting it out; application
+  executable or other specifics are an external document
+

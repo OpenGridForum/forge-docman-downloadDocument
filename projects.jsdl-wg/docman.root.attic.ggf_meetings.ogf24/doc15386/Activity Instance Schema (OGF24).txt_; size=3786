@@ -1,0 +1,116 @@
+====================================
+ OGF24 (Singapore) -- JSDL-WG
+  Activity Instance Document Schema 
+====================================
+
+Local Participants:
+    (see http://www.ogf.org/gf/event_schedule/attendees.php?id=1402)
+Remote (dial-in) Participants:
+    Fred Brisard
+
+-------
+Agenda:
+-------
+- Review of work so far (background, objectives)
+- Update on use cases
+- Discussion of requirements list
+- Next steps towards strawman
+
+--------
+Minutes:
+--------
+
+
+Requirements:
+
+- The general notion of "dependency" and "workflow" handling needs more
+  clarification
+    * clean separation between plain activities that have passive dependencies
+      to each other and nested activities, which might have a "parent" activity
+      and possibly spawn new sub-activities themselves
+    * streamlining of names in the whole area
+
+
+--> no consensus whether this should be part of AI schema at all; discussion
+    postponed to later
+
+
+- Changes to the original template during the lifetime of an activity could be
+  tracked along with its state
+
+
+- Generated data is not supposed to go directly into the schema. This covers
+  e.g. predicted end times for activities and the like. However, it might be
+  good to capture "intermediate" states (pending a clear definition). It is
+  agreed upon that whatever is available currently (e.g. the BES state model)
+  suffices.
+
+
+- The notion of "sealing" an activity implies a read-only mode for the activity
+  document which is to be enforced by the service providing the document.
+
+
+- "Final records" (for usage data etc.) might appear more than once; naming of
+such should be rethought.
+
+
+- Security is to be handled outside the activity document, possibly providing an
+  additional security document along with the activity document. On-behalf
+  access models common in Grids are to be considered. There might be a need for
+  fine-grained ACLs, but this is still unclear.
+
+--> issue needs more discussion and consultation of security people
+
+
+- R019 was dropped, since it is already captured by R001 and R002
+
+
+- Resource usage tracking should be kept low profile, since the necessary
+  information may or may not be available.
+
+
+- Exceptional states probably do not need to be represented by a separate
+  concept, but could be handled as a part of the state recording. In general, a
+  reason blob should suffice.
+
+
+- Checkpointing is to be handled in terms of capturing the state only, without
+  coming up with a model. Possibly, this can be even handled as part of the
+  state records of an activity.
+
+
+- Data locations need clarification.
+
+- Capturing the state of sub-activities is a sub-problem of the question how to
+  handle dependencies and workflows. There seems to be a strong necessity for
+  being able to at least "find out" about incoming and/or outgoing dependencies,
+  which in turn is part of nesting of activities. Possibly, a parent/child
+  relationship which also implies ownership will be sufficient.
+
+
+General Comments:
+
+- A document split into use cases/requirements and schema/spec has been
+  suggested to allow for additional/complementary specs on the basis of the same
+  requirements and use cases.
+
+- During the forging of the specification, it would be beneficial to find two
+  implementors that can accompany the definition process in order to ensure
+  early that all concepts can be implemented.
+
+- The requirements should be streamlined and clarified as far as possible in
+  order to get a core specification without bells and whistles
+
+--------
+Actions:
+--------
+
+Philipp, Alexander (ASAP):
+- consolidate requirements list
+ - clean up wording
+ - extend descriptions
+- come up with draft schema, starting from UDAP
+
+Group Discussion
+- prioritize list, using high/medium/low
+- continue bi-weekly calls for work

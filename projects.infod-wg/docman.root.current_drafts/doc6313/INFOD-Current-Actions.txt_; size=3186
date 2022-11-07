@@ -1,0 +1,125 @@
+INFOD Current Actions
+=====================
+
+This is a list of current actions.  Each action has a serial number, once it
+is closed it is moved to a companion document of closed actions.
+
+==============================================================================
+
+
+182   Framework of chapter 2 of next spec - rough draft
+
+      - Owner: Dieter
+      - Date: 28 Sep 2006
+      - Target: 26 Jul 2007
+
+
+209   Provide schema for registry along with data generator and query
+      generator to Dave Berry
+
+      - Owner: Vijay
+      - Date: 22 Mar 2007
+      - Target: 12 Jul 2007
+      Waiting for info from Raghul. Information provided so now can go ahead.
+
+
+215   Construct SIGMOD Article
+      - Owner: Vijay
+      - Date: 12 Apr 2007
+      - Target: 5 Jul 2007
+
+      Will be sent out in time
+
+
+219   Develop an 'elevator speech' for INFOD 
+      - Owner: Arjun & Raghul 
+      - Date: 14 Jun 2007
+      - Target: draft by 5 Jul 2007
+
+
+220   Sending existing messages immediately to "dynamic customers"
+      - Owner: Raghul & Vijay 
+      - Date: 14 Jun 2007
+      - Target: 26 Jul 2007
+
+
+221  Put Korean paper on web site and ensure that it is studied
+      - Owner: Dieter
+      - Date: 21 Jun 2007
+      - Target: 2 Aug 2007
+
+      Now on web site - should all now read it. Dieter will invite
+      John for 2 August or later. It seems that as of the 19th July
+      only Dieter has found time to read it!
+
+
+223  Review Use Case Doc
+     - Owner: All
+     - Date: 21 Jun 2007
+     - Target: 26 Jul 2007
+
+     Steve will try to read for the 12th July. He is waiting for
+     clarification before he can proceed.
+
+
+225  Produce revised spec
+     - Owner: Steve
+     - Date: 5 June 2007
+     - Target: 27 Sep 2007
+
+
+226  Consider changes to spec to deal with "DISABLE NEW"
+     - Owner: Steve
+     - Date: 5 June 2007
+     - Target: 26 Jul 2007
+
+      We now need to add to the Wiki what explanation needs to be
+      added to the spec.
+
+
+227   Reasonable draft of chapter 2 of next spec to discuss at OGF21
+      - Owner: Dieter
+      - Date: 5 Jul 2007
+      - Target: 28 Sep 2007
+
+
+228   Add news item pointing to new spec and clean up web a bit
+      - Owner: Steve
+      - Date: 12 Jul 2007
+      - Target: 26 Jul 2007
+
+
+229   Enumerate properties of subscriptions in case of disseminators
+      - Owner: Vijay
+      - Date: 12 Jul 2007
+      - Target: 19 Jul 2007
+
+
+231   Provide precise XML for one of the constraints in a use case
+      - Owner: Ronny and Dieter
+      - Date: 19 Jul 2007
+      - Target: 26 Jul 2007
+
+      Steve will provide Ronny and Dieter with the precise questions
+
+
+232   IS CREATION_TIME reset with replace
+      - Owner: Ronny
+      - Date: 19 Jul 2007
+      - Target: 26 Jul 2007
+
+
+233   Output from getmetadata is not defined.
+      - Owner: Raghul
+      - Date: 19 Jul 2007
+      - Target: 26 Jul 2007
+   
+      A suitable defintion will be added to the Wiki to add to the spec or a future version      
+
+
+233   Request OGF sessions
+      - Owner: Dieter
+      - Date: 19 Jul 2007
+      - Target: 2 Aug 2007
+      
+      

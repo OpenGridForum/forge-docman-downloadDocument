@@ -1,0 +1,83 @@
+DMI Telcon - 15th August 2007
+=============================
+
+Present:
+         Mario Antonioletti, EPCC
+         Allen Luniewski, IBM,
+         Michel Drescher, Fujitsu
+         Steven Newhouse, Microsoft
+
+Agenda:
+
+       1. IPR Notice
+       2. Agenda Bashing
+       3. Group Leadership
+       4. Current Document Review
+       5. Session at OGSA F2F
+       6. Where Next?
+       7. AoB
+
+Mario asked Steven whether we could still try to get HPC profile folks
+to adopt DMI. Steven said that the HPC Profile folks were currently
+concentrating on a profile of the JSDL document.  What should one
+expect for data staging in and out - a URL? Something else? 
+DMI could have a URL - could point to a DMI service - needs to be 
+worked out.
+
+1. IPR notice
+
+   Called to attention.
+
+2. Agenda Bashing 
+  
+   Everyone thought that the agenda was ok.
+
+3. Group Leadership
+
+   Mario is willing to stand as a co-chair.
+   No objections presented at the call.
+   If no objection is presented at the mailing list then 
+   Mario should notify the area directors.
+
+4. Current Document Review.
+
+   No one has the write token at the moment.
+
+5. Session at OGSA F2F
+
+   Michel and Steve were going to present a couple of slides
+   and talk over the document at the OGSA f2f and collect
+   any feedback. 
+
+   Everyone else should read over the document and then collect any
+   issues with those from the OGSA face-to-face together.
+
+6. Where Next?
+
+   Will be determined by the level of feedback from the face-to-face.
+
+   Issue about doing implementations and experimentation before the
+   document is moved on to the document pipeline.
+
+   Edinburgh has no free resource to work on this, Allen is the same.
+   Steven and Michel may be able to do implementations but this will be
+   out of hours. Michel might be able to provide the first version of
+   the WSDL and XML Schema.
+
+   We seem to think that the document is about 80% complete.
+
+
+7. AoB
+
+   To summarise:
+
+    o Michel and Steve will present the DMI document at the OGSA face-to-face
+      and collect feed-back. This will be disseminated to the group.
+    o Everyone will go over the DMI document and note any issues.
+    o Have a telcon next week to discuss the issues about the document. 
+      10am Chicago time is ok for Ravi.
+
+DONM: 4pm (BST), 10am (Central), 8am (Pacific)
+      Use Steven's numbers?
+
+   

@@ -1,0 +1,51 @@
+JSDL conference call
+====================
+
+
+9 February 2012
+
+
+Participants
+------------
+Michael Saravo
+Michel Drescher
+Etienne Urbah
+Steve Crouch
+Oxana Smirnova
+Morris Riedel
+
+
+OGF 34 session agenda
+---------------------
+- no progress on OGF34 schedule yet.
+- session request is 90 minutes
+- draft agenda:
+    -- 10" minutes work on JSDL specs are out there
+        --- core, ParamSweep, SPMD, HPC profile
+    -- 30" Overview and resolution of the GLUE2 XML issues
+        --- Attempts to draft specific JSDL fragments wiht GLUE2
+    -- 20" Discussion on behaviour if GLUE elements and JSDL resource elements appear in the same JSDL XML document
+    -- 30" Michael Saravo
+        --- Unique id to group jobs, or scratch space
+        --- Filesystem change proposals
+        --- etc.
+
+- second session: BES, GLUE2 and "GLUE-ification"
+    -- Should be postponed to a BES-focused session
+    -- Using Etienne's proposal of using benchmark units
+        -- simple to express in JSDL, but BES instances would have to be hardcoded
+        -- If BES should not be hardcoded
+    -- The group was not eintirely sure of the consequences
+    -- JSDL WG members should look at Etienne's proposal from 22 September "proposal to use benchmarks as units") (JSDL archive)
+
+
+Profiles on JSDL
+----------------
+- IGE supports profiling JSDL 
+    (JP does IIS for Globus)
+- JP on EU hierarchical vs US flat
+    - IIS supports both
+- open issue on defining multiple global elements inan XML schema, vs their use in an specific XML document (see hierarchy problem)
+    -- Steve to talk to JP about this
+
+

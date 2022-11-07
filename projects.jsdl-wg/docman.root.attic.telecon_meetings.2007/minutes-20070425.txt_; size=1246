@@ -1,0 +1,37 @@
+JSDL Teleconference - 25 April 2007
+===================================
+
+* Participants
+
+  Michel Drescher
+  Donal Fellows
+  Steve McGough
+  Gabor Roczei
+  Andreas Savva 
+
+* OGF20 
+
+** Discussed and updated agendas on the wiki
+** Gabor's presentation probably in the first session. Gabor will send
+   a copy of it in advance to Steve and Andreas
+** Some uncertainty about having a parameter sweep session. Check
+   again at OGF20.
+** Andreas will ask Ellen Stokes when she is planning a draft for the
+   information model
+** No presentation for the joint session with GLUE/OGSA. A statement
+   that we are going to be using the OGSA Info Model and require
+   feature parity with JSDL 1.0 resource requirements
+** Someone probably needs to attend the GSA session where they will
+   talk about their scheduling language. Will decide at OGF20.
+** Andreas will add other directly related sessions 
+** RSS uses JSDL but has no direct requirements at this time
+
+* JSDL 1.0 Errata
+
+  Discussed Gabor's email
+
+** The correct namespace URI is the ggf one
+** epsilon question added to the tracker and resolved
+** floating cpucount issue added to the tracker and resolved
+
+** Quick review of open issues on the tracker.

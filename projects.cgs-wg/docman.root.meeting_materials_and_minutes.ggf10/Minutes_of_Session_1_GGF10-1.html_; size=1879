@@ -1,0 +1,79 @@
+<html>
+
+
+This is a static archive of the previous Open Grid Forum GridForge content management system saved from host forge.ogf.org file /sf/docman/do/downloadDocument/projects.cgs-wg/docman.root.meeting_materials_and_minutes.ggf10/doc4906 at Fri, 04 Nov 2022 22:50:23 GMT
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Minutes of the 1st CGS</title>
+</head>
+
+<body>
+
+<p><font face="Verdana">Minutes of the 1st CGS-WG Session<br>
+GGF10, Berlin<br>
+12-March-2004, 1030</font></p>
+<p><font face="Verdana">Larry Flon called the meeting to order, and introduced 
+Tom Roney as the new co-chair of the group.&nbsp; Tom took notes for the 
+meeting.</font></p>
+<p><font face="Verdana">Larry briefly reviewed the history of the group, and the 
+plan for this and the 2nd session.&nbsp; He then introduced Andrea Westerinen.</font></p>
+<p><font face="Verdana">Andrea gave a presentation on the DMTF and the history 
+and future of CIM.&nbsp; Some discussion followed.</font></p>
+<p><font face="Verdana">Larry then proposed a Workshop for GGF11 on CIM, and 
+there was general interest among the group in attendance.</font></p>
+<p><font face="Verdana">In the context of the workshop, it was suggested that we 
+should add to the agenda a discussion of using CIM for job monitoring and/or 
+workflow.</font></p>
+<p><font face="Verdana">Demos would be interesting if time permits.</font></p>
+<p><font face="Verdana">We should discuss UML and modeling, not just the 
+intracacies of MOF.</font></p>
+<p><font face="Verdana">Fred Maciel suggested We avoid using the term CIM in the 
+title of the workshop.&nbsp; John Tollefsrud, our AD, agrees.&nbsp; Larry 
+suggested something like:</font></p>
+<p><font face="Verdana">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Workshop on a Common 
+Information Model</font></p>
+<p><font face="Verdana">Tom would like to hold the workshop more than one time, 
+John suggested he get support from the GROC.</font></p>
+
+<!-- forge.gridforum.org footer.html -->
+<br> <hr>
+<table width='100%'> 
+ <tr>
+  <td align='left'>   <a href='http://www.ogf.org/' target='_blank' style='border: 0 px;'><img src='../../../../../../ogf-it/opengridforum.gif' alt='The Open Grid Forum' style='border:0px white solid;'></a><td>
+  <td align='center'> <a href='mailto:webmaster@ogf.org'>Contact Webmaster</a> 
+                    | <a href="../../../../../tracker/do/createArtifact/projects.ggf-info/tracker.html">Report a problem</a>
+                    | <a href="../../../../../wiki/do/viewPage/projects.ggf-info/wiki/HomePage.html">GridForge Help</a>
+                    </td>
+  <td align='right'>  
+<!--		<img src='/ogf-it/powered_by_dell.gif' alt='Powered by Dell'> -->
+<!-- Begin DigiCert/ClickID site seal HTML and JavaScript -->
+<div id="DigiCertClickID_sxSDRU4L">
+  <a href="http://www.digicert.com/">SSL Certificates</a>
+</div>
+<script type="text/javascript">
+var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_sxSDRU4L", "10", "m", "black", "sxSDRU4L"]);(function(){var cid=document.createElement("script");cid.type="text/javascript";cid.async=true;cid.src=("https:" === document.location.protocol ? "https://" : "http://")+"seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
+</script>
+<!-- End DigiCert/ClickID site seal HTML and JavaScript -->
+  </td>
+ </tr>
+</table>
+<!-- google analytics code -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6775861-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+
+
+This is a static archive of the previous Open Grid Forum GridForge content management system saved from host forge.ogf.org file /sf/docman/do/downloadDocument/projects.cgs-wg/docman.root.meeting_materials_and_minutes.ggf10/doc4906 at Fri, 04 Nov 2022 22:50:23 GMT
+</html>

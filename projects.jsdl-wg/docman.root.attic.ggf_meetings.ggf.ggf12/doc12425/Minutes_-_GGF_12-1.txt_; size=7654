@@ -1,0 +1,269 @@
+JSDL-WG Meeting Minutes
+-----------------------
+GGF12 (Brussels)
+----------------
+Sessions 1 to 5
+---------------
+
+Session 1 - Tuesday 21st Sep. 2004, 11:00 - 12:30 (Local Time)
+==============================================================
+
+[See also comments highlighted in green in spec.: 
+ draft-ggf-jsdl-spec-0.5.0_S1.doc]
+
+ - Introduction to GGF12 agenda and sessions - Ali
+
+ ? Is there a requirement for the specification of IP ports that 
+   jobs may require?
+
+ ? What are the security implications of job delegation/spawning?
+
+ - Typing - See Session 1 spec.: draft-ggf-jsdl-spec-0.5.0_S1.doc
+
+ - Operators - Steve...
+
+CLOSE
+
+
+Session 2 - Tuesday 21st Sep. 2004, 13:30 - 15:00 (Local Time)
+==============================================================
+
+[See also comments highlighted in green in spec.: 
+ draft-ggf-jsdl-spec-0.5.0_S2.doc]
+
+ - Trying to define the type for each of the attributes - Strings for 
+   most at the moment.
+
+ - Change "JSDL attribute" to "JSDL element" throughout spec to match 
+   JSDL XML elements in the schema.
+
+ - Define tuple (ExecutionUserID section).
+
+ - Put in a global statement regarding preference mechanism defined 
+   in Section 4 of the spec. - preference is handled in the schema 
+   using this mechanism.
+
+ ? Need to specify preference for EACH JSDL element?
+
+ - Define at a global level the meanings of 
+
+   - Definition;
+   - Multiplicity;
+   - Usage; and
+   - Type;
+
+   for the element descriptions.
+
+ - The elements need fleshing out in terms of explanations of why 
+   they are required - dig out of the previous meeting minutes and 
+   put into the PRIMER.
+
+ - Need a glossary...
+
+ - Use JSDL document to mean the JSDL XML description of a job, 
+   in place of 'job'.
+
+CLOSE
+
+Compositors Example:
+--------------------
+
+<Host allOf>
+
+  <CPU/>
+  <RAMAmount/>
+
+  <Resource oneOf>
+  <Host>
+    foo
+    bar
+  </Host>
+
+  <Host>
+    foobar
+  </Host>
+  </Resource>
+
+</Host>
+
+
+Session 3 - Wednesday 22nd Sep. 2004, 09:00 - 10:30 (Local Time)
+================================================================
+
+[See also comments highlighted in green in spec.: 
+ draft-ggf-jsdl-spec-0.5.0_S3.doc]
+
+[See also Darren's minutes]
+
+ - Going through the schema - Steve.
+
+ - We need a balance between strongly typed, hierarchical structure 
+   and flat, flexible structure to the schema.
+
+ - AstroGrid job description language mentioned.
+
+ ? Specification of required libraries: in Software Requirements or 
+   Data Staging section?
+
+ ? Attributes for software licenses and types of licenses?
+
+ - Tie license requirements to the software required.
+
+ - License attributes need not be in version 1 of the JSDL schema.
+
+CLOSE
+
+
+Session 4 - Wednesday 22nd Sep. 2004, 13:30 - 15:00 (Local Time)
+================================================================
+
+[See also comments highlighted in green in spec.: 
+ draft-ggf-jsdl-spec-0.5.0_S4.doc]
+
+[See also Darren's minutes]
+
+ - Discussion with Fred and Andreas over the structure of the schema:
+
+   1. Introduce all of the attributes in a flat structure;
+   2. Introduce grouping attributes, e.g. JobIdentification that 
+      is a complex type composed of the other simple attributes;
+   3. Use large general groupings: JobID, Requirements, Application.
+
+ - Business Grid example by Andreas Savva
+
+ - NAREGI, GridMPI example by Sayaka Akioka
+
+   - NAREGI, ProcessTopology - describes the number of processes 
+     that are required by EACH of the applications running in the 
+     job, which implies multiple jobs/executables in one JSDL 
+     description document - this breaks the JSDL model of a job 
+     template with a single executable.
+   - Number of processes can be divisible, Boolean attribute needed.
+   - Need to specify how to divide the processes over resources 
+     (Wide Area) - this adds another dimension to the "CPU tiling" 
+     i.e. on a single cluster suggested by Chris Smith.
+
+   - Chris: put CPUTiling in the process topology section.
+
+   - Akioka: put the Count= and Depth= in the CPU tag with Speed=
+
+       <jsdl:CPU Speed="" Count="" Depth=""/>
+
+   - Describe processes as well as processors? Multiple processes 
+     per job description implied?
+
+   - Can use ID's for the attribute groupings for each 
+     process/executable in a JSDL description, e.g.
+
+       <HardwareRequirements id="foobar">
+
+     then can use the ID elsewhere in the description to link to the 
+     attribute grouping for each executable. (Ali: breaks the JSDL 
+     model of one executable/process per JSDL document instance)
+
+ - Can allow multiple executable applications in one JSDL document(?), 
+   they can ID their requirements through the ID attributes on their 
+   requirements, e.g. <HardwareRequirements id="foobar"> .
+
+ - Expression of units from the Usage Record specification that is in 
+   the public comment period.
+
+ - Use of <Queue> element questioned?
+
+CLOSE
+
+
+Session 5 - Thursday 23rd Sep. 2004, 09:00 - 10:30 (Local Time)
+===============================================================
+
+[See also comments highlighted in green in spec.: 
+ draft-ggf-jsdl-spec-0.5.0_S5.doc]
+
+ - Telecons - Darren,
+
+   10pm UTC/GMT Next Tue 28th September 2004.
+
+
+ - William Lee (LeSC), GridSAM motivation and architecture
+
+   (See Slides)
+
+   - Put the order by which the requirements are satisfied in 
+     the schema - have had this conversation. Conclusions?
+
+   - Multiple File Source = Choice
+   - Multiple File Target = Replication
+
+   - If requirements are in a JSDL document then must parse and must 
+     satisfy for the job - if system can parse it's JSDL compliant, 
+     if it cannot satisfy then job cannot be satisfied/submitted.
+
+   - Use Apache jelly (Ant like) as intermediate language (script).
+
+   - Demo...
+
+
+ - Sven Van Den Berghe (Fujitsu), UniGrids project
+
+   (See Slides)
+
+   - JSDL to Unicore AJO (abstract job object)
+
+   - AJO cannot handle the specific resource requirements, such as 
+     hardware requirements, OS etc., - it  instead focuses on 
+     application needs and targets known resources.
+
+   - Working Dir concept - required data and executables imported 
+     into the Working Dir.
+
+   - Predefining executables, Steve likes this.
+
+
+ - John Ainsworth (Manchester, CSAR), Grid Markets
+
+   - No way to express whether things are mandatory or variable, 
+     choice etc.
+
+   - Describing the job for submission, describing where it will run.
+
+
+ - Darren Pulsipher (Cadence), JSDL parser - front end of the 
+   GridMatrix
+
+   - Batch processing using DRMs.
+
+   - Have proprietary job workflow language.
+
+   - Want to describe atomic jobs using std language to their system 
+     that forwards them to different off-the-shelf DRM systems.
+
+   - Need <extends> mechanism for DRM specific instructions (Maps).
+
+   - Using JSDL internally in the system and externally to DRMs when 
+     they have JSDL adapters.
+
+
+ - Dan Templeton (Sun), JSDL<->DRMAA (SGE?)
+
+   - JAXB, run JSDL schema through JAXB, 120 Classes that represent 
+     JSDL(?)
+   - Modified the main class of DRMAA Java binding to accept JSDL.
+   - Get Dan to send us the missing stuff and description of what 
+     he's done, plus any output.
+   - Extension mechanism for native specifications (Job Status and 
+     Scheduling?).
+   - e-mail addresses, and block e-mail.
+
+   - Bill, take the DRMAA attributes and put into JSDL so that stuff 
+     that isn't covered in JSDL is specified in a std. way(?)
+     - specify a std. DRMAA extension set for JSDL.
+
+
+ --> Conclusion??
+
+     JSDL will provide a very useful abstraction for a large part of 
+     describing the job (model), but, there will always be a level of 
+     proprietary description.
+
+CLOSE
+

@@ -1,0 +1,63 @@
+JSDL Teleconference - 2 July 2008
+=================================
+
+* Participants
+
+  Steve McGough
+  Donal Fellows
+  Steven Newhouse
+  Gabor Roczei
+  Philipp Wieder
+  Andreas Savva (minutes)
+
+  Apologies: Fred Brisard, Michel Drescher
+
+* Activity discussion
+
+  Agreed to use the wiki to keep track of a simple issues list now
+  that Gridforge seems stable again.
+    
+** Financial service provision use case overview
+
+   - Diagram describes the business case so some information needed is
+     missing. For example UDAP is only shown as used for discovery but
+     there are also updates from the compute service to udap,
+     financial provider register more services in use, etc
+   - Agreement leads to creation of an SLA
+     - tracking sla, status, and whether sla is violated or not
+     - dynamic vs static information? sla (terms) is not dynamically
+       updated
+
+   Action: Philipp will update the diagram/text and derive a list of
+           requirements
+
+** Next steps
+
+   - Coming close to finishing use case writeup
+   - Andreas will remind Fred for an update to the use case with no
+     name
+   
+   Action: Philipp will will produce a single requirements list
+           (removing and duplicated items)
+
+   - And will start prioritizing the requirements
+
+** Next call
+
+   - Scheduled for July 16 at the same time (2pm UTC)
+
+* JSDL 1.0 Experience document
+
+  - No major issues reported on the list
+  - Two projects want to add survey responses. They will be accepted
+    as long as they arrive before Friday.
+    - Both GRIA and ARC seem ok with that deadline
+  - In addition to merging in new project submission will also do the
+    minor update requested by Steven.
+  - On track for submission to the Editor this Friday
+  - Gabor gave an overview of the ARC survey response, which seems
+    close to completion
+
+  - The publication plan is to take the Experience document through
+    public comment/publication and then publish the document
+    previously-known-as-errata as the JSDL Recommendation

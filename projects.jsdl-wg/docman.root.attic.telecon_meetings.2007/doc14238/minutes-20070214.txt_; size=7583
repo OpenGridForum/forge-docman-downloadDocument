@@ -1,0 +1,175 @@
+JSDL Teleconference - 14 February 2007
+======================================
+
+* Participants
+
+  Ali Anjomshoaa
+  Fabio Benedetti
+  Fred Brisard 
+  Donal Fellows
+  An Ly 
+  Alessandro Maraschini
+  Andreas Savva 
+
+  Apologies: Steve McGough, Michel Drescher
+
+  Minutes: Andreas Savva
+
+>  1. Early discussion/Agenda bashing
+>     [Note OGF IPR rules apply]
+>  2. Status/updates on working drafts and assignments
+
+   Andreas gave a quick summary of OGF19 sessions---good attendance
+   (30+) even though both sessions were on the last day. Got a lot of
+   work done---resolved all or most issues with the current
+   drafts. The trackers have been updated and hopefully there will be
+   new document drafts by next week.
+
+   The group is waiting for an errata process to be defined by OGF and
+   if that is done quickly then JSDL 1.1 will be probably be just an
+   errata release.
+
+>  3. "Design Thoughts for JDSL 2.0" presentation (Fabio Benedetti)
+>     (This presentation was initially scheduled for the second
+>     session at OGF19 but we ran out of time.)  See
+>     https://forge.gridforum.org/sf/go/doc14210?nav=1
+
+   At OGF19 the group ran out of time in the second session before
+   this slide deck could be presented. This is part of identifying
+   what topics to work on for the next major release.
+   
+   [Caveat: Notes are fragmentary at times and some comments are not
+   attributed.]
+
+   [slide 2]
+
+   Just to set the stage and make sure terms and responsibilities are
+   used in a well-defined manner. These are different actors/roles but
+   could be taken on by the same entity at times.
+   - There are complications when doing delegation etc
+
+  [slide 3]
+
+   - Some use cases specific to the definitions given on the previous
+     slide.
+   - (Andreas) There is an OGF published document (OGSA Use Cases)
+     that describes a grid data center use case. It covers similar
+     material.
+   - (Donal) There are also similar cases in big academic environments
+
+   ACTION: Andreas will send Fabio a link to the document (or GFD
+           number)
+
+  [slide 4]
+
+   - Variables could be internal to job definition (like a macro); or
+     a parameter coming from outside the document
+   - Variables could be expressions
+   - Basically a way to identify what needs to be filled in before
+     submission
+
+   - (Donal) There is a system using JSDL that is already doing
+     something like this (parameterized job definitions). But it is
+     probably misusing JSDL. Some way to do this kind of templates in
+     a standard manner would be useful.
+   - Agreed that in general this kind of templates are useful but it
+     is only half the story. A way to publish the templates and
+     discover them is also needed.
+     - WS-Agreement also has the notion of templates (need to look
+       into it)
+
+   - Variables could be typed
+   - BPEL has variable support but this feature is probably
+     over-specified (too much functionality)
+
+  [slide 5]
+  
+   - One big difference between now and the time when JSDL 1.0 was
+     being specified is that WS-Security is published and has
+     widespread support, including tooling support.
+   - (Andreas) The idea of leveraging existing standards is very
+     attractive. At the time the group had an invited security
+     presentation in one of its sessions at Berlin (GGF10); and came
+     to the conclusion that it was better to leave all security
+     considerations as future work (orthogonality). Some projects have
+     done work with passing some sort of credentials as extensions
+     (e.g., GridSAM for myproxy(?)) and it may be worth thinking about
+     standardizing such a 'container'.
+     - Agreed that different credentials might be needed for different
+       constructs (filesystem, etc)
+   - (Donal) There is a big difference between passing credentials in
+     the SOAP headers (as part of the submission, as some people do)
+     and as part of the document.
+     - This is as part of the document; going back to the roles the
+       submitter may be a different actor...
+   - ...
+
+  [slide 6]
+
+   - Relationship : for example, containment,  ..
+   - Allocation : for example, to request a specific portion of a
+     resource
+   - Preference : which is the preferred requirement when there are
+     different options
+   - Selection criteria to optimize job execution
+     - Would this be something like what WS-Agreement does?
+       - WS-Agreement is too simple; just specify container. This
+         would be more specific to job execution
+     - (Donal) Resource Selection Services (RSS) has done some work on
+       this. There is a schema and way to define preferences
+   - Resource types and the ability to define new resource types is
+     essential to augment the resource model. It is one reason why
+     requirements in jsdl 1.0 are not sufficient (not 'transparently'
+     extensible)
+     - This is not to say that 1.0 resource requirement model is not
+       good for many purposes. 
+       - (Donal gave a overview of the thinking going into defining
+         the resource requirements for JSDL 1.)
+       - (Donal) There are groups that like the 1.0 model; it really
+         depends on the specific needs of the users. It is good enough
+         for many users.
+   - Using XQuery; then one (probaly the initial) resource type/model
+     would be equivalent to the one in 1.0. That is part of the work
+     of the OGSA information modeling team.
+
+   ACTION: Donal to send Fabio a pointer to the latest RSS draft
+
+  [slide 7]
+  
+   - This is work starting up in the OGSA workflow design team. So
+     complex choreography would probably be out of scope of this
+     group.
+   - WS-BPEL needs enhancement to support using together with jsdl;
+     this would be something that would require liaising with that
+     group to achieve.
+
+   - (Andreas) There are already a number of implementations of
+     bpel&jsdl. Often this is in addition to another workflow language
+     that can provide a more abstract description of the (e.g.) HPC
+     workflow; and bpel&jsdl are used as the 'implementation' target
+     to actually run the workflow.
+
+  [Discussion]
+
+  - (Andreas) In what ways is the structure of JSDL 1.0 insufficient?
+    For example, it is known that separating out the (resource)
+    requirements is one needed change. Are there more?
+  - (Fabio) The need for the credential container/mapping. 
+    - Also for resource requirements there is a need for an orthogonal
+      way to express resource requirements that can support new types
+      of resources. For interoperability, just generic jsdl would be a
+      problem. A basic resource model (type) that provides the same
+      level of functionality as JSDL 1 is needed. (Part of OGSA
+      Information modeling work)
+  - Agreed that the approach of bringing new features out
+    incrementally and using existing JSDL 1 implementations (as far as
+    possible) to get feedback and validate the new features on the way
+    to the next version is a good one
+  - Agreed that Fabio's slides present a good set of
+    requirements. More discussion is needed on prioritizing and should
+    be a focus of future calls
+  - Andreas will start allocating time on the calls for this work. 
+    - at least one more call before the March OGSA F2F
+    - a session at the next OGSA F2F (provided there is quorum, which
+      looks likely at the moment)
+    - a session at OGF20

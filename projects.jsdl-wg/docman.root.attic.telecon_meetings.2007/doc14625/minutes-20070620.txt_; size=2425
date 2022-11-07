@@ -1,0 +1,69 @@
+JSDL phone conference
+=====================
+
+20 June 2006
+
+Participants
+------------
+Andreas Savva, Fujitsu
+Gabor Roczei, NIIF
+Michel Drescher, Fujitsu
+Stephen McGough, Imperial
+Fred Brisard, CA
+An Ly, CA
+
+Minutes: Michel Drescher
+
+New Action items
+================
+- Steve: Request response from GridSAM
+- Michel: Request response from the UNICORE community
+- Andreas: Spam the JSDL, BES and HPCP mailing lists
+- Andreas: Beautify the experience report document and let
+           Steve and Michel have initial comments and reports
+		   before spamming the lists
+		   
+Agenda
+======
+  1. Early discussion
+	- OGF IPR rules
+	http://www.ogf.org/About/abt_policies.php
+	- Agenda bashing
+	- Updates
+  2. Review plans and outline for JSDL 1.0 Experience document
+	- Draft 0 to be available by the call
+  3. JSDL 1.0 Errata
+	- Text and tracker review
+	- Please review artifacts in advance
+	  and post any proposed text to the tracker
+
+Early discussion
+----------------
+- No changes to the agenda
+- The group has two documents in public comment (HPCApplication, 
+  SPMDApplication) and need comments.
+
+JSDL 1.0 Experience document
+----------------------------
+- The group discusses the first outline of the Experience document
+- There will be a table in the experience document listing all existing 
+  JSDL 1.0 elements, asking for implementation status (Yes, No, n/a, etc)
+- The document will try to capture which backends people map JSDL to
+- The document will also address any encountered security issues, and
+  asks for security framewors used with.
+- Any non-standardised JSDL extensions should be listed in the document, too.
+
+JSDL 1.0 Errata
+---------------
+- artf5652: The group accepted the change; artifact closed.
+- artf5498: The group accepted the change; artifact closed.
+- artf5855: The group did not reach agreement on this artifact.
+            Its final resolution is deferred to the next call.
+- artf5495: The group accepted the change; artifact closed.
+- artf5649: Issue resolved as accepted on the call; Andreas
+            will change the spec doc accordingly. Artifact is resolved,
+			and will be reassessed on the next call
+- artf5847: No more examples are usiing MountSource the wrong way;
+            artifact closed.
+- artf5856: The group slightly changed the text and changed the formatting
+            less outstanding. Artifact closed.

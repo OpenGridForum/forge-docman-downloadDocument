@@ -1,0 +1,51 @@
+JSDL-WG Telecon - 2006 08 16
+
+Attending:
+----------
+Andreas
+Marvin
+Donal
+Fred
+Darren
+Ali
+
+
+Agenda:
+
+OGSA F2F fall-out
+GGF18 Planning
+
+OGSA F2F:
+---------
+
+Discussed developments from the OGSA F2F. How the resource
+requirements are being addressed in the Information Model by Ellen et
+al. In the short term JSDL-WG will monitor, and participate as needed,
+in work being done in BES, HPCP and OGSA.
+- BES - container modeling
+- HPCP - extension to JSDL 1.0 for XQuery and also a cut-down version
+  of POSIXApplication
+- OGSA - overall architectural picture 
+
+Some of these would probably go in a 1.1 (incl errata); other work
+requiring structural changes will be folded into a 2.0 at a later
+time.
+
+Steve and Andreas will be looking how to map existing stuff to the
+description+requirements approach being proposed.
+
+GGF18 Planning:
+---------------
+
+Two sessions scheduled. Cover the following topics in order. (First
+session probably to Parallel Job.)
+
+- General outreach       - Steve
+- what is JSDL?          - Steve
+- Plan for JSDL sessions - Steve
+- Spec errata            - Andreas
+- Parallel Job           - Andreas/Steve
+- Parameter sweep        - Michel
+- Dependencies           - Michel/Ali/others
+- Base profile?          - (Probably not needed; drop?)
+

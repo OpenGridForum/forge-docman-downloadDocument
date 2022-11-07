@@ -1,0 +1,107 @@
+{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf540
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww22920\viewh16340\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 Open Grid Forum 27\
+October 12-16, 2009\
+Banff, Canada\
+\
+JSDL-WG Session Minutes\
+Notetaker: Philipp Wieder, TU Dortmund\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 ------------------------------------------------------\
+\
+\
+Session #1\
+JSDL General Session\
+October 14, 2009, 10:30 am - 12:00 pm\
+URL: http://ogf.org/gf/event_schedule/index.php?id=1762\
+# Participants: 13\
+---\
+\
++ IPR presented & participant sheet distributed\
++ Agenda bashing\
+  - JSDL session #2 as on printed schedule today at 14:45 @ MB150\
++ Work done since OGF 26\
+  - Mainly Activity instance: schema specification & document writing\
+  - More in session #2\
++ Discussion about new work to be executed by the JSDL-WG\
+  - Already agreed upon:\
+    * SPMD: survey & experience\
+      # (Andre) SAGA users are interested in extensions. Are there any plans to work on it, e.g. include cores and \
+          threads (and alignments)? - A (Andreas): Extensions are possible, but JSDL is currently not working on it. \
+          Agreement: Resource requirements come from GLUE, JSDL not looking into it. Alignment later. \
+          Suggestion: For a quick solution, SAGA should add its own resources.\
+      # Action (Andreas): Prepare survey template\
+    * Mini-spec to allow other resource descriptions \
+    * Dependencies/workflow experience document\
+  -  ---> All "new work" items are still valid, but not yet scheduled due to work done on activity instance schema\
+  - Potential new work\
+    * XQuery/GLUE --> mini spec to define resource requirements (<Resources> element) within JSDL through XQuery requests\
+      # (Steve) Session on future of BES on Thursday 14:45.\
+      # [NOTE: BES information delivered will more be service-related data; resource-related data via info services]\
+      # Needed: GLUE schema. Then the XQuery for JSDL <Resources> can be done.\
+      # [ACTION/Philipp] Check within projects who is willing to help with the XQuery.\
+      # (Steve): There is a core GLUE spec. XML schema needed --> currently done by ARC.\
+      # [ACTION/?]: Check when the XML GLUE schema is available.\
+      # Q (Alexander): In case current <Resource> element is deprecated and substitued by XQuery, is this the only way \
+        then to describe the request? - A (Andreas): No, in case you do not want to use XQuery, you can still use the \
+        <Resource> element. XQuery is only one option. Plan to have something to be substituted with a OGF \
+        specific schema for XQuery/GLUE (like done by the activity schema). (Alexander): Thinking of OVF/OCCI \
+        results to be shipped as Resource requirements for JSDL.\
+  - Further new work:\
+    * Experience document on Parameter Sweep --> Check, when 6 months period for GFD.149 ends [DONE: Nov. 12, 2009]\
++ JSDL 2.0\
+  - Pre-requisits:\
+    * XQuery extension\
+    * Dependencies. (Steve): In order to include dependencies you need to break backwards compatibility. \
+      (Andreas): Not yet decided about backwards comp. Dependencies would be extensions: Deprecate DataStaging and extend \
+       similar to <Resource> and XQuery (see above)\
+    * Q (Philipp): Advertising work on JSDL 2.0 to get more momentum? - A: (Andreas) Do the pre-requisits first, go evolutionary \
+       and then announce JSDL 2.0.\
+    * Q (Wolfgang): Network resources go into job requirements? - A (Andreas): Yes, this will be possible.\
+    * Q (Wolfgang): Licenses are to be also within JobRequirements? - A: Yes.\
+-----------------------------------------------------\
+\
+\
+Session #2\
+JSDL Activity Instance Document Schema\
+October 14, 2009, 14:45 pm - 16:15 pm\
+URL: http://ogf.org/gf/event_schedule/index.php?id=1763\
+# Participants: 9\
+---\
+\
++ Presenation of prototype implementation (see GridForge or session details)\
++ Alexander presenting the activity schema document in detail\
++ Discussion on schema. Life editing of the schema, result see GridForge. Selected discussion issues:\
+  - Sealing an activity document:\
+    * In-depth evaluation of adding signature to the document is necessary. Discussion at the next telecon. \
+    * [ACTION/Donal]: Prepare proposal for next telecon.\
+  - Timestamp also for where the entry is added to the activity history? - (Andrew): Potential problem with signing entry and \
+    altering it afterwards. Solution: Leave the "receiving" timestamp to the container implementation.\
+  - Q: If ActivityDefinition is ommitted, what does it mean? - A: There has to be one in the initial record, if it is ommitted,\
+     the previous one is referred to.\
+  - Q (Andrew): State --> Is there a notion of which model (e.g. BES Version X) to be followed. - A: Yes, through the \
+    OGF-specific schema the namespace is carried.\
+  - Dependency: Make clear what is done here. Atomicity, no workflow in there, etc.\
+  - ManagerReference: It is an URI/EPR.\
+  - ResourceUsage: UR may be used for monitoring. - (Donal): Intermediate UR is possible. --> Annotation written respectively.\
+  - Category: [NOTE/Andrew]: People in BES which demand state transition from FINAL to READY to RUN again. \
+    --> Independent of BES, the "final" category has a different semantic for the activity.\
+  - "Initial" category: [Implementation NOTE]: Creation of activity creates the initial entry. \
++ Q (Andrew): Is it also possible to add a link to the core image to the exception? - A: Yes, through extension. \
+   [NOTE]: Check whether there is the respective extension point. \
+-----------------------------------------------------\
+\
+NOTE:\
+The Activity concepts have been presented and discussed during the BES session. See respective notes for details.\
+\
+\
+ \
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+ }

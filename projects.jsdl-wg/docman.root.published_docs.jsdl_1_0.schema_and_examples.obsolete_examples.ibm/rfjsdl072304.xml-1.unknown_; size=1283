@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsdl:job 
+      xmlns:jsdl="http://www.gridforum.org/JSDL"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.gridforum.org/JSDL jsdl.xsd">
+      <jsdl:JobIdentification>
+        <jsdl:JobName>Another simple application invokation</jsdl:JobName> 
+        <jsdl:Extend name="unicore:job" /> 
+        <jsdl:Extend name="unicore:AAId">3452325707234</jsdl:Extend>
+        <!-- since we can't create extension in jsdl:Application, we'll do them here -->
+        <!-- point to the relevant agreement document -->
+	  <jsdl:Extend name="WSAgreementReference">file://rfwsag071904.xml</jsdl:Extend>
+        <!-- create an extension to indicate the execution path -->
+        <jsdl:Extend name="executablePath">/home/jsdlwg/bin</jsdl:Extend>
+      </jsdl:JobIdentification>
+      <jsdl:Application>
+      	<jsdl:ExecutableName>test</jsdl:ExecutableName>
+      	<jsdl:StdIn>/tmp/in</jsdl:StdIn>
+      	<jsdl:StdOut>/tmp/out</jsdl:StdOut>
+      	<jsdl:StdErr>/tmp/err</jsdl:StdErr>
+      </jsdl:Application>
+      <jsdl:Host>
+        <jsdl:ExecutionUserID>
+         <jsdl:User name="rfilepp" group="oneMoreGroup"/>
+        </jsdl:ExecutionUserID>
+       </jsdl:Host>
+</jsdl:job>
+
+

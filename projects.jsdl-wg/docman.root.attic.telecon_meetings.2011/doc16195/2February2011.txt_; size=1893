@@ -1,0 +1,61 @@
+JSDL Telecon
+2 February 2011
+
+Attendees
+---------
+	Mark Morgan (minutes, chair)
+	Michael Saravo
+	Morris Riedel
+	Etienne Urbah
+	Michaela Lechner
+	Aleksandr Konstantinov
+	John Karpovich
+	Stuart Martin
+	Phillip Wieder
+
+Not Attending
+-------------
+
+Agenda
+------
+	* Roll Call and Minutes
+	* Approve last meetings minutes
+		- Last meeting minutes aproved without changes (19January2011)
+	* Action Item Review from Last Week
+	* Agenda Bashing
+	* Discussing Use Case Templates
+	* Discuss Etienne's GLUE 2 document
+	* Teleconferencing Software
+	* Action Item Review
+
+Action Item Review from Last Week
+    * Mark Morgan to evaluate and prepare EVO for next telecon
+		- Done
+    * Read the GLUE 2 document that Etienne has prepared
+    * Start thinking about Use Cases
+        -- Take an existing one
+            --- Which existing one?
+                > JSDL one?
+                    >> Mark to look up JSDL use case format and email out
+                    >> If you have another existing format, please email to
+                        group
+    * Mark Morgan to get the JSDL minutes up and mailed out and to get the
+		- Done
+    * Mark Morgan to look into task management
+		- Done
+
+* Discussing Use Case Templates
+	* Everyone read http://forge.gridforum.org/sf/go/doc16024
+		- Prepared to vote in two weeks
+* Discuss Etienne's GLUE 2 document
+	* Phillip to put out slides from Munich, Morris Thoughts on JSDL
+* Teleconferencing Software
+* Action Item Review
+	* Starting working on Use cases
+	* Everyone read http://forge.gridforum.org/sf/go/doc16024
+		- Prepared to vote on use case format in two weeks
+	* Start working on almost-normative specifications
+	* Everyone take a look at a link by Etienne:
+	http://forge.gridforum.org/sf/wiki/do/viewPage/projects.pgi-wg/wiki/ReqJD3
+	* Mark to come up with comparison of Etienne's Use Case Document
+		and JSDL Use Case Document and PGI Use Case template.

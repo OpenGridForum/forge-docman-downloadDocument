@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--*
+    * Slightly more complex application invokation and workflow integration
+    * 
+    * User wants to run the application 'octave' to generate an input
+    * dataset to another application (bonus points for indicating how this
+    * fits with the previous use case.)
+    * 
+    * User supplies the *.oct file to configure octave.
+    * 
+    * User has no idea where the application is installed; it is not on the
+    * path, but the job engine is aware of where it is provided.
+    * 
+    * Workflow manager wants all components in the workflow to use a common
+    * working directory to make transferring intermediate files easy.
+    * 
+    * Output file is to be left in working directory if program succeeds,
+    * and deleted if program fails.
+    * 
+    * Stderr to be separate from all other components in the workflow to
+    * facilitate easier debugging.
+    * 
+    * (I can't remember how much use of parallelism octave can make; my
+    * concrete example happens to be on a single-processor machine...)
+    *-->
+
+<jsdl:job xmlns:jsdl="http://www.gridforum.org/JSDL"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:unicore="http://www.unicore.org/schema/jsdl"
+      xsi:schemaLocation="http://www.gridforum.org/JSDL jsdl.xsd">
+  <jsdl:JobIdentification>
+    <jsdl:JobName>Slightly more complex application invokation and workflow integration</jsdl:JobName>
+    <jsdl:Extend name="unicore:job"/>
+    <jsdl:Extend name="unicore:AAId">3452325707345</jsdl:Extend>
+  </jsdl:JobIdentification>
+  <jsdl:Resource>
+    <jsdl:CPUCount>1</jsdl:CPUCount>
+    <jsdl:PhysicalMemory>40971520</jsdl:PhysicalMemory>
+  </jsdl:Resource>
+  <jsdl:SoftwareRequirements>
+    <jsdl:Extend name="unicore:Application">octave</jsdl:Extend>
+  </jsdl:SoftwareRequirements>
+  <jsdl:Application>
+    <jsdl:ExecutableName type="unicore:Application">octave</jsdl:ExecutableName>
+    <jsdl:Argument>input.oct</jsdl:Argument>
+    <!-- Can't remember if output data file is specified in control
+      file or on command line -->
+    <jsdl:Argument>output.dat</jsdl:Argument>
+    <jsdl:StdErr>errors.3452325707345.log</jsdl:StdErr>
+    <jsdl:WorkingDirectory>/home/me/I/know/where/this/is</jsdl:WorkingDirectory>
+  </jsdl:Application>
+  <jsdl:DataAttributes>
+    <jsdl:File>
+      <jsdl:FileName>input.oct</jsdl:FileName>
+      <!-- We've attached the control file to the SOAP message -->
+      <jsdl:Source>cid:blahblahblah</jsdl:Source>
+      <!-- File is not to be retained; attribute missing from schema -->
+      <jsdl:DeleteOnTermination/>
+    </jsdl:File>
+    <jsdl:File>
+      <jsdl:FileName>output.dat</jsdl:FileName>
+      <!-- File is to be retained -->
+      <jsdl:DeleteOnTermination>false</jsdl:DeleteOnTermination>
+    </jsdl:File>
+    <jsdl:File>
+      <jsdl:FileName>errors.3452325707345.log</jsdl:FileName>
+      <jsdl:Target>unicore:spooltouser</jsdl:Target>
+      <jsdl:DeleteOnTermination/>
+    </jsdl:File>
+  </jsdl:DataAttributes>
+</jsdl:job>

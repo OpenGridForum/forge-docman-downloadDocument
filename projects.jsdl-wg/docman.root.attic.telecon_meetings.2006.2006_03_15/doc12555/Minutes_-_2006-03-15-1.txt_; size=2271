@@ -1,0 +1,68 @@
+JSDL Telecon Minutes
+====================
+March 15th, 2006 - 14:00 GMT
+============================
+
+
+Attendees:
+==========
+
+Alexander Papaspyrou (University of Dortmund)
+Andreas Savva (Fujitsu, Japan)
+Leo Stutzmann (Platform, US)
+Donal Fellows (University of Manchester)
+Ivan Rodero (Barcelona Supercomputing Center)
+Ali Anjomshoaa (EPCC, University of Edinburgh)
+Michel Drescher (Fujitsu, UK)
+
+
+Apologies:
+==========
+
+
+Discussion:
+===========
+
+Pick up where we left off at GGF16:
+
+Parallel Job Type Extension
+---------------------------
+ o Using POSIX Application Type
+ o Notes of interest from:
+   - BSC (Ivan Rodero - Proposer and Reviewer)
+   - Platform (Chris Smith - has previously sent "topology examples" to the JSDL list)
+   - Manchster University (Donal Fellows - ?)
+   - Fujitsu (Andreas Savva - ?)
+   - LeSC, Imperial College (Stephen McGough/William Lee - ?)
+
+
+ - Comments:
+   ---------
+-> Donal - Need full doc examples of how the parallel extension would be used as a starting point
+         - Example of the features in the BSC proposal within the context of an overall JSDL doc
+
+   Andreas - We could use examples of parallel jobs being used within the context of JSDL
+   Andreas - Get parallel job extension examples from NAREGI
+   Ivan - Send examples of parallel jobs from BSC to the JSDL-WG mailing-list
+   Leo - Get Chris to send us intention of collaboration with the parallel extension examples
+   Andreas - Chris has sent topology examples to JSDL list in the past, will dig them out
+
+ - Actions:
+   --------
+   [Ivan] - Send BSD parallel job examples using JSDL and extensions to the list
+   [Andreas] - Seek out NAREGI parallel job examples using JSDL and extensions and send to the list
+   [Andreas/Chris] - Send parallel job topology examples using JSDL and extensions to the list
+
+
+Working with CDDLM in Provisioning
+----------------------------------
+ o Chris' BLAST job example in JSDL with CDDLM deployment doc 
+   - examples are being discussed and worked on in OGSA
+   - ball is in OGSA's court to sort out use-cases and architectural requirements
+   - Andreas will warn on ball returning to JSDL-WG
+
+Workflow and Scheduling
+-----------------------
+ o Discussion on Job Dependencies to be had at GGF17(?)
+ o Ali to sound out interest
+

@@ -1,0 +1,42 @@
+JSDL Teleconference - 16 September 2009
+=======================================
+
+* Participants
+
+  Steve McGough
+  Philipp Wieder
+  Andreas Savva
+
+  Apologies: Alexander Papaspyrou
+
+* Agenda:
+>  1. Agenda bashing & quick status update
+
+   No updates
+
+>  2. Activity instance document schema
+>     - Progress on issues/actions on tracker
+>       https://forge.gridforum.org/sf/go/projects.jsdl-wg/tracker.activity_schema
+
+        artf6317: closed
+        artf6307: Philipp to check and close
+        artf6308: Philipp to check and close
+        artf6304: Deferred
+     
+  Andreas to add artifact for 
+    - Use xsd:all instead of xsd:sequence if it allows for the xsd:any with ambiguity? 
+    - Philipp to check if it works using oXygenXML
+
+>     - Draft review
+
+    Andreas to remind Donal for ResourceUsage element (abstract, concrete)
+
+    Introduction: Use cases looked at requirements
+    - Delegation as main example
+      - Philipp to look for an example to be used in the specification.
+
+>  3. Other business
+
+   Next call: 
+   - Check availability for Sep 30th
+   - Oct 7th last checkpoint before OGF27

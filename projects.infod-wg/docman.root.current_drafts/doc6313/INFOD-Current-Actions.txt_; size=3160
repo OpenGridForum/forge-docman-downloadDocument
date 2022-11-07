@@ -1,0 +1,128 @@
+INFOD Current Actions
+=====================
+
+This is a list of current actions.  Each action has a serial number, once it
+is closed it is moved to a companion document of closed actions.
+
+==============================================================================
+
+
+182   Framework of chapter 1 of next spec - rough draft
+
+      - Owner: Dieter
+      - Date: 28 Sep 2006
+      - Target: 23 Aug 2007
+
+      DONE
+
+
+209   Provide schema for registry along with data generator and query
+      generator to Dave Berry
+
+      - Owner: Vijay
+      - Date: 22 Mar 2007
+      - Target: 30 Aug 2007
+
+      Waiting for info from Raghul. Some information provided but more needed.
+
+
+215   Construct SIGMOD Article
+      - Owner: Vijay
+      - Date: 12 Apr 2007
+      - Target: 9 Aug 2007
+
+      Will be sent out in time
+
+
+219   Develop an 'elevator speech' for INFOD 
+      - Owner: Steve
+      - Date: 23 Aug 2007
+      - Target: draft by 9 Aug 2007
+
+      Needed on web page
+
+      DONE
+
+
+223  Review Use Case Doc
+     - Owner: All
+     - Date: 21 Jun 2007
+     - Target: 23 Aug 2007
+
+     Steve will try to read for the 12th July. He is waiting for
+     clarification before he can proceed.
+
+
+225  Produce revised spec
+     - Owner: Steve
+     - Date: 5 June 2007
+     - Target: 27 Sep 2007
+
+
+227   Reasonable draft of chapter 1 of next spec to discuss at OGF21
+      - Owner: Dieter
+      - Date: 5 Jul 2007
+      - Target: 28 Sep 2007
+
+
+228   Add news item pointing to new spec and clean up web a bit
+      - Owner: Steve
+      - Date: 12 Jul 2007
+      - Target: 26 Jul 2007
+
+      DONE
+
+
+231   Provide precise XML for one of the constraints in a use case
+      - Owner: Ronny and Dieter
+      - Date: 19 Jul 2007
+      - Target: 23 Aug 2007
+
+      Steve has provided Ronny and Dieter with the precise questions.
+      Most info now provided
+
+
+233   Output from getmetadata is not defined.
+      - Owner: Dieter
+      - Date: 19 Jul 2007
+      - Target: 23 Aug 2007
+   
+      Dieter will add a erratum to the wiki
+
+
+235   Review messages in spec
+      - Owner: All
+      - Date: 2 Aug 2007
+      - Target: 16 Aug 2007
+
+      https://forge.gridforum.org/sf/wiki/do/viewPage/projects.infod-wg/wiki/ErrattaForVersion1OfSpecifications
+      Proposed changes are on the Wiki with stars. Most are now approved 
+
+
+236   Consider impact of adding the external EPR to the notification
+      message to the publisher and the internal EPR for message from
+      publisher to consumer. Is it sufficient for R-GMA?
+      - Owner: Steve, Arjun
+      - Date: 2 Aug 2007
+      - Target: 30 Aug 2007
+
+
+237  Outline access control issue
+     - Owner: Arjun, Raghul
+     - Date: 16 Aug 2007
+     - Target: 30 Aug 2007
+
+
+238  Add to the use case document to address the new features in the errata
+      - Owner: Dieter
+      - Date: 23 Aug 2007
+      - Target: 13 Sep 2007
+
+
+239  Look at draft of chapter 1 of new spec: 
+     <http://forge.gridforum.org/sf/go/doc14734?nav=1> 
+      - Owner: All
+      - Date: 23 Aug 2007
+      - Target: 30 Aug 2007
+
+240

@@ -1,0 +1,125 @@
+Minutes of the meeting of SAGA-RG
+held at OGF21, oct 17, 2007, 15:15-16:45
+
+notes: Shantenu Jha, Thilo Kielmann
+
+agenda:
+
+1. IPR
+2. Agenda bashing
+3. Java binding for the CORE spec
+
+Thilo Kielmann opens the session, explains the IPR rules and hands out
+the signup sheet
+
+It is agreed to begin the session with a short report-out from the
+"future of DRMAA" session.
+Here, Dan Templeton reports about the plans to prepare a next DRMAA
+version as another SAGA package.
+Both the SAGA and DRMAA groups want to cooperate on this issue.
+
+Java binding:
+
+Thilo Kielmann is presenting important aspects of the Java binding, as
+it is currently being developed by his group.
+
+fundamental decisions:
+
+- design for Java 1.5
+- for application portability across multiple implementations, a mechanism
+  like C++ header files is desirable. for this purpose, the language binding
+  presents all SAGA interfaces and classes as interfaces, accompanied by
+  factory classes. These interfaces and classes will have to be used by all
+  implementations, acting like header files.
+
+Flags being used, e.g. for file read/write/create operations.
+-----
+The current soluton is based on enumerations. The participants doubt that
+this solution is ideal. Use of these enumerations is complex due to the
+method interface of the object. Also, these enums are converted to integers
+for the operations (e.g., file read); this violates type safety.
+
+The participant discuss alternatives for modeling such flags. They favour
+two options:
+a) a pure integer-based solution without type safety, but with an easy to use
+   interface and predefined constants (powers of two)
+b) a real object that never gets casted to integers
+
+Proposals for both versions shall be made and posted to the mailing list for
+comparison and for adopting one of these two approaches.
+
+timeout values:
+--------------
+numeric constants such as "nowait" and "waitforever" shall be used instead
+of 0 and -1
+
+Buffers:
+-------
+
+it is suggested to check whether the NIO bytebuffer could be used instead of
+a from-scratch buffer
+
+
+files:
+-----
+SAGA files are POSIX style
+the Java binding is using exceptions instead of the POSIX error codes
+The current file implementation is inspired by random files.
+inputstream and outputstream shall be layered on top of this.
+
+tasks:
+-----
+
+this interface (group) seemingly needs more attention
+
+it is suggested to check whether future objects from the concurrency library
+could be used.
+the RVTask looks very much like a future
+
+the asymmetry between run() and waittask() should be resolved
+
+
+optional parameters:
+-------------------
+
+it is suggested to add methods (via overloading) that do not have the last
+parameter for those methods with optional parameters in the SAGA CORE spec.
+maybe the varargs mechanism might help (whatever becomes easier to use)
+
+
+implicit sessions:
+-----------------
+in SAGA, the default session is used unless specified differently.
+this means that the factories need additional methods without session
+parameters.
+
+
+RPC package:
+-----------
+
+esp here, the varargs package might be useful
+
+
+CPI, adaptor interface:
+----------------------
+
+The audience suggests to add an SPI (service provider interface) as part
+of the Java language binding (currently called CPI in the JavaGAT)
+This could allow for a standardized adaptor interface, and thus adaptor
+reuse.
+Good examples for such an API/SPI combinations are: JAXP, LDAP, DRMAA
+
+
+multiple implementations:
+------------------------
+
+the questions was raised whether it would be / should be possible to
+use multiple SAGA implementations in the same application.
+It was decided to not support this as no real need is seen.
+
+thread safety:
+-------------
+The audience decided that simply requiring thread safety (and synchronization)
+of SAGA methods would simplify application development. An expected 
+performance impact is considered of lesser importance, as the service times
+of remote services dominate invocation times anyway.

@@ -1,0 +1,38 @@
+JSDL Teleconference -  9 June 2010
+==================================
+
+* Participants
+
+    Philipp Wieder
+    Donal Fellows  
+    Andreas Savva
+
+  - Apologies
+    Alexander Papaspyrou
+
+* Agenda:
+> 
+>   1. Agenda bashing & quick status update
+>   2. Activity instance description specification
+>      Document & issue review in preparation for pc submission
+
+       - Walkthrough of open issues and updated text
+
+       - Clarified that UR text should talk normatively about producer
+         of ActivityHistoryEntry. Consumer point of view or processing
+         rules are out of scope. Also reword text to say "According to
+         the UR spec starttime & endtime ...."
+
+       - Philipp to ask BES-WG to put their schemas online
+
+       - artf6335 - talks about 'sealing' -- a deprecated term --
+         appears in 1.4.2. Remove in next version. It is ok in
+         security section as that is a security term.
+
+       - Philipp will make updates. Target end of this week or
+         beginning of next to send final version to the list
+
+>   3. Other business
+>      - OGF29 session
+
+* Next call: if needed, June 16, otherwise after OGF29

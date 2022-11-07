@@ -1,0 +1,151 @@
+JSDL Telecon Minutes
+====================
+March 24th, 2004 - 16:00 GMT
+============================
+
+
+Attendees:
+==========
+
+Ali Anjomshoaa (EPCC)
+Lee Cook (IBM)
+Stephan Grell (Sun)
+Dan Templeton (Sun)
+Fred Brisard (CA)
+Chris Smith (Platform)
+Asit Dan (IBM)
+
+
+Apologies:
+==========
+
+
+Agenda:
+=======
+
+   Non-technical
+   -------------
+   o Discussion of the next phase of work on the spec.
+   o Discussion of the start of deliverable 3 (translation tables)(postponed)
+   o Discussion of schema authors.
+
+   Technical
+   ---------
+   o (I propose) Discussion of resource attributes from the GGF10 fallout.
+
+
+Discussion:
+===========
+
+Administrative:
+---------------
+
+   o Discussion of the next phase of work on the schema
+     --------------------------------------------------
+
+       Attribute Updates:
+       ------------------
+     - All authors to revise attributes following feedback from GGF10.
+         Use GGF10 meeting minutes.
+     - Follow new tabular format for the spec?
+     - Deadline for updates by the end of the month???
+
+
+       Use-cases and Examples:
+       -----------------------
+     - Include ***use-cases*** and ***examples*** (in XML if helpful) 
+       and ***any-other-information*** for clarification, for the 
+       attributes in the relevant sections, if necessary.
+
+
+       Effort Re-allocation:
+       ---------------------
+     - Fred to come off the Scheduling attributes work to help An 
+       with the Resource attributes section.
+     - Lee to come off the Security attributes work and start to look at
+       OWL, XACML, etc. and tools for the XML schema.
+
+ o Potentially, Lee to work on the schema.
+ o Stephan G., to work on the schema.
+ o The current authors to work on the schema.
+ o Alain Andrieux, to work on the schema (reviewer).
+
+Comments:
+---------
+Question: Will the schema be done to discuss at GGF11?
+  Answer: That should be the aim.
+
+Lee: Making schema generic. i.e. executables as web-services, etc.
+     use <any>.
+
+
+Specification:
+--------------
+Resource Section:
+-----------------
+
+host
+----
+o If more than one attribute exists, i.e. 2 Hosts, and if we require to
+  specify an order of preference, then the schema should be explicit in 
+  specifying that order. That is, do not rely on the order of appearance of 
+  the attributes in the JSDL document.
+
+
+Digression from the Resource Section of the Specification:
+----------------------------------------------------------
+
+Job Definition
+--------------
+o Suggestion: That the JSDL expresses a job template and that there is no 
+              connection to a running job instance.
+
+  - So Job ID, which reflects the running job status, does not belong in the 
+    JSDL, according to the above definition.
+
+o Should, therefore, push the personal ID and resource usage, and idea of 
+  JSDL representing an instance of a running job out of the JSDL - to a 
+  higher level(?).
+
+o The JSDL then becomes a template language. A list of requirements for a 
+  job.
+
+
+Concluding:
+-----------
+o Job template vs. Job instance description...
+  - Job template wins...
+
+o Simple resource requirements or a complex resource requirement.
+  - absolute requirements
+
+Question: What are we defining?
+  Answer: A set of attributes and the language for defining the 
+          relationship between them.
+
+ o Refer back to the charter.
+
+ o Will need a set of operators to express preference between attributes, 
+     and 
+ o Will need a set of operators to express the specified value of the 
+     attributes.
+
+Question: introduce these operators in the JSDL?
+  Answer: can do, see JDML for e.g.
+
+Asit: to give a talk on Agreement/Guarantee to JSDL on Wed. 7th April and 
+      to send us e-mail introduction (abstract) for the agenda in advance.
+
+
+AOB:
+----
+Dan: Now that we are doing templates not job instance descriptions, what 
+     about parametric jobs, a la SGE (refer to SGE man page for qsub)
+
+Chris: Also in LSF terms for the SOAP interface - will send doc to list.
+
+
+DONM:
+-----
+Wednesday 31st Mar 2004 - 16:00 GMT(?)
+

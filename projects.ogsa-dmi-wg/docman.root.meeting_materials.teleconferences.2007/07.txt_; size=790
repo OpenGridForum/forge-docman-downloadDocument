@@ -1,0 +1,33 @@
+Paricipants :
+
+Allen Luniewski, IBM
+Ravi Madduri, ANL 
+Steven Newhouse from Microsoft
+
+
+Notes: 
+
+Discussed about group charter
+- Naming: We should change the charter to say that this is out of scope of this working group and we would be happy to work with any wg working to standardize this.
+
+Document: Data Movement Transport Protocols and their use in OGSA-DMI
+
+Out of scope for this spec. DMI is not about underlying data transport protocols. So we should update the charter 
+
+Document: WS-RF Basic Profile Rendering of Data Movement Functional
+Specification
+
+Ravi will take a stab at it.
+
+
+Action Items:
+
+Ravi will update the charter
+Ravi will upload the draft with his comments
+
+Next week's agenda
+
+Document review 
+Slide deck review
+Allen's write up
+

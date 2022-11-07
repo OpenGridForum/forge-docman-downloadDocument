@@ -1,0 +1,291 @@
+JSDL-WG GGF9 (Chicago) Session 1
+--------------------------------
+
+Tuesday 7th October 2003, 16:00 - 17:30 (local time)
+----------------------------------------------------
+
+
+Ali – presented the agenda:
+
+        o Motivation for the JSDL
+        o JSDL-WG Charter
+        o JSDL-WG Deliverables
+        o JSDL-WG Update and Logistics
+        o JSDL Structure
+          - Attribute Categories
+        o JSDL-WG Work Plan
+
+
+Ali - purpose of the meeting:
+
+        o Some dissemination of information.
+        o Go through basic structure of JSDL, spec document.
+        o Present outline to make writing the spec easier.
+        o Attribute categories. (Is it the right way to present 
+          JSDL attributes?)
+
+
+Brief motivation for JSDL:
+--------------------------
+
+Architecture agnostic job description language.
+
+Allow "job mgt" and interoperability between "entities" such as 
+job submission client, queuing services, execution resources, etc. 
+
+
+JSDL Structure:
+---------------
+
+a) "core set" of attributes
+   --> JSDL supplies semantics and syntax of attributes
+
+b) extension mechanism
+   not clear yet. to add proprietary attributes.
+   (maybe <any>....)
+
+
+JSDL-WG Charter:
+----------------
+
+a) set of MUST attributes
+b) set of MAY  attributes (file transfer techniques, job 
+   dependencies, etc.)
+
+NOT CONCERNED about the scheduling and selection of resources 
+but of course JSDL should enable it.
+
+We accept proposal for set of terms/attributes presented in the Job 
+Terms Proposal. If conflicts we will hash them out in conf calls.
+
+
+JSDL-WG Deliverables: 
+---------------------
+
+a) Binding-independent spec: attributes, semantics, 
+                             inter-relationships, value ranges
+
+b) Normative XML schema
+
+c) Document of translation tables.
+
+    --> using knowledge of specialists from 
+        different systems
+
+
+   Darren: One of the reasons for JSDL: interoperability.
+           Too costly to drop brand new batch language into 
+           an existing system.
+
+   Ali: EPCC set up new system. Scheduler went 
+        from LSF to LoadLeveler. Don't want to have to port 
+        existing job description documents. Ideally translate 
+        from JSDL to various proprietary languages and vice 
+        versa, to allow interoperability.
+
+   Alain: Who will write those adapters (the JSDL translators 
+          between the DRM Systems and the JSDL language)?
+
+   Ali: Best if the ISVs do it, or other software people that 
+        need to start to use current DRM systems.
+
+   Andreas: Thought about writing translators to other 
+            languages/standards? Such as DRMAA? DRMAA-JSDL 
+            translator may save some work.
+
+   Ali: shows proof-of-concept student project based on DRMAA 
+        attribute set and IBM LoadLeveler. He has job submission 
+        client to translate from DRMAA client invocation to actual 
+        LoadLeveler.
+
+   Comment: if own schema, can do XSLT to do translation if 
+            description is not too sophisticated.
+
+
+Question: Is it really critical to restrict JSDL to batch jobs?
+
+Ali: We are primarily focused on batch systems when we talk about 
+     the Job Submission Description Language.
+
+Ali: Start with batch job languages/systems. Set up the basis for JSDL.
+     Other things are out of scope right now. 
+
+Steve: Keep the notion of covering other types of jobs in the back 
+       of our minds as much as possible even if we don't put in the 
+       language at this stage.
+
+
+Hrabri: Job attributes have been defined in the DRMAA spec.
+
+Ali: They should be submitted for consideration to this group.
+
+
+JSD-WG Update:
+--------------
+
+Since GGF8:
+ o Submitted new JSDL-WG proposal.
+ o Chartered mid-August.
+ o Weekly telecons in Sept.
+ o So far we have:
+   - The basic spec document outline,
+   - The proposal for Job Terms made to group.
+
+
+JSDL-WG Logistics:
+------------------
+
+Migration of Web site to GridForge in the pipeline.
+
+Weekly telecon meetings:
+
+ o Time will rotate every 4 weeks for fairness.
+ o Next set of 4 meetings start on Oct 15.
+   - Start time 13:00 GMT until Oct 26
+                14:00 GMT after Oct 26
+ o Meeting time posted to list before every meeting.
+ o If times are not practical, send comments to the list.
+
+
+JSDL Attribute Categories:
+--------------------------
+
+o Coarse-grained break-up of attributes.
+
+o Ali - Attribute Categories (See presentation for Details)
+
+        o Job ID Attributes
+        o Job Resource Attributes
+        o Job Environment Attributes
+        o Job Data Attributes
+        o Job Scheduling Attributes
+        o Job Security Attributes
+
+["JSDL Attribute Categories" slide gives examples of what 
+types of attributes go under each category]
+
+Invitation to the floor for comments.
+
+Karl: What is the semantic benefit of these categories?
+      What is the purpose of the categories?
+
+Ali: reasons for categories: 
+
+     1) To help facilitate the writing of the spec. Make 
+        manageable pieces of work. Idea being to take the first 
+        category, tackle it for a few weeks, define its 
+        attributes, and then move on to the next category.
+
+     2) Maybe job description can be used by applications that 
+        only deal with certain set of attributes.
+        Example: Accounting app. If JSDL structure reflects 
+        set of attributes useful for accounting, i.e. resource 
+        usage attributes, categorisation of that set of attributes 
+        could help the application.
+
+  The purpose of the categories is basically to logically break 
+  things up to facilitate the writing of the specification. Another 
+  reason to put attributes into the categories is that you may have 
+  a job description that only needs to deal with a specific type of 
+  application like accounting. Then the Category can possibly be 
+  used to handle accounting attributes.
+
+
+Comment(Alain): Limited mapping since not all domain-specific 
+                groupings will be covered
+
+
+Ali: A document is linked to unique instance of a job. That is not 
+     to say you can not reuse the document to submit another job 
+     instance.
+
+
+We need to make sure that the JSDL can handle interactive jobs 
+and other future things. The DRM Schedulers should handle things 
+appropriately. An XML document can handle Job templates etc.
+
+
+Ali: JSDL not dictating anything about how job description is written. 
+
+Steve: Only defining the structure of the job description document.
+
+
+Question: Use case for environment variables? Should these be in the 
+          resource category?
+
+
+Karl: We should not worry too much about the categories.
+
+
+Ming: When are we going to get things going as far as identifying the 
+      attributes and putting them into categories. Others agreed that 
+      we come up with all of the attributes and then make sure the categories 
+      fit.
+
+  Which direction to go to define attributes? Compare systems or start 
+  from scratch?
+
+Steve: Probably both directions at the same time.
+
+Ming: probably useful to capture command-line features not just attributes 
+      in description language.
+
+
+Darren: Let's define all attributes and only then group them. Maybe 
+        we will throw away some categories or merge them, we'll see 
+        at that point.
+
+  Would be nice to gather informational documents about each language.
+
+  Maybe we need to make sure that the DRM vendors are asked about what 
+  they want in the JSDL and what attributes are the best way to go.
+
+
+Karl: Concern about assumptions about operational context and 
+      architecture, not stated explicitly. When are we defining 
+      service interfaces?
+
+      What are you going to do about the Adaptors and we need to 
+      define the protocols and messages and functions.
+
+Darren: Want to approach from other end. "How I am going to use JSDL?"
+
+Karl: Exactly what is missing. We need to define how to use 
+      this "job document".
+
+Darren: Start from use case. We need to look at the use cases to set 
+        the boundaries that we need to bring into the group from the 
+        NPI group.
+
+
+Question: Users should not see all attributes. We need to make sure 
+          that the JSDL does not require all of the information to submit 
+          a job. Most people do not know or care about the specifics about 
+          the job.
+
+Steve/Ali: We need to think about the meta-job stuff.
+
+  We need to decide whether we need to be more abstract or more concrete.
+
+  Domain application should shield users from attributes that are not 
+  needed.
+
+Tom: What about the DMTF – CIM model and what a job class is in their model.
+
+  Thought about other formats? MOF? UML? 
+
+Jenny: Charter says XML, so it will be XML.
+
+
+Question: how can application provider specify its requirements using JSDL?
+
+Suggestion: use WS-Agreement for a standard way to specify those requirements.
+
+
+Comment(Andreas): On job ID, better to be the job "name" 
+                  because cannot be decided by the client.
+
+Chris: Whoever you talk to will give you a handle. No guarantee of uniqueness.
+
+--> let's discuss specific attributes on the list or conference call.
+

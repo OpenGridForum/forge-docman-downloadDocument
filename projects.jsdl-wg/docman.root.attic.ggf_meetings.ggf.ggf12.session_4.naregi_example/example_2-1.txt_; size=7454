@@ -1,0 +1,210 @@
+<!-- *************************************************************** -->
+<!-- JSDL example by NAREGI akioka version                           -->
+<!-- last update: 2004/08/24                                         -->
+<!-- Changelog:                                                      -->
+<!-- 2004/08/20   Correct typos,                                     -->
+<!--              Rewrite to use JSDL description for exclusive exec,-->
+<!--              Reqrite to use JSDL description for queue          -->
+<!--              requirement                                        -->
+<!-- 2004/08/24   Moved "ExclusieveExecution" to SoftwareRequirements-->
+<!--              Fixed typo                                         -->
+<!-- *************************************************************** -->
+<jsdl:job xmlns:jsdl="http://www.gridforum.org/JSDL"
+	  xmlns:xsi="http://www.w3.org/2001/XML_Schema-instance"
+	  xmlns:naregi="http://www.naregi.org/NAREGI">
+
+  <!-- Job Identity Attributes -->
+  <jsdl:JobIdentification>
+
+    <jsdl:ExecutionUserID>
+      <user>Norma Jean Baker</user>
+      <group>nii.ac.jp</group>
+    </jsdl:ExecutionUserID>
+
+    <jsdl:UserGroupName>
+      NAREGI
+    </jsdl:UserGroupName>
+  
+    <jsdl:JobName>
+      RISM-FMO Multi-Physics Coupling Job
+    </jsdl:JobName>
+
+    <jsdl:JobProjectName>
+      NAREGI Work Package 6
+    </jsdl:JobProjectName>
+
+    <jsdl:JobCategory>
+      GridMPI
+    </jsdl:JobCategory>
+    <jsdl:JobCategory>
+      Coupled Simulation
+    </jsdl:JobCategory>
+  
+    <!-- added for our requirement -->
+    <naregi:CheckPoint>
+      120 units=S
+    </naregi:CheckPoint>
+
+  </jsdl:JobIdentification>
+
+
+  <!-- environment variables-->
+  <jsdl:EnvironmentVariable name="IMPI_SERVER_IP">
+    ahost.naregi.org
+  </jsdl:EnvironmentVariable>
+  <jsdl:EnvironmentVariable name="IMPI_SERVER_PORT">
+    5893
+  </jsdl:EnvironmentVariable>
+  <jsdl:EnvironmentVariable name="IMPI_CLIENT_ID">
+    1
+  </jsdl:EnvironmentVariable>
+
+
+  <!-- Process Topology -->
+  <jsdl:ProcessTopology>
+    <naregi:ProcessFeatureRef>
+      FMO
+    </naregi:ProcessFeatureRef>
+    <naregi:ProcessFeatureRef>
+      Mediator
+    </naregi:ProcessFeatureRef>
+    <naregi:ProcessFeatureRef>
+      RISM
+    </naregi:ProcessFeatureRef>
+  </jsdl:ProcessTopology>
+
+
+  <!-- Process Feature -->
+  <naregi:ProcessFeature id="FMO">
+    <naregi:SoftwareRequirementsRef>
+      FMO_SoftReq
+    </naregi:SoftwareRequirementRef>
+    <naregi:HardwareRequirementsRef>
+      FMO_HardReq
+    </naregi:HardwareRequirementsRef>
+    <naregi:ApplicationRequirementsRef>
+      FMO_AppReq
+    </naregi:ApplicationRequirementsRef>
+  </naregi:ProcessFeature>
+
+  <naregi:ProcessFeature id="Mediator">
+    <naregi:SoftwareRequirementsRef>
+      Mediator_SoftReq
+    </naregi:SoftwareRequirementRef>
+    <naregi:HardwareRequirementsRef>
+      Mediator_HardReq
+    </naregi:HardwareRequirementsRef>
+    <naregi:ApplicationRequirementsRef>
+      Mediator_AppReq
+    </naregi:ApplicationRequirementsRef>
+  </naregi:ProcessFeature>
+
+  <naregi:ProcessFeature id="RISM">
+    <naregi:SoftwareRequirementsRef>
+      RISM_SoftReq
+    </naregi:SoftwareRequirementRef>
+    <naregi:HardwareRequirementsRef>
+      RISM_HardReq
+    </naregi:HardwareRequirementsRef>
+    <naregi:ApplicationRequirementsRef>
+      RISM_AppReq
+    </naregi:ApplicationRequirementsRef>
+  </naregi:ProcessFeature>
+
+
+  <!-- Hardware Requirements -->
+  <jsdl:HardwareRequirements id="FMO_HardReq">
+    <!-- CPU Speed should be described in MIPS -->
+    <!-- Count is added for our application -->
+    <jsdl:CPU Speed="3GHz" Count="256">Intel(R) Xeon(TM)</jsdl:CPU>
+    <jsdl:PhysicalMemory>1 units=G</jsdl:PhysicalMemory>
+    <jsdl:Network Count="1" Bandwitdth="10000MBps">IB</jsdl:Network>
+    <jsdl:DiskSpace>1 units=G</jsdl:DiskSpace>
+  </jsdl:HardwareRequirements>
+
+  <jsdl:HardwareRequirements id="Mediator_HardReq">
+    <!-- CPU Speed should be described in MIPS -->
+    <!-- Count is added for our application -->
+    <jsdl:CPU Speed="2.8GHz" Count="1">Intel(R) Xeon(TM)</jsdl:CPU>
+    <jsdl:PhysicalMemory>2 units=G</jsdl:PhysicalMemory>
+    <jsdl:Network Count="1" Bandwitdth="10000MBps">IB</jsdl:Network>
+    <jsdl:DiskSpace>1 units=G</jsdl:DiskSpace>
+  </jsdl:HardwareRequirements>
+
+  <jsdl:HardwareRequirements id="RISM_HardReq">
+    <!-- CPU Speed should be described in MIPS -->
+    <!-- Count/Depth is added for our application -->
+    <jsdl:CPU Speed="1.7GHz" Count="4" Depth="4">Power4+</jsdl:CPU>
+    <jsdl:PhysicalMemory>12 units=G</jsdl:PhysicalMemory>
+    <jsdl:Network Count="1" Bandwitdth="96000MBps">IB</jsdl:Network>
+    <jsdl:DiskSpace>1 units=G</jsdl:DiskSpace>
+  </jsdl:HardwareRequirements>
+
+
+  <!-- Software Requirements -->
+  <jsdl:SoftwareRequirements id="FMO_SoftReq">
+    <jsdl:ExclusiveExecution>not_shared</jsdl:ExclusiveExecution>
+    <jsdl:OperatingSystem version="2.4.14">RedHat Linux</jsdl:OperatingSystem>
+    <jsdl:ProcessVirtualMemoryLimit>1 units=G</jsdl:ProcessVirtualMemoryLimit>
+    <jsdl:FileSizeLimit>1 units=G</jsdl:FileSizeLimit>
+    <jsdl:CPUTimeLimit>30 units=M</jsdl:CPUTimeLimit>
+    <jsdl:WallTimeLimit>1 units=H</jsdl:WallTimeLimit>
+    <jsdl:Queue>Gold Queue</jsdl:Queue>
+  </jsdl:SoftwareRequirements>
+
+  <jsdl:SoftwareRequirements id="Mediator_SoftReq">
+    <jsdl:ExclusiveExecution>not_shared</jsdl:ExclusiveExecution>
+    <jsdl:OperatingSystem version="2.4.14">RedHat Linux</jsdl:OperatingSystem>
+    <jsdl:ProcessVirtualMemoryLimit>1 units=G</jsdl:ProcessVirtualMemoryLimit>
+    <jsdl:FileSizeLimit>1 units=G</jsdl:FileSizeLimit>
+    <jsdl:CPUTimeLimit>30 units=M</jsdl:CPUTimeLimit>
+    <jsdl:WallTimeLimit>1 units=H</jsdl:WallTimeLimit>
+    <jsdl:Queue>Gold Queue</jsdl:Queue>
+  </jsdl:SoftwareRequirements>
+
+  <jsdl:SoftwareRequirements id="RISM_SoftReq">
+    <jsdl:ExclusiveExecution>not_shared</jsdl:ExclusiveExecution>
+    <jsdl:OperatingSystem version="5.2.0">AIX 5L</jsdl:OperatingSystem>
+    <jsdl:ProcessVirtualMemoryLimit>1 units=G</jsdl:ProcessVirtualMemoryLimit>
+    <jsdl:FileSizeLimit>1 units=G</jsdl:FileSizeLimit>
+    <jsdl:CPUTimeLimit>30 units=M</jsdl:CPUTimeLimit>
+    <jsdl:WallTimeLimit>1 units=H</jsdl:WallTimeLimit>
+    <jsdl:Queue>Gold Queue</jsdl:Queue>
+  </jsdl:SoftwareRequirements>
+
+
+  <!-- Application Requirement -->
+  <jsdl:ApplicationRequirement id="FMO_AppReq">
+    <jsdl:Executable type="GridMPI">fmo</jsdl:Executable>
+    <!-- I should fill these items ... -->
+    <jsdl:Argument></jsdl:Argument>
+    <jsdl:StdIn></jsdl:StdIn>
+    <jsdl:StdOut></jsdl:StdOut>
+    <jsdl:StdErr></jsdl:StdErr>
+    <jsdl:WorkingDirectory></jsdl:WorkingDirectory>
+    <jsdl:Log></jsdl:Log>
+  </jsdl:ApplicationRequirement>
+
+  <jsdl:ApplicationRequirement id="Mediator_AppReq">
+    <jsdl:Executable type="GridMPI">mediator</jsdl:Executable>
+    <!-- I should fill these items ... -->
+    <jsdl:Argument></jsdl:Argument>
+    <jsdl:StdIn></jsdl:StdIn>
+    <jsdl:StdOut></jsdl:StdOut>
+    <jsdl:StdErr></jsdl:StdErr>
+    <jsdl:WorkingDirectory></jsdl:WorkingDirectory>
+    <jsdl:Log></jsdl:Log>
+  </jsdl:ApplicationRequirement>
+
+  <jsdl:ApplicationRequirement id="RISM_AppReq">
+    <jsdl:Executable type="GridMPI">rism</jsdl:Executable>
+    <!-- I should fill these items ... -->
+    <jsdl:Argument></jsdl:Argument>
+    <jsdl:StdIn></jsdl:StdIn>
+    <jsdl:StdOut></jsdl:StdOut>
+    <jsdl:StdErr></jsdl:StdErr>
+    <jsdl:WorkingDirectory></jsdl:WorkingDirectory>
+    <jsdl:Log></jsdl:Log>
+  </jsdl:ApplicationRequirement>
+
+</jsdl:job>

@@ -1,0 +1,56 @@
+SAGA - Public Comments
+Sunflower: 14:00-15:30 Monday 29th January 2007
+Goal: Overview of the public comments made on the API.
+
+[AD] Workshop and All Hands-On presentation.
+
+Q: Can we have an overview of the API?
+A: Two persons request it. The presentation is shifted to the next SAGA session.
+
+Overview of Kaiser's Comments.
+
+Overview of Kleijer's Comments.
+Discussion on the state machine and "Unknown" state. Language binding might have additional information about how the state is used.
+
+Usage of Proxy Gates for streams. The consensus is to let it to the language binding and not within the API. Another mechanism has to be used.
+
+Overview of Illingworth's Comments.
+
+Overview of Pipan's Comments.
+Q: Life time of the default session. How do we handle it?  
+A: Get created as needed, gets destroyed on application shutdown.
+
+Q: What is the purpose of adding a task to task_container more than once?
+A: Nothing presents it.
+
+Q: What happen when 3 files copy on the same job is done?
+A: Depends on the implementation and how the job is handled on the back-end. 
+
+Conclusion:
+A task can only be added once to a container. The "add" will be silently ignored if added more then once.
+
+Q: Discussion on the error handling and error list vs. single error messages. 
+A: No we should stay as is now.
+
+Q: Should the automatic conversion of a string to an array be there?
+A: To simplify the API no, the conversion to list or arrays should not be automatic.
+
+Q: Byte ordering important?
+A: We have only streams of bytes and files of bytes, thus no problem.
+TODO: Ensures that the API properly state that we have stream of bytes and file of bytes.
+
+Problem of having the attribute interface not supporting the asynchronous interface. The case is replica management where attribute are stored on the back-end.
+Conclusion: The attribute interface will implement the asynchronous interface. (This is ugly but necessary).
+
+Q: Should SAGA add a byte buffer class to handle streams, files, messages etc?
+A: Yes, the API should be changed to support only bytes and add a Byte Buffer class.
+
+API final submission for OGF 20. The document will be submitted end of March 2007.
+
+What to submit:
+- Clean New
+- Commented New
+- Change Log
+
+Session Close: 15:25
+%

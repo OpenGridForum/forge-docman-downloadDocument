@@ -1,0 +1,84 @@
+JSDL general session
+  Open Grid Forum 28, Munich
+  Tue Mar 16, 2010; 17:00h
+
+Participants:
+  - Andreas Savva (Session Leader)
+  - Alexander Papaspyrou (Note Taker)
+  - Andre Merzky (GFSG)
+  - others -- check online (URL: )
+
+
+<include status quo from slides>
+
+Talks: 
+PGI requirements (Morris Riedel, Juelich Supercomputing Centre) on behalf of PGI
+- basic idea: collect what's there and put to production
+- strong interest on re-using standards such as JSDL (courtesy Morris)
+- requirement: JSDL w/ certain delta
+  - for HPC: network topologies (torus/mesh), task/core mapping (MPI rank to core)
+  - machine-specific rendering
+  - Andreas: consider to move around MPITaskCoreMapping (from resource to application)
+    - supported by Alexander and Andre
+    - Morris: needs discussion
+  - SMT currently not covered beyond true/false <- Andre: need for?
+- better Application Support
+  - need for application/version/family 
+    => maps to application/version/operating system
+  - need for application w/o specifying executable
+    => already there in JSDL:Application
+  - need for application type
+  - need for software specification
+    - requirement known to JSDL
+    - need for GLUE rendering instead of JSDL elements
+- need for "stopping" during the job lifecycle
+  - hold at certain BES states
+  - Andreas: should be separate from JSDL, perhaps as a additional input to the
+             BES submission
+- need for sequences
+  - pre/post approach with parallel application within
+  - Morris: don't care for rendering
+- execution adjacencies
+  - support for agreed environment variables
+  - support for the concept of (DEISA) modules
+=> foundation for future work:
+   - allow GLUE2 in JSDL
+   Andreas: JSDL/BES have been waiting for normative GLUE2 schemas. Agreed in
+            the past to base the BES info model/JSDL resource requirements on
+            GLUE2
+
+Extensions to JSDL (Yvon Jegou, INRIA) on behalf of XtreemOS
+- Grid operating system w/ transparent access to the Grid
+- wrt. JSDL: execute from desktop
+- requirements
+  - support ranges with "tolerance values" for resource requirements
+  - support uptime/idle percentage as resource requirement
+  - support notion of "data closeness"
+    - specify "important files"
+    - <SchedulingHint> tag
+    => Andreas: might use FileSystems from JSDL
+  => seems more of a resource requirement ("file must be present") rather than
+     a scheduling hint
+  - support for "LifeTime" in terms of scheduling/reservation
+    - Andreas: out of scope for JSDL
+    - Ramin: might be WS-Agreement
+    - Wolfgang: could use AR profile.
+  - network description (firewalling, netmasks, protocols, etc.)
+  - allow description of "interactiveness"
+    - redirect std{in/out/err}
+      => can already be done as is: Genesis II is supporting interactive jobs,
+         but not sure how they are doing it
+    - add specific support, ie. <X11> </X11>
+  - credential support <= used in the file staging extension
+  - checkpointing
+    - initiator, library and version, container, application resources, protocol
+  => there used to be a checkpointing group, which is now defunct. SAGA-WG seems
+     to have taken over their work, so it is suggested to talk to them
+
+Bulk Data Copy Generalization (Dave Meredith, STFC)
+- currently using JSDL File Staging profile w/ multiple stagings
+  - Andre: use case for bulk unclear
+  - Dave: keep things in one document (?)
+  - Alexander: maybe extend DMI port types for bulk operations
+  - Andreas: come up with "DataMovementApplication" as extension to JSDL
+  => main intention: discuss the shape of the frontend interface

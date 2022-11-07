@@ -1,0 +1,73 @@
+JSDL Telecon Minutes
+--------------------
+April 26, 2006
+--------------
+
+Attendees:
+----------
+Darren (Not at GGF17)
+Fred (Not at GGF17)
+Andreas
+Donal
+Ali (Not at GGF17)
+Michel
+Steve
+Saga San
+
+Minutes:
+--------
+
+Darren, Fred, and Ali are not attending GGF17.
+
+GGF17 Agenda
+------------
+
+Parallel Job Type Extension to JSDL v1.0:
+-----------------------------------------
+
+Session 1:
+----------
+  - BSC examples
+    [Ali: Contact Ivan R. to put together a presentation for us]
+
+  - NAREGI examples
+    [Saga San: Presentation of NAREGI examples and demo of middleware behaviour]
+
+  - Chris Smith and Platform, resurrect the topology discussions
+    (mostly contained on the list)
+    [Andreas: contact Chris for material]
+
+  - Examples from other projects or stakeholders (solicit from JSDL list?)
+    (allow overflow to Session 2)
+    [Steve: simple examples from IC]
+    [Michel: previous examples]
+
+
+Session 2:
+ ----------
+  - Summarise requirements for Parallel Job Type Extension.
+      What are the use cases we must support by this extension?
+      What are the use cases we are leaving out?
+
+    [If we have more time]
+
+  - Schema proposals?
+      Review existing proposals to determine how far they meet
+      requirements, e.g., BSC
+
+  - BES and ESI (Execution Service Interfaces) discussion:
+      Extensions to JSDL rather than wrapper to contain job state info etc.
+
+  - IBM work proposed by Jay U. discussed in ad hoc meeting with a view of 
+    planning a formal session for GGF18.
+
+
+
+Primer:
+-------
+  - Strawman needed
+      Need a document that captures a set of JSDL document examples and 
+      their expected interpretations so that we can test the compliance 
+      of systems (BES containers?) and JSDL parsers - make into an 
+      experiences doc to get formal recommendation status for JSDL1.0?
+

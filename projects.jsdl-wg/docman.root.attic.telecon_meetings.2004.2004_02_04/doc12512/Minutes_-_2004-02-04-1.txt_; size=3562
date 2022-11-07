@@ -1,0 +1,137 @@
+JSDL Telecon Minutes
+====================
+February 4th, 2004 - 23:00 GMT
+==============================
+
+
+Attendees:
+==========
+
+Andreas Savva (Fujitsu)
+Ali Anjomshoaa (EPCC)
+Darren Pulsipher (Cadence)
+Steve McGough (LeSC)
+Lee Cook (IBM)
+Fred Brisard (CA)
+An Ly (CA)
+Asit Dan (IBM)
+
+
+Apologies:
+==========
+
+
+Discussion:
+===========
+
+Administrative:
+---------------
+
+GGF10:
+------
+o We have been allocated 3 (1.5hr) sessions
+
+  11/03 - 16:00
+  11/03 - 18:00
+  12/03 - 14:00
+
+o Attending in Berlin: Ali, Darren, Andreas, Steve, Fred, Asit
+
+o Darren to set up telephone (and web conf.) (for An and Lee, others?)
+
+o Document submission deadline is 24th Feb.
+
+
+Technical:
+----------
+
+Following last week's telecon (28th Feb 2004)
+---------------------------------------------
+
+o Lee:
+ - An's resources attributes: MinMaxVal, still covered or updated?
+ - Fred's discussion: iCalendar (only 3 temporal attributes)
+   - Darren: should reference iCalendar, not re-invent the wheel.
+
+o Fred: 'ImmediateRun' - Lee thought need for this, but, 
+        Fred sees no use-case right now.
+o Lee: Time that job is submitted as time to run the job is a bit 
+       uncertain because of clock synchronisation issue etc.
+o Steve: 3 types of job submission:
+
+         "run now",
+         "run at time x", 
+         "run whenever"
+
+o Fred: JobStartTrigger attribute?
+
+ - We should put a place-keeper for 'ImmediateRun' as an attribute 
+   into the JSDL.
+
+
+o Asit: WS-Agreement - Guarantee spec, for JSDL
+
+
+Status Check of Work:
+---------------------
+o Ali: Apologies, JobID not updated since Dec. but will be for review 
+       at GGF10
+
+o Fred: Scheduling attr category, good coverage of the attributes.
+        No additional attributes since last release. 
+        Definitions still open to work. Need detail and to expand cases.
+
+o An: No top level descriptions or use-cases.
+      MinMaxVal - Lee, range and range values,
+         - combine min max into a single attribute
+      Need to handle the requirements of sophisticated DRMs.
+
+o Andreas: Data attributes are with Steve.
+o Steve: Will have a look and comment.
+
+o Security: Lee to work with Darren to try and understand the 
+            security work impact on JSDL and JSDL's requirements 
+            for security attributes. Will report back when possible.
+
+
+JSDL Focus:
+-----------
+o Ali: We need to look at the language, vocabulary, not grammar yet.
+o Steve: Agree, look at the vocabulary of the JSDL.
+
+  - Agreement that we should find vocabulary.
+
+  - can still have sideline discussions regarding the way to use 
+    the JSDL and its structure and feed back once attributes are defined 
+    and consistent.
+
+
+o Asit: attributes to describe how the work went on, job status?
+o Darren, Ali: Outwith the scope of JSDL, down to implementation and other 
+               specs.
+
+
+AOB:
+----
+
+o Andreas: Not going to make the call next week. Tuesday OGSA f2f
+           Andreas would like JSDL slides for OGSA f2f reviewed.
+           Ali has agreed to do this, if furnished with slides in time.
+
+o Asit: exploit synergy between WGs, status update on WS-Agreement 
+        before GGF10?
+o Asit: Guarantee and JSDL. Send an e-mail on the list, focus on 
+        service term and what a guarantee means. To expand on GRAAP 
+        and WS-Agreement terminology to aid our understanding.
+
+o Steve: Report from GRAAP f2f - in depth discussion, not necessarily 
+         directed at JSDL, but some work will concern us.
+
+o Steve: to set up the meeting with CIM folks at GGF10.
+
+
+DONM:
+-----
+
+Wednesday 11th Feb 2004 - 14:00 GMT
+

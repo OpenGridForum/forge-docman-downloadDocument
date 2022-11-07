@@ -1,0 +1,89 @@
+#
+# Script generated from JSDL document jsdl_instance.xml
+#
+
+# JSDL specified sections
+#BSUB -J "Blast1"
+# Description of this Job: Blast query number 1
+# Annotation for this job: Blast1Annotation
+#BSUB -P "BlastProject"
+#BSUB -a BlastN
+# no mapping for element: ApplicationVersion
+# Description of this Application: BlastN performs nucleotide similarity searching
+#BSUB -i sequences1.txt
+#BSUB -o sequences1.html
+#BSUB -e sequences1.err
+#BSUB -W 60
+#BSUB -F 1073741824
+#BSUB -C 0
+#BSUB -D 32768
+# no mapping for element: LockedMemoryLimit
+#BSUB -M 67108864
+#BSUB -F 16
+# no mapping for element: PipeSizeLimit
+#BSUB -S 1048576
+#BSUB -c 30
+#BSUB -p 8
+#BSUB -v 134217728
+#BSUB -T 8
+# no mapping for element: UserName
+# no mapping for element: GroupName
+#BSUB -m "cluster1 cluster2 "
+# no mapping for element: FileSystem
+# no mapping for element: FileSystem
+#BSUB -x
+#BSUB -R osname == MACOS
+#BSUB -R osver == 10.4.4
+# Description of this Operating System: Mac OS version 10.4.x
+#BSUB -R cpuarch == powerpc
+#BSUB -R cpuspeed < 2147483648.0
+# no mapping for element: IndividualCPUTime
+#BSUB -R netbandwidth < 104857600.0
+#BSUB -R mem < 1024.0
+#BSUB -R swp < 1024.0
+#BSUB -R diskspace < 1073741824.0
+# no mapping for element: TotalCPUTime
+# no mapping for element: TotalPhysicalMemory
+# no mapping for element: TotalVirtualMemory
+# no mapping for element: TotalDiskSpace
+
+# LSF Scheduling Parameter extensions
+#BSUB -q priority
+#BSUB -r
+#BSUB -G informatics
+#BSUB -g /informatics/blastjobs
+
+# LSF Notification Parameter extensions
+#BSUB -B
+#BSUB -u csmith@platform.com
+
+# LSF Runtime Parameter extensions
+#BSUB -I
+
+# CPU requirements
+#BSUB -n 10
+#BSUB -R "span[ptile=2]"
+
+# Environment
+PATH=/usr/bin:/usr/local/bin:/usr/local/bio/bin
+export PATH
+DATADIR=/usr/local/bio/data
+export DATADIR
+
+# Working directory
+cd /home/csmith/blastqueries
+
+# Copy in files
+jsdlcopy dontOverwrite http://tempuri.org/~csmith/blastqueries/sequences1.txt blastqueries/sequences1.txt
+
+
+# Run the command
+/usr/local/bin/blastall -p blastn -d est -T T
+
+# Copy out files
+jsdlcopy -delete overwrite blastqueries/sequences1.html http://tempuri.org/~csmith/blastqueries/sequences1.html
+jsdlcopy append blastqueries/sequences1.err http://tempuri.org/~csmith/blastqueries/sequences1.err
+
+
+# EOF
+

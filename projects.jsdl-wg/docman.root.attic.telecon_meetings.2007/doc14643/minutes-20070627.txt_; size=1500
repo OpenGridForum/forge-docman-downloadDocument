@@ -1,0 +1,53 @@
+JSDL Teleconference - 27 June 2007
+==================================
+
+* Participants
+
+  Donal Fellows
+  Steve McGough
+  Andreas Savva
+
+  Minutes: Andreas Savva
+
+
+>  1. Early discussion
+>       - OGF IPR rules
+>       http://www.ogf.org/About/abt_policies.php
+>       - Agenda bashing
+>       - Updates, if any for
+>         - XQuery extension strawman
+
+  Strawman is not ready yet.
+
+>         - Experience report survey/strawman
+
+  Reviewed the draft survey form. No changes are needed. Andreas will
+  upload it to gridforge.
+
+  Agreed that a request should be sent out to the list and that anyone
+  who wants to provide information may do so. Separate emails may also
+  be sent to specific people/projects.
+
+  Responses from at least two projects are needed for this effort to
+  proceed.
+
+  Agreed to track the progress on the gridforge wiki.
+
+>  2. Review JSDL description for OGSA Roadmap 1.1 (10 minutes)
+
+  Reviewed the JSDL section draft in OGSA Roadmap 1.1 (will be in the
+  next draft of the Roadmap). This was rewritten to describe the JSDL
+  1.0 Errata work and additional extensions that are now in
+      progress. No changes are needed.
+
+>  4. JSDL 1.0 Errata
+>       - Text and tracker review
+>       - Note draft 10 uploaded earlier today
+
+  Worked on JSDL 1.0 tracker artifacts:
+  - artf5855, artf5869, artf5649, artf5844, artf5573
+
+* Next call scheduled for July 11th but needs confirmation because
+  some people are traveling.
+
+

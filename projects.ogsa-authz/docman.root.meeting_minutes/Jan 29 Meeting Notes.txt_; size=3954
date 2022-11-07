@@ -1,0 +1,87 @@
+---
+
+* Preamble
+David brought meeting to order
+Circulated OGF IP sign-in sheet
+Von volunteers to scribe
+
+* Telecon Update
+
+Decision: Once every two months, we will take one of the OGSA-WG phone call slots to report to the larger community. Next date will be March 8th.
+
+Decision: Telecon dates
+ February 13th
+ March 7th
+ April 3rd
+ April 23rd
+
+* "Functional Components of Grid Service Provider Authorisation Service Middleware" available from
+http://forge.gridforum.org/sf/go/doc13968?nav=1
+Latest version is Oct 24th version
+Outstanding issue: implications of carrying attributes and credentials within the same protocol or within different protocols
+
+Outstanding issue: Id vs URL issued raised by Tom Scavo:
+http://www.ogf.org/pipermail/ogsa-authz-wg/2006-November/000242.html
+
+Doc should then be ready for WG final call and progression to AD
+
+* Protocol Doc Updates
+Described 3 protocol
+1) PEP-Context Handler: no profile proposed. Maybe the same as protocol #3 if credentials can be carried in same field as attributes in the protocol.
+2) Context Handler-CVS: WS-Trust profile:
+http://forge.gridforum.org/sf/go/doc9011?nav=1
+3) Context Handler-PDP: proposal XACML request/response protocol proposed:
+the current profile, available from
+http://forge.gridforum.org/sf/go/doc13681?nav=1
+
+in which the XACML request context is transported to the PDP in a SAML
+request message.
+
+Apparently this OASIS mechanism has been deprecated because it was
+(wrongly) thought that no-one was using it. We thus may need to
+reconsider this protocol and use a different wrapper to carry the XACML
+contexts.
+
+* Takuya Mori presentation on NAREGI Authz Service and NAREGI XACML profile
+Slides: http://forge.gridforum.org/sf/go/doc14166?nav=1
+SAML 2.0 and XACML 2.0 based
+Uses GT authz framework
+Profile between Authz service client (in GT4) and Authz CVS
+Handles VOMS AC's and passes to Authz service
+Presented mapping of attributes from X.509 EEC/VOMS AC into XACML
+Resource Attribute Filtering Mechanism (RAFM) - Reference properties,
+XACML profile has Subject, Resource and Action attributes
+
+There is an issue as to how a resource's attributes are obtained by the
+PEP. If the user submits them to the PEP there is a potential trust
+issue here, and the attributes will need to validated by the CVS. If the
+PEP obtains them itself from a local store this is not an issue.
+
+* VOMS profile
+Discussed on Oct 16 telecon - minutes on list
+Meaning of the primary type must be explicit rather than implicit (as currently done via sequence)
+Awaiting response from VOMS group
+
+Valerio: What we haven't understood so far is why an explicit primary attribute
+is needed rather then an implicit one and what needs an eventual change
+in VOMS AC format would address. [Discussion continued on ogsa-authz email list]
+
+* Attribute Retrieval Protocol
+Added as last meeting
+OASIS profile for SAML - Tom Scavo author
+
+* Von Welch resignation as WG chair
+Those who are interesting in replacing Von should send email to David
+
+* Other business
+Tom Scavo: Do we need mechanism to bind SAML to X.509 (equivalent to VOMS)? (https://spaces.internet2.edu/display/GS/X509BindingSAML)
+
+David: 2005 X.509 has specification for binding XML to X.509, but doesn't specify XML content
+
+Tom Scavo to investigate how these relate.
+
+David: VOMS is providing a standard SAML protocol interface for picking
+up VOMS attributes. A beta is supposed to be ready by April 2007 (Valerio: That's correct David. The protocol is that in SAML V2.0 Profiles for X.509 Subject as agreed. We are about to work on the implementation of the protocol and we will eventually inform Tom and the authors about any issue we may have. Hope it won't be too late by that time but we couldn't make it before.) (Later in email Tom directs to http://www.oasis-open.org/committees/download.php/21568/sstc-saml2-profiles-deploy-x509-draft-01.pdf)
+
+
+

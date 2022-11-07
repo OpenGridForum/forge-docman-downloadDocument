@@ -1,0 +1,41 @@
+JSDL-WG Telecon - 6th Sept. 2006
+================================
+
+Participants
+------------
+
+  Ali Anjomshoaa
+  Michel Drescher
+  An Ly
+  Fred Brisard
+  Andreas Savva
+
+GGF18
+-----
+
+ Agreed to make first session intro/outreach and talk about work that
+ is starting up in order to get more people involved. The second
+ session to focus more on detailed work.
+
+ - First Session:
+   - Intro, outreach, parameter sweep extension, dependencies extensions
+
+ - Second Session:
+   - 1.0 Spec errata, parallel application extension review
+
+ - Confirm session overlaps with HPCProfile and make sure relevant
+   people can attend (Marvin, Chris)
+   - Which topics should we leave for non-overlapping session,
+     parallel job extension?
+
+ - For parameter sweep and dependencies identify interested parties
+   and invite them to join. Dependencies might be best done in a new
+   WG but initial work can be done here with a view to identifying
+   requirements on jsdl schema.
+
+ - Try to setup Skype and Glance for people wanting to join remotely
+
+Parallel Extension Doc
+----------------------
+
+Reviewed draft sent to the list.

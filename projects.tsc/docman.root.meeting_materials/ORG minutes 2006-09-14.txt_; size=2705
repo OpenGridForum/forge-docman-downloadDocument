@@ -1,0 +1,55 @@
+TSC/Platinimun & Gold 09-14-06
+
+Attendees:
+Dave Snelling
+Chris Kanterjiev - Oracle/TSC
+David Martin - IBM
+Joel Replogle
+Steven Newhouse - OMII/TSC
+Chris Smith - Platform
+Jem Treadwell - HP
+Jong Suk Lee - Kisti
+Ming Xu  - Microsoft
+Rich Liapala - Microsoft
+Mark Linesch - OGF
+Steve Crumb - OGF
+
+Dave going through the slides:
+Technical Strategy Process
+Setting Strategy in OGF
+	identify and leverage existing synergy
+Moon Shot Goal
+	the OGF should commit all its available resources to thee goal that before this decade is out, commercial and academic organizations will build real operational grids using OGF defined components. 
+High-Value Use Cases
+	Grid API's, 
+	Job Submit, 
+	File Movement, 
+	Application Provisioning, 
+	Data Provisioning and Data Grids,
+	Grid Security.
+Roadmap snapshot
+	Very first sample wrt some of the specifications that directly address these use cases
+	JDSL - a product is in beta that implements JSDL (Platform's v 7.0)
+
+Steve - We need to make sure we get a good slot for this regular TSC/Platinum&Gold meeting.
+Mark - Encourage the TSC to write down the big questions that many have, especially wrt the scope of the versions of the document.  
+To the Org Members - What are the questions that the people within your organization will have when you send this document around?  How does this document add display value?
+Chris Smith - First step is that the Standards process aligns with Platform's, next step is to see the plan for OGF to get the standards realized.  Show the value of standard solutions taking over difficult-to-maintain custom solutions.
+Mark - there are two types of customers for the vendors: the middle-ware vendors and the actual users.
+David Martin - Showing the use cases & showing the broad support among competitors.
+
+Steve Crumb update on the Landscape of Grid & Distributed Computing document in progress.
+Steve - to Org Members - what other meaningful benefit can you get from OGF?
+
+Mark - to Org Members - How many of you think you can articulate OGF's technical strategy to your constituents?
+David Martin - believes he could in some areas, but not all.
+
+Question about strategy - how should future groups/work fit into the strategy?
+Steven Newhouse - volunteered to be on the core team to write the landscape document.
+
+Dave Snelling - wants to get the content/structure filled out in the next few weeks.
+
+Joel - take the high-value use cases and refresh the survey to be more focused on them.
+
+Ming - determine criteria, what gaps are in our control?
+	Running use cases through a simple filter, high-value/low-value, and easy/hard to do.	How do you determine what actually is high-value

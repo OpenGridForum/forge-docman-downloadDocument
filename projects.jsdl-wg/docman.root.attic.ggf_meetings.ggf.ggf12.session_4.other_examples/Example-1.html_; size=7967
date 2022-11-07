@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0072)http://www-unix.gridforum.org/mail_archive/jsdl-wg/2004/09/msg00003.html -->
+<!-- MHonArc v2.5.14 --><!--X-Subject: [jsdl&#45;wg] A suggestion about JSDL.xsd for a parameteric study job --><!--X-From-R13: "Yjba, Au&#45;xlbhat" <bxxjbaNxvfgv.er.xe> --><!--X-Date: Sun, 5 Sep 2004 20:50:52 &#45;0500 --><!--X-Message-Id: 000001c493b3$e71f3e30$67eab796@okkwon --><!--X-Content-Type: text/plain --><!--X-Head-End--><HTML>
+This is a static archive of the previous Open Grid Forum GridForge content management system saved from host forge.ogf.org file /sf/docman/do/downloadDocument/projects.jsdl-wg/docman.root.attic.ggf_meetings.ggf.ggf12.session_4.other_examples/doc12417 at Fri, 04 Nov 2022 19:16:12 GMT
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<HEAD><TITLE>[jsdl-wg] A suggestion about JSDL.xsd for a parameteric study job</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+rev=made href="mailto:okkwon@kisti.re.kr">
+<META content="MSHTML 6.00.2800.1458" name=GENERATOR></HEAD>
+<BODY><!--X-Body-Begin--><!--X-User-Header--><!--X-User-Header-End--><!--X-TopPNI-->
+<HR>
+[<A 
+href="http://www-unix.gridforum.org/mail_archive/jsdl-wg/2004/09/msg00002.html">Date 
+Prev</A>][<A 
+href="http://www-unix.gridforum.org/mail_archive/jsdl-wg/2004/09/msg00004.html">Date 
+Next</A>][<A 
+href="http://www-unix.gridforum.org/mail_archive/jsdl-wg/2004/09/msg00002.html">Thread 
+Prev</A>][<A 
+href="http://www-unix.gridforum.org/mail_archive/jsdl-wg/2004/09/msg00004.html">Thread 
+Next</A>][<A 
+href="http://www-unix.gridforum.org/mail_archive/jsdl-wg/2004/09/maillist.html#00003">Date 
+Index</A>][<A 
+href="http://www-unix.gridforum.org/mail_archive/jsdl-wg/2004/09/threads.html#00003">Thread 
+Index</A>] <!--X-TopPNI-End--><!--X-MsgBody--><!--X-Subject-Header-Begin-->
+<H1>[jsdl-wg] A suggestion about JSDL.xsd for a parameteric study job</H1>
+<HR>
+<!--X-Subject-Header-End--><!--X-Head-of-Message-->
+<UL>
+  <LI><EM>To</EM>: &lt;<A 
+  href="mailto:jsdl-wg@gridforum.org">jsdl-wg@gridforum.org</A>&gt; 
+  <LI><EM>Subject</EM>: [jsdl-wg] A suggestion about JSDL.xsd for a parameteric 
+  study job 
+  <LI><EM>From</EM>: "Kwon, Oh-kyoung" &lt;<A 
+  href="mailto:okkwon@kisti.re.kr">okkwon@kisti.re.kr</A>&gt; 
+  <LI><EM>Date</EM>: Mon, 6 Sep 2004 10:50:35 +0900 
+  <LI><EM>Importance</EM>: Normal 
+  <LI><EM>Sender</EM>: <A 
+  href="mailto:owner-jsdl-wg@gridforum.org">owner-jsdl-wg@gridforum.org</A> 
+</LI></UL><!--X-Head-of-Message-End--><!--X-Head-Body-Sep-Begin-->
+<HR>
+<!--X-Head-Body-Sep-End--><!--X-Body-of-Message--><PRE>Hi, 
+
+I have a suggestion regarding the xml schema file of JSDL.
+
+We are developing the OGSI based Grid Services to submit, schedule, and
+allocate a Grid job. A user can specify the job by our job submission
+language, which is based on Globus RSL2. 
+Recently, we are considering about changing to JSDL by applying to our
+application after addressing final JSDL documents. 
+We have a plan to submit a parameteric study job by our Grid Services. 
+
+The general parameteric study job devided into indepedent sub-jobs, which
+have different arguments, stdin, or files to stage in.  
+
+However, the JSDL has no features to describe different arguments at each
+sub-job. 
+
+If the user want to manually specify the host information by "Host" element,
+the user could specify each argument as the child elements of "Host" element
+as following.  
+I referenced the NAREGI examples in JSDL mailiing lists.) 
+&lt;jsdl:Host&gt;
+   &lt;jsdl:HostName&gt;host1&lt;/jsdl:HostName&gt;
+   &lt;jsdl:Application&gt;
+        &lt;jsdl:Argument&gt;
+            fileA.txt
+        &lt;jsdl:Argument&gt;
+   &lt;/jsdl:Application&gt;
+   &lt;jsdl:DataAttributes&gt;
+        &lt;jsdl:File&gt;
+             &lt;jsdl:FileName&gt;fileA.txt&lt;/jsdl:FileName&gt;
+	 &lt;jsdl:Target&gt;gsi<A href="ftp://applserv/path/fileA.txt">ftp://applServ/path/fileA.txt</A>&lt;/jsdl:Target&gt;
+        &lt;/jsdl:File&gt;
+   &lt;/jsdl:DataAttributes&gt;
+&lt;/jsdl:Host&gt;
+&lt;jsdl:Host&gt;
+   &lt;jsdl:HostName&gt;host2&lt;/jsdl:HostName&gt;
+   &lt;jsdl:Application&gt;
+        &lt;jsdl:Argument&gt;
+            fileB.txt
+        &lt;jsdl:Argument&gt;
+   &lt;/jsdl:Application&gt;
+   &lt;jsdl:DataAttributes&gt;
+          &lt;jsdl:File&gt;
+             &lt;jsdl:FileName&gt;fileB.txt&lt;/jsdl:FileName&gt;
+	 &lt;jsdl:Target&gt;gsi<A href="ftp://applserv/path/fileB.txt">ftp://applServ/path/fileB.txt</A>&lt;/jsdl:Target&gt;
+          &lt;/jsdl:File&gt;
+   &lt;/jsdl:DataAttributes&gt;
+&lt;/jsdl:Host&gt;
+
+If the user want a meta scheduler to automatically select hosts by
+specifying the "Resource" element in JSDL, the user could also specify the
+different arguments for each sub-job.
+&lt;jsdl:Resource&gt; ... &lt;/jsdl:Resource&gt;
+&lt;jsdl:Host&gt;
+   &lt;jsdl:Application&gt;
+        &lt;jsdl:Argument&gt;
+            fileA.txt
+        &lt;jsdl:Argument&gt;
+   &lt;/jsdl:Application&gt;
+   &lt;jsdl:DataAttributes&gt;
+        &lt;jsdl:File&gt;
+             &lt;jsdl:FileName&gt;fileA.txt&lt;/jsdl:FileName&gt;
+	 &lt;jsdl:Target&gt;gsi<A href="ftp://applserv/path/fileA.txt">ftp://applServ/path/fileA.txt</A>&lt;/jsdl:Target&gt;
+        &lt;/jsdl:File&gt;
+   &lt;/jsdl:DataAttributes&gt;
+&lt;/jsdl:Host&gt;
+&lt;jsdl:Host&gt;
+   &lt;jsdl:Application&gt;
+        &lt;jsdl:Argument&gt;
+            fileB.txt
+        &lt;jsdl:Argument&gt;
+   &lt;/jsdl:Application&gt;
+   &lt;jsdl:DataAttributes&gt;
+          &lt;jsdl:File&gt;
+             &lt;jsdl:FileName&gt;fileB.txt&lt;/jsdl:FileName&gt;
+	 &lt;jsdl:Target&gt;gsi<A href="ftp://applserv/path/fileB.txt">ftp://applServ/path/fileB.txt</A>&lt;/jsdl:Target&gt;
+          &lt;/jsdl:File&gt;
+   &lt;/jsdl:DataAttributes&gt;
+&lt;/jsdl:Host&gt;
+
+What do u think about changing the "Host" element definition in JSDl.xsd to
+as following ?
+(I referenced the NAREGI examples in JSDL mailiing lists.) 
+
+  &lt;xsd:element name="Host"&gt;
+    &lt;xsd:complexType&gt;
+      &lt;xsd:sequence&gt;
+        &lt;xsd:element name="HostName" type="xsd:string"
+             minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xsd:element ref="ExecutionUserID"
+             minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xsd:element ref="Resource"
+             minOccurs="0" maxOccurs="1" /&gt;
+        &lt;xsd:element name="ProcessTopology" type="xsd:string"
+             minOccurs="0" maxOccurs="1" /&gt;
+        &lt;xsd:element ref="Environment"
+             minOccurs="0" maxOccurs="1" /&gt;
+        &lt;xsd:element ref="SoftwareRequirements"
+             minOccurs="0" maxOccurs="1" /&gt;
+        &lt;xsd:element ref="Application"
+             minOccurs="0" maxOccurs="1" /&gt;  &lt;!-- added stuff --&gt;
+        &lt;xsd:element ref="DataAttributes"
+             minOccurs="0" maxOccurs="1" /&gt;
+      &lt;/xsd:sequence&gt;
+      &lt;xsd:attribute name="name" type="xsd:string" /&gt;
+      &lt;xsd:attribute name="description" type="xsd:string" /&gt;
+    &lt;/xsd:complexType&gt;
+  &lt;/xsd:element&gt;
+
+
+Best Regards,
+Ohkyoung Kwon
+
+
+
+</PRE><!--X-Body-of-Message-End--><!--X-MsgBody-End--><!--X-Follow-Ups-->
+<HR>
+<!--X-Follow-Ups-End--><!--X-References--><!--X-References-End--><!--X-BotPNI-->
+<UL>
+  <LI>Prev by Date: <STRONG><A 
+  href="http://www-unix.gridforum.org/mail_archive/jsdl-wg/2004/09/msg00002.html">Re: 
+  [jsdl-wg] Jobs within Jobs Use Case</A></STRONG> 
+  <LI>Next by Date: <STRONG><A 
+  href="http://www-unix.gridforum.org/mail_archive/jsdl-wg/2004/09/msg00004.html">[jsdl-wg] 
+  JSDL Meeting Sep 9, 2004</A></STRONG> 
+  <LI>Previous by thread: <STRONG><A 
+  href="http://www-unix.gridforum.org/mail_archive/jsdl-wg/2004/09/msg00002.html">Re: 
+  [jsdl-wg] Jobs within Jobs Use Case</A></STRONG> 
+  <LI>Next by thread: <STRONG><A 
+  href="http://www-unix.gridforum.org/mail_archive/jsdl-wg/2004/09/msg00004.html">[jsdl-wg] 
+  JSDL Meeting Sep 9, 2004</A></STRONG> 
+  <LI>Index(es): 
+  <UL>
+    <LI><A 
+    href="http://www-unix.gridforum.org/mail_archive/jsdl-wg/2004/09/maillist.html#00003"><STRONG>Date</STRONG></A> 
+
+    <LI><A 
+    href="http://www-unix.gridforum.org/mail_archive/jsdl-wg/2004/09/threads.html#00003"><STRONG>Thread</STRONG></A> 
+    </LI></UL></LI></UL><!--X-BotPNI-End--><!--X-User-Footer--><!--X-User-Footer-End--><!-- forge.gridforum.org footer.html -->
+<br> <hr>
+<table width='100%'> 
+ <tr>
+  <td align='left'>   <a href='http://www.ogf.org/' target='_blank' style='border: 0 px;'><img src='../../../../../../ogf-it/opengridforum.gif' alt='The Open Grid Forum' style='border:0px white solid;'></a><td>
+  <td align='center'> <a href='mailto:webmaster@ogf.org'>Contact Webmaster</a> 
+                    | <a href="../../../../../tracker/do/createArtifact/projects.ggf-info/tracker.html">Report a problem</a>
+                    | <a href="../../../../../wiki/do/viewPage/projects.ggf-info/wiki/HomePage.html">GridForge Help</a>
+                    </td>
+  <td align='right'>  
+<!--		<img src='/ogf-it/powered_by_dell.gif' alt='Powered by Dell'> -->
+<!-- Begin DigiCert/ClickID site seal HTML and JavaScript -->
+<div id="DigiCertClickID_sxSDRU4L">
+  <a href="http://www.digicert.com/">SSL Certificates</a>
+</div>
+<script type="text/javascript">
+var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_sxSDRU4L", "10", "m", "black", "sxSDRU4L"]);(function(){var cid=document.createElement("script");cid.type="text/javascript";cid.async=true;cid.src=("https:" === document.location.protocol ? "https://" : "http://")+"seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
+</script>
+<!-- End DigiCert/ClickID site seal HTML and JavaScript -->
+  </td>
+ </tr>
+</table>
+<!-- google analytics code -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6775861-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</BODY>
+This is a static archive of the previous Open Grid Forum GridForge content management system saved from host forge.ogf.org file /sf/docman/do/downloadDocument/projects.jsdl-wg/docman.root.attic.ggf_meetings.ggf.ggf12.session_4.other_examples/doc12417 at Fri, 04 Nov 2022 19:16:12 GMT
+</HTML>

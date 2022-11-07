@@ -1,0 +1,110 @@
+<JobDefinition id="xsd:ID"?>
+	<JobDescription>
+	
+		<JobIdentification>
+			<JobName ... />?
+			<Description ... />?
+			<JobAnnotation ... />* 			<!-- XX -->
+			<JobProject ... />* 			<!-- XX - DS -->
+			<xsd:any##other>*
+		</JobIdentification>?
+
+		<Application> 
+			<ApplicationName ... />? 		<!-- XX - DS -->
+			<ApplicationVersion ... />?     <!-- XX - DS -->
+			<Description ... />?
+			<xsd:any##other/>*
+		</Application>?
+
+	</JobDescription>
+
+	<JobRequirements> <!-- <Resources ... />? -->
+		<!-- Would now contain an XQuery -->
+		<!--	<CandidateHosts ... />? -->
+		<!--	<FileSystem .../>*  -->
+		<!--	<ExlusiveExecution .../>? -->
+		<!--	<OperatingSystem .../>? -->
+		<!--	<CPUArchitecture .../>? -->
+		<!--	<IndividualCPUSpeed .../>? -->
+		<!--	<IndividualCPUTime .../>? -->
+		<!--	<IndividualCPUCount .../>? -->
+		<!--	<IndividualNetworkBandwidth .../>? -->
+		<!--	<IndividualPhysicalMemory .../>? -->
+		<!--	<IndividualVirtualMemory .../>? -->
+		<!--	<IndividualDiskSpace .../>? -->
+		<!--	<TotalCPUTime .../>? -->
+		<!--	<TotalCPUCount .../>? -->
+		<!--	<TotalPhysicalMemory .../>? -->
+		<!--	<TotalVirtualMemory .../>? -->
+		<!--	<TotalDiskSpace .../>? -->
+		<!--	<TotalResourceCount .../>? -->
+		<!--	<xsd:any##other>* -->
+		
+		<!-- ===== More, perhaps including ===== -->
+		
+		<!--XX  <JobProject ... />* -->
+		
+		<!--XX	<ApplicationName ... />? -->
+		<!--XX	<ApplicationVersion ... />? -->
+
+		<!--XX <UserName ... />? -->
+		<!--XX <GroupName ... />? -->
+    </JobRequirements>?
+	<xsd:any##other/>*
+</JobDefinition>
+
+<!-- ====================================================================================-->
+
+<POSIXApplication name="xsd:NCName"?>
+	<Executable ... />?
+	<Argument ... />*
+	<Input ... />?
+	<Output ... />?
+	<Error ... />?
+	<WorkingDirectory ... />?
+	<Environment ... />*
+	<!-- App Configuratio, not requirements: somewhat d-n -->
+	<WallTimeLimit ... />? <!-- Not a POSIX limit-->
+	<FileSizeLimit ... />?
+	<CoreDumpLimit ... />?
+	<DataSegmentLimit ... />?
+	<LockedMemoryLimit ... />?
+	<MemoryLimit ... />?
+	<OpenDescriptorsLimit ... />?
+	<PipeSizeLimit ... />?
+	<StackSizeLimit ... />?
+	<CPUTimeLimit ... />?
+	<ProcessCountLimit ... />?
+	<VirtualMemoryLimit ... />?
+	<ThreadCountLimit ... />?
+	<UserName ... />? 				<!-- XX -->
+	<GroupName ... />? 				<!-- XX -->
+</POSIXApplication>?
+
+<!-- Definition of files required by POSIXApplication : maybe as addion to above-->
+	<File name="xsd:NCName"?> <!-- <DataStaging ... />* -->
+		<LogicalFileName> 			<!-- XX -->
+		<LocalFileName ... /> 		<!-- XX -->
+		<FileSystemName ... />? 	<!-- XX -->
+		<!-- <CreationFlag ... /> -->			<!-- XX -->
+		<!-- <DeleteOnTermination ... />? --> 		<!-- XX -->
+		<xsd:any##other/>*
+	</File>*
+	
+<!-- ====================================================================================-->
+<!-- DataStaging would become another 'application' type -->
+
+<DataStagingApplication name="xsd:NCName"?> <!-- <DataStaging name="xsd:NCName"?> -->
+	<FileName ... />
+	<FileSystemName ... />?
+	<CreationFlag ... />
+	<DeleteOnTermination ... />?
+	<Source ... />?
+	<Target ... />?
+	<xsd:any##other/>*
+</DataStaging>*
+
+<!-- -->
+<!-- ====================================================================================-->
+<!-- Missing piece is dependencies:
+      How to define a sequence (dag more generally) of stage in > execute > stage out as in 1.0-->

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.ggf.org/jsdl/2005/04/jsdl-posix" xmlns:jsdl-posix="http://schemas.ggf.org/jsdl/2005/04/jsdl-posix" targetNamespace="http://schemas.ggf.org/jsdl/2005/04/jsdl-posix" elementFormDefault="qualified">
+	<!--========================================================================-->
+	<xsd:element name="POSIXApplication">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Executable" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="Argument" type="xsd:normalizedString" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element name="Input" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="Output" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="Error" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="WorkingDirectory" type="xsd:string" minOccurs="0"/>
+				<xsd:element ref="jsdl-posix:Environment" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element name="TileSize" type="xsd:positiveInteger" minOccurs="0"/>
+				<xsd:element name="ProcessCount" type="xsd:positiveInteger" minOccurs="0"/>
+				<xsd:element name="WallTimeLimit" type="xsd:positiveInteger" minOccurs="0"/>
+				<xsd:element name="FileSizeLimit" type="xsd:positiveInteger" minOccurs="0"/>
+				<xsd:element name="CoreDumpLimit" type="xsd:positiveInteger" minOccurs="0"/>
+				<xsd:element name="DataSegmentLimit" type="xsd:positiveInteger" minOccurs="0"/>
+				<xsd:element name="LockedMemoryLimit" type="xsd:positiveInteger" minOccurs="0"/>
+				<xsd:element name="MemoryLimit" type="xsd:positiveInteger" minOccurs="0"/>
+				<xsd:element name="OpenDescriptorsLimit" type="xsd:positiveInteger" minOccurs="0"/>
+				<xsd:element name="PipeSizeLimit" type="xsd:positiveInteger" minOccurs="0"/>
+				<xsd:element name="StackSizeLimit" type="xsd:positiveInteger" minOccurs="0"/>
+				<xsd:element name="CPUTimeLimit" type="xsd:positiveInteger" minOccurs="0"/>
+				<xsd:element name="ProcessCountLimit" type="xsd:positiveInteger" minOccurs="0"/>
+				<xsd:element name="VirtualMemoryLimit" type="xsd:positiveInteger" minOccurs="0"/>
+				<xsd:element name="ThreadCountLimit" type="xsd:positiveInteger" minOccurs="0"/>
+				<xsd:element name="UserName" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="GroupName" type="xsd:string" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!--========================================================================-->
+	<xsd:element name="Environment">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+					<xsd:attribute name="name" type="xsd:NCName"/>
+					<xsd:anyAttribute namespace="##other" processContents="lax"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

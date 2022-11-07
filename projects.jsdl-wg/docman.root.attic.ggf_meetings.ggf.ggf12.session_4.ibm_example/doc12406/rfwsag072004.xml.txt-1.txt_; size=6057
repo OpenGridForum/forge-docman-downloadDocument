@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsag:AgreementOffer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdtc="http://foo.org/sdtc" xmlns:wsag="http://www.ggf.org/namespaces/ws-agreement" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jsdl="http://www.gridforum.org/JSDL" xsi:schemaLocation="http://www.ggf.org/namespaces/ws-agreement ../query2SQL/agreement_types2.xsd http://www.w3.org/2001/XMLSchema ../query2SQL/XMLSchema.xsd http://www.gridforum.org/JSDL ../query2SQL/jsdl.xsd http://foo.org/sdtc ../query2SQL/sdtc.xsd ">
+	<wsag:Name>Offer2</wsag:Name>
+	<wsag:Context/>
+	<wsag:Terms>
+		<wsag:All>
+
+		<!-- This example WSAgreement is meant to be referenced by an example JSDL file -->
+		<!-- It describes 2 alternative sets of resource requirements -->
+                <!-- The "faster" alternative is assigned a higher value or utility than the slower -->
+                <!-- this helps the job scheduler to prioritize resource assignments -->
+		   
+		  <wsag:ExactlyOne>
+		      
+                     <wsag:ServiceDescriptionTerm wsag:Name="fasterSystem" wsag:ServiceName="testService">
+                          <!-- specify resource alternative 1 -->
+                            <jsdl:job> 
+                              <jsdl:Resource>
+                                   <jsdl:CPUDescription>itelPentium4</jsdl:CPUDescription> 
+                                   <jsdl:CPUCount>4</jsdl:CPUCount> 
+                                   <jsdl:CPUSpeed>2048Mhz</jsdl:CPUSpeed> 
+                                   <jsdl:PhysicalMemory>4096Mb</jsdl:PhysicalMemory> 
+                                   <jsdl:Network>
+                                      <jsdl:NetworkDescription>FastEthernet</jsdl:NetworkDescription> 
+                                      <jsdl:NetworkCount>2</jsdl:NetworkCount> 
+                                      <jsdl:NetworkBandwidth>100MB</jsdl:NetworkBandwidth> 
+                                   </jsdl:Network>
+                                   <jsdl:FileSystem name="scratch" size="4096Mb" /> 
+                                   <jsdl:SwapSpace>100GB</jsdl:SwapSpace> 
+                                   <jsdl:TemporarySpace>200KB</jsdl:TemporarySpace> 
+                                   <jsdl:ExclusiveExecution>true</jsdl:ExclusiveExecution> 
+                               </jsdl:Resource>
+
+                               <jsdl:SoftwareRequirements>
+			              <jsdl:OperatingSystem> 
+                                   <jsdl:OperatingSystemDescription>Linux</jsdl:OperatingSystemDescription>
+                                     <jsdl:OperatingSystemVersion>RedHat7.2</jsdl:OperatingSystemVersion>  
+                                        <jsdl:Extend name="patchVersion">October2003</jsdl:Extend>  
+                                   </jsdl:OperatingSystem> 
+                               </jsdl:SoftwareRequirements>
+                            </jsdl:job>
+                  </wsag:ServiceDescriptionTerm>
+
+		      <wsag:ServiceDescriptionTerm wsag:Name="slowerSystem" wsag:ServiceName="testService">
+                         <!-- specify resource alternative 2 -->
+                            <jsdl:job>    
+                               <jsdl:Resource>
+                                   <jsdl:CPUDescription>itelPentium3</jsdl:CPUDescription> 
+                                   <jsdl:CPUCount>1</jsdl:CPUCount> 
+                                   <jsdl:CPUSpeed>1024Mhz</jsdl:CPUSpeed> 
+                                   <jsdl:PhysicalMemory>4096Mb</jsdl:PhysicalMemory> 
+                                   <jsdl:Network>
+                                      <jsdl:NetworkDescription>SlowEthernet</jsdl:NetworkDescription> 
+                                      <jsdl:NetworkCount>1</jsdl:NetworkCount> 
+                                      <jsdl:NetworkBandwidth>10MB</jsdl:NetworkBandwidth> 
+                                   </jsdl:Network>
+                                   <jsdl:FileSystem name="scratch" size="4096Mb" /> 
+                                   <jsdl:SwapSpace>100GB</jsdl:SwapSpace> 
+                                   <jsdl:TemporarySpace>200KB</jsdl:TemporarySpace> 
+                                   <jsdl:ExclusiveExecution>true</jsdl:ExclusiveExecution> 
+                                </jsdl:Resource>
+                                <jsdl:SoftwareRequirements>
+                                  <jsdl:OperatingSystem>
+                                    <jsdl:OperatingSystemDescription>Windows2000</jsdl:OperatingSystemDescription> 
+                                    <jsdl:OperatingSystemVersion>2000.0.1.3</jsdl:OperatingSystemVersion> 
+                                 </jsdl:OperatingSystem>
+                                </jsdl:SoftwareRequirements>
+                            </jsdl:job>                               
+		     </wsag:ServiceDescriptionTerm>
+			
+		</wsag:ExactlyOne>
+		<wsag:GuaranteeTerm wsag:Name="ConfigurationPreference">
+               <wsag:ServiceScope>
+			<wsag:ServiceName>testService</wsag:ServiceName>
+		   </wsag:ServiceScope>
+
+		   <wsag:ServiceLevelObjective xsi:type="sdtc:OpType">
+                     <!-- sdtc is a place holder for an rich expression language -->
+                     <Or>
+                           <SDT>fasterSystem</SDT>
+			   <SDT>slowerSystem</SDT>
+                     </Or>
+               </wsag:ServiceLevelObjective>
+		   <wsag:BusinessValueList>
+			<wsag:Preference>
+				<wsag:ServiceTermReference>fasterSystem
+                                </wsag:ServiceTermReference>
+				   <!-- specify the relative business value of "fasterSystem" -->
+                                   <wsag:Utility>0.8</wsag:Utility>
+				   <wsag:ServiceTermReference>slowerSystem
+                                </wsag:ServiceTermReference>
+                                <!-- specify the relative business value of "slowerSystem" -->
+				<wsag:Utility>0.5</wsag:Utility>
+			</wsag:Preference>
+		   </wsag:BusinessValueList>
+		</wsag:GuaranteeTerm>
+	   </wsag:All>
+	</wsag:Terms>
+</wsag:AgreementOffer>

@@ -1,0 +1,177 @@
+INFOD Current Actions
+=====================
+
+This is a list of current actions.  Each action has a serial number, once it
+is closed it is moved to a companion document of closed actions.
+
+==============================================================================
+
+
+43     Describe the two approaches for traceability through multiple disseminators
+
+        (1) Re-pacakaging a message at each hop in a new header
+        (2) Removing the header and adding a new appropriate message
+            header after transformation
+
+       - Date 3 Oct 2005
+       - Owner: 
+       - Target: 
+      
+
+48     Define sequence number and message groups in the context of transactions
+
+       - Date 3 Oct 2005
+       - Owner: 
+       - Target:
+
+
+108    Define vocabulary WS to support non-XML Data Vocabularies
+
+       - Date: 12 Feb 2006
+       - Owner: 
+       - Target:
+
+
+129    Find how to deal with nested vocabularies in XML
+
+       - Date: 17 May 2006
+       - Owner: Dieter
+       - Target: 
+
+
+140    How do we deal with "delta messages" (optimisation of notification)
+
+       - Date: 17 May 2006
+       - Owner: Dieter
+       - Target: 
+
+
+150    Check that notify() message actually works as planned
+
+       - Date: 15 Jun 2006
+       - Owner: Vijay
+       - Target: 29 Mar 2007
+
+       Have not managed yet. Now using .Net but still some problems -
+       so far no success with any tool. Will modify the WSDL and check
+       with IBM implementation. Need to verify compatibility.
+
+
+155    How do we deal with retention periods?
+ 
+       Separation of data retention from data publishing
+
+       - Date: 1 Jul 2005
+       - Owner: Dieter
+       - Target date:
+
+
+156    How do the propagation interface(s) differ from the consume
+       interfaces and what is stored in the registry?
+
+       - Date: 1 Jul 2005
+       - Owner: Shailendra, Cecile
+       - Target date:
+
+
+160    What's special about INFOD disseminators?
+
+       * Retention of information
+       * Querying information
+       * Auditing and tracking
+
+       - Date: 1 Jul 2005
+       - Owners:
+       - Target date:
+
+
+178    Mention charter evolution to area director
+
+       - Owner: Steve F.
+       - Date: 9 Sep 2006
+       - Target: 28 Sep 2006
+
+       Draft prepared
+
+
+182   Framework of chapter 2 of next spec
+
+      - Owner: Dieter
+      - Date: 28 Sep 2006
+      - Target: 
+
+
+187   Send responses to Peter Niblett and Matt Roberts
+
+      - Owner: Vijay
+      - Date: 7 Dec 2006
+      - Target: 4 Jan 2006
+
+      Will be there today - 22 Feb
+
+
+194   Consider relationship between Consumers and DataVocabularies for
+      the next spec.
+
+      - Date: 4 Jan 2007
+
+
+198   Review new chapter 1
+      - Owner: All
+      - Date: 15 Mar 2007
+      - Target: 22 Mar 2007
+
+
+199   Update chapter 2 to match chapter 1
+      - Owner: Dieter and Ronny
+      - Date: 15 Mar 2007
+      - Target: 29 Mar 2007
+
+
+200   Complete chapter 4 and the WSDL
+      - Owner: Vijay
+      - Date: 15 Mar 2007
+      - Target: 29 Mar 2007
+
+
+201   Merge back to 1 spec document by 12th Apr
+      - Owner: Vijay
+      - Date: 15 Mar 2007
+      - Target: 29 Mar 2007
+
+
+202   Internal review of complete spec document
+      - Owner: All
+      - Date: 15 Mar 2007
+      - Target: 26 Apr 2007
+
+
+203   Resubmit spec
+      - Owner: Steve
+      - Date: 15 Mar 2007
+      - Target: OGF20 (7th May)
+
+
+204   Set up INFOD public area at UTK
+      - Owner: Raghul
+      - Date: 15 Mar 2007
+      - Target: ??
+
+
+205   Link INFOD UTK public area from INFOD web site
+      - Owner: Steve
+      - Date: 15 Mar 2007
+      - Target: ??
+
+
+206   Update use case doc to match the spec
+      - Owner: ??
+      - Date: 15 Mar 2007
+      - Target: ??
+
+
+207
+
+
+
+

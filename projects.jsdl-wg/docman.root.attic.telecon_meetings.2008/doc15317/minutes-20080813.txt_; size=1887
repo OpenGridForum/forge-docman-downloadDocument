@@ -1,0 +1,57 @@
+JSDL Teleconference - 13 August 2008
+====================================
+
+* Participants
+
+  Michel Drescher
+  David Meredith
+  Andreas Savva
+  Geoff Williams
+
+  Apologies: Steve McGough
+
+* Parameter sweep issues review
+
+Tracker:
+  https://forge.gridforum.org/sf/tracker/do/listArtifacts/projects.jsdl-wg/tracker.parameter_sweep
+
+* artf6148: Geoff will reformulate for next week
+* artf6264: File sweep
+  - Text looks well written; will include in the next draft.
+  - Mandate a specific delimiter or not?
+    - Agreed that it is best to leave the delimiter choice up to the
+      user. Change the schema accordingly.
+  - Support regular expressions? No
+
+  - David will update the draft.
+  - Michel will merge in the document. The document requires some
+    additional reorganization to move examples in an Appendix and so
+    forth.
+
+* artf6187: Constraint
+  - A number of concerns with the effort that might be required to
+    define this: a constraint language (or at least defining a subset
+    of another language such as XPath) is needed; still unsure what is
+    the best way to define this in XML.
+  - Also how far to go with variable scoping and the danger to turning
+    this all into a general programming language...
+  
+  Agreed to defer for a later version or extension. But will provide
+  appropriate extensibility in the current spec so that it would not
+  have to be modified if we add this later.
+  - Added artf6269 and assigned to Michel; review next week.
+
+* Other issues:
+** Draft 11: Removed attributegroup from loopdouble definition due to
+   tooling issues.
+
+* Michel has the pen 
+* Andreas took over review and closing of 'fixed' artifacts: 6147,
+  6184, 6150, 6151, 6145, etc.
+
+
+* Next call 
+
+  It is an Activity but will arrange 15 minutes or so at the beginning
+  for parameter sweep to resolve artf6269
+

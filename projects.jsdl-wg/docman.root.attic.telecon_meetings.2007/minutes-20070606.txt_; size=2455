@@ -1,0 +1,68 @@
+JSDL phone conference
+=====================
+
+6 June 2007
+
+Participants:
+=============
+Andreas Savva, Fujitsu
+Steve McGOugh, Imperial College
+Donal Fellows, UoM
+Fred Brisard, CA
+An Ly, Ca,
+Michel Drescher, Fujitsu
+
+Notes: Michel Drescher
+
+Agenda
+------
+1. JSDL Experience document
+2. OGF20 wrap up
+3. 1.0 Errata document
+
+JSDL Experience document
+------------------------
+- Rumour has it that if a spec in OGF comes along for 2 years without an 
+  Experience document, then the spec is getting obsolete.
+- JSDL 1.0 is approaching the 2 year deadline, and we need to check whether
+  this applies to us or not
+- The group agrees that an Experience document is really overdue and that
+  we should create one soon, even possibly before the next HPC07 end of this 
+  year.
+- The group agrees on compiling the Experience document into one document 
+  instead of several.
+- The group agrees that at least GridSAM and UNICORE should directly contribute
+  to this document, but not without not mentioning all the other participants
+  of the great HPC06 interop demo.
+- Alternatively the group provides a form implementers could fill in and return
+  to the Experience Document editors.
+- AI Andreas: Review the requirements of an OGF Experience document, and provide
+              an outline of an Experience document.
+
+OGF20 wrap up
+-------------
+- Based on the OGF20 session, the next pieces of work would be:
+
+-- JSDL 1.0 Errata document
+
+-- One JSDL 1.0 extension document profiling XQuery 
+ --- Use different query languages?
+ --- Need to narrow down the XQuery features we would want to allow
+ --- We need to be aware of namespaces and different data models
+	 ---- Do we need to provide explicitly the used data model?
+	 ---- Should we allow/disallow expressions that can be used against
+		  multiple data models?
+ --- The group tends to see this as an extension document rather than a
+	 profile document. However, the document even when written as an extension
+	 document must state that this document is at the same time a profile
+	 on XQuery / XPath
+ --- Contributors shall be:
+	 Michel, Steve McGough
+
+-- Parameter Sweep
+   --- The group would like to see this document as a working group draft
+   --- Andreas has created a Parameter Sweep tracker
+
+-- JSDL Instance document / Activity document
+   --- We need to set up a wiki page collecting the efforts and requirements
+       for this

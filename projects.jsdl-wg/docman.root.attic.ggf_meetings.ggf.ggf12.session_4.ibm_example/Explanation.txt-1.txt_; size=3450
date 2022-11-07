@@ -1,0 +1,75 @@
+---------- Forwarded message ----------
+Date: Thu, 29 Jul 2004 23:53:50 -0400
+From: Robert Filepp <filepp@us.ibm.com>
+To: jsdl-wg@gridforum.org
+Cc: Asit Dan <asit@us.ibm.com>, Heiko Ludwig <hludwig@us.ibm.com>
+Subject: Re: Fw: [jsdl-wg] JSDL: Invitation
+
+
+
+
+
+Hello everyone,
+In response to Ali's request, attached for your review are two XML files
+that provide an example of how JSDL and WS-Agreement might be used
+together. The first XML file is a simple JSDL file that references a
+WS-Agreement document by means of a jsdl extension. The second XML file is
+a WSAG document based on Example 3 from the latest WS-Agreement draft
+specification available for review at
+https://forge.gridforum.org/projects/graap-wg/document/WS-AgreementSpecification/en/3
+. The resource requirements encapsulated in the second XML file are roughly
+based on the 071304_jsdl.xml example that the JSDL-WG posted in the working
+group web site.
+
+I've discussed this example with two of the WS-Agreement authors, Asit Dan
+and Heiko Ludwig, and they indicated that this example is appropriate and
+in conformance with the latest WS-Agreement draft specification.
+
+This example focuses on how WS-Agreement may be used as a means for
+specifying resource requirements to be utilized by the resource matching
+component of a distributed computing metascheduler. The prioritization of
+resource allocation among jobs may be approached in several ways such as
+fairness, e.g. first come first serve, efficiency, e.g. shortest job first,
+and sophisticated economic models, e.g. auctions. Critical to arbitrated
+resource allocation is the concept of job value. One complicating factor is
+the possibility that jobs may be executed on a variety of platforms with
+differing resources. Therefore the ability to assign different values to
+the execution of instances of a job utilizing different resource
+alternatives must be explored. For example, a job might be executed on
+either a 1GHz processor or a 2GHz processor. Each platform can support the
+job, but the job will likely execute more quickly on the faster platform.
+The user may indicate a preference for the faster processor over the slower
+by assigning a higher relative value to the faster alternative.
+
+The example illustrates a paradigm in which 1) WS-Agreement documents may
+encapsulate JSDL resource requirement directives and be used to specify the
+business value of jobs in a standardized fashion and as means for users to
+specify the relative business value of resource allocation alternatives
+within the same job; and  2) JSDL documents may reference WS-Agreement
+documents and need contain only the data needed to instantiate a job, such
+as permissions, program arguments, environment variables, etc.
+
+Here are the exemplar XML files.
+(See attached file: rfjsdl072304.xml)(See attached file: rfwsag072004.xml)
+
+Also, here are 5 schemas that can be used for validation purposes. Please
+note that  sdtc.xsd serves as a placeholder for a (hopefully) rich
+expression language.
+(See attached file: sdtc.xsd)(See attached file: agreement_types2.xsd)(See
+attached file: jsdl.xsd)(See attached file: xml.xsd)(See attached file:
+XMLSchema.xsd)
+
+Sorry to get this out so late but I spent several days recovering from a
+hard drive failure.
+
+Best regards,
+
+Bob Filepp
+IBM T.J.Watson Research Center
+19 Skyline Drive
+Hawthorne, N.Y.  10532
+office: H1-4N-C18
+filepp@us.ibm.com
+tieline 863-7521
+external (914) 784-7521
+fax: (914) 784-6040

@@ -1,0 +1,101 @@
+Minutes of the JSDL BoF session at GGF8, Seattle
+ - held on the 26th June 2003
+
+Introductions by the BoF Chairs
+-------------------------------
+Stephen McGough (London e-Science Centre, Imperial College),
+Ali Anjomshoaa (EPCC, University of Edinburgh),
+Darren Pulsipher (Cadence Design Systems)
+
+GGF IP issues and sign up sheet
+-------------------------------
+
+Ali's Presentation
+------------------
+About a third of the audience were present at the JSDL BoF at GGF7, Tokyo.
+
+o Presentation of the charter,
+o motivation for JSDL,
+o positioning within GGF wrt DRMAA, GRAAP, other,
+o deliverables,
+o list of systems to consider
+o interested parties
+
+
+Charter Discussion:
+
+o Question: Why is there a need for a JSDL Translator.
+  Answer: To allow the JSDL to retrofit existing job description languages
+          and to allow for proprietary system languages in future.
+
+o Question: How does the JSDL cater for batch system vendor extensions.
+  Answer: Through an extensibility mechanism, to be scoped.
+
+o Question: Will the JSDL include an aspect of Job control.
+  Answer: Perhaps it will provide the ability to specify that job control is required.
+
+o Question: Is the JSDL like JCL?
+  Answer: Could be a starting point.
+
+
+Examples of RDL features should be considered (RDL not to be included - hope to import one)
+
+o Do not need a full RDL.
+o WG aim is to focus on relationship between resources and needs, NOT capturing resource description.
+o Will only look at RDL to the extent that the WG will set requirements for another group.
+o Should clarify charter on this point.
+
+Discussion -
+o is there a need to include some RDL features in the language?
+o is there a need for a framework but leaving the details and keywords out.
+o could do the framework and some subset of keywords? Perhaps?
+o could include a tag to identify the RDL so can plug and play?
+
+Proposal:
+1. Choose a resource scope that is sufficient
+2. Define a language sufficient to meet the scope
+
+In defining RDL you should provide translation definitions to existing product resource 
+definitions, i.e. a translation table.
+
+Migration issues in the future when RDL is filled out
+
+
+o The JSDL will not address workflow.
+
+o Will need to liaise with GRAAP-WG as they can make use of JSDL.
+
+o Added translation table for JSDL attributes to the list of deliverables.
+
+
+o Fred Maciel to send out suggested times for telecons.
+
+
+o List of volunteers to act as consultants on various batch/scheduling systems.
+
+Condor -  Hongsuda Tangmunarunleit (USC-ISI)
+UNICORE - Andreas Savva (Fujitsu)
+Loadleveler -  Jay Unger (IBM)
+Globus RSL - Alain Andrieux (USC-ISI)
+Platform LSF - Ming Xu and Chris Smith (Platform)
+EU DataGrid - Steve McGough (LeSC, IC)
+SGE -  Andreas Haas (Sun)
+PBS - Bill Nitzberg (Altair)
+Maui - Scott or Dave Jackson
+Grid Application Definition Language - Jurgen Falkner (Fraunhofer Institut)
+
+
+Extensibility of JSDL - 
+o extensibility will be one of the biggest issues that we need to work on.
+o consensus will be important or the JSDL will not be adopted.
+o could extend to describe Grid Service resources.
+o propose JSDL core set with an extension mechanism for extensions set.
+o must satisfy vendor concerns by defining extension mechanisms.
+o introduce job categories as in DRMAA, vendors can then chose to interpret 
+  JSDL semantics depending on the job category. Does this undermine the 
+  semantics of the JSDL?
+o key issue is to provide a clear mapping for a core set of features.
+o JSDL will provide independence of job submission platform.
+
+
+o Can JSDL fill the gap in the agreement protocol, (OGSI-Agreement draft available).

@@ -1,0 +1,83 @@
+INFOD Current Actions
+=====================
+
+This is a list of current actions.  Each action has a serial number, once it
+is closed it is moved to a companion document of closed actions.
+
+==============================================================================
+
+
+22     Produce a plan for at least two implementations
+
+       - Date: 1 Jul 2005
+       - Owner: 
+       - target date: F2F
+
+       Susan has sent a document about ref implementations.
+
+       Susan will look into students for an Open Source implementation
+
+       Oracle will look at closed implementation
+
+
+150   Check that notify() message actually works as planned
+
+      - Date: 15 Jun 2006
+      - Owner: Vijay
+      - Target: 22 Jun 2006
+
+      Have not managed yet
+
+
+164   Merge use case doc
+
+      - Date: 3 Aug 2006
+      - Owner: Susan
+      - Target: F2F
+
+
+165   Correct WSN stuff in spec following feedback from WSN community.
+
+      - Date: 3 Aug 2006
+      - Owner: Ronny and Shailendra 
+      - Target: 10 Aug 2006
+
+
+166   Talk to Joel about author list
+
+      - Date: 3 Aug 2006
+      - Owner: Steve
+      - Target: GGF18
+
+
+167   Find reviewers
+
+      Targets:
+        Dieter 4 - maybe more
+        Steve 2 - none confirmed
+        Stephen 2 (only 1 maybe so far)
+        Chris 1 - no luck yet
+        Ronny 2 - none confirmed
+
+      - Date: 10 Aug 2006
+      - Owner: All
+      - Target: 24 Aug 2006
+     
+
+168   Find how many reviewers we need
+  
+      - Date: 10 Aug 2006
+      - Owner: Dieter, Stephen
+      - Target: 17 Aug 2006
+
+      It would appear to be a very small number which we should easily
+      exceed.
+
+
+169   Contact GGF Data Area people (Dave Martin and Malcom Atkinson) to find reviewers
+     
+      - Date: 31 Aug 2006
+      - Owner: Steve
+      - Target: GGF18 F2F
+      
+

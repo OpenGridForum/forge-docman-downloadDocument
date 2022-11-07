@@ -1,0 +1,255 @@
+# ##############################################################
+# 
+# File:      nmlbase.rnc - Main schema definition
+# Version:   $Id$
+# Purpose:   This is the main schema file, it defines the
+#            general topology elements of NML
+# 
+# ##############################################################
+
+
+# ##############################################################
+# Namespace definitions
+# ##############################################################
+
+default namespace nml = 
+    "http://schemas.ogf.org/nml/base/201103/beta/"
+
+
+
+NetworkObject =
+  (
+    Identifier
+    & Name?  
+    & Relation*
+    & Lifetime?
+  )
+
+NetworkObjectRef =
+  IdReference
+
+Identifier =
+  attribute id { xsd:anyURI }
+
+IdReference =
+  attribute idRef { xsd:anyURI }
+
+Name =
+  element name {
+    attribute type { xsd:string }?
+    & xsd:string
+  }
+
+Relation =
+  element relation {
+    attribute type { xsd:anyURI }
+    & ( BaseNode | BaseLink | BasePort | BaseService | NMLGroup | Container )
+  }
+
+# problem: hasPort, hasport, has_port are not equal. Risk is less with URI's.
+# risk of proliferation of types. E.g. Port -hostname-> Node instead of Node -hasport-> Port
+
+Lifetime =
+  element lifetime {
+    StartTime
+    & (EndTime | Duration)?
+  }
+### May a lifetime be segmented? (thus multiple sets of begin/endtime?)
+
+# #################################################################
+# This sequence allows any element, attribute, or text (regardless 
+# of name or namespace) into the document when invoked.
+# #################################################################
+
+anyElement = 
+  element * { 
+    anyThing 
+  }
+
+anyAttribute = 
+  attribute * { text }
+
+anyThing = 
+  ( 
+    anyElement | 
+    anyAttribute | 
+    text 
+  )*
+
+
+## ########################
+## Time elements
+## ########################
+
+StartTime = 
+  element start { xsd:dateTime }
+   
+EndTime = 
+  element end { xsd:dateTime }
+
+Duration =
+  element duration { xsd:duration }
+
+## ########################
+## Generic location
+## ########################
+
+LocationContent =
+  element continent { xsd:string }?
+  & element country { xsd:string }?
+  & element zipcode { xsd:integer }?
+  & element state { xsd:string }?
+  & element institution { xsd:string }?
+  & element city { xsd:string }?
+  & element streetAddress { xsd:string }?
+  & element floor { xsd:string }?
+  & element room { xsd:string }?
+  & element cage { xsd:string }?
+  & element rack { xsd:string }?
+  & element shelf { xsd:string }?
+  & element latitude { xsd:float }?
+  & element longitude { xsd:float }?
+### NAME?
+
+## ########################
+## Generic link
+## ########################
+
+BaseLink = element link { BaseLinkContent | NetworkObjectRef }
+BaseLinkContent =
+  NetworkObject
+  & element type { xsd:string }?
+  & element capacity { xsd:float }?
+  & anyElement*
+
+
+## ########################
+## Generic port
+## ########################
+
+BasePort = element port { BasePortContent | NetworkObjectRef }
+BasePortContent =
+  NetworkObject
+  & element capacity { xsd:float }?
+  & anyElement*
+
+
+## ########################
+## Generic node
+## ########################
+
+BaseNode = element node { BaseNodeContent | NetworkObjectRef }
+BaseNodeContent =
+  NetworkObject
+  & element location { LocationContent }?
+  & anyElement*
+
+## ########################
+## Generic service
+## ########################
+
+BaseService = 
+  AdaptationService
+  | SwitchingService
+
+AdaptationService = anyElement
+SwitchingService = anyElement
+
+# Follows in next version, along with multi-layer stuff
+
+## ########################
+## Groups
+## ########################
+
+NMLGroup = 
+  Topology
+  | Domain
+  | Network
+  | BidirectionalLink
+  | BidirectionalPort
+
+
+## ########################
+## Generic topology
+## ########################
+
+Topology = element topology { BaseTopologyContent | NetworkObjectRef }
+BaseTopologyContent =
+  NetworkObject
+  & BaseLink*
+  & BasePort*
+  & BaseNode*
+  & NMLGroup*
+  & anyElement*
+
+# NML group can contain an NML Group, according to NML schema. Is this OK for RNC?
+
+## ########################
+## Generic domain
+## ########################
+
+Domain = element domain { BaseDomainContent | NetworkObjectRef }
+BaseDomainContent =
+  NetworkObject
+  & anyElement*
+
+
+## ########################
+## Generic network
+## ########################
+
+Network = element network { BaseNetworkContent | NetworkObjectRef }
+BaseNetworkContent =
+  NetworkObject
+  & anyElement*
+
+## ########################
+## Bidirectional Link
+## ########################
+
+BidirectionalLink = element bilink { BaseBidirectionalLinkContent | NetworkObjectRef }
+BaseBidirectionalLinkContent =
+  NetworkObject
+  & Link
+  & Link
+
+## ########################
+## Bidirectional Port
+## ########################
+
+BidirectionalPort = element biport { BaseBidirectionalPortContent | NetworkObjectRef }
+BaseBidirectionalPortContent =
+  NetworkObject
+  & Port
+  & Port
+
+## ########################
+## Containers
+## ########################
+
+## A container is a list of items. A list may be unordered (a Bag) or ordered (a Sequence)
+
+Container = 
+  Bag
+  | Sequence
+
+Bag = 
+  element bag { UnorderedItem* }
+
+UnorderedItem = 
+  element * { NetworkObject | NetworkObjectRef }
+
+Sequence = 
+  element list { attribute first { xsd:anyURI } OrderedItem* }
+
+UnorderedItem = 
+  element * { 
+    attribute next { xsd:anyURI }
+    | attribute last { xsd:empty }
+    anyThing 
+  }
+
+## root element
+
+start = Topology
+

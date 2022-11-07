@@ -1,0 +1,62 @@
+JSDL conference call
+====================
+
+10 November 2011
+
+1) Roll call
+------------
+- Etienne Urbah
+- Oxana Smirnova
+- Michel Drescher
+- Michael Saravo
+- Philip Wieder
+- Steve Crouch
+
+Apologies:
+- Morris Riedel
+
+
+2) Minutes of last meeting
+--------------------------
+Last meeting's minutes (http://forge.gridforum.org/sf/go/doc16352?nav=1) were accepted without further changes.
+
+
+3) Action review
+----------------
+Actions were reviewed online on Gridforge during the call. Proceedings and new state are recorded with the actions themselves, not in the minutes.
+
+
+4) Using GridForge
+------------------
+The participants briefly discussed the proposal and unanimously agreed on the following Gridforge uses:
+
+Tasks:
+Used to track specific actions assigned on WG meetings (conference calls, F2F, etc.) to specific persons. Task status values do not perfectly match the intended use; however the following is a practicval approach:
+'Not started' - Start value, stays that way until the task is worked on.
+'OK'          - Once the asignee works on the task it should be set to 'Ok".
+'Completed'   - When the task has been accomplished.
+Assignees will regularly report accomplishments, plans and issues for the task so that everyone else may keep track of what has happened.
+Regular action reviews on conference calls will take snapshots of the overall action status.
+
+Tracker:
+Track and manage the actual workload of the WG - the requested changes to the JSDL specification in easily digestible manner.
+
+File releases:
+Used to publish distinct versions of the JSDL specification and XML rendering. May publish intermediate drafts and iterations for regular review where people can record issues against it for consideration for the next iteration.
+
+Documents:
+Persist meeting minutes, Slides, and all other documentation that is generated in the WG outside of the actual specification and XML rendering.
+
+JSDL Calendar:
+Integrates a simple Google calendar for WG members to integrate into their own calendaring system. Each meeting entry will host the proposed agenda for the respective event.
+
+
+5) AOB
+------
+Based om the discussion of the aggregated information (task1142, http://forge.gridforum.org/sf/go/task1142?nav=1) the following further actions were assigned:
+task1145: Digest JSDL Use Case document (Etienne URBAH)
+task1146: Digest JSDL/GLUE document (Michel Drescher)
+task1147: Digest BES/JSDL document 	(Michael Saravo)
+task1148: Digest PGI document (Oxana Smirnova)
+task1149: Digest existing JSDL tracker (Philipp Wieder)
+

@@ -1,0 +1,65 @@
+JSDL Teleconference - 26 November 2008
+======================================
+
+* Participants
+
+  Fred Brisard
+  Donal Fellows
+  Steve McGough
+  David Meredith
+  Andreas Savva (minutes)
+  Philipp Wieder
+  Geoff Williams
+
+  Apologies: Michel Drescher, Alexander Papaspyrou
+
+* Timeslot & Frequency of calls: stay with 1pm UTC and bi-weekly 
+
+* Parameter Sweep public comment discussion
+
+** Double value comparison
+   - Proposal to reformulate as explicit loop counts and exceptions on
+     loop counts.
+   - Discussed whether this is user-friendly or not. The typical
+     counter-argument is that the schemas are not for human
+     consumption and a user interface could help out by generating the
+     exceptions automatically, etc.
+   - Accuracy did not seem to be an issue to early implementors. Java
+     bigdecimal (java.math.bigdecimal) seemed to have no issues. But
+     this is probably not behaviour that can be relied on for all
+     implementations.
+
+   Initial consensus: Probably ok to do loopcount and exception for
+   double loops. Do need to do some background checks (ask
+   implementors) and discuss again.
+   
+   Action: Ask parameter sweep early implementors if they have
+           implemented loopdouble and what issues they have
+           - g-eclipse (Andreas)
+           - KISTI (David)
+           - Nimrod (Geoff)
+
+   Action: David to ask Stephen Pickles to come to the next call
+
+** Zero-step
+   - This was discussed when the spec was written and the consensus
+     was that it was overkill to do it in schema. There is no reason
+     to change that decision.
+
+** XPath substring
+
+   - Does it return the string or node for substring match?
+     - string is returned; we expect the node
+   - Is it (easily) implementable? Need to check whether anyone has
+     actually implemented it.
+   - The use case for identifying input/output files for sweep
+     instances depends on this feature, so it would be nice to keep in
+     the spec if possible.
+   
+   Action: Ask parameter sweep early implementors if they have
+           implemented the substring match and what issues they have
+           - g-eclipse (Andreas)
+           - kisti (David)
+           - Nimrod (Geoff)
+
+* Next call: December 10th @ 1pm UTC

@@ -1,0 +1,1270 @@
+<?xml version="1.0"?>
+<!DOCTYPE datalist PUBLIC "-//VA Software, Inc.//DTD DataList Export 1.1//EN"
+    "http://schema.vasoftware.com/sf/dtd/sf-datalist-export_1_1.dtd">
+
+<datalist>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5209</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>(1332) Should we add referencing capabilities to the schema?</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Igor proposed the addition of names to elements and then the ability to reference these in other places in the doc.
+
+The group was undecided on this and we want to defer until we know what automatic tooling is available for this....</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Stephen McGough</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>15.03.2005</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>02.05.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Open</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>2</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Donal Fellows</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5209/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5210</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>(1358) Support elements as ontology</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Should we support using JSDL elements outside the normal Job-definition context? My inclination is to say &#034;yes&#034; to this, but it requires changes through the document to remove the forms of words from all elements that say what element they must be a child of; for use in defining a job template, the hierarchy is defined anyway in a top-down way (currently it's both top-down and bottom-up)..</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Donal Fellows</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>08.04.2005</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>15.02.2006</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>15.02.2006</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5210/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5211</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>(1330) Why are types defined in the XSD string typed rather than Qname elements</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>We went from Qname elements to string elements. Why did we do that and is it still relevent?.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Stephen McGough</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>15.03.2005</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>13.09.2006</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>13.09.2006</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5211/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5212</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>(1286) Database Access Job Submission Application Extension</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Add the SQL Job submission example to the Example section.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Darren Pulsipher</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>08.02.2005</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>13.09.2006</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Open</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Stephen McGough</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5212/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5213</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>(1284) Web services Example</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Put the web services example in the Example sections.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Darren Pulsipher</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>08.02.2005</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>15.02.2006</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>15.02.2006</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5213/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5214</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>(1283) Multi-process example</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>We need to show an multi-process example in the Examples section.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Darren Pulsipher</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>08.02.2005</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>13.09.2006</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>13.09.2006</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5214/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5215</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>(1282) Translation Table Appendix</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>We need to have at least one example on how to map JSDL to a job submission..</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Darren Pulsipher</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>08.02.2005</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>13.09.2006</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>13.09.2006</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5215/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5216</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>(1272) Example on Extension for software Requirements</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>We need to add some examples of software requirements to the resource section. Such as clib.so or motif or something else..</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Darren Pulsipher</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>08.02.2005</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>13.09.2006</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>13.09.2006</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5216/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5217</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>(1271) How to invoke a Web Service</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Insert the Web service example that Fred came up with.  Some clean up to the schema needs to be done and the example put into the spec..</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Darren Pulsipher</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>08.02.2005</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>14.02.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Open</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5217/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5562</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Software 'resource' or library</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>The ESI draft contained a jsdl extension called esi:Library. (It should probably be called 'Software' instead.) A similar extension was also introduced in other projects, e..g, HPC-Europa.
+
+ESI definition fragment follows below:
+
+4.3.2	Support for Libraries
+This element MAY be used to identify libraries and other software components that are available at a resource. They MAY also be added to the Job Description Resource element to indicate that the job requires the giver library or software package.
+
+&lt;esi:Library&gt;
+  &lt;LibraryName .../&gt;?
+  &lt;LibraryVersion .../&gt;?
+   &lt;Description .../&gt;?
+&lt;/esi:Library&gt;
+</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>04.09.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>13.06.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Open</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>3</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5562/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5641</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Optional tags on extensions</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>At the moment all elements of a JSDL document must be understood for the document to be understood. Even for xsd:any elements.
+
+It would be nice to have a way of tagging an extension to JSDL as &#034;it's OK if you ignore me&#034;. This could be used for hints or optional extras.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Stephen McGough</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>23.11.2006</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>13.06.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Open</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Stephen McGough</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5641/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5951</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Multicore representation in JSDL</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>[From the JSDL; sent by Steven Newhouse]
+
+During the BES public comment period we had some feedback on how CPUArchitecture/CPUCount/CPUSpeed would be represented in a multi-core world. We use these JSDL elements to model the underlying compute resources in BES.
+
+https://forge.gridforum.org/sf/discussion/do/listPosts/projects.ggf-editor/discussion.rec_ogsa_basic_execution_service.topc4069
+
+This was something that BES felt was out of scope of its activities but clearly in scope for JSDL! You may have already had discussion on this matter... but could I pass this onto you for clarification in future revisions of the specification.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>12.07.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>12.07.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Open</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5951/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6065</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Schema extension mechanism</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>[Submitted to the list by Thomas Soddemann]
+
+Dear Group,
+
+within the DEISA project we have a new Web Service - SaaS project.
+With that we are faced with task of providing means for the
+interpretation of JSDL documents including its standard extensions.
+When working on this project, we naturally had a close look at the
+JSDL specification and the provided JSDL schema definitions (meaning
+JSDL 1.0 which we will refer to as the &#034;core&#034; XSD and the three
+extensions, POSIX, HPCPA, SPMD).
+Accepting JSDL documents means certainly verifying them syntactically
+and in a second step semantically. But due to the use of xsd:any and
+xsd:anyAttribute tags at various places in the core XSD, it is not
+possible to perform a syntactical verification of a document on the
+basis of the given schemata alone. Extra code is needed to check the
+correct position of elements from the extension name spaces.
+When reading the section of the specification which describes how to
+extend JSDL we got the impression that xsd:any and xsd:anyAttribute
+are used as hooks for extending JSDL.
+The problem implementors like us have now, is the extra code which is
+needed to check the validity of JSDL documents arising from the use of
+the any tags. More code means a greater risk of bugs.
+In addition this extra code may also lead to non-interoperable
+behavior due to misinterpretations of the specification document(s).
+
+Hence, should it not be the ultimate goal for the JSDL-WG to formulate
+a schema definition which allows extensions but also requires this
+extensions to inherit and adhere to the intended structure? Only then,
+it would suffice to perform a simple XSD validity check on a given
+JSDL document in order to determine its syntactical validity.
+
+We think, it is conceivable to modify the existing JSDL schemata to
+fulfill the above requirement with only minor modifications to the
+JSDL spec itself.
+
+First of all, JSDL core spec extensions can always extends JSDL
+elements, since none of them is marked as final. This already does
+enable extensions to define additional elements and attributes without
+the need of exploiting xsd:any and xsd:anyAttribute.
+
+Furthermore, it still should be possible to include serveral
+extensions (at least as sub-elements in Application, and may be also
+in JobIdentification, Resources, and DataStaging). This can be
+achieved by introducing an optional abstract element to these elements
+in a prototype pattern manner.
+An example for Application could be
+
+ &lt;xsd:complexType name=&#034;Application_Type&#034;&gt;
+  ...
+  &lt;xsd:element ref=&#034;ApplicationPrototype&#034; minOccurs=&#034;0&#034; 
+maxOccurs=&#034;unbounded&#034;/&gt;
+ &lt;/xsd:complexType&gt;
+
+which could be implemented as
+
+ &lt;xsd:complexType name=&#034;ApplicationPrototype_Type&#034;&gt;
+  &lt;xsd:sequence&gt;
+      &lt;xsd:element name=&#034;application&#034; type=&#034;ApplicationPrototype_Type&#034; 
+minOccurs=&#034;0&#034;
+               maxOccurs=&#034;unbounded&#034;/&gt;
+      &lt;xsd:element name=&#034;applicationRef&#034; type=&#034;xsd:IDREF&#034; minOccurs=&#034;0&#034;
+                   maxOccurs=&#034;unbounded&#034;/&gt;
+  &lt;/xsd:sequence&gt;
+  &lt;xsd:attribute name=&#034;id&#034; type=&#034;xsd:ID&#034; use=&#034;optional&#034;/&gt;
+ &lt;/xsd:complexType&gt;
+
+ &lt;xsd:element name=&#034;ApplicationPrototype&#034; 
+type=&#034;ApplicationPrototype_Type&#034; abstract=&#034;true&#034;/&gt;
+
+Extensions like SPMD then would simply extend ApplicationPrototype
+
+ &lt;xsd:complexType name=&#034;SPMDApplication_Type&#034;&gt;
+  &lt;xsd:complexContent&gt;
+      &lt;xsd:extension base=&#034;jsdl:ApplicationPrototype_Type&#034;&gt;
+          &lt;xsd:sequence&gt;
+              ...
+          &lt;/xsd:sequence&gt;
+          &lt;xsd:attribute name=&#034;name&#034; type=&#034;xsd:NCName&#034; use=&#034;optional&#034;/&gt;
+      &lt;/xsd:extension&gt;
+  &lt;/xsd:complexContent&gt;
+ &lt;/xsd:complexType&gt;
+
+ &lt;xsd:element name=&#034;SPMDApplication&#034; type=&#034;SPMDApplication_Type&#034;
+      substitutionGroup=&#034;jsdl:ApplicationPrototype&#034;/&gt;
+
+and an according JSDL document snippet still would read as
+
+ &lt;Application&gt;
+  &lt;ApplicationName&gt;Whatever&lt;/ApplicationName&gt;
+  &lt;ApplicationVersion&gt;1.1b&lt;/ApplicationVersion&gt;
+  &lt;jsdl-spmd:SPMDApplication &gt;
+              &lt;jsdl-spmd:NumberOfProcesses&gt;128&lt;/jsdl-spmd:NumberOfProcesses&gt;
+              &lt;jsdl-spmd:ProcessesPerHost&gt;32&lt;/jsdl-spmd:ProcessesPerHost&gt;
+              &lt;jsdl-spmd:ThreadsPerProcess&gt;1&lt;/jsdl-spmd:ThreadsPerProcess&gt;
+              &lt;jsdl-spmd:SPMDVariation&gt;&lt;/jsdl-spmd:SPMDVariation&gt;
+  &lt;/jsdl-spmd:SPMDApplication&gt;
+ &lt;/Application&gt;
+
+but could be verified syntactically in simply using schemata.
+
+For achieving such a goal, a few steps would have to be done.
+
+  * all occurrences of xsd:any and xsd:anyAttribute elements would
+    have to be removed from the specification
+  * the &#034;Extending JSDL&#034; section in the specification would have to be
+    rewritten
+  * the standard extensions would have to be augmented by adding
+    inheritance to match the above structure
+  * xsd:any and xsd:anyAttribute elements may be removed from the
+    standard extension XSDs as well.
+
+Your comments on this are very welcome.
+
+Best wishes,
+Thomas
+</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>07.11.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>07.11.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Open</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6065/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6438</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Extension proposals from XtreemOS</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Received from Toni Cortes</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>17.02.2010</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>17.02.2010</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Open</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6438/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6454</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>How to specify 32-bit OS on 64-bit CPU</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>[From Kazu@NAREGI]
+
+I have a question for resource element of JSDL.
+Is it possible to specify bit width of OS
+independent from CPUarchitecture.
+We have a problem for 64 bit applications.
+The broker can find a 64 bit CPU resource, how
+ever the application will be error, if 32 bit 
+OS running on the resource. Running 32 bit OS
+on 64 bit CPU is still not unusual thing.
+ 
+Is it possible to specify this kind of resource
+in JSDL?. Describe it in OperatingSystemVersion ?
+The OperatingStstem type element has no information 
+about bit width for major OS in the enumeration 
+list of the JSDL specification.
+</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>30.08.2010</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>30.08.2010</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Open</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6454/</field-value>
+    </field>
+  </element>
+</datalist>

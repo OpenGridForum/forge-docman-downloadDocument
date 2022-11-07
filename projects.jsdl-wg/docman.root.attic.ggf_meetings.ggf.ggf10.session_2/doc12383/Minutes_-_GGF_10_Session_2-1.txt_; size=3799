@@ -1,0 +1,106 @@
+JSDL-WG GGF10 (Berlin) Session 2
+--------------------------------
+
+Thursday 11th March 2004, 16:00 - 17:30 (local time)
+----------------------------------------------------
+
+
+Presentation by Ali on JSDL Job ID attributes: See:
+
+https://forge.gridforum.org/projects/jsdl-wg/document/JSDL-WG_GGF10_Session_2_-_JSDL_Job_ID_Attributes/en/2
+
+This slide set has been annotated from the meeting's discussions.
+
+
+Job ID Attributes' Presentation and Discussion
+==============================================
+
+o JobName
+  - Lifetime of a Job is from start to finish. If a job fails then it must 
+    be re-submitted.
+  - Remove the requirement that an attribute cannot be changed because an 
+    attribute cannot change when the job is submitted because it is a 
+    single action.
+
+o JobID
+  - This should be an opaque string.
+  - Discussion is whether this is valid or not. Should the JobID be 
+    handed back or passed in?
+  - Could there be more than one JobID corresponding to a job. One that 
+    the user specifies and/or one that the scheduling system supplies.
+  - The JobID could be used by a "job submission system" (for internal 
+    use) to identify a job.
+  - The JobID could be external to the JSDL document, since the document 
+    needs to be referenced somehow, anyway.
+
+o UniqueJobID
+  - Is not needed.
+  - Jobs are unique within a namespace, so let the implementors worry 
+    about it.
+
+o SubmittingUserName
+  - Remove the requirement that an attribute cannot be changed because an 
+    attribute cannot change when the job is submitted because it is a 
+    single action.
+  - Use for e.g. authentication and accounting.
+  - Need to be mappable to a "real" username.
+
+o ExecutionUserName
+  - Remove the requirement that an attribute cannot be changed because an 
+    attribute cannot change when the job is submitted because it is a 
+    single action.
+  - Use for e.g. authentication and accounting.
+  - Need to be mappable to a "real" username.
+  - References security object that allows for authentication on a system. 
+    Should(?) be an XML fragment.
+  - Talk to the security guys.
+  - This is an executing identity not a username.
+  - Bill: specific use-cases useful.
+
+o UserGroupName
+  - Execution Group Name
+  - Submission Group Name - Could be used from complex Policy stuff.
+  - Should this be divided into "submission" and "execution"?
+  - Use-case for submission group name? The submission username does not 
+    necessarily provide this. i.e. do we need submission group name?
+  - Darren: No submission group name is required. (open issue).
+  - Should(?) be an XML fragment?
+
+
+
+Presentation by Steve on JSDL Data attributes: See:
+
+https://forge.gridforum.org/projects/jsdl-wg/document/JSDL-WG_GGF10_Session_2_-_JSDL_Data_Attributes_NOTES/en/2
+
+This slide set has been annotated from the meeting's discussions.
+
+
+Data Attributes' Presentation and Discussion
+============================================
+
+ Q: Are we talking about program files or data file
+ Steve: we haven't specified.
+
+ C: Fred: Provisioning is more than just copying files, it's also 
+    installation and configuration.
+
+ C: Recursive copying of files? Copy a directory means its contents also?
+
+ C: FileSystemName -> DomainName? Should be relative to "path".
+
+ C: Shared file space for files and specific directory for others.
+
+ Q: Physical or logical filename?
+
+ C: Overwrite Attribute: file permissions/privileges for files when 
+    overwriting? Persist permissions of existing or staged file?
+
+ Q: We need to address file priority for transfers.
+
+ C: Require at least a "source" or a "target" on the File attribute.
+
+ C: How does one express that one needs a file to be present but 
+    doesn't know if the file is there or not?
+
+Need to specify that a file exists or does not exist on a resource?
+

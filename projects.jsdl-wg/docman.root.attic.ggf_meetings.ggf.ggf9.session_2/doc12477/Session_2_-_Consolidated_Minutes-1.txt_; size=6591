@@ -1,0 +1,215 @@
+JSDL-WG GGF9 (Chicago) Session 2
+--------------------------------
+
+Wednesday 8th October 2003, 12:00 - 13:30 (local time)
+------------------------------------------------------
+
+
+Ali – presented the agenda:
+
+ * Talks on: 
+
+   o The OGSA Program Execution Environment
+     - Ming Xu or Chris Smith (Platform)
+
+   o The Community Scheduler Framework (CSF)
+     - Chris Smith (Platform)
+
+   o The WS-Agreement (WS-A) Framework
+     - Karl Czajkowski and/or Alain Andrieux (ISI)
+
+   o The Job Terms Proposal (based on the WS-A terms language structure)
+     - Karl Czajkowski and/or Alain Andrieux (ISI)
+
+ * Discussion Items
+
+
+
+* OGSA Program Execution (OGSA-PE) (Chris Smith, Platform)
+
+  o OGSA-PE allows workload realisation on resources. Addresses the 
+    basic problem of matching supply and demand.
+
+  o WS-Agreement based
+
+  o Road map of the Program Execution Environment
+    - WS-Agreement proposed (June 2003)
+    - Reference implementation of WS–Agreement
+      (Community Scheduler Framework (CSF))
+    - OGSA face-to-face meeting first spec based on CSF
+    - PE Terms – Andrew Grimshaw
+
+  o Factoring high level components into Grid Services
+
+  o Agreement based PE service interfaces.
+
+  o OGSI is not enough (createService is common but arguments are Grid Service
+    specific.)
+
+  o OGSI is not enough because it does not allow for interoperability between 
+    the different DRM systems.
+
+  o Leading to WS-Agreement adoption (together with common language Terms definitions)
+
+  o Agreement Terms – the language Terms should be agreed on between the different groups
+    (e.g. JSDL, GESA, DAIS). Terms are basically the different "attributes" in the JSDL.
+
+  o AgreementFactory exposes terms supported
+
+  o AgreementFactory Grid Service will be the place that Terms for specific DRM systems 
+    will be handled.
+
+
+
+* Community Scheduler Framework (CSF) (Chris Smith, Platform)
+
+  o Advanced reservation (main experience with WS-Agreement)
+
+  o WS-Agreement is currently used for advanced reservation in the 
+    CSF architecture right now.
+
+  o Provide Resource Manager (RM) interoperability
+
+  o RM Adapter Server is providing a common API to the legacy schedulers 
+    out there.
+
+    - Questions: Is GRAM supported by the RM Adaptor Server?
+    - Answer: not yet.
+
+  o CSF -> meta-scheduler framework
+    - Job service (proxy) <- use JSDL job Terms to the end RM translation +
+			     job control
+    - Reservation
+    - Queuing (at VO level)
+    - RM adapter (bridge to underlying batch/RM systems)
+      - similar in concept to GRAM, but not same interface, protocol (yet)
+
+  o Scheduler framework API (for 3rd party)
+    - (4 call-back functions and plugin?)
+
+  o Open source (to be rolled into GT3 (GTPL))
+    - Still some administrative hurdles (distribution)
+
+  o Advanced reservation as WS-Agreements 
+    - Restricted (WS-Agreement still being defined)
+    - Multicluster leasing
+
+  o WS-Agreement
+    - Main protocol; not just for program execution but also for
+      data transfers.
+    - RM Adaptors disappear when agreement protocol becomes the main
+      protocol to negotiate for things.
+
+  o There are now standard terms for reservation. 
+
+  o How can I talk to the Grid Service
+    - Check the status of the WS-Agreement and Grid Service
+
+  o WS-Agreement could be used for Job Management, Reservation and Data Access.
+
+  o Transformations will be used to change JSDL to domain specific representation.
+
+  o Bridging to LSF
+    - GABD (Grid Access Bridge Daemon): soap access interface to LSF
+    - Native support for JSDL is unlikely; bridging/translation more
+      likely due to large body of existing code.
+
+  o Re-negotiation is still not well defined yet.
+
+
+
+* WS-Agreement Framework (Karl, Globus/ISI)
+
+  o Envelope protocol for negotiation
+
+  o Generalise from advanced reservation
+
+  o Initial stages
+
+  o Term neutral (define domain specific terms)
+
+  o Proposal: Define JSDL in terms of WS-Agreement.
+
+  o Question: does this proposal narrow the JSDL range?
+    Answer: not according to what's in the charter.
+
+
+
+* Job Terms Proposal (Alain, Globus/ISI)
+
+  o Term definition
+    - Would like to be able to extend Terms; open content model
+    - Required or Optional, ...
+    - Negotiable or Fixed
+    - Allowable ranges
+    - ...
+
+  o Terms as XML elements (Term = XML element (and vice-versa))
+
+  o Composed in WS-Agreement (document)
+
+  o Each provider (scheduler) can specialise Terms further
+    - e.g., a file transfer might have to include protocol
+      information.
+
+  o 2 dimensions: usage, negotiability -> 8 states
+
+  o wsp:compositor rather than enumeration
+
+  o Behavioural constraints during runtime.
+
+  o Minimise number of standard terms by including constraints in terms.
+
+  o Ditto for negotiability constraints (used for advertisements)
+
+  o Constraints on Terms. 
+    - Behavioural Constraints
+    - Negotiability Constraints
+
+  o Term Violations
+    - Terminate OnViolation
+    - Fault Prevents Violation
+
+  o Term violation 
+    - action to take if a term is violated, e.g terminate, if not
+      finished by specified time.
+    - Question: Is it necessary to support this feature? 
+      Answer: Does not have to be supported necessarily by all ---
+        discover/negotiate its existence.
+
+  o Seems to be moving JSDL focus (from common subset).
+
+  o Focusing on just common subset is too restrictive. (No one
+    will support it)
+
+  o Do we need to handle a generic least common denominator or handle 
+    something that handles a good set of attributes and/or terms? 
+    The problem is what to do here. More generic to allow for specific 
+    Terms.
+
+  o Generic vs. extensible: where to draw the line. One common
+    approach is to put down base + extensions.
+    - profiles to define what gets supported
+    - but this is separate to the standard
+
+  o Mismatch might indicate that the application won't run in any
+   case (in this environment).
+
+  o We need to find a common set that we make required. And other 
+    options or have different levels and possibly different extension 
+    standards.
+
+  o List of proposed terms
+    - Input: PBS, RSL, SGE, LSF. 
+    - Tried to minimise their number.
+    - Agreed: Discuss Terms proposal in more detail on mailing list.
+
+  o Proposal: consider WS-Agreement and decide how we can use it.
+
+  o Especially get input from people not working in a WS setting.
+
+  o Meanwhile continue work on determining what are the core Terms/attributes
+
+  o DRMAA has done work on essential Terms: it is part of the DRMAA spec
+    (p12-14). Submit separately as informational document.
+

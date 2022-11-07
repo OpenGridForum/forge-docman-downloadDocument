@@ -1,0 +1,39 @@
+JSDL Teleconference - 7 October 2009
+====================================
+
+* Participants
+
+  Alexander Papaspyrou
+  Philipp Wieder
+  Donal Fellows
+  Andreas Savva
+
+* Agreed that it is ok to swap sessions per saga-wg request
+
+* Tracker review
+** art6335 resource usage element semantics
+  - discuss it in the session
+** artf6336
+  - xsd:all cannot support xsd:any 
+  - closed 
+** artf6306 bes (steve)
+** artf6322 - genesis - Mark replied, assigned to Andreas
+** artf6316 - document container
+** artf6315 - as is
+** artf6310 - activity state - increase priority
+** artf6330 - added xsd:documentation - will merge in spec
+** artf6318 - data liveness - 
+** artf6320 - exception & state changes
+** artf6307 (fixed) -> closed
+** artf6308 (fixed) -> closed
+
+ Action on all to review the xsd:documentation for correctness
+
+* OGF27 session agenda
+
+** General:
+	- Status update and free discussion 
+** Activity:
+	  - Review issues
+	  - Text review
+	  - Implementation overview (may be dones in General session given time)

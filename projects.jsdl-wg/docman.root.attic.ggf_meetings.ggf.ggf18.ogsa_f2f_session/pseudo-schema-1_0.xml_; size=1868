@@ -1,0 +1,82 @@
+<JobDefinition id="xsd:ID"?>
+	<JobDescription>
+	
+		<JobIdentification>
+			<JobName ... />?
+			<Description ... />?
+			<JobAnnotation ... />*
+			<JobProject ... />*
+			<xsd:any##other>*
+		</JobIdentification>?
+		
+		<Application>
+			<ApplicationName ... />?
+			<ApplicationVersion ... />?
+			<Description ... />?
+			<xsd:any##other/>*
+		</Application>?
+		
+		<Resources>
+			<CandidateHosts ... />?
+			<FileSystem .../>*
+			<ExlusiveExecution .../>?
+			<OperatingSystem .../>?
+			<CPUArchitecture .../>?
+			<IndividualCPUSpeed .../>?
+			<IndividualCPUTime .../>?
+			<IndividualCPUCount .../>?
+			<IndividualNetworkBandwidth .../>?
+			<IndividualPhysicalMemory .../>?
+			<IndividualVirtualMemory .../>?
+			<IndividualDiskSpace .../>?
+			<TotalCPUTime .../>?
+			<TotalCPUCount .../>?
+			<TotalPhysicalMemory .../>?
+			<TotalVirtualMemory .../>?
+			<TotalDiskSpace .../>?
+			<TotalResourceCount .../>?
+			<xsd:any##other>*
+		</Resources>?
+
+		<DataStaging name="xsd:NCName"?>
+			<FileName ... />
+			<FileSystemName ... />?
+			<CreationFlag ... />
+			<DeleteOnTermination ... />?
+			<Source ... />?
+			<Target ... />?
+			<xsd:any##other/>*
+		</DataStaging>*
+		
+	</JobDescription>
+	
+	<xsd:any##other/>*
+</JobDefinition>
+
+
+
+
+<POSIXApplication name="xsd:NCName"?>
+	<Executable ... />?
+	<Argument ... />*
+	<Input ... />?
+	<Output ... />?
+	<Error ... />?
+	<WorkingDirectory ... />?
+	<Environment ... />*
+	<WallTimeLimit ... />?
+	<FileSizeLimit ... />?
+	<CoreDumpLimit ... />?
+	<DataSegmentLimit ... />?
+	<LockedMemoryLimit ... />?
+	<MemoryLimit ... />?
+	<OpenDescriptorsLimit ... />?
+	<PipeSizeLimit ... />?
+	<StackSizeLimit ... />?
+	<CPUTimeLimit ... />?
+	<ProcessCountLimit ... />?
+	<VirtualMemoryLimit ... />?
+	<ThreadCountLimit ... />?
+	<UserName ... />?
+	<GroupName ... />?
+</POSIXApplication>?

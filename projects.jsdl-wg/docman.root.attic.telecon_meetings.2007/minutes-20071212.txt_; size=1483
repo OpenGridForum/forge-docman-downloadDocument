@@ -1,0 +1,40 @@
+JSDL Teleconference - 12 December 2007
+======================================
+
+* Participants
+ 
+  Michel Drescher
+  Steve McGough
+  Donal Fellows
+  Andreas Savva
+
+  Minutes: Andreas Savva
+
+* Agenda bashing
+
+  - Skip UDAP discussion since no representative on the call.
+  - Donal mentioned a discussion on the HPCP list about inventoring
+    application names; something to keep an eye out for.
+
+* JSDL 1.0 Errata
+
+  - Discussed new issue about 'dontOverwrite' meaning if the file is
+    already present. Agreed to include similar text to the FileStaging
+    in the CreationFlag section and also to amend the text in the
+    Table defining the enumeration
+  - Checked formatting of detailed list of changes and agreed these
+    should go in a subsection of the Appendix, indicating the version
+    they are relative to.
+  - Agreed to a change from naming Editors on the front page to naming
+    Corresponding Authors per the proposed update to GFD.1. 
+    - Corresponding Authors will be Michel, Steve, Donal, Andreas
+  - Michel was actioned with checking 'fixed' items accepting changes
+    and closing artifacts
+  - Andreas will issue final call and try to get the document
+    submitted by the next GFSG call. Ask for it to be treated as an
+    errata submission if possible; a new document otherwise.
+
+* Next call scheduled for next week
+  
+  - Andreas will confirm whether Philipp Wieder will be available to
+    discuss the udap documents.

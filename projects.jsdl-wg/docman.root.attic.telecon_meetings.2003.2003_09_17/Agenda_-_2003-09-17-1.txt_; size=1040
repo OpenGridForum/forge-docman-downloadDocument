@@ -1,0 +1,42 @@
+JSDL Telecon Agenda - 17th Sept. 2003
+-------------------------------------
+
+o Plan of action for the spec doc.
+
+  - must change previous plan, which was to
+
+      * scope requirements,
+      * survey various batch systems,
+      * write spec.
+
+  - perhaps can start with an existing language and schema?
+
+      * RSL (from Globus)
+      * JDML (from EDG)
+      * Condor ClassAds (from Condor!)
+      * others possibilities to start with?
+
+  - then can address the deficiencies and extras in the language that 
+    we have choosen as a starting point, in order to attempt to construct 
+    a JSDL that can serve as an abstract job description language.
+
+
+o GGF9 Sessions.
+
+  - Introduction slides (Ali to draft)
+
+  - Spec Doc slides (Don't know what these should be until 
+    we have a better idea of the structure of the spec.)
+
+  Session 2:
+  ----------
+
+  - 3 talks:
+
+      * WS-Agreement framework
+      * Program Execution Architecture (based on Grid Services)
+      * Job description terms within the WS-Agreement framework
+
+
+o AOB
+

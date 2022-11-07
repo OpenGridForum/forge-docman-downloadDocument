@@ -1,0 +1,20 @@
+- Get rid of all String types?
+
+- Ranges implicitly defines operators, i.e. between 'a' and 'b'
+
+- All operator attributes on the elements go away, no need for operators
+
+- ProcessCount should be (?) implicit to the description of the application, 
+  so this should, perhaps, appear in the application type specific definition?
+
+  NAREGI have requirement for ProcessCount for MPI server.
+
+  HAVE TAKEN OUT ProcessCount for now.
+
+- Resource is a set of resources the number of which is given by the 
+  ResourceCount. The HostName is an array of allowed hosts.
+  - CPUCount is the number of CPUs for eache resource.
+
+- Discuss on list which resource constraints are global total constraints, 
+  i.e. over the whole job regardless of the number of processes and resources.
+

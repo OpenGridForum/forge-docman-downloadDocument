@@ -1,0 +1,54 @@
+DAIS Telcon - 5 Dec 07
+======================
+
+Attendees:
+	  Mario Antonioletti, EPCC
+	  Dave Pearson, Oracle
+	  Isao Kojima, AIST
+	  Said Mirza, AIST
+	  Miguel Esteban Gutierrez, UPM
+
+Agenda:
+
+       - Agenda bashing
+       - Progress on the specs
+       - Planning
+       - AOB
+
++---
+
+- Agenda bashing
+
+ No new items to add.
+
+- Progress and Planning
+
+Doing a glossary and then will agree on the terms to be used for the
+specifications. Roughly the plan is to:
+
+- Finish the glossary of terms
+- Agree on the terminology to be used for the specifications
+- Complete the specification documents (query and ontologies)
+
+The glossary and motivational document will be merged.
+
+UPM and AIST are preparing an article about RDF for the CFP for OGF22
+- deadline 21 Dec. The glossary will be done by the end of the year.
+The combined motivational and glossary document will be available by
+the 15th of January.
+
+The ontology specification to be ready by the end of January.
+The query specification to be done by the 15th of January.
+
+Partial implementations already exist for both of these. AIST willing
+to implement the ontology specification and UPM will also implement
+the query specification.
+
+In Seattle David Martin suggested that a meeting with W3C should be
+organised for OGF22 in Boston - Miguel wanted to know if there was
+anyone that could be contacted about this.
+
+Dave de Roure was suggested and Dave has an ex-Oracle contact who is
+now involved with W3C whose name he will pass to Miguel.
+
+DONM: 15 or 16th of January.

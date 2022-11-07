@@ -1,0 +1,197 @@
+-- JSDL-WG Session 1 --
+
+OGF19, Chapel Hill, NC, USA
+Friday 2nd Feb 2007
+
+Chairs: Andreas Savva, Stephen McGough
+Scribe: Ali Anjomshoaa (& Andreas Savva)
+
+-------------------------------------------------------------------------------------
+* Introduction
+-------------------------------------------------------------------------------------
+
+  Andreas talked about the status of group and its recent activities;
+  showed timeline (see slides) and expected completion of ongoing
+  work.
+
+  There are three drafts in progress (HPC Parallel Application,
+  Parallel (SPMD) Application, JSDL 1.1) and proposals for new work:
+  Parameter Sweep. Also work on the next major version (JSDL 2.0) is
+  beginning (exploratory work has began for some parts).
+
+-------------------------------------------------------------------------------------
+* Review of "HPC Profile Application Extension v1.0 draft 6"
+-------------------------------------------------------------------------------------
+
+  HPC Profile was initially developed within the OGSA HPC Profile WG
+  and handed over to JSDL-WG for finalization and publication. 
+
+  Chris gave an overview of the status of the draft.  This has been
+  stable since last October after review on a JSDL call. Draft 6 on
+  GridForge has some minor changes:
+  - The namespace changed to better fit in with the JSDL namespaces
+  - Made the <Executable> element optional (0 to 1) rather than
+    required. This is based on feedback from the EMS Scenarios work.
+  - Other minor edits, <WorkingDirectory> etc.
+
+  Main difference from POSIXApplication is the restriction placed on
+  filepaths and removal of filesystem.
+
+  Andreas proposed that this draft moves forward to the JSDL and
+  HPCProfile lists for "final call", before submitting to OGF Editor
+  for "public comment".
+
+  [Action] - Chris to accept all changes and send "final call" to JSDL
+           and HPCProfile lists; allow a period of 5 working days.
+
+  [Action] - Andreas to send to editor (Greg Newby) after end of
+             "final call" period
+
+-------------------------------------------------------------------------------------
+* Review of  "JSDL SPMD Application Extension - v1.0", v4 on GridForge - 
+-------------------------------------------------------------------------------------
+
+  Andreas led discussion of unresolved issues in the Gridforge
+  tracker. These issues were submitted by Stephen Pickles and Chris
+  Smith.
+
+  - artf5677 
+    - Stephen Pickles: make clear to *implementors* that they need to
+      setup the environment variables and the command line for the
+      invocation, so that the application can be mapped to the local
+      system, from the submitted JSDL template.
+    - The users should not have to make any special considerations in
+      order to map their JSDL request for an SPMD application to the
+      underlying system. 
+    - In other words, users using this extension should NOT specify a
+      wrapper script as the 'Executable' if they use this extension.
+
+  - artf5682 
+    - Stephen Pickles: definition of host needs clarification, e.g. "a
+      host is a single node in a cluster"
+
+  - artf5671 
+    - Chris Smith: Need to clarify the <NumberOfProcesses>
+      element. Number of processes should be strictly defined as what
+      part of the application they refer to. Proposal is to define
+      this element in terms of how many Executable instances will be
+      running (how many instances of the executable are to be
+      instantiated). 
+    - Andreas: Using this proposed definition also makes it clear that
+      the user should not specify a wrapper script in the Executable
+      (artf5677).
+
+  - artf5672 
+    - Chris Smith: ProcessesPerHost, define in terms of the previous
+      tracker artifact, i.e., definition of NumberOfProcesses. Chris
+      has a problem with the definition of "Processes", which is
+      overloaded!  Same resolution as tracker artf5671
+
+  - artf5674 
+    - Chris Smith: Implementation of HPCProfile in BES gave rise to
+      this tracker issue.
+    - Stephen Pickles noted that Mark McKeown has a similar preference
+      as Chris. 
+    - Andreas: It would be nice to be consistent. Currently using same
+      mechanism as JSDL 1.0. Would probably need to change future
+      versions for consistency. There is also a related issue that for
+      future versions we are likely to move to use the WS-CIM
+      generated schemas for such values (e.g., OperatingSystem). Have
+      not confirmed yet what form these schemas will take.
+      - Both approaches have advantages and disadvantages and it looks
+        more like a style decision. 
+      - Doing it as a URI has the advantage of not keeping the values
+        in the schema, so a schema change is not needed to add values;
+        with a URI the specification of these values is only in the
+        spec (which can also be a problem).
+
+    - Resolution: Overall it looks like the change to URI for this
+      element is preferred. If it does changes to URI, then for
+      consistency, future version of the core JSDL will have to change
+      to URI for similar definitions. The exception will be
+      enumerations that are not owned by JSDL. For those we use
+      whatever we are provided by, e.g., WS-CIM.
+
+   [Action] - Steve to get feedback on this resolution from the JSDL
+              and ByteIO Lists, before finalisation.
+
+  - artf5675 
+    - Including GridMPI introduces an ambiguity in the definition of
+      host; it has some fundamental differences from the other MPI
+      flavors. (See also later on)
+
+  - artf5683 
+    - Agreed to add jsdl-posix:user and add extensibility (open
+      content) to this extension
+
+  - artf5676 
+    - Specifying number of threads was ruled out of scope in earlier
+      discussions. (But see later discussion)
+
+  - artf5681 
+    - Stephen Pickles proposal for various patterns for CPUCount.
+    - Andreas: Can add custom attributes as an extensibility
+      feature. 
+    - Agreed that it is too complex to try and address now. For later
+      consideration once more experience is gained.
+
+  - artf5678 
+    - Stephen Pickles: Add references to specifications, since some
+      (e.g. GridMPI) are not well known. Agreed to give a reference to
+      the web site or document for each flavor.
+
+  - artf5680 
+    - Stephen Pickles: Put in clarification on rank zero processes -
+      or is this dodgy? Agreed, after lengthy discussion, that it is
+      too complex to try and explain normatively. Instead opt to warn
+      users not to assume too much about the semantics of Executable
+      and WorkingDirectory. (For Executable the environment should be
+      set so that it can be picked up. For WorkingDirectory, a shared
+      filesystem may be one assumption, in addition to the rank zero
+      proposal).
+
+     Agreed to include a non-normative example with appropriate
+     warnings in the doc.
+
+  - artf5679 - Minor issue; skipped. Andreas will fix.
+
+  - artf5673 
+    - Chris Smith: suggested adding a number of SPMDVariation values.
+    - Andreas: The initial set was not mean to be restrictive. More
+      values can and should be added.
+
+    [Action] Andreas to send mail to the list to solicit for values
+             once he updates the document with the values given so
+             far.
+
+    - Discussed whether to add OpenMP (proposed by Stephen
+      Pickles). Introduces the need to describe number of
+      threads. This has been ruled out of scope earlier. 
+      - Discussed whether it is ok to just use the cpu count as
+        implicit value; it is implementation specific and may not be
+        what the user wants. It is not uncommon to use more threads
+        than CPUs.
+     - Andreas: A compromise is to add a NumberOfThreadsPerProcess
+       element with type limited to a positive integer; to avoid
+       similar questions with the earlier 'power of' discussion.
+
+     Agreed to add a number of threads element
+
+  - General discussion: 
+    - Saga-san asked how or whether various configurations could be
+      supported by this extension. It is only for a single cluster or
+      across various systems?
+    - Andreas explained that there is no explicit description of
+      configurations supported. One could map to multiple clusters but
+      it would be implementation-specific. A way to combine multiple
+      JSDL documents and a specification to describe the necessary
+      configuration would also be needed (it does not exist right
+      now).
+
+  [Action] Andreas and Saga-san: to discuss use cases for specifying
+           parallel applications requiring multiple systems and what
+           kind of configuration description is needed. (This could be
+           another specification that addresses GridMPI requirements
+           more explicitly.)
+
+

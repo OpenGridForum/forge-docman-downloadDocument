@@ -1,0 +1,45 @@
+Teleconference minutes -  8 April 2009
+=======================================
+
+* Participants
+
+  Donal Fellows
+  Andreas Savva
+  Philipp Wieder 
+
+* Teleconference slot 
+  - Agreed to have the call one hour earlier from next time:
+    12:00 UTC / 1pm BST / 2pm CSET / 8am EST / 9pm JST
+
+* Activity instance document
+
+  Action: Philipp to write up a draft structure by April 10
+  
+  - After structure is fixed assign people to write up the different sections
+
+** Extensibility 
+   - Quick look at various ways of doing extensibility in addition to
+     xsd:any##other. Which one to choose is often a matter of
+     style/preference.
+   - Philipp will look into extensibility mechanims in more detail and
+     make a proposal on which way to use
+
+   - Some links:
+     - http://www.stylusstudio.com/w3c/schema0/UseDerivInInstDocs.htm#ipo.xsd
+     - http://www.stylusstudio.com/w3c/schema0/restrictingTypeDerivs.htm#restrictingTypeDerivs
+     - http://www.stylusstudio.com/w3c/schema0/SubsGroups.htm
+     - http://www.stylusstudio.com/w3c/schema0/abstract.htm#abstract
+
+* OGF 26
+
+  - Agree to ask for two sessions, one (short) to identify future work
+    and one (long) to work on the activity document.
+  - Session 1 : 45 minutes (future work)
+  - Session 2 : 90 minutes (activity schema; finalize draft)
+
+  - Andreas will request the sessions
+
+* Next call 4/22
+  - Calls after that: 5/13 and possibly 5/20
+  - OGF26 is 5/26-29 
+

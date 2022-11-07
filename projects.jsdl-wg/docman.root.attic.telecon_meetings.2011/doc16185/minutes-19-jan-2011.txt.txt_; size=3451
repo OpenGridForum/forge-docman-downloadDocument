@@ -1,0 +1,93 @@
+JSDL Telecon
+19 January 2011
+
+Attendees
+---------
+	Mark Morgan (minutes, chair)
+	Morris Riedel
+	Etienne Urbah
+	Michaela Lechner
+	Aleksandr Konstantinov
+	Michael Saravo
+	John Karpovich
+
+Agenda
+------
+	* Roll Call and Minutes
+	* Approve last meetings minutes (I know we don't have a last meeting  
+	  so this is a place holder for the future)
+	* Agenda Bashing (in general, I will ask (not require) that anyone who  
+	  wants to change the agenda please do so by email to me with at least  
+	  24 hours notice on the actual meeting -- I'm a firm believer in  
+	  Brooks' Mythical Man Month when it comes to meetings)
+	* Teleconferencing Software
+		- TokBox
+		- Evo
+	* JSDL Planning for 2011
+		- What do we want to accomplish (I have a few ideas and I know that  
+		  PGI has some thoughts)
+		- How are we going to get from here to there.
+		- What procedure will be adopt for prioritizing work
+		- Who plans on active participation (i.e., who is going to work on  
+		  JSDL items between telecons).
+	* OGF 31 Discussion
+	* Next Telecon Planning (Wednesday, 2 February 2011)
+	* Action Item Review
+
+* Planning
+	* GLUE 2 and JSDL
+		- Inside JSDL there is a part to describe the job itself
+		- Another part describes service level agreement (or maybe it could
+		  be there)
+		- Describe pre-requisites which have to be matched for running job
+			-- This part is related to the information system and which
+			   we might like to be based on GLUE 2
+	* JSDL-OR
+		- JSDL requirements section where you specify what you require in order
+		  to satisfy the job
+			-- Want to be able to specify this OS, OR that OS
+			-- This memory, or that cpu hours, etc.
+	* Much Better SPMD for JSDL
+		- Specify things like network topology
+		- Shape support
+		- A lot of these again refer to resources available
+			-- Related to GLUE 2
+				--- Dimensions of the shape, network topologies, etc.
+	* JSDL 2
+		- A couple of things are problems with JSDL 1
+			-- Data staging credential part
+				--- Need different credentials in data staging periods
+				--- Client enabled data staging
+				--- We were not sure how to render this as a profile
+		
+* GLUE 2 is the most important from the PGI perspective
+	- Sergio says there has been no advancement with the Glue 2 spec.
+		-- XML rendering is still not in shape
+		-- Whether we can go on in the abstract
+		-- Abstract specification does exist and we can work with this
+		   abstract.  This is described in the draft document.
+		-- Need a list of missing JSDL requirements attributes
+			--- Etienne has already prepared a little
+			--- He has listed attributes of classes and matched those with
+				JSDL elements.  He's tried to match up.  Job is not complete.
+* Backwards compatibility with JSDL 1.0
+
+Action Items
+------------
+	* Mark Morgan to evaluate and prepare EVO for next telecon
+	* Read the GLUE 2 document that Etienne has prepared
+	* Start thinking about Use Cases
+		-- Take an existing one
+			--- Which existing one?
+				> JSDL one?
+					>> Mark to look up JSDL use case format and email out
+					>> If you have another existing format, please email to
+						group
+	* Mark Morgan to get the JSDL minutes up and mailed out and to get the
+	* Mark Morgan to look into task management
+
+Decisions
+---------
+	* Try Evo for next week
+	* Use existing use case format
+	* Try and keep JSDL 1.0 and simply profile new section definitions.

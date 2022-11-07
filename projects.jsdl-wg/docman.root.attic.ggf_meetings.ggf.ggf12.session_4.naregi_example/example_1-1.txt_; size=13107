@@ -1,0 +1,258 @@
+<!--  ================================================================ -->
+<!--  Hatanaka 08/13/2004 version                                      -->
+<!--  ================================================================ -->
+<jsdl:job xmlns:jsdl="http://www.gridforum.org/JSDL"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <jsdl:JobIdentification>
+    <jsdl:JobName>FMO-RISM Multi-Physics Coupling Job</jsdl:JobName>
+    <jsdl:JobAnnotation></jsdl:JobAnnotation>
+    <jsdl:JobProjectName>NAREGI Work Package 6</jsdl:JobProjectName>
+    <!--  ================================================================ -->
+    <!--  "maxOccurs" of "JobCategory" is defined as 1. But we need more.  -->
+    <!--  ================================================================ -->
+    <jsdl:JobCategory>MPI,GridMPI</jsdl:JobCategory>
+
+    <ExecutionUserID>
+      <user>Norma Jean Baker</user>
+      <group>nii.ac.jp</group>
+    </ExecutionUserID>
+    <UserGroupName>NAREGI</UserGroupName>
+  </jsdl:JobIdentification>
+
+  <SchedulingAttributes>
+    <ExclusiveExecution>true</ExclusiveExecution>
+    <Extend name="Queue">GoldQueue</Extend>
+    <Extend name="CheckpointInterval">120 Seconds</Extend>
+  </SchedulingAttributes>
+
+  <!--  ================================================================ -->
+  <!--  We defined our original "ProcessTopology" based on MPICH's       -->
+  <!--  machine file.                                                    -->
+  <!--    process#      Host                Executable                   -->
+  <!--    0             nd0.cl.naregi.org   a.out                        -->
+  <!--    1             nd1.cl.naregi.org   b.out                        -->
+  <!--    ...                                                            -->
+  <!--  ================================================================ -->
+  <jsdl:ProcessTopology>
+    <!--  ============================================================== -->
+    <!--  Abstraction of MPICH's machine file                            -->
+    <!--  ============================================================== -->
+    <ProcessNumber>
+      <Start>0</Start><End>255</End>
+      <ProcessApplication>FMO</ProcessApplication>
+      <ProcessResource>FMO</ProcessResource>
+      <Extend>
+      </Extend>
+    </ProcessNumber>
+    <ProcessNumber>
+      <Start>256</Start><End>256</End>
+      <ProcessApplication>Mediator</ProcessApplication>
+      <ProcessResource>Mediator</ProcessResource>
+    </ProcessNumber>
+    <ProcessNumber>
+      <Start>257</Start><End>257</End>
+      <ProcessApplication>RISM</ProcessApplication>
+      <ProcessResource>RISM</ProcessResource>
+    </ProcessNumber>
+  </jsdl:ProcessTopology>
+
+  <!--  ============================================================== -->
+  <!--  Elements of "Environment" will be aplyed all prodesses.        -->
+  <!--  ithe case of no "Environment/@name" specifiedj               -->
+  <!--  ============================================================== -->
+  <jsdl:Environment>
+    <jsdl:EnvironmentVariable name="IMPI_SERVER_IP">ahost.naregi.org</jsdl:EnvironmentVariable>
+    <jsdl:EnvironmentVariable name="IMPI_SERVER_PORT">5893</jsdl:EnvironmentVariable>
+    <jsdl:EnvironmentVariable name="IMPI_CLIENT_ID">1</jsdl:EnvironmentVariable>
+  </jsdl:Environment>
+
+  <!--  ============================================================== -->
+  <!--  ============================================================== -->
+  <!--  "FMO" Part                                                     -->
+  <!--  ============================================================== -->
+  <!--  ============================================================== -->
+  <jsdl:Host label="FMO">
+    <jsdl:Resource>
+      <Cluster>
+        <NumberOfNodes>256</NumberOfNodes>
+        <!--  ============================================================== -->
+        <!--  Interconnect network between cluster nodes                     -->
+        <!--  Infiniband 1x (2.5Gbps), 4x (10 Gbps), 12x (30 Gbps)           -->
+        <!--  ============================================================== -->
+        <jsdl:Network>
+          <jsdl:NetworkDescription>IB</jsdl:NetworkDescription>
+          <jsdl:NetworkCount>1</jsdl:NetworkCount>
+          <jsdl:NetworkBandwidth>10Gbps</jsdl:NetworkBandwidth>
+        </jsdl:Network>
+        <!--  ============================================================== -->
+        <!--  Hint for brokers                                               -->
+        <!--  Make FMO-W and FMO-D one pair in a node                        -->
+        <!--  ============================================================== -->
+        <Extend>
+          <BrokeringHint>
+            <!--  ============================================================== -->
+            <!--  ClusterDivision true/false(default)/optional                   -->
+            <!--  ============================================================== -->
+            <ClusterDivision by="2">optional</ClusterDivision>
+          </BrokeringHint>
+        </Extend>
+      </Cluster>
+      <jsdl:CPUDescription>Intel(R) Zeon(TM)</jsdl:CPUDescription>
+      <jsdl:CPUCount>1</jsdl:CPUCount>
+      <jsdl:CPUSpeed>3GHz</jsdl:CPUSpeed>
+      <jsdl:PhysicalMemory>1GB</jsdl:PhysicalMemory>
+      <jsdl:TemporarySpace>1GB</jsdl:TemporarySpace>
+    </jsdl:Resource>
+    <jsdl:SoftwareRequirement>
+      <jsdl:OperatingSystem>
+        <jsdl:OperatingSystemDescription>LINUX</jsdl:OperatingSystemDescription>
+        <jsdl:OperatingSystemVersion>2.4.14</jsdl:OperatingSystemVersion>
+        <jsdl:Extend name="Product">RedHat</jsdl:Extend>
+      </jsdl:OperatingSystem>
+      <jsdl:Limits>
+        <jsdl:ProcessVirtualMemoryLimit>1GB</jsdl:ProcessVirtualMemoryLimit>
+        <jsdl:CPUTimeLimit>30 Minites</jsdl:CPUTimeLimit>
+        <jsdl:WallTimeLimit>1 Hour</jsdl:WallTimeLimit>
+        <!--  ============================================================== -->
+        <!--  *** XML Schema doesn't define FileSizeLimit                    -->
+        <!--  ============================================================== -->
+        <jsdl:FileSizeLimit>1GB</jsdl:FileSizeLimit>
+      </jsdl:Limits>
+      <jsdl:Extend name="Software">
+        <SoftwareDescription>GridMPI</SoftwareDescription>
+        <SoftwareVersion>1.0.1</SoftwareVersion>
+      </jsdl:Extend>
+    </jsdl:SoftwareRequirement>
+    <!--  ============================================================== -->
+    <!--  Current specification of JSDL doesn't support MPMD (Multiple   -->
+    <!--  Program Multiple Data) type parallel programing model.         -->
+    <!--  ============================================================== -->
+    <jsdl:Application>
+      <jsdl:ExecutableDescription></jsdl:ExecutableDescription>
+      <jsdl:ExecutableName type="">fmo</jsdl:ExecutableName>
+      <jsdl:Argument></jsdl:Argument>
+      <jsdl:StdIn></jsdl:StdIn>
+      <jsdl:StdOut></jsdl:StdOut>
+      <jsdl:StdErr></jsdl:StdErr>
+      <jsdl:WorkingDirectory></jsdl:WorkingDirectory>
+      <jsdl:Log></jsdl:Log>
+    </jsdl:Application>
+  </jsdl:Host>
+
+  <!--  ============================================================== -->
+  <!--  ============================================================== -->
+  <!--  "Mediator" Part                                                -->
+  <!--  ============================================================== -->
+  <!--  ============================================================== -->
+  <jsdl:Host label="Mediator">
+    <jsdl:Resource>
+      <jsdl:CPUDescription>Intel(R) Zeon(TM)</jsdl:CPUDescription>
+      <jsdl:CPUCount>1</jsdl:CPUCount>
+      <jsdl:CPUSpeed>2.8GHz</jsdl:CPUSpeed>
+      <jsdl:PhysicalMemory>2GB</jsdl:PhysicalMemory>
+      <jsdl:TemporarySpace>1GB</jsdl:TemporarySpace>
+    </jsdl:Resource>
+    <jsdl:SoftwareRequirement>
+      <jsdl:OperatingSystem>
+        <jsdl:OperatingSystemDescription>LINUX</jsdl:OperatingSystemDescription>
+        <jsdl:OperatingSystemVersion>2.4.14</jsdl:OperatingSystemVersion>
+        <jsdl:Extend name="Product">RedHat</jsdl:Extend>
+      </jsdl:OperatingSystem>
+      <jsdl:Limits>
+        <jsdl:ProcessVirtualMemoryLimit>1GB</jsdl:ProcessVirtualMemoryLimit>
+        <jsdl:CPUTimeLimit>30 Minites</jsdl:CPUTimeLimit>
+        <jsdl:WallTimeLimit>1 Hour</jsdl:WallTimeLimit>
+        <!--  ============================================================== -->
+        <!--  *** XML Schema doesn't define FileSizeLimit                    -->
+        <!--  ============================================================== -->
+        <jsdl:FileSizeLimit>1GB</jsdl:FileSizeLimit>
+      </jsdl:Limits>
+      <jsdl:Extend name="Software">
+        <SoftwareDescription>GridMPI</SoftwareDescription>
+        <SoftwareVersion>1.0.1</SoftwareVersion>
+      </jsdl:Extend>
+    </jsdl:SoftwareRequirement>
+    <!--  ============================================================== -->
+    <!--  Current specification of JSDL doesn't support MPMD (Multiple   -->
+    <!--  Program Multiple Data) type parallel programing model.         -->
+    <!--  ============================================================== -->
+    <jsdl:Application>
+      <jsdl:ExecutableDescription></jsdl:ExecutableDescription>
+      <jsdl:ExecutableName type="">mediator</jsdl:ExecutableName>
+      <jsdl:Argument></jsdl:Argument>
+      <jsdl:StdIn></jsdl:StdIn>
+      <jsdl:StdOut></jsdl:StdOut>
+      <jsdl:StdErr></jsdl:StdErr>
+      <jsdl:WorkingDirectory></jsdl:WorkingDirectory>
+      <jsdl:Log></jsdl:Log>
+    </jsdl:Application>
+  </jsdl:Host>
+
+  <!--  ============================================================== -->
+  <!--  ============================================================== -->
+  <!--  "RISM" Part                                                    -->
+  <!--  ============================================================== -->
+  <!--  ============================================================== -->
+  <jsdl:Host label="RISM">
+    <!--  ============================================================== -->
+    <!--  It assumes a  Hitachi  SR11000  super-computer  system (16-way -->
+    <!--  SMP x 50 nodes)                                                -->
+    <!--  ============================================================== -->
+    <jsdl:Resource>
+      <Cluster>
+        <NumberOfNodes>4</NumberOfNodes>
+        <!--  ============================================================== -->
+        <!--  Interconnect network between cluster nodes                     -->
+        <!--  System multi-level crossbar network between nodes              -->
+        <!--  ============================================================== -->
+        <jsdl:Network>
+          <jsdl:NetworkDescription></jsdl:NetworkDescription>
+          <jsdl:NetworkCount>1</jsdl:NetworkCount>
+          <jsdl:NetworkBandwidth>96 Gbps</jsdl:NetworkBandwidth>
+        </jsdl:Network>
+      </Cluster>
+      <!--  ============================================================== -->
+      <!--  16-way SMP node with clock rate 1.7 GHz Power4+ Processor      -->
+      <!--  ============================================================== -->
+      <jsdl:CPUDescription dialect="cim:Processor/OtherFamilyDescription">Power4+</jsdl:CPUDescription>
+      <jsdl:CPUCount>16</jsdl:CPUCount>
+      <jsdl:CPUSpeed>1.7GHz</jsdl:CPUSpeed>
+      <jsdl:PhysicalMemory>12GB</jsdl:PhysicalMemory>
+    </jsdl:Resource>
+    <jsdl:SoftwareRequirement>
+      <jsdl:OperatingSystem>
+        <jsdl:OperatingSystemDescription>AIX 5L</jsdl:OperatingSystemDescription>
+        <jsdl:OperatingSystemVersion>5.2.0</jsdl:OperatingSystemVersion>
+      </jsdl:OperatingSystem>
+      <jsdl:Limits>
+        <jsdl:ProcessVirtualMemoryLimit>1GB</jsdl:ProcessVirtualMemoryLimit>
+        <jsdl:CPUTimeLimit>30 Minites</jsdl:CPUTimeLimit>
+        <jsdl:WallTimeLimit>1 Hour</jsdl:WallTimeLimit>
+        <!--  ============================================================== -->
+        <!--  *** XML Schema doesn't define FileSizeLimit                    -->
+        <!--  ============================================================== -->
+        <jsdl:FileSizeLimit>1GB</jsdl:FileSizeLimit>
+      </jsdl:Limits>
+      <jsdl:Extend name="Software">
+        <SoftwareDescription>GridMPI</SoftwareDescription>
+        <SoftwareVersion>1.0.1</SoftwareVersion>
+      </jsdl:Extend>
+    </jsdl:SoftwareRequirement>
+    <!--  ============================================================== -->
+    <!--  Current specification of JSDL doesn't support MPMD (Multiple   -->
+    <!--  Program Multiple Data) type parallel programing model.         -->
+    <!--  ============================================================== -->
+    <jsdl:Application>
+      <jsdl:ExecutableDescription></jsdl:ExecutableDescription>
+      <jsdl:ExecutableName type="">rism</jsdl:ExecutableName>
+      <jsdl:Argument></jsdl:Argument>
+      <jsdl:StdIn></jsdl:StdIn>
+      <jsdl:StdOut></jsdl:StdOut>
+      <jsdl:StdErr></jsdl:StdErr>
+      <jsdl:WorkingDirectory></jsdl:WorkingDirectory>
+      <jsdl:Log></jsdl:Log>
+    </jsdl:Application>
+  </jsdl:Host>
+
+</jsdl:job>

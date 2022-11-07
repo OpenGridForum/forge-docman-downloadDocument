@@ -1,0 +1,81 @@
+JSDL conference call
+====================
+
+3 November 2011
+
+Participants:
+-------------
+Morris Riedel, EMI
+Michael Saravo, UVA
+Michel Drescher, EGI.eu
+Philip Wieder, GWDG
+Oxana Smirnova, NDGF
+Etienne Urbah, EDGI
+
+
+1) WG Insfrastruture
+--------------------
+- The WG agreed to use EGI.eu HiDef conference call infrastructure.
+- Calls will be held weekly on Thudsdays, 13:30 UTC for one hour.
+- Screen sharing was requested. UVA may provide Glance.net, but that needs
+  clarification.
+  ==> Action Michael
+- Participants agreed to use Gridforge wherever possible:
+    -- Tracker for specification related change requests
+    -- Tasks for actions recorded for attendees to carry out.
+    -- Wiki for other (semi-)static information.
+    -- Documents for storing specifications, schemas, etc. for permanent 
+       storage of WG proceedings
+
+
+2) Leadership
+-------------
+- Michael Saravo, and Michel Drescher are nominated new co-chairs of the WG.
+- Philip Wieder is acting secretary for the WG.
+- Philip will step down as secretary in the forseeable future (until March 2012)
+- Michel mentions Gina Corell (UVA) as potential secretary, but this needs 
+  confirmation
+  ==> Michael to confirm permanent secretary position for Gina
+- The WG will follow the formal OGF process for changing WG chairs.
+    -- Send out E-Mail to the JSDL WG, and the current chairs for
+       change to proposed chairs giving deadline of 1 week to object, otherwise
+       the change will be accepted and asked for approval by GFSG
+    -- GFSG will approve or deny at their weekly conference call.
+  ==> Philip to coordinate and track the approval process
+
+
+3) JSDL WG processes & goals
+----------------------------
+- There are a number of issues to work into the JSDL specification.
+- The group has no clear idea about the number, and impact of the requested
+  issues.
+  ==> Philip to send out existing links and documents that refer to or contain 
+      issues to the JSDL mailing list
+- The next actions will be to start tracking change requests in Gridforge
+    -- Also the meeting minutes in Lyon already contain a number of issues
+       that need to be worked into the next JSDL iteration
+    ==> Philip to digest the Lyon meeting minutes into actions and issues in
+        Gridforge
+- Michel describes an outline of how to process the change requests.
+    ==> Michel to document the process on Gridforge
+
+
+4) Next actions
+---------------
+- No specific long-term actions were discussed.
+
+
+5) AOB
+------
+
+
+ACTIONS
+-------
+ACTION Michael  - Clarify using UVA Glance subscription for JSDL
+ACTION Michael  - Confirm Gina to take over secretary role of JSDL
+ACTION Philip   - initiate and manage the chair transition process with GFSG
+ACTION Philip   - Provide links and documents that contain JSDL spec issues 
+                  for the group to digest
+ACTION Philip   - Digest minutes from JSDL meetings in Lyon and extract 
+                  actions and issues to be stored in Gridforge
+ACTION Michel   - Document the proposed process and circulate in JSDL WG

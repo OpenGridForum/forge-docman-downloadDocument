@@ -1,0 +1,44 @@
+JSDL Teleconference - 12 November 2008
+======================================
+
+* Participants
+
+  Fred Brisard 
+  Andreas Savva (minutes)
+  Philipp Wieder
+
+* Review of Activity document draft
+
+  http://forge.gridforum.org/sf/docman/do/viewDocument/projects.jsdl-wg/docman.root.working_drafts.activity_schema/doc15395/2
+
+  This will probably be split (eventually) into two documents
+
+  - Main text is still a stub
+  - Appendix A: Use cases and some notes
+  - Appendix B: Consolidated requirements
+
+** Walkthrough of Appendix B
+
+   - Workflow issue: Need to clarify how it relates to this work;
+     can't take too much on this for a variety of reasons, not all
+     technical.
+   - How states and substates relate to BES state model needs
+     discussion.
+   - Do records only get created for a state change? Probably not,
+     some examples that might not fit very well: VM migration
+     scenario, checkpointing.
+   - Terminology: 'Final' record may not be final; implementations
+     could choose to 're-start' an activity. 'Aggregate' or some other
+     term may be better.
+     - Agreed that 'sealing' is implementation-dependent
+   - Access control ... is implementation dependent. Do have to
+     provide some security discussion in the document.
+   - Granularity ... again is implementation-dependent
+   - Exceptions ... out of scope
+
+Action: Philipp to update requirements and do survey on
+        relative priorities
+
+* Next call: Two weeks time, 11/26
+
+

@@ -1,0 +1,34 @@
+JSDL Teleconference - 20 February 2008
+=======================================
+
+* Participants
+
+  Donal Fellows
+  Steve McGough
+  Alexander Papaspyrou
+  Andreas Savva
+  Philipp Wieder
+  Geoff Williams
+
+* Reviewed Philipp's presentation for the Activity BoF at OGF22.
+   Agreed to some minor changes: make the transition between the
+   general portion and the UDAP portion more obvious; provide more
+   explanation on the UDAP perspective for the example on slide 12;
+   slides 13-onwards should come after the GridSAM/UNICORE
+   presentations and lead into the detailed discussion; add a list of
+   issues to start off the discussion; etc
+   - Philipp will review past minutes for issues raised
+
+* Steve volunteered to do the parameter sweep presentation at OGF22
+  since neither Michel nor Ali will be present. Agreed to dedidate half of
+   the first session to parameter sweep; primarily as an introduction
+   to the state of the work
+   - Use Michel's and Ali's presentations from OGF19 & OGF20 as a
+     base
+   - Andreas will confirm with Michel/Ali what their level of
+     participation will be for the parameter sweep
+   - Geoff has a number of issues on the parameter sweep draft. He
+     will post them to the tracker for discussion on the teleconfs
+     after OGF22
+
+  

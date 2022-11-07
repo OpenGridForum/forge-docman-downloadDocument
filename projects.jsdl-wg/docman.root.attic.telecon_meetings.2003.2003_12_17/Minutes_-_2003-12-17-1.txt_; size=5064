@@ -1,0 +1,141 @@
+JSDL Telecon Minutes
+====================
+December 17th, 2003 - 07:00 GMT
+===============================
+
+
+Attendees:
+==========
+
+Darren Pulsipher (Cadence)
+Steve McGough (LeSC)
+Michal Kosiedowski (Poznan)
+Andreas Savva (Fujitsu)
+Ali Anjomshoaa (EPCC)
+Alain Andrieux (ISI)
+Lee Cook (IBM)
+
+
+Apologies:
+==========
+
+
+Discussion:
+===========
+
+Administrative:
+---------------
+
+Telecon times: In view of the low turn out of key contributors for the 
+               07:00 GMT slot from the States, and the solo attendance of 
+               Andreas Savva from Japan, this time slot will be suspended.
+
+               Until further notice, then, the weekly JSDL telecon time 
+               slot will toggle between 23:00 GMT and 14:00 GMT every four 
+               Wednesdays, starting with a telecon at 23:00 on Wed. 14th 
+               Jan. 2004.
+
+               The up-to-date telecon schedule will be posted on the JSDL 
+               GridForge front page at:
+
+               https://forge.gridforum.org/projects/jsdl-wg/
+
+
+Job Attributes' Definition Properties:
+--------------------------------------
+
+o What an attribute definition should include:
+
+    o Should an attribute be 'Required' or 'Optional'?
+      1 - Required in terms of the JSDL needs it, i.e. it must appear in 
+          every JSDL document; OR
+      2 - Required in terms of the job description of a job instance needs 
+          it, i.e. without this attribute the job cannot be scheduled.
+          A - a user could specify the attribute as required for the job 
+              instance (for the system to be able to accept the job.)
+          B - a system could specify the attribute as required for the job 
+              instance (if a system specific attribute were required, e.g. 
+              a specific type of file transfer.)
+
+    Note: 'Optional' is in terms of the value of the attribute being within 
+          a certain range.
+
+          ("Is Optional" - is open to the system ignoring its value?)
+
+          If optional attributes are satisfied then you get better QoS, or 
+          better job execution, e.g. if there's a checkpoint and migrate 
+          option available from a system and a user has specified C&M as an 
+          optional attribute then a system providing C&M is preferable to 
+          one that doesn't.
+
+  (Need to think about how DRM and other job handling systems should deal 
+   with JSDL and individual attributes...)
+
+
+    o Should the attribute be required to have a mapping to existing 
+      DRM systems?
+      - Should this mapping be complete, in other words, semantically 
+        unambiguous (maps to only one functionality on each DRM and to the 
+        same functionality across DRMS)? We need to make the translation 
+        tables normative so that mappings to existing systems are well 
+        understood.
+      - Should there be mappings from existing DRM systems to JSDL which 
+        are complete for this attribute? Again, refer to normative 
+        translation tables.
+
+    Notes: if an attribute does NOT have a mapping to an existing DRM 
+           functionality, then a strong use-case is required for that 
+           attribute to exist in the JSDL.
+
+           We need to enable JSDL users to specify custom attributes, 
+           perhaps DRM specific for specific system implementations to work 
+           with (and they could be required!), through the JSDL's 
+           extensibility mechanism.
+
+
+<verbatim source="from minutes of 10th Dec 2003 telecon">
+
+    o Should the attribute be 'Negotiable' or not?
+      - can the user specify a preliminary value that is open to 
+        negotiation by a job handling system/broker?
+      Andreas H.: "What is the negotiation relationship for existing 
+                   systems?"
+      Ali: "Cannot let the JSDL satisfy only existing DRM systems, we 
+            need a Grid language to satisfy Grid requirements, one of 
+            which is negotiation."
+
+    o Should the attribute have a lifetime?
+      Karl: "Difficult to talk about lifetime in a general abstract way."
+
+    o Does the attribute definition include relationships to other 
+      attributes?
+      - How should this be captured in the JSDL?
+      - Does the attribute have requirements on other attributes
+
+    o What are the attribute value types and ranges, enumeration 
+      of values?
+      Lee: "e.g. Counts should be numeric."
+
+    o What is the multiplicity of the attribute?
+
+    o Is the attribute's value mutable?
+      Ali: "This is not in the scope of JSDL as a submission language."
+
+</verbatim>
+
+
+JSDL Job Schema Properties:
+---------------------------
+
+o Need logical operations for attributes: AND, OR ...?
+
+o Need attribute composition, i.e. need to be able to put attributes 
+  together, using above logical operators.
+
+o Need to be able to do ranking of optional attributes by order of 
+  preference.
+
+o Need to enable JSDL users to specify custom attributes, perhaps DRM 
+  specific for specific system implementations to work with (and they could 
+  be required attributes).
+

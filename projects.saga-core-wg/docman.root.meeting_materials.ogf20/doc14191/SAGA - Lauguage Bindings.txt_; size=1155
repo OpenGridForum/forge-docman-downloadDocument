@@ -1,0 +1,29 @@
+SAGA - Language Bindings
+Sunflower: 16:00-17:30 Monday 29th January 2007
+Goal: Discuss the Java Language bindings
+
+Since several Java bindings are on track it becomes mandatory to define the L&F of the bindings to avoid diverging implementations.
+
+Illingworth's Presentation:
+JRA7 and SAGA from DEISA.
+Q: Why is there a SAGAException
+A: Because this is typical of a JAVA implementation.
+
+Q: Why are some namespace methods with arrays of flags and not bit set?
+A: Check with the implementation guys for the reason.
+
+Q: Was it straightforward or tricky to apply the API?
+A: Not really. 
+
+Kleijer's Presentation:
+Raised issues in the current specification to rectify: Support of all JSDL attributes
+Problems of interpretation of the API document: not clear on how some object must be used.
+Strong need to uniform the API L&F in Java.
+
+Q: How do we do a Java implementation reference document?
+A: Setup a repository to define each SAGA Java API and converge to a JAVA binding.
+
+HPC Profiles might be a good extension to SAGA use cases. It might also provide some insight of the needs for application level.
+
+Session Closed: 17:30
+%

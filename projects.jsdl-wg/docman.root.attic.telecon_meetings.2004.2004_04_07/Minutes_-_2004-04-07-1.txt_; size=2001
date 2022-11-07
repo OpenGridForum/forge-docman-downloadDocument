@@ -1,0 +1,48 @@
+JSDL 07.Apr.2004
+
+o Presentation by Asit Dan -- See slides
+  . WS-A template could be used to carry JSDL content
+  . JSDL should not be WS-A specific, but should be able to use it
+  . Time to start talking to WS-A since they're starting to solidify their goals
+    - Joint meetings?
+  . These meeting notes will be cross posted to WS-A.  (Hi, guys!)
+  . Will share WS-A drafts with us before GGF11 o What is plan about reviewing spec and notes?
+  . Resource description
+    - JDL originally had plans for a resource description language
+    - Ended up getting pushed out into other group/effort
+    - How to do it without WS-A?
+    - Very complex problem
+    - Is resource select from WS-A interpreted by XML?
+    - Passing in a freeform string is also pretty hideous
+    - Also the issue of translation mapping for specific DRMs
+    - Maybe use discrete resource definitions with a very small set of relational operations
+      ~ 80/20 rule
+    - Key issue
+    - Any hope of a resource description language group?
+      ~ None exists
+      ~ We need some SMEs in that area
+      ~ Should we form a new group, or is that the purpose of this group?
+        < Can't really do it within the JSDL charter
+    - JSDL onion model
+      ~ Core
+      ~ Resource description layer
+        < Wanders into territory of business value
+      ~ Security layer
+      ~ File transfer layer
+        < Close to core, but not quite core
+      ~ Etc.
+      ~ Scheduling should not in core
+      ~ Core could be just job/application identification
+        < What about job data files?
+          > Close to core but not core
+      ~ What about databases?
+        < No idea
+        < 2 aspects: DB for app itself & ???
+      ~ Should draft as doc and put on mailing list
+
+
+--
+*************************************************************
+*             Daniel Templeton   ERGB01 x60220              *
+*            Staff Engineer, Sun N1 Grid Engine             *
+*************************************************************

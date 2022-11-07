@@ -1,0 +1,125 @@
+JSDL Telecon Meeting
+====================
+September 24th, 2003 - 22:00 GMT
+================================
+
+
+Attendees:
+==========
+
+Ali Anjomshoaa (EPCC)
+Steve McGough (LeSC)
+Darren Pulsipher (Cadence)
+Alain Andrieux (ISI)
+Hiro Kishimoto (Fujitsu)
+Chris Smith (Platform)
+Karl Czajkowski (ISI)
+
+Apologies:
+==========
+
+Hrabri Rajic (Intel)
+
+
+Agenda:
+=======
+
+o Discussion of the Job Terms Proposal
+
+  - how do we proceed with this proposal?
+
+    * suggest discussion on list followed up at 
+      the second session of JSDL-WG at GGF9.
+
+    * suggest adopting the document as informational 
+      document - a proposal for the JSDL structure.
+
+    * require fine tuning of the contents.
+
+
+Discussion:
+===========
+
+Ali: Happy to take the Platform/Globus "Job Terms Proposal" document into 
+     the JSDL as an informational document, which proposes a JSDL structure 
+     based on the new WS-Agreement framework proposal (under development) 
+     and leverages its terms language structure.
+
+Steve: Happy to take this document into the JSDL. Would like to add more 
+       to the set proposed therein.
+
+Chris: Notes encouraging overlap with EDG Job Description Language (JDL), 
+       documents for which were posted on the list by Fabrizio Pacini.
+
+Karl: Will give talk to JSDL-WG at GGF9 with Alain. Would like an hour to 
+      present and discuss WS-Agreement framework and the Job Terms Proposal.
+
+Ali: Will schedule one hour for WS-Agreement framework and the Job Terms 
+     Proposal discussion at the second JSDL-WG session at GGF9.
+
+Darren: Notes that there are a lot of other languages out there. Should use 
+        these.
+
+Ali: Expresses minor worries over some of the details of the attributes in 
+     the Job Terms Proposal, say for example expression of filepaths etc. 
+     Will post concerns to the list.
+
+Steve: XNODES (similar to Unix INODES), for file access, file path 
+       definition.
+
+
+
+Ali: Points out that the Job Terms depend on WS-Agreement development.
+
+Karl: Agrees. It's early days, both can develop over next 2 to 3 GGFs.
+
+
+
+Steve: Expresses worry about OGSA/OGSI. Can a "terms language" based JSDL 
+       satisfy non-Grid Services architectures? Lots of existing systems.
+
+Ali: The Job Terms docs will be XML docs. So it should be easy to parse and 
+     pick and choose what you need from them. The important issue is to have 
+     access to the schema that define the terms language and the Job Terms. 
+     Without the WS-Agreement and terms language, the terms language would 
+     essentially have to be taken care of within the JSDL anyway, i.e. 
+     defining attributes to say whether a description element is required or 
+     merely preferred, and defining limits, and ranges, and enumerations etc.
+
+Karl: Agree that JSDL terms language is neutral. Security mechanism is 
+      architecture agnostic. How the security of the job is configured is 
+      important.
+
+
+
+Darren: Is there any worry from vendors that the JSDL will break the market.
+
+Chris: No. Differentiate products on distinctive product values and features.
+
+
+
+Ali: What is the view of Platform on DRMAA
+
+Chris: Platform are not looking at DRMAA since there are language 
+       dependencies to the interface. They will not be supporting DRMAA 
+       as they subscribe to the Grid Services architecture that is more 
+       flexible in terms of providing an interface.
+
+
+
+Ali: Shall we propose the Job Terms Proposal as a JSDL informational 
+     document within the JSDL-WG, as a base for building on?
+
+ALL: "Yeay".
+
+Ali: Will send out mail to the list re: the Job Terms Proposal and ask for 
+     comments.
+
+
+
+Ming Xu will talk on the Program Execution Environment Architecture from 
+OGSA, at the second session of JSDL-WG at GGF9.
+
+Hiro will send Ali the OGSA draft that has been submitted, for Ali to link
+off the JSDL-WG page and post notice to the list.
+

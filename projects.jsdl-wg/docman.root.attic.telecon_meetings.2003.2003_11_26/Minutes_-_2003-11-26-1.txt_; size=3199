@@ -1,0 +1,105 @@
+JSDL Telecon Minutes
+====================
+November 26th, 2003 - 14:00 GMT
+===============================
+
+
+Attendees:
+==========
+
+Andreas Haas (Sun)
+Ali Anjomshoaa (EPCC)
+Andreas Savva (Fujitsu)
+
+Apologies:
+==========
+
+
+Discussion:
+===========
+
+Administrative:
+---------------
+
+o Skip telecon on the 3rd Dec. DONM 10th Dec. 07:00 GMT
+
+
+JSDL Job Attributes:
+--------------------
+
+o JobCategory:
+
+ A S: What is "required"?
+ A H: Whether a JSDL attribute set is "complete", i.e. does the attribute 
+      match others in various DRM systems for mapping?
+ A S: All attributes can be considered as required, i.e. can be used by a 
+      system out there, but not all of them.
+ A H: Must look at the consequences of the attributes in order to decide 
+      what is required.
+ A S: Required - for attributes that a DRM MUST understand. An instance of 
+      a JSDL document MUST contain these attributes.
+ Ali: Attributes that are absolutely required in the description.
+      Default attribute values for the MUST attributes?
+ Ali: Default attribute values break portability, i.e. the Default for a 
+      particular attribute may be different for different DRMs and so the 
+      job would be handled differently. This may result in different results 
+      coming back from various DRM implementations. In addition, default 
+      behaviour cannot be imposed on system implementors.
+ A S: If an attribute is required to be in the JSDL it MUST have a value.
+      Core set are all required?
+
+Conclusions:
+
+ A H: o For each attribute, must decide whether it is REQUIRED in a JSDL 
+        document, and 
+
+      o for each attribute, must decide whether each system implementation 
+        will have a useful mapping.
+
+ A S: o Definition of a core set of attributes, which are not all 
+        necessarily REQUIRED. Common to all DRM systems?
+
+      o REQUIRED attributes are a subset of the core set of attributes.
+
+ Ali: o REQUIRED attributes must have a value. Not "default" and not "null".
+
+ A S: o Attributes cannot have a default value. (All agree).
+
+ A H: Questions to be asked:
+        o Whether the JSDL doc can be considered complete? i.e. containing 
+          all required attributes, and
+        o whether the mapping can be considered complete for a particular 
+          system? i.e. all required attributes can be mapped according to 
+          the semantics of their definition.
+
+      Consider: Whether there is a mapping for an attribute, and whether 
+      there is a reverse mapping from a system language to JSDL.
+
+ A H: It May be useful to use placeholders to define the value range of a 
+      particular attribute, it is necessary to decide for each attribute 
+      what the value range is.
+
+ A H: Change the definition of ExecutionUserName to contain:
+
+      "The 'ExecutionUserName' attribute MUST represent the 'username' of 
+       the 'user' in the 'execution environment' where the 'job' will be 
+       'executed'."
+
+      instead of:
+
+      "The 'ExecutionUserName' attribute MUST represent the 'username' of 
+       the 'user' in the 'execution environment' where the 'job' is 
+       currently 'running'."
+
+
+AOB:
+----
+
+o NO
+
+
+DONM:
+-----
+
+o 10th Dec. 2003 - 14:00 GMT
+

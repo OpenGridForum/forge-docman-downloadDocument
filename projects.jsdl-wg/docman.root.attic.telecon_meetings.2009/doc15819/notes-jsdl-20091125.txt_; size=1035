@@ -1,0 +1,40 @@
+JSDL Teleconference - 25 November 2009
+======================================
+
+* Participants
+
+  Donal Fellows
+  Philipp Wieder
+  Andreas Savva
+
+* Agenda
+
+>  1. Agenda bashing & quick status update
+>      - http://www.ogf.org/pipermail/jsdl-wg/2009-October/001255.html
+>      - Check actions (from OGF27, etc)
+
+ACTION: Philipp will put actions from OGF27 into existing trackers
+        (feature request) and create trackers if they correspond to
+        new documents
+
+>  2. Activity instance document schema
+>      - Tracker review/discussion
+>         https://forge.gridforum.org/sf/go/projects.jsdl-wg/tracker.activity_schema
+>      - Draft review (if revised text available)
+
+ACTION: Philipp to talk with Alexander and upload latest versions of
+        document & schema
+
+>  3. Other business
+
+Glance subscription has expired. Need to find a free alternative. Some options:
+ - yugma
+ - vyew
+ - dimdim
+ - skype
+
+ACTION: Andreas will review glance alternatives and suggest one by
+        next call
+
+
+* Next call: Next week same time

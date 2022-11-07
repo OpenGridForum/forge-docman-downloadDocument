@@ -1,0 +1,131 @@
+INFOD Current Actions
+=====================
+
+This is a list of current actions.  Each action has a serial number, once it
+is closed it is moved to a companion document of closed actions.
+
+==============================================================================
+
+
+43     Describe the two approaches for traceability through multiple disseminators
+
+        (1) Re-pacakaging a message at each hop in a new header
+        (2) Removing the header and adding a new appropriate message
+            header after transformation
+
+       - Date 3 Oct 2005
+
+       Will move to Wiki 
+      
+
+48     Define sequence number and message groups in the context of transactions
+
+       - Date 3 Oct 2005
+
+       Will move to Wiki 
+      
+
+108    Define vocabulary WS to support non-XML Data Vocabularies
+
+       - Date: 12 Feb 2006
+
+       Will move to Wiki 
+      
+
+129    Find how to deal with nested vocabularies in XML
+
+       - Date: 17 May 2006
+
+       Will move to Wiki 
+
+      
+140    How do we deal with "delta messages" (optimisation of notification)
+
+       - Date: 17 May 2006
+       - Owner: Dieter
+
+       Will move to Wiki 
+      
+
+155    How do we deal with retention periods?
+ 
+       Separation of data retention from data publishing
+
+       - Date: 1 Jul 2005
+       - Owner: Dieter
+
+       Will move to Wiki 
+
+
+156    How do the propagation interface(s) differ from the consume
+       interfaces and what is stored in the registry?
+
+       - Date: 1 Jul 2005
+       - Owner: Shailendra, Cecile
+
+       Will move to Wiki 
+
+
+160    What's special about INFOD disseminators?
+
+       * Retention of information
+       * Querying information
+       * Auditing and tracking
+
+       - Date: 1 Jul 2005
+
+       Will move to Wiki 
+
+
+182   Framework of chapter 2 of next spec
+
+      - Owner: Dieter
+      - Date: 28 Sep 2006
+      - Target: 28 Sep 2007
+
+
+194   Consider relationship between Consumers and DataVocabularies for
+      the next spec.
+
+      - Date: 4 Jan 2007
+
+       Will move to Wiki 
+
+
+206   Update use case doc to match the spec
+      - Owner: Dieter
+      - Date: 15 Mar 2007
+      - Target: 28 Jun
+
+      Mostly done      
+
+
+209   Provide schema for registry along with data generator and query
+      generator to Dave Berry
+
+      - Owner: Vijay
+      - Date: 22 Mar 2007
+      - Target: 1 Jun 2007
+
+      Waiting for info from Raghul
+
+
+210   Use Case to associate Consumers with a DataVocabulary
+      - Owner: Raghul
+      - Date: 29 Mar 2007
+      - Target: ???
+
+
+211   Reference to multiple entries for a single property vocabulary instance
+      - Owner: Vijay
+      - Date: 29 Mar 2007
+      - Target: ???
+
+
+215   Construct SIGMOD Article
+      - Owner: Vijay
+      - Date: 12 Apr 2007
+      - Target: 21 May 2007
+
+
+218

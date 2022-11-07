@@ -1,0 +1,55 @@
+JSDL Teleconference - 18 June 2008
+==================================
+
+* Participants
+
+  Philipp Wieder
+  Andreas Savva (minutes)
+  Alexander Papaspyrou
+  Donal Fellows
+  Michel Drescher
+
+* Review of OGF23 session
+
+  - Visualization/steering use case: having the Activity EPR available
+    in some manner is ok. Donal keeps the action for now.
+  - Two main issues raised in the session
+    - Modeling static or dynamic information
+    - Whether the scope is that of the BES activity only
+      - Need to review BES activity model in more detail
+      - Rough consensus that it is ok to do more than the BES Activity
+        as long as it is clear what is extra
+
+      ACTION: Andreas and Philipp to read with BES specification and
+              identify activity content
+
+      - Reminder that Andreas has a similar action for the DMI
+        specification (instance)
+
+  - With gridforge down agreed to track issues in the document for
+    now (Philipp)
+
+* Informal discussion on static vs dynamic content
+  - Make clear distinction between dynamic / static information; and
+    maybe static information is updated less frequently; perhaps
+    available from different services/containers
+  - UDAP did static information mainly; but that work was done in a
+    specific context with knowledge of the kind of information
+    produced; dynamic from same interface
+  - Could provide last recorded state (with timestamp) as dynamic
+    information, with some other small set 
+  - All information (including dynamic) has to be considered
+    out-of-date on arrival; that's the nature of distributed
+    systems. (Static probably means information that may impact
+    performance if retrieved frequently)
+  - Opinions seem to lean towards tackling static information mainly;
+    but it is too early to make a clear decision
+
+* Next call scheduled for July 2
+
+* JSDL 1.0 Experience draft review
+
+  ACTION: Andreas to ask survey repondents whether they agree to have
+          their survey responses included in the document
+
+  Alexander agreed to included the C3G response.

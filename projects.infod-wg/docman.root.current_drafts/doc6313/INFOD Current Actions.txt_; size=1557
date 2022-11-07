@@ -1,0 +1,70 @@
+INFOD Current Actions
+=====================
+
+215   Construct SIGMOD Article
+      - Owner: Vijay, Raghul
+      - Date: 12 Apr 2007
+      - Target: 29 Nov 2007
+
+
+223  Review Use Case Doc
+     - Owner: All
+     - Date: 21 Jun 2007
+     - Target: 22 Nov 2007
+
+
+225  Produce revised spec
+     - Owner: Steve
+     - Date: 5 June 2007
+     - Target: 22 Nov 2007
+
+
+236   Consider impact of adding the external EPR to the notification
+      message to the publisher and the internal EPR for message from
+      publisher to consumer. Is it sufficient for R-GMA?
+      - Owner: Steve, Arjun
+      - Date: 2 Aug 2007
+      - Target: 18 Oct 2007
+
+      DONE
+
+
+237  Outline access control issue
+     - Owner: Arjun, Raghul
+     - Date: 16 Aug 2007
+     - Target: Ongoing
+
+     Just started. Will work with Akos.
+
+
+238  Add to the use case document to address the new features in the errata
+     - Owner: Arjun and Ronny
+     - Date: 23 Aug 2007
+     - Target: 22 Nov 2007
+
+
+239  Look at draft of chapters 1&2 of new spec: 
+     <http://forge.gridforum.org/sf/go/doc14734?nav=1> 
+     - Owner: All
+     - Date: 23 Aug 2007
+     - Target: 18 Oct 2007
+
+     DONE
+
+
+241  Investigate how to handle dynamic moving consumers
+     (i.e. cellphones) for 'potential' publications (chem plume)
+     - Owner: Raghul, Arjun, Ronny
+     - Date 13 Sep 2007
+     - Target: Ongoing
+
+
+244  React to OGSA Data Document
+     - Owner: Arjun and Dieter
+     - Date: 4 Oct 2007
+     - Target: 18 Oct 2007
+
+     DONE
+
+
+245 

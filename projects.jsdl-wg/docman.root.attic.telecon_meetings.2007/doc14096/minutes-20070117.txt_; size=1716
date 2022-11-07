@@ -1,0 +1,62 @@
+JSDL Teleconference
+===================
+
+17 January 2007
+
+Participants:
+-------------
+Andreas Savva, Fujitsu
+Donal Fellows, UoM
+Chris Smith, Platform
+Fred Brisard, CA
+Michel Drescher, Fujitsu
+Steve McGough, Imperial College
+Fabio Benedetti, IBM
+Alessandro Marascini, July Project (?)
+Ali Anjomshoaa, EPCC
+
+Minutes: Michel Drescher
+
+
+1) Early Discussion
+===================
+- No changes to the agenda
+
+
+2) OGF19 planning/preparation
+=============================
+- No phone line has been requested
+  -- If necessary but no late reservation is possible, a Skype connection
+     will be provided
+- The group reviews the agenda plannning
+  -- Changes discussed on the phone call are reflected in JSDL's Wiki page at
+     GridForge
+
+
+3) JSDL 1.1
+===========
+The group continues to address the currently open tracker artifacts for JSDL.
+- art5649: "CPU time elements"
+  -- A clarification is needed
+  -- Assigned to Chris Smith
+- art5650: "IndividualNetworkBandwidth is ambiguous"
+  -- Resolved
+- art5651: "JobAnnotation not 'strong' enough"
+  -- Its use is discouraged using SHOULD NOT normative term in JSDL 1.1
+  -- Extensibility mechanism should be used instead
+- art5647: "Memory resources need clarification"
+  -- The configured memory is meant
+  -- This does not provide for querying for "free" memory (how is "free 
+     memory" defined anyway?)
+- art5652: "Well known filesystem names"
+  -- The filesystem type must be made normative for the well known file systems
+  -- Other characteristics should be given informatively
+  -- ROOT definition need to be re-considered
+- art5648: "Disk space resources"
+  -- Single-disk case is solved
+  -- Multi-disk case needs clarification for IndividualDiskSpace element
+
+
+
+
+

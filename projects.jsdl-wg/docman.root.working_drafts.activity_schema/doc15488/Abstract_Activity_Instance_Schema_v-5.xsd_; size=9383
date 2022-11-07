@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    targetNamespace="http://schemas.ogf.org/jsdl/2009/02/activity-instance"
+    xmlns:ai="http://schemas.ogf.org/jsdl/2009/02/activity-instance"
+    xmlns:wsa="http://www.w3.org/2005/08/addressing"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <xsd:annotation>
+        <xsd:documentation xml:lang="en">
+			The OGF takes no position regarding the validity or scope of any
+			intellectual property or other rights that might be claimed to pertain
+			to the implementation or use of the technology described in this
+			document or the extent to which any license under such rights might or
+			might not be available; neither does it represent that it has made any
+			effort to identify any such rights. Copies of claims of rights made
+			available for publication and any assurances of licenses to be made
+			available, or the result of an attempt made to obtain a general
+			license or permission for the use of such proprietary rights by
+			implementers or users of this specification can be obtained from the
+			OGF Secretariat.
+			
+			The OGF invites any interested party to bring to its
+			attention any copyrights, patents or patent applications, or other
+			proprietary rights which may cover technology that may be required to
+			practice this recommendation. Please address the information to the
+			OGF Executive Director. 
+			
+			This document and the information contained
+			herein is provided on an "As Is" basis and the OGF disclaims all
+			warranties, express or implied, including but not limited to any
+			warranty that the use of the information herein will not infringe any
+			rights or any implied warranties of merchantability or fitness for a
+			particular purpose. 
+			
+			Copyright (C) Open Grid Forum (2009). All Rights Reserved. 
+			
+			This document and translations of it may be copied and
+			furnished to others, and derivative works that comment on or otherwise
+			explain it or assist in its implementation may be prepared, copied,
+			published and distributed, in whole or in part, without restriction of
+			any kind, provided that the above copyright notice and this paragraph
+			are included on all such copies and derivative works. However, this
+			document itself may not be modified in any way, such as by removing
+			the copyright notice or references to the OGF or other organizations,
+			except as needed for the purpose of developing Grid Recommendations in
+			which case the procedures for copyrights defined in the OGF Document
+			process must be followed, or as required to translate it into
+			languages other than English.
+			
+			The limited permissions granted above are perpetual and will not 
+			be revoked by the OGF or its successors or assignees.
+		</xsd:documentation>
+        <xsd:documentation xml:lang="en">
+			Abstract Activity Instance schema document.
+
+			Authors:
+			Alexander Papaspyrou, TU Dortmund University
+			Philipp Wieder, TU Dortmund University
+
+			History:
+			1.0:
+			0.4: abstract elements added during OGF 26 (May 2009)
+			0.3: update w/ feedback from April/May telecons (May 2009)
+			0.2: update w/ feedback from OGF24 WG sessions (March 2009)
+			0.1: initial version (February 2009)
+		</xsd:documentation>
+    </xsd:annotation>
+    <xsd:import namespace="http://www.w3.org/2005/08/addressing" schemaLocation="http://www.w3.org/2002/ws/addr/ns/ws-addr"/>
+    <!--
+	===== ABSTRACT ELEMENTS =======================================	
+-->
+    <xsd:element abstract="true" name="State"/>
+    <xsd:element abstract="true" name="Exception"/>
+    <!-- Activity Definition abstract element
+		The ActivityDefinitionType defines the requirements of an activity,
+		i.e. the description template the activity has been created from. The
+		template may be changed over time (e.g. due to activity delegation,
+		negotiation processes, etc.).
+	-->
+    <xsd:element abstract="true" name="ActivityDefinition"/>
+    <!-- Activity Dependency abstract element
+		Link(s) to associated activities. The actual dependency structure (aka
+		work flow) should be captured by a different schema and maintained by a
+		separate service.
+	-->
+    <xsd:element abstract="true" name="ActivityDependency"/>
+    <!--
+		Here the final resource usage is captured (as e.g. defined by RUS)
+		:NOTE Per definition this is only the final usage. Continuous usage is
+		not captured here.
+	-->
+    <xsd:element abstract="true" name="ResourceUsage"/>
+    <!--
+	===== TYPES ================================================
+-->
+    <!--- Activity Document type -->
+    <xsd:complexType name="ActivityDocumentType">
+        <xsd:annotation>
+            <xsd:documentation>
+				Contains an activity's meta-data and history and provides a root
+				element for every activity. While the meta-data part MAY carry
+				information about the activity's creator, purpose, and
+				references (i.e. to other activities), the history part SHOULD
+				describe the full lifecycle of the activity.
+			</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="ActivityDescription" type="ai:ActivityDescriptionType"/>
+            <xsd:element name="ActivityHistory" type="ai:ActivityHistoryType"/>
+            <xsd:any minOccurs="0" namespace="##other" processContents="lax"/>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation>
+					An identifier for the activity, which MUST be globally
+					unique. It is RECOMMENDED to use Universally Unique
+					Identifiers as described in RFC 4122, "A Universally Unique
+					IDentifier (UUID) URN Namespace".
+				</xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:anyAttribute namespace="##other" processContents="lax"/>
+    </xsd:complexType>
+    <!-- Activity Description type -->
+    <xsd:complexType name="ActivityDescriptionType">
+        <xsd:annotation>
+            <xsd:documentation>
+				A human-readable description of the activity. This field MAY
+				contain information on the activity's creator, purpose, and
+				references to other activities, as well as other information.
+			</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:any minOccurs="0" namespace="##other" processContents="lax"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <!-- Activity History type -->
+    <xsd:complexType name="ActivityHistoryType">
+        <xsd:annotation>
+            <xsd:documentation>
+				A record of the activity's history. This record MAY be
+				incomplete, but MUST contain one initial and, at some point in
+				time, one final record; see also
+					/ActivityDocument/ActivityHistory/ActivityHistoryEntry/@category
+				Note that, although a final record MAY be written already, the
+				activity itself MAY still be modified; see also
+					/ActivityDocument/@sealed
+			</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded"
+                name="ActivityHistoryEntry" type="ai:ActivityHistoryEntryType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <!-- Activity History Entry type -->
+    <xsd:complexType name="ActivityHistoryEntryType">
+        <xsd:sequence>
+            <xsd:any minOccurs="0" namespace="##other" processContents="lax"/>
+            <xsd:element maxOccurs="1" minOccurs="1" name="Status" type="ai:ActivityStatusType"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="ai:ActivityDefinition"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="ai:ActivityDependency"/>
+            <!-- -The EPR of the executing service -->
+            <!-- REQ R024x -->
+            <xsd:element maxOccurs="1" minOccurs="1"
+                name="ManagerReference" type="wsa:EndpointReferenceType"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="ai:ResourceUsage"/>
+        </xsd:sequence>
+        <xsd:attribute name="timestamp" type="xsd:dateTime" use="required"/>
+        <xsd:attribute name="category"
+            type="ai:ActivityHistoryEntryCategoryType" use="optional"/>
+        <xsd:anyAttribute namespace="##other" processContents="lax"/>
+    </xsd:complexType>
+    <!-- Activity Status type -->
+    <xsd:complexType name="ActivityStatusType">
+        <xsd:sequence>
+            <!-- REQ R002 -->
+            <!-- Activity state -->
+            <xsd:element maxOccurs="1" minOccurs="1" ref="ai:State"/>
+            <!-- Exception -->
+            <xsd:element maxOccurs="1" minOccurs="0" ref="ai:Exception"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <!--
+		An entry in the activity's historic entry can be: - the original one,
+		i.e. the one initially submitted, or - the final one (REQ R008a) An
+		historic entry without an category attribute is per definitionem an
+		interim one.
+	-->
+    <xsd:simpleType name="ActivityHistoryEntryCategoryType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="initial"/>
+            <xsd:enumeration value="intermediate"/>
+            <xsd:enumeration value="final"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <!-- The Activity Document -->
+    <xsd:element name="ActivityDocument" type="ai:ActivityDocumentType"/>
+</xsd:schema>

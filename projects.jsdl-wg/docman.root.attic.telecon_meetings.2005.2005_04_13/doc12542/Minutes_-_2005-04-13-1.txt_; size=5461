@@ -1,0 +1,254 @@
+JSDL Telecon 13-04-2005
+-----------------------
+Attendees
+---------
+
+Ali
+Fred
+Bill
+Donal
+Andreas
+Darren
+Michel
+Steve
+
+Agenda & Minutes
+----------------
+
+ 0) UID/GID
+
+   - POSIX UID and GID in the POSIX Application section. (Open Q: username vs. userID)
+
+   - Action: Donal to bring the open question to list
+
+
+ 1) Fig. 1 revision
+
+   - Action: Andreas
+
+
+ 2) Fig. 2 revision
+
+   - Action: Andreas
+
+
+ 3) Prefixes and namespaces (check and update)
+
+   - waiting on Greg Newby and GFSG.
+
+   - Action: Michel to ensure that his recommended namespace is 
+     consistent throughout the spec (i.e. not to wait on Greg and GFSG).
+
+
+ 4) Namespace should be in the table (and update)
+
+   - DONE
+
+
+ 5) Section 3 (spec doc) general revision and polishing up
+
+   - To be done...
+
+   - Action: Andreas
+
+   - Owners for: Glossary
+               : Extending JSDL
+
+
+ 6) Update explanation for jsdl:other usage
+
+   - jsdl:other is the value for e.g. other arch and OS name etc.
+
+   - Have defined this and behaviours - have to be able to process it and must reject the 
+     document if can't be processed.
+
+   - To add extra information that is allowed to be ignored if can't be processed, but, 
+     jsdl:any can't be ignored.
+
+   - Section 4.2 - placeholder (maybe better in the Extending JSDL section).
+
+
+ 7) Possibly reformat ch. 4.2.1, 4.2.2.1, 4.2.2.2
+
+   - Bulleted list to tables
+
+   - Action: Andreas
+
+
+ 8) JSDL compliance levels
+    How much of jsdl a system must support, not just process.
+    Probably a topic for later.
+
+   - Placeholder, will come up later!
+
+   - Action: Michel
+
+
+ 9) The statement "If not supported then the consuming system MUST reject
+    the document." needs a bit more explanation or re-write.
+
+   - Related to number 8 above.
+
+   - Refer to notational convention
+
+   - Action: Michel
+
+
+10) When/why did HostName change from 0-1 to 0-n? (reverted)
+
+   - It didn't!
+
+   - Action: Andreas to follow up on the list.
+
+
+11) Filesystem name and type and filesystem reference in DataStaging
+
+   - This needs to be specified? Needs more explanation?
+
+   - Action: Andreas
+
+
+12) Mountpoint environment variable. Is the current approach ok, or
+    should we provide a separate mechanism, e.g, a tag that if present
+    provides the name of the environment variable in which the
+    MountPoint value must be present.
+
+   - If a Mountpoint environment variable is not specified, then the name 
+     of the filesystem is used for the value of the env var.
+
+   - Action: ALL to review spec section 5.5.12 and get back to the list
+
+   - Issue to be discussed on the list.
+
+
+13) Should FileSystemID be changed (back) to FileSystemName.
+
+   - This is done already.
+
+
+14) DRMAA use case for defining filenames. We have to at least be able
+    to show an example of how to define and stage out an <Output> file.
+
+   - Action: Andreas
+
+   - Action: Donal to suggest alternative
+
+
+15) CreationFlag. Was this made optional or not? Confirm and delete
+    comment.
+
+   - Not optional. Andreas to make spec consistent.
+     4.2.2.4  File Creation Flags (jsdl:CreationFlagEnumeration)
+          - Get rid of "Prepend"
+
+
+16) Process Topology needs review. In particular are the examples ok or
+    not, are the definition correct and so on. Delete the yellow
+    comments once that is done. Not sure if we should define the precise
+    allocation behaviour or allow for that to be defined instead.
+
+   - Action: ALL to review this section (Section 6 in 0.9.5-01).
+       - ProcessCount to be put back into POSIX Application.
+       - ProcessCountLimit in the POSIX Application.
+
+
+17) Section "Extending JSDL" needs an owner. I expect this section to be
+    about 1 page long so should not be too much trouble.
+
+   - Action: Steve (with Michel as wingman)
+
+
+18) Normative Extension is out of place
+
+   - Action: Andreas.
+
+
+19) re-check terminology for process topology and delete comments
+
+   - Part of 16 Review
+
+
+20) "Bytes (octets of bits)"
+
+   - Delete!
+
+   - Put into Glossary.
+
+
+21) Memory limit incomplete text
+
+   - Action: Donal - Extra text
+
+
+22) pipe size limit incomplete text
+
+   - Action: Donal - Extra text
+
+
+23) Update of security considerations in line with latest decisions
+    (when we actually reach firm decision)
+
+   - User and Group ID decisions finalised, then make clear statements 
+     about security.
+
+
+24) Complete author information (see my entry as reference)
+
+   - Leave to last... Placeholder
+
+
+25) Update contributors and acknowledgements
+
+   - Leave to last... Placeholder
+
+
+26) Complete list of Normative references, e.g., CIM is still missing.
+
+   - Leave to last... Placeholder
+
+     CIM = http://www.dmtf.org/standards/cim/
+
+
+27) Glossary owner
+
+   - Action: Ali
+
+
+28) Translation tables need to be added
+    Proposal: Karl for Globus/GRAM,
+              Chris for LSF,
+              Saga-san for Naregi,
+              ??? for Condor,
+              ...
+
+   - See below...
+
+28a) Put the translation tables into a separate document?
+
+   - Non-normative information docs
+
+   - Steve and GridSAM to input GRAM and Condor
+
+   - Template for these docs needed.
+
+
+29) Promised examples for the appendix
+   (But maybe this should be split off into a Primer)
+
+   - Put examples into a primer...
+
+
+30) Make citations in text of document reference real cross-references.
+
+   - Action: Andreas
+
+
+31) Complete example sub-sections
+
+   - Need examples for elements.
+
+
+32) POSIXApplication/Executable: optional or mandatory?
+
+   - Bring to list.
+

@@ -1,0 +1,149 @@
+JSDL Telecon Minutes
+====================
+March 3rd, 2004 - 14:00 GMT
+===========================
+
+
+Attendees:
+==========
+
+Ali Anjomshoaa (EPCC)
+Steve McGough (LeSC)
+Fred Brisard (CA)
+Andreas Savva (Fujitsu)
+An Ly (CA)
+
+
+Apologies:
+==========
+
+
+Agenda:
+=======
+
+ - Agenda items include:
+
+   o status check of work,
+   o readiness for GGF10,
+   o review of 4 meeting agendas,
+   o review of slides (if any available),
+   o review of JSDL scope statements (if any available),
+   o discussion of JSDL document and attribute mutability.
+
+
+Discussion:
+===========
+
+Administrative:
+---------------
+
+   o status check of work
+     --------------------
+
+ - No changes to specification document since 25th February.
+
+
+   o readiness for GGF10
+     -------------------
+
+ - Steve: The group of JSDL regulars should narrow scope of JSDL before 
+          GGF10 presentation.
+
+ - Ali: We should each put in our scope positions, then discuss differences.
+
+--
+
+ - Andreas: Mutability(?) - would prefer to address the submission issues 
+            now and address more complex issues like mutability later on.
+
+ - Steve: Agree.
+
+--
+
+ - Andreas: JSDL as an "Ontology" - questionable.
+
+ - Steve: Agree.
+
+ - Ali: Ontology = Semantics of JSDL attributes + rules of engagement on 
+        how to use the JSDL.
+
+ - Andreas: Would alleviate this if we stuck with job submission, i.e. don't 
+            need to deal with post-submission issues.
+
+ - Steve: Agree.
+
+ - Ali: Remove "ontology" for just job submission.
+
+--
+
+ - Andreas: Scope statement could include the big picture and highlight 
+            what part JSDL will play.
+
+ - Steve: Core JSDL should be our focus as per JSDL charter.
+
+--
+
+ - Andreas: Can an instance of an executable be run on a distributed 
+            environment, e.g. MPICH job?
+
+ - Ali: Yes. Will put explicitly into scope position statement.
+
+--
+
+ - Ali: requested comments on "What is JSDL?" (scope) position statement
+        Andreas, Steve, An, Fred.
+
+
+   o review of 4 meeting agendas
+     ---------------------------
+
+ - Ali: To book conference call for Thursday 11th 18:00 for An and Lee 
+        and ?
+
+ - Ali: To put agendas on gridforge.
+
+
+   o review of slides for GGF10
+     --------------------------
+
+ - Ali: Fred's template is on GridForge under the GGF10 category.
+
+ - Ali: Looked at Fred's slides. Should be prepared to discuss why we 
+        don't want to address complex scheduling and workflow issues 
+        in the JSDL.
+
+ - Fred: to forward updated scheduling slides to Steve and Andreas.
+
+
+   o review of JSDL scope statements
+     -------------------------------
+
+ - Already discussed above in 'readiness for GGF10'. All to send embedded 
+   comments to Ali for new version of the JSDL scope position statement.
+
+
+   o discussion of JSDL document- and attribute-mutability
+     ----------------------------------------------------
+
+ - Steve: Anything that changes a JSDL document up to the point of 
+          submission and the acceptance by a "system" of that submission, 
+          is JSDL.
+
+ - Inconclusive discussion of the mutability issue.
+
+ - Ali: Job Submission or Job Specification?
+
+
+AOB:
+----
+None
+
+
+DONM:
+-----
+March 24rd, 2004 - 23:00 GMT (90 min.)
+
+ - Agenda items will include:
+   o ??
+
+----------------------

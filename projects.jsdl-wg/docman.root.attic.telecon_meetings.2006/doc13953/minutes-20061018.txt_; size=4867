@@ -1,0 +1,140 @@
+JSDL Teleconference - 18 October 2006
+=====================================
+
+* Participants
+
+  Fred Brisard (CA)
+  Rich Ciapala (MS)
+  Michel Drescher (Fujitsu)
+  Donal Fellows (UoM)
+  An Ly (CA)
+  Andreas Savva (Fujitsu)
+  
+  Minutes: Andreas Savva
+
+* Summary of new actions
+
+  (Some are re-stated from previous minutes in order to number them)
+
+  AI-1018a: Michel and Donal to write up backwards compatibility
+              statement.
+
+  AI-1018b: Donal will write a summary of the referencing proposal
+             (based on Igor's original proposal)
+
+  AI-1018c: Andreas will talk with Darren and get an initial JSDL 1.1
+                   draft on gridforge by next call.
+
+  AI-1018e: Andreas to send a reminder to Chris Smith for additional
+            JSDL 1.1 issues
+
+
+* Teleconference day/time
+
+  Summer time ends Oct 28. (Except Japan; no summer time.) The current
+  slot and day of the week needs to be confirmed. There were no
+  objections to the current UTC slot or day (Wednesday) from people on
+  the call.
+
+  There will be a call next week---the last call before the summer
+  time change.
+  
+* Review JSDL 1.1 actions
+
+  [From GGF18]
+
+> - Backwards compatibility acceptability
+>       - Adding new optional Elements
+>       - Widening the cardinality of an element 
+>       - Michel and Donal to come up with a simple document (one Page
+>         Max) on our statement of documentation.
+>         
+>       - We will make sure that all minor releases are backwards compatible.
+>       - Major releases are not under the same restriction.
+>       - Part of the 1.1 specification will have what has changed.
+
+
+  Michel has written up a position statement and has sent it to Donal
+  for review. The plan is to post it to the list by the end of this
+  week / beginning of next week. And to discuss on next week's call.
+
+  AI-1018a: Michel and Donal to write up backwards compatibility
+              statement.
+
+> 
+> - Andreas to send email to the CIM guys to let them know that
+>   PalmPilot should be PalmOS.
+
+  In progress. (This is not an issue for JSDL 1.1)
+
+> 
+> - MountPoint needs to be resolved. Michel needs to look at
+>   compatibility for this.
+
+    Need to decide on compatibility approach first.
+
+> 
+> - Donal to give a summary on JSDL Referencing.
+
+  This refers to part of Igor's proposal for 1.0. The group adopted
+  the extension mechanism from that proposal but not the way of
+  referencing elements in the document. This is not necessarily an
+  issue for 1.1 but may enable other stuff like expression of
+  dependencies.
+
+  AI-1018b: Donal will write a summary of the referencing proposal
+             (based on Igor's original proposal)
+
+> - Add security consideration for every element.  - Start JSDL 1.1
+> draft (Darren)
+
+  AI-1018c: Andreas will talk with Darren and get an initial JSDL 1.1
+                   draft on gridforge by next call.
+
+  AI-1018e: Andreas to send a reminder to Chris Smith for additional
+            JSDL 1.1 issues
+
+> * Experiences Document - BES (Andrew, Mark), Steve, Michel, Saga
+> 
+>       - Ask the vendors to submit Experience Documents.
+
+  Agreed that this is low priority at this moment. It should be
+  possible to leverage the experience of the HPC Profile
+  interoperability work.
+
+* Other Action Items
+
+> AI-0927a: C Smith: Resolve the ambiguity between the definition of the
+>                    Executable element and a later referring footnote
+> AI-0927b: A Savva: Do the same for the POSIXApplication extension in 
+>                    JSDL 1.0  
+
+        Above was assigned to Chris Smith on last call. Andreas will
+        take it over and check the POSIXApplication text.
+
+>                 
+> AI-0927c; C Smith: Brush up the definition of the Argument element in 
+>                    relation to 
+>                    - what means "collapsed"
+>                    - combining consecutive Argument elements
+>                    - constrained normalized string
+> AI-0927d: C Smith: To clarify the document with respect to container 
+>                    behaviour for Input Output and Error and the current
+>                    workung directory (see Executable element definition)
+
+  - Andreas had a look through the revised HPC Application draft a few
+    weeks ago. The revisions wrt above actions looked good.
+  - Donal is also planning to review the document.
+
+* Review any new drafts, if available
+
+        Andreas is planning to have the Parallel Application extension
+        (schema) ready for review by next call.
+
+* Other business - OGSA F2F 
+
+  - People planning to attend OGSA F2F: 
+    - Fred, An, Michel, Donal, Andreas. Also probably Steve.
+  - There may be sufficient people to arrange for a 1-2 hour slot,
+    depending on agenda.
+

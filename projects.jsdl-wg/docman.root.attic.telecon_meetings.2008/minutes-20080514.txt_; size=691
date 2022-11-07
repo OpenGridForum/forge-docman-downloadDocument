@@ -1,0 +1,35 @@
+JSDL Teleconference - 14 May 2008
+==================================
+
+* Participants
+
+  Donal Fellows
+  Andreas Savva
+  Geoff Williams
+  David Meredith
+  Fred Brisard
+  
+* Sweep within input files to be discussed at OGF23
+
+* Reviewed artifacts; decisions in tracker, with some additional notes
+  in the minutes
+
+* artf6187 
+
+  Action: Geoff to request Nimrod input
+
+* artf6189 
+* artf6186
+* artf6188
+* artf6185
+
+* artf6184
+
+  Initial candidate list: loopdecimal, loopfloat, loopdouble
+
+  Action: Geoff to put detailed in proposal in the tracker.
+
+* Other 
+
+  Action: Andreas to add deferred status to the tracker status list
+          (with closed status)

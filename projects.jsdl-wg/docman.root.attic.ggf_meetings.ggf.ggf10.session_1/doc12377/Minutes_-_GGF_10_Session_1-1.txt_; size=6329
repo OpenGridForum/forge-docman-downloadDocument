@@ -1,0 +1,168 @@
+JSDL-WG GGF10 (Berlin) Session 1
+--------------------------------
+
+Thursday 11th March 2004, 08:30 - 10:00 (local time)
+----------------------------------------------------
+
+
+Presentation by Ali: See:
+
+https://forge.gridforum.org/projects/jsdl-wg/document/JSDL-WG_GGF10_Session_1_-_JSDL_Introduction_and_Scope/en/2
+
+See also NOTES on this presentation:
+
+https://forge.gridforum.org/projects/jsdl-wg/document/JSDL-WG_GGF10_Session_1_-_JSDL_Introduction_and_Scope_NOTES/en/1
+
+
+Session overview
+================
+
+ o JSDL scope discussion and job definition.
+   - Discussing scope again to clarify for the group the focus of 
+     JSDL once more.
+   - There has been ongoing discussion regarding the scope of JSDL 
+     and the definition of jobs for JSDL, between the JSDL authors 
+     and editors.
+
+ o Security talk by Frank Siebenlist.
+   - Discussion of security and JSDL and JSDL's security requirements.
+
+
+ Q: What are the JSDL-WG milestones and the deadlines for deliverables?
+ A: The milestones are available on the JSDL-WG's GridForge web-site.
+    The deliverables are due December 2004.
+
+
+Charter, Description of Scope and Motivation
+============================================
+
+ o Charter presented.
+   - Working on vocabulary of JSDL, i.e. JSDL attributes, at the moment.
+   - Have divided JSDL attributes into categories; for convenience only.
+   - Some contention on dependencies;
+     - whether a description of scheduling requirements should be in 
+       the JSDL;
+     - ditto for security, does (how?) security fit in JSDL.
+
+
+JSDL Purpose
+============
+
+   - Goal is to standardise the definition of job requirements.
+
+
+Job Definition
+==============
+
+  Problem: What is a job and by extension what should a JSDL document
+           describe.
+           - a JSDL document describes one instance of an executable;
+             i.e. a job is an instance of a running executable.
+           - to allow treatment of jobs at the finest granularity;
+           - to allow composition of jobs by other entities.
+
+
+  Q: Description of an instance of a job versus a template for defining 
+     a job which can then be used to instantiate job(s).
+  A: JSDL is not for job templates; that should be done at a higher 
+     level.
+
+  Q: Single 'executable' is too restrictive; or is this playing with
+     terminology.
+  A: - instance of an application,
+     - from the point of view of the consumer (submitter) it is an
+       atomic unit. (might be a complex 'unit').
+     - "A job is an instance of a running application".
+
+  Q: Requirements of sub-executables as separate descriptions?
+  A: Depends on framework. Majority of cases, the sub-executables will 
+     have the same (resource) requirements as the main application being 
+     described using JSDL.
+
+  Q: Series of executables? (e.g. parametric studies, work-flow) 
+  A: Out of JSDL-WG Scope. Leave for higher level composition.
+
+  Q: Templates for sub-jobs?
+  A: Attribute for referencing other JSDL docs for sub-jobs?
+
+  Q: How to compose documents; might then solve the is it a single or
+     multiple "executable/job" description.
+
+  Q: Avoid 'what is a job' and whether 'it is one or many executables'
+     discussion. It is a description of a command line, the first item
+     is what to execute. (Not important if that is simple or complex).
+
+  Q: What is a Job ID and how does it relate to jobs? The example was 
+     given about a job that is a data transport and how does the Job ID 
+     relate.
+  A: The Job ID is independent of the command that is run. It may be unique 
+     in the implementation of the framework.
+
+
+
+Presentation by Frank Siebenlist: See:
+
+https://forge.gridforum.org/projects/jsdl-wg/document/JSDL_and_Security/en/1
+
+See also NOTES on this presentation:
+
+https://forge.gridforum.org/projects/jsdl-wg/document/JSDL-WG_GGF10_Session_1_-_JSDL_Introduction_and_Scope_NOTES/en/1
+
+
+Security and JSDL
+=================
+
+  - Where does security meet JSDL?
+  - Potentially complex environment (job uses resources from different
+    organisations that may require different rights associated with
+    different portions of the job).
+  - Also description may be very abstract.
+  - Problem at the moment when assigning privileges, i.e. have to assign 
+    too many privileges to take into account all the possible
+    environments that a job may run in.
+  - Delegation of rights: need standardised language to express 
+    and exchange authorisation assertions.
+  - Access rights associated with job also effect where the job can be
+    run; this effects scheduling and resource selection.
+  - Understanding of required authorisation rights associated with a job.
+  - Make use of security context to transparently handle many situations. 
+    - But often need help (hints).
+
+  - Outgoing request:
+    - this subject/submitter/requester,
+    - or on behalf of a previous subject (delegation chain),
+    - hint needed on what to do.
+  - How to ask for more rights if not enough rights are associated with
+    the current subject.
+  - What rights to delegate to the next stage (outgoing request) to
+    allow for execution.
+
+  - To limit rights given to the job depends on the level of detail of
+    the description of the job; e.g., not just use site z, but use this
+    (file/resource) on site z.
+  - Open issue: how to get (provide) the needed hints from the job
+    description.
+  - Least privilege delegation of rights preferable, i.e. only provide the 
+    rights that are absolutely required for the job to run.
+  - Look at existing authorisation policy languages (e.g., XACML, OWL,
+    KAos) to aid in the definition of the JSDL language.
+
+  - Question or Statement: That the Security Policies should actually not 
+    be defined in the JSDL but the JSDL should allow for the attachment of 
+    Security Policies.
+
+  - Use existing work for security/policy and attach to the JSDL document.
+
+  - IP status of ws-policy?
+
+  Q: Hints at what to look at, but no recommendations. Any recommendations?
+  A: OWL might offer a good basis for building a language such as JSDL. 
+     XACML also offers 'operators' and 'typing' that could be used to 
+     build JSDL.
+
+  Q: License usage?
+  A: Conceptually some kind of authorisation assertion (using a resource).
+
+  Q: Connection to other security working groups in OGSA.
+  A: Work in progress.
+

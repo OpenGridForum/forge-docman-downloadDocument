@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0040)http://www.csm.ornl.gov/ghpn/ghpnrg.html -->
+<HTML>
+This is a static archive of the previous Open Grid Forum GridForge content management system saved from host forge.ogf.org file /sf/docman/do/downloadDocument/projects.ghpn-rg/docman.root.charter/doc10796 at Sun, 06 Nov 2022 04:09:51 GMT
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<HEAD><TITLE>Grid High-Performance Networking Research Group (GHPNRG)</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 5.50.4923.2500" name=GENERATOR></HEAD>
+<BODY>
+<H1>Grid High-Performance Networking Research Group (GHPNRG)</H1>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TH vAlign=top align=left rowSpan=2>Co-Chairs:</TH>
+    <TD><A href="http://www.cl.cam.ac.uk/users/jac22/">Jon Crowcroft</A> 
+      &lt;<A 
+      href="mailto:Jon.Crowcroft@cl.cam.ac.uk">Jon.Crowcroft@cl.cam.ac.uk</A>&gt;</TD></TR>
+  <TR>
+    <TD><A href="http://www.csm.ornl.gov/ghpn/ghpnrg.html">Franco 
+      Travostino</A> &lt;<A 
+      href="mailto:travos@nortelnetworks.com">travos@nortelnetworks.com</A>&gt;</TD></TR>
+  <TR>
+    <TH vAlign=top align=left rowSpan=2>Secretaries:</TH>
+    <TD><A href="http://saturn.csm.ornl.gov/~nrao/">Nagi Rao</A> &lt;<A 
+      href="mailto:raons@ornl.gov">raons@ornl.gov</A>&gt;</TD></TR>
+  <TR>
+    <TD><A href="http://www.fz-juelich.de/zam/ZAMPeople/sander.html">Volker 
+      Sander</A>&lt;<A 
+      href="http://www.cs.wm.edu/~lowekamp/V.Sander@fz-juelich.de">http://www.cs.wm.edu/~lowekamp/V.Sander@fz-juelich.de</A>&gt;</TD></TR>
+  <TR>
+    <TH vAlign=top align=left>Mailing List:</TH>
+    <TD><A 
+      href="mailto:ghpn-wg@gridforum.org">mailto:ghpn-wg@gridforum.org</A> is 
+      used for RG communication. It will probably be renamed in the near 
+    future.</TD></TR>
+  <TR>
+    <TH vAlign=top align=left>Subscription Request:</TH>
+    <TD>send an email to <A 
+      href="mailto:majordomo@gridforum.org">mailto:majordomo@gridforum.org</A> 
+      with the body "subscribe ghpn-wg"</TD></TR>
+  <TR>
+    <TH vAlign=top align=left>Home page:</TH>
+    <TD><A 
+      href="http://www.csm.ornl.gov/ghpn/GHPNHome.html">http://www.csm.ornl.gov/ghpn/GHPNHome.html</A></TD></TR>
+  <TR>
+    <TH vAlign=top align=left>Email archive:</TH>
+    <TD><A 
+      href="http://www-unix.gridforum.org/mail_archive/ghpn-wg/maillist.html">http://www-unix.gridforum.org/mail_archive/ghpn-wg/maillist.html</A> 
+    </TD></TR></TBODY></TABLE>
+<P>The Grid High-Performance Networking Research Group focuses on the 
+relationship between network research and Grid application and infrastructure 
+development. The objective of GHPNRG is to bridge the gap between the networking 
+and grid research communities. It accomplishes its goal by serving as a forum 
+for information exchange on advances and requirements in both fields, as well as 
+by providing a focal point for liaison activities between the GGF and the 
+various networking standards bodies. Specific topics of interest include, but 
+are not limited to: </P>
+<UL>
+  <LI>End-to-end performance 
+  <LI>High-performance transport protocols 
+  <LI>Emerging network technologies 
+  <LI>The interface between Grid applications and network services 
+  <LI>Deployment of new technologies on the Internet and overlay networks 
+</LI></UL>
+<P></P>
+<P>The GHPNRG provides a forum for such topics until sufficient maturity and 
+interest to both communities is reached that naturally results in the formation 
+of a separate WG or RG to pursue them further. The discussions of GHPN are 
+carried out both during the meetings and on the GHPN mailing list.</P>
+<P>Two specific goals of the GHPNRG are identifying: </P>
+<UL>
+  <LI>grid application requirements and implementations that are not supported 
+  or understood by the networking community and 
+  <LI>advanced networking features that are not being utilized by grid 
+  applications. </LI></UL>The natural forum for communicating the results of its 
+work are through the periodic release of informational documents. The initial 
+documents will concentrate on identifying gaps in understanding between the grid 
+and networking communities. As GHPNRG identifies and explores topics, further 
+informational documents will be written and released to the community. 
+<P></P>
+<H2></H2><BR><!-- forge.gridforum.org footer.html -->
+<br> <hr>
+<table width='100%'> 
+ <tr>
+  <td align='left'>   <a href='http://www.ogf.org/' target='_blank' style='border: 0 px;'><img src='../../../../../../ogf-it/opengridforum.gif' alt='The Open Grid Forum' style='border:0px white solid;'></a><td>
+  <td align='center'> <a href='mailto:webmaster@ogf.org'>Contact Webmaster</a> 
+                    | <a href="../../../../../tracker/do/createArtifact/projects.ggf-info/tracker.html">Report a problem</a>
+                    | <a href="../../../../../wiki/do/viewPage/projects.ggf-info/wiki/HomePage.html">GridForge Help</a>
+                    </td>
+  <td align='right'>  
+<!--		<img src='/ogf-it/powered_by_dell.gif' alt='Powered by Dell'> -->
+<!-- Begin DigiCert/ClickID site seal HTML and JavaScript -->
+<div id="DigiCertClickID_sxSDRU4L">
+  <a href="http://www.digicert.com/">SSL Certificates</a>
+</div>
+<script type="text/javascript">
+var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_sxSDRU4L", "10", "m", "black", "sxSDRU4L"]);(function(){var cid=document.createElement("script");cid.type="text/javascript";cid.async=true;cid.src=("https:" === document.location.protocol ? "https://" : "http://")+"seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
+</script>
+<!-- End DigiCert/ClickID site seal HTML and JavaScript -->
+  </td>
+ </tr>
+</table>
+<!-- google analytics code -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6775861-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</BODY>
+This is a static archive of the previous Open Grid Forum GridForge content management system saved from host forge.ogf.org file /sf/docman/do/downloadDocument/projects.ghpn-rg/docman.root.charter/doc10796 at Sun, 06 Nov 2022 04:09:51 GMT
+</HTML>

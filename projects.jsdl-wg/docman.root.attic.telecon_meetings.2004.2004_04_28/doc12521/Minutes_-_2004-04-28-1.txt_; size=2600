@@ -1,0 +1,65 @@
+April 28, 2004
+
+Next Meeting:
+Tuesday Afternoon UK - 1500 BST, 2300 JST, 0800 MST
+
+Agenda:
+	1) General Discussion of XML UML and the plan for the schema
+(~30min)
+	2) Overall structure of the JSDL document - template or instance document (~20min)
+	3) GGF 11 Status Report (~10min)
+	4) Section Reports - general progress reports (~30min)
+
+Attendees
+	Darren Pulsipher
+	Dan Templeton
+	Steve McGough
+	Andreas Savva
+	Ali A.
+
+-----------------------------------------------
+GGF Sessions for GGF11
+-----------------------------------------------
+JSDL Schema I #1
+JSDL Schema II #2
+JSDL Attributes I #3
+JSDL Attributes II #4
+JSDL Translation Tables #5 
+
+Extra Face to Face Meeting on June 10th half a day or the whole. (Darren to ask Stacey)
+
+----------------------------------------------
+Deadlines
+----------------------------------------------
+May 14, 2004 - Deadline for drafts for GGF11.
+May 10, 2004 - Deadline to get sections to Andreas for compilation.
+
+
+----------------------------------------------
+XML UML Schema
+----------------------------------------------	
+1. What to Store? (Darren - Come up with the UML model from the Attributes lists) May 5, 2004 2. How to store? What Schemas? (OWL, etc...) (Steve - Come up with the XML schema strategy) May 5, 2004 3. Schema Requirements? - Need for Logical Operation, Attribute composition, Attribute Ranking, Custom attributes. (Dec 17, 2004 meeting notes).
+
+----------------------------------------------
+Structure of the JSDL XML Document
+---------------------------------------------
+Instance or Template? (Andreas - Put the definition of our XML Template in the Introduction to the Doc.) JSDL XML Document will be submitted to a system that will create an instance of a job. 
+JSDL defines what the job is not how it is instantiated.
+
+What is the minimum set of attributes to submit a job?  Just the executable fragment should be required.
+
+We need to have the concept of XML fragments that can be optional, but if include MUST have specific attributes defined.
+
+----------------------------------------------
+Section Reports (Andreas to get the information from the teams)
+----------------------------------------------
+* Job ID - (Darren will look and review this stuff.)
+* Resource (Fred and An)
+Scheduling One Attribute (
+Security (Put in a placeholder) - There should be a security fragment that should be created.
+* Data (Steve, An and Andreas)
+* Introduction (Andreas, Ali)
+
+Document research of the XML schema at the end of the document.
+
+Translation tables will be another document. (Darren will have a draft of this in a couple of weeks)

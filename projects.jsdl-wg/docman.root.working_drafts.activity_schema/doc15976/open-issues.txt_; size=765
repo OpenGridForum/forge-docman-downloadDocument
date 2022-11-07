@@ -1,0 +1,19 @@
+DOCUMENT:
+- Clarification of terminology: activity versus activity instance. The former is what the user/application/client/... wants to have executed. The latter is generated according to this specification. Check whole document for consistency. Introduce terms.
+- Enumeration of figures (3 is missing).
+- De-bold all references to references.
+- Do we provide Annex B (If not, adjust Section 3)
+- What was the decision re. Section 4? Fill or delete?
+- Is 5.10.6 example correct?
+- Adjust 6.2.5 to 6.1.5?
+- Insert missing references.
+
+XSD:
+- Link to the OGF/W3C location of schemata, not the local ones.
+- Take special care re UR URL!
+- Check XSD versus specification.
+- THEN add XSD to Annex A.
+
+MINOR::
+
+- Acronym Activity Instance Document Specification -> uups.

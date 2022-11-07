@@ -1,0 +1,70 @@
+JSDL Teleconference - 19 September 2007
+=======================================
+
+  Donal Fellows
+  Steve McGough
+  Gabor Roczei
+  Andreas Savva
+
+  Apologies: Michel Drescher, Fred Brisard
+
+  Minutes: Andreas Savva
+
+* OGF21 sessions
+
+** Activity schema
+   AI: Andreas will send an email to the lists: JSDL, HPCP, BES, and
+       also GSA (Philipp to forward)
+   - Done
+   
+  Agreed to keep total time of presentations under an hour
+
+** General session
+*** Experience report: 
+        - Overview of proposed activity & coverage 
+        - Survey
+        - SC07 interop (data staging)
+        - Features not covered
+        - Volunteers to contribute for the extra coverage
+*** Presentations
+   AI: Steve will send an email to the list to solicit presentations
+       on implementations. Probably cross-post to BES/HPCP also
+        Done, two replies 
+        - UVA
+        - Gridway
+
+   Probably 15 minutes each; have a chat with them in advance and check that the content fits. (Keeping in mind the focus on the experience report work)
+
+*** Other updates
+
+   AI: Michel will send an email to stakeholders/interested parties to
+       remind them the parameter sweep draft is on gridforge.
+        - No update
+
+** Technical session
+   AI: Michel will do a presentation on how JSDL XQuery + RSS
+       XQuery might work together for OGF21. Review a draft on a call
+       before OGF21
+        - No update
+
+** AI: Andreas will update the sessions with the detailed agendas as
+   far as possible.
+
+* Experience report
+
+  AI: Andreas will send an open invitation to the list for survey
+      responses. Also cross-post to BES, HPCP
+        Not done.
+
+  To put together a table of untested features for OGF21
+  Waiting for GridSAM survey response
+
+* JSDL 1.0 Errata
+  AI: Andreas will talk to the OGF Editor on how to go about
+      publishing this document and get back to the group by the next
+      call
+      Email sent, waiting for a response.
+
+- Reviewed remaining errata and resolved environment element issues
+
+** Next call for Oct. 3 

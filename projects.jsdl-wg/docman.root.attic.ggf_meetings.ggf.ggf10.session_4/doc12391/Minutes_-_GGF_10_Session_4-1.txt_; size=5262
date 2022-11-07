@@ -1,0 +1,154 @@
+JSDL-WG GGF10 (Berlin) Session 4
+--------------------------------
+
+Friday 12th March 2004, 14:00 - 15:30 (local time)
+--------------------------------------------------
+
+
+Presentation by Ali on JSDL-WG Logistics: See:
+
+https://forge.gridforum.org/projects/jsdl-wg/document/JSDL-WG_GGF10_Session_4_-_JSDL_Deliverables_and_Logistics/en/1
+
+This slide set has been annotated from the meeting's discussions.
+
+
+JSDL-WG Logistics
+=================
+
+o Formal use-cases?
+  - Integrated into the specification. (proposed)
+  - Darren volunteered to collect the use-cases.
+  - NPi use-cases submitted as informational document.
+
+  - Do use-cases to provide documentation on why certain features are 
+    included & why something doesn't need to be included (limit scope).
+
+o Use-case collection needs to be done for each area as part of the 
+  specification. We need to come up with more scenarios for the general 
+  use-cases. Let’s make sure that we keep things simple and if they are 
+  complex then we should put in a use-case to indicate why they are 
+  required. This is a scenario of one of the use-cases.
+
+o Schema Volunteers:
+  - Looking for 4 people (Alain, Steve,....)
+  - Volunteers or nominations will be accepted.
+  - Make clearer what the work involves:
+    - Requirements,
+    - Review of other related work to express schema (OWL, XACML, etc.),
+    - Actual schema writing.
+
+o Translation tables terms:
+  - Start by collecting terms from existing systems.
+  - Cross-reference and make sure there is good coverage with current
+    proposals (and identify things missing).
+
+  - Look at work of monitoring groups as well (for naming, etc)
+    Network Measurements Group?
+  - Look at PBS, LSF, Condor, SGE, LoadLeveler initially.
+
+o JSDL Time line: (see presentation slides)
+
+o Teleconfs:
+  DoNM: 24th March, 16:00 GMT.
+  --- after that : andreas possible teleconf conflict check ---
+
+
+
+Presentation by Fred on JSDL Resource attributes: See:
+
+https://forge.gridforum.org/projects/jsdl-wg/document/JSDL-WG_GGF10_Session_4_-_JSDL_Resource_Attributes/en/1
+
+
+Resource Attributes' Presentation and Discussion
+================================================
+
+ o Resource attributes (continued...)
+
+  (...recap from yesterday... March 11th, Session 3...)
+
+   - How to express "want" vs. "need": (e.g. ranges) job needs at least 
+     4 nodes but wants 8.
+   - This is one of the issues for the schema. Also connection with 
+     agreement framework.
+
+ o Check out the Network Measurements WG for the network attributes.
+
+o Executable
+  - Ali: Must have an executable.
+  - Darren: OK for Type and Name.
+  - Staging doesn't require an executable(?)
+  - Executable "type": to allow for extension.
+  - Perceived overlap with CDDLM; need to work through relationship with 
+    them.
+    Dan: talk to CDDLM for describing web services as executables in the 
+         JSDL. They are defining this already.
+
+  - How to specify 'type' in such a way as to encourage people not to 
+    re-define standard 'types'.
+    - Be careful not to make assumptions about how will be expressed in 
+      the schema, or document them, e.g. is 'type' a string or an element 
+      or ....
+    - 'string' means free form or is there structure assumed.
+  - Executable Type should be narrowed down to prevent clashes.
+  - Bill: Why have type for the executable?? What is the use-case for 
+          the type.
+    - Why is type really needed? use-case -> ClearCase.
+  - Why isn't it a JobCategory...?
+  - Isn't 'type' just a label/tag?
+  - Need to make the usage clearer since it effects the way it should be 
+    structured.
+  - Would like to leave the 'binding' for late-binding (a type value under 
+    executable) rather than early-binding (enumerate executable_xxx in the 
+    schema)
+  - Bill: List the executable types that you can think of: java, web 
+    service, shell, etc. Type will be a string and flexible.
+
+o Argument
+  - Ordered list of 0 to many.
+  - It could be an XML fragment as well as a String, because an XML 
+    fragment is a string.
+  - Need to specify in the specification document that there is an order 
+    and precedence to the arguments.
+
+  - clarify this in the examples, i.e.
+    <argument>arg1 arg2<argument> = "arg1 arg2"
+
+    <argument>arg1<argument> = "arg1"
+    <argument>arg2<argument> = "arg2"
+
+o StandardInput
+  - rename to 'stdin'
+
+o StandardOutput
+  - rename to 'stdout'
+
+o StandardError
+  - rename to 'stderr'
+
+
+o Streaming the output rather than sending it to a file. For data and 
+  stdin/out/err.
+o Memory to memory data transfer issues.
+
+
+o Shell
+  - Need a "No Shell" value for the Shell attribute?
+  - Shell jobs are a type of job and so the Shell attribute should 
+    get folded into the job type.
+
+o Log
+  - Condor use-case for log file.
+  - Notification "never", "on job end", "on job transition", "on job fail"
+    Need a notification attribute.
+
+o Have an extra argument to allow for other systems.
+
+
+
+Bill on process - Suggestions for future working group sessions at GGFs:
+------------------------------------------------------------------------
+1. Put the specification document up and go through it rather than making 
+   a presentation with same.
+2. Put use-cases and examples of usage directly into the specification 
+   document.
+

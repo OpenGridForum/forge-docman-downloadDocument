@@ -1,0 +1,44 @@
+JSDL Teleconference 25 June 2008
+================================
+
+* Participants
+
+  Michel Drescher
+  Steve McGough
+  David Meredith
+  Steven Newhouse
+  Andreas Savva
+  Geoff Williams
+
+  Minutes: Andreas Savva
+  Apologies: Fred Brisard, Donal Fellows
+
+* Parameter Sweep
+** OGF23 review
+   - Summary of conclusion of OGF23 parameter sweep session sent to
+     the list is fine
+** Input files extension discussion
+   - It is not essential to have the extension written up for the main
+     Parameter sweep specification to be submitted for public
+     comment. But it is necessary to know how the extension can be
+     formulated and to make any changes necessary to accomodate it
+     before submitting
+  - David will update the wiki with the schema of the extension
+    proposal
+  - Geoff proposed making the parameter type abstract as one
+    possibility
+     - Location together with Placeholder should be abstracted into
+       the Parameter
+  - Action: Michel/David/Geoff to produce a proposal for the Abstract
+            Parameter by next call
+
+** Review of remaining issues
+*** Loop names/values
+   - artf6183: Closed as it is the same as artf6184
+   - artf6184: Agreed to two loops (Integer, Double). Geoff will do
+     the writeup.
+
+** Next parameter call
+   - Scheduled for July 9th
+   - Likely to move the time by one hour later to accomodate US
+     Pacific coast participants

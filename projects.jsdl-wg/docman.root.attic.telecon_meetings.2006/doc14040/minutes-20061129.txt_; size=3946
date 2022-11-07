@@ -1,0 +1,99 @@
+JSDL Conference call
+====================
+
+29 November 2006
+
+Participants:
+=============
+Andreas Savva, Fujitsu
+Fabio Benedetti, IBM
+Michel Drescher, Fujitsu
+Steve McGough, Imperial College
+
+Minutes: Michel Drescher
+
+Update on JSDL from OGSA-F2F
+===========================
+- All today's call participants were at the Noov. OGSA F2F (OGSA-16)
+  -- Hence no update is needed
+- AI-11.29a: Michel to prepare a XQuery live demo on a JSDL call of the 
+             work carried out for OGSA-WG
+
+JSDL 1.1
+========
+- Steven walks us through the tracker list for JSDL 1.1 
+  -- Some are very minor things
+     --- i.e. the schema is fixed, but the document is not
+- Artifact 5641 "Optional tags on extensions"
+  -- Currently a feature request
+  -- The group discusses the alternatives how to implement this 
+     feature request
+  -- How to do deal with the "MountSource" issue?
+     --- The group tends to (more or less) silently discard it from the spec
+         ---- This would be an incompatible change 
+  -- WS-Policy has a similar technique. This group defined attributes
+     that can be used for this purpose
+  -- WS-Addressing uses a similar technique
+  -- AI-11.29b: Fabio to provide relevant links how WS-Policy solves the 
+                "optional tag on extension" issue
+  -- AI-11.29c: Michel to provide relevant links how WS-Addressing solves the 
+                "optional tag on extension" issue
+  -- The group decides to postpone the decision and re-schedule it
+     for the next call after further discussion
+- Email archive on other issues
+  -- Chris Smith volunteered to check his email archive and give a list of
+     issues to feed in from the OGSA-HPCP group
+- No defined Errata process
+  -- OGF will set up one
+  -- Target date unknown
+  -- Errata process not applicable here as we are creating a new specification 
+     version that will covver all errata for the previous version
+
+New extension drafts
+====================
+- New SPMDApplication draft available
+- Andreas walsk the group through the latest draft
+- The issues narrowed down to three items
+- The most controversial issue so far was ch. 5.2
+  -- Should the XML element be nillable, or should another
+     mechanism be used?
+  -- Fabio suggests an alternative approach
+     --- Use the xs:choice technique
+     --- But JAX-RPC 1.1 doesn't support that
+  -- Nonetheless this is not a showstopper to hinder the document
+     to enter Public Comment
+- SPMDVariation uses the same extension technique that JSDL 1.0 uses
+  for OSEnumeration
+- Currently, the document specifies variations of MPI
+  -- Do we want to add PVM etc. to the document?
+  -- AI-11.29d: Andreas to into adding PVM into the SPMDVariationEnumeration
+  -- AI-11.29e: Andreas to include a MPICH version information to the document
+
+OGF-19 planning
+===============
+- We have to flesh out our plans
+- The call is right now inappropriate for this
+  -- There is JSDL 1.1
+  -- There is SPMDApplcation 
+- Iterate the agenda on ML and a future call
+  -- We should schedule at least two more calls in January for OGF-19 preparation
+     --- 17 January 2007
+     --- 24 January 2007
+ 
+Any other business
+==================
+- Date of next call
+  -- tentatively 13 December 2006, usual times
+- AI-11.29f: Steve to send a mail to the Area Directors regarding status updates
+
+Summary of Action Items of this call
+====================================
+AI-11.29a: Michel to prepare a XQuery live demo on a JSDL call of the 
+           work carried out for OGSA-WG
+AI-11.29b: Fabio to provide relevant links how WS-Policy solves the 
+           "optional tag on extension" issue
+AI-11.29c: Michel to provide relevant links how WS-Addressing solves the 
+           "optional tag on extension" issue
+AI-11.29d: Andreas to add PVM to SPMDVariationEnumeration element
+AI-11.29e: Andreas to include a MPICH version information to the document
+AI-11.29f: Steve to send a mail to the Area Directors regarding status updates

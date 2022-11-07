@@ -1,0 +1,2332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+      targetNamespace="http://www.icenigrid.org/JDML" 
+                xmlns="http://www.icenigrid.org/JDML" 
+   elementFormDefault="qualified">
+
+<!--=====================================================================-->
+<!-- SECTIONS -->
+<!--=====================================================================-->
+
+  <xsd:complexType name="SectionElement">
+    <xsd:choice minOccurs="1" maxOccurs="1">
+      <xsd:element ref="SectionValue"     minOccurs="1" maxOccurs="1" />
+      <xsd:element ref="SectionVariable"  minOccurs="1" maxOccurs="1" />
+      <xsd:element ref="SectionOperation" minOccurs="1" maxOccurs="1" />
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:complexType name="SectionValueElement">
+    <xsd:sequence>
+      <xsd:element ref="SectionEquation"    minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element ref="StringEquation"     minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element ref="StringListEquation" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element ref="RealEquation"       minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element ref="IntegerEquation"    minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element ref="BooleanEquation"    minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="SectionEquation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="SectionValueElement">
+          <xsd:attribute name="attribute" type="xsd:string" use="required" />
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element> 
+
+  <xsd:element name="SectionValue" type="SectionValueType" />
+
+  <xsd:complexType name="SectionValueType">
+    <xsd:complexContent>
+      <xsd:extension base="SectionValueElement" />
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:element name="SectionVariable" type="SectionVariableType" />
+
+  <xsd:complexType name="SectionVariableType">
+    <xsd:attribute name="context" type="ContextType" default="self"/>
+    <xsd:attribute name="name" type="xsd:string" /> <!-- use="required" /> -->
+  </xsd:complexType>
+
+  <xsd:element name="SectionOperation" type="SectionOperationType" />
+  
+  <xsd:complexType name="SectionOperationType">
+  </xsd:complexType>
+
+<!-- String Operations -->
+
+<!-- Unary operations (-+!~) - make no sense for sections -->
+
+<!-- Multiplicative (*/%) - make no sense for sections -->
+
+<!-- Addative (+-) - only + makes sense (section concatination) -->
+
+  <xsd:element name="SectionAddition" substitutionGroup="SectionOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="SectionOperationType">
+          <xsd:sequence>
+            <xsd:element name="SectionLHS" type="SectionElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="SectionRHS" type="SectionElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Shift (<< >> >>>) - make no sense for sections -->
+
+<!-- Relational (< <= > >=) - no sense for sections -->
+
+<!-- Equality (== != is isnt) - all make sense for sections -->
+
+  <xsd:element name="SectionEquals" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="SectionLHS" type="SectionElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="SectionRHS" type="SectionElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="SectionNotEqual" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="SectionLHS" type="SectionElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="SectionRHS" type="SectionElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="SectionIs" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="SectionLHS" type="SectionElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="SectionRHS" type="SectionElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="SectionIsnt" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="SectionLHS" type="SectionElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="SectionRHS" type="SectionElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Bitwise AND - no sense -->
+
+<!-- Bitwise XOR - no sense -->
+
+<!-- Bitwise OR - no sense -->
+
+<!-- Logical AND - no sense -->
+
+<!-- Logical OR - no sense -->
+
+<!-- Conditional - makes sense - well kind of... -->
+
+  <xsd:element name="ConditionalSectionResult" 
+       substitutionGroup="SectionOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="SectionOperationType">
+          <xsd:sequence>
+            <xsd:element name="BooleanTest"       type="BooleanElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="SectionTrueResult"  type="SectionElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="SectionFalseResult" type="SectionElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Compound () statment -->
+
+  <xsd:element name="SectionCompound" substitutionGroup="SectionOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="SectionOperationType">
+          <xsd:sequence>
+            <xsd:choice minOccurs="1" maxOccurs="1">
+              <xsd:element ref="SectionValue"    minOccurs="1" maxOccurs="1"/>
+              <xsd:element ref="SectionVariable" minOccurs="1" maxOccurs="1"/>
+              <xsd:element ref="SectionOperation"
+                   minOccurs="1" maxOccurs="1" />
+            </xsd:choice>
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--=====================================================================-->
+<!-- STRINGS -->
+<!--=====================================================================-->
+
+  <xsd:complexType name="StringElement">
+    <xsd:choice minOccurs="1" maxOccurs="1">
+      <xsd:element ref="StringValue"     minOccurs="1" maxOccurs="1" />
+      <xsd:element ref="StringVariable"  minOccurs="1" maxOccurs="1" />
+      <xsd:element ref="StringOperation" minOccurs="1" maxOccurs="1" />
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:element name="StringEquation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="StringElement">
+          <xsd:attribute name="attribute" type="xsd:string" use="required" />
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="StringValue" type="StringValueType" />
+
+  <xsd:complexType name="StringValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:element name="StringVariable" type="StringVariableType" />
+
+  <xsd:complexType name="StringVariableType">
+    <xsd:attribute name="context" type="ContextType" default="self"/>
+    <xsd:attribute name="name" type="xsd:string" /> <!-- use="required" /> -->
+  </xsd:complexType>
+
+  <xsd:element name="StringOperation" type="StringOperationType" />
+  
+  <xsd:complexType name="StringOperationType">
+  </xsd:complexType>
+
+<!-- String Operations -->
+
+<!-- Unary operations (-+!~) - make no sense for strings -->
+
+<!-- Multiplicative (*/%) - make no sense for strings -->
+
+<!-- Addative (+-) - only + makes sense (string concatination) -->
+
+  <xsd:element name="StringAddition" substitutionGroup="StringOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="StringOperationType">
+          <xsd:sequence>
+            <xsd:element name="StringLHS" type="StringElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="StringRHS" type="StringElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Shift (<< >> >>>) - make no sense for strings -->
+
+<!-- Relational (< <= > >=) - some sense if comparing strings -->
+
+  <xsd:element name="StringLessThan" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="StringLHS" type="StringElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="StringRHS" type="StringElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="StringLessThanOrEqual" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="StringLHS" type="StringElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="StringRHS" type="StringElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="StringGreaterThan" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="StringLHS" type="StringElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="StringRHS" type="StringElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="StringGreaterThanOrEqual" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="StringLHS" type="StringElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="StringRHS" type="StringElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Equality (== != is isnt) - all make sense for strings -->
+
+  <xsd:element name="StringEquals" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="StringLHS" type="StringElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="StringRHS" type="StringElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="StringNotEqual" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="StringLHS" type="StringElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="StringRHS" type="StringElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="StringIs" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="StringLHS" type="StringElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="StringRHS" type="StringElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="StringIsnt" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="StringLHS" type="StringElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="StringRHS" type="StringElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Bitwise AND - no sense -->
+
+<!-- Bitwise XOR - no sense -->
+
+<!-- Bitwise OR - no sense -->
+
+<!-- Logical AND - no sense -->
+
+<!-- Logical OR - no sense -->
+
+<!-- Conditional - makes sense-->
+
+  <xsd:element name="ConditionalStringResult" 
+       substitutionGroup="StringOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="StringOperationType">
+          <xsd:sequence>
+            <xsd:element name="BooleanTest"       type="BooleanElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="StringTrueResult"  type="StringElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="StringFalseResult" type="StringElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Compound () statment -->
+
+  <xsd:element name="StringCompound" substitutionGroup="StringOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="StringOperationType">
+          <xsd:sequence>
+            <xsd:choice minOccurs="1" maxOccurs="1">
+              <xsd:element ref="StringValue"     minOccurs="1" maxOccurs="1"/>
+              <xsd:element ref="StringVariable"  minOccurs="1" maxOccurs="1"/>
+              <xsd:element ref="StringOperation" minOccurs="1" maxOccurs="1"/>
+            </xsd:choice>
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--=====================================================================-->
+<!-- STRING LISTS -->
+<!--=====================================================================-->
+
+  <xsd:complexType name="StringListElement">
+    <xsd:choice minOccurs="1" maxOccurs="1">
+      <xsd:element ref="StringListVariable"  minOccurs="1" maxOccurs="1" />
+      <xsd:element ref="StringListOperation" minOccurs="1" maxOccurs="1" />
+      <xsd:element ref="StringListValue"     minOccurs="1" maxOccurs="1" />
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:element name="StringListEquation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="StringListElement">
+          <xsd:attribute name="attribute" type="xsd:string" use="required" />
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:complexType name="StringListVariableElement">
+    <xsd:choice minOccurs="1" maxOccurs="1">
+      <xsd:element ref="StringListVariable" minOccurs="1" maxOccurs="1"/>
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:element name="StringListValue" type="StringListValueType" />
+
+  <xsd:complexType name="StringListValueType">
+    <xsd:choice minOccurs="1" maxOccurs="unbounded">
+        <xsd:element ref="StringValue"     minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="StringVariable"  minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="StringOperation" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:element name="StringListVariable" type="StringListVariableType" />
+
+  <xsd:complexType name="StringListVariableType">
+    <xsd:attribute name="context" type="ContextType" default="self" />
+    <xsd:attribute name="name" type="xsd:string" /> 
+        <!--use="required"/> -->
+  </xsd:complexType>
+
+  <xsd:element name="StringListOperation" type="StringListOperationType" />
+
+  <xsd:complexType name="StringListOperationType">
+  </xsd:complexType>
+
+<!-- String List Operations -->
+
+<!-- Unary operations (-+!~) - make no sense for string Lists -->
+
+<!-- Multiplicative (*/%) - make no sense for string lists -->
+
+<!-- Addative (+-) - only + makes sense (string list concatination) -->
+
+  <xsd:element name="StringListAddition" substitutionGroup="StringListOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="StringListOperationType">
+          <xsd:sequence>
+            <xsd:element name="StringListLHS" type="StringListElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="StringListRHS" type="StringListElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Shift (<< >> >>>) - make no sense for string lists -->
+
+<!-- Relational (< <= > >=) - makes no sense if comparing string lists -->
+
+<!-- Equality (== != is isnt) - all make sense for string lists -->
+
+  <xsd:element name="StringListEquals" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="StringListLHS" type="StringListElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="StringListRHS" type="StringListElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="StringListNotEqual" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="StringListLHS" type="StringListElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="StringListRHS" type="StringListElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="StringListIs" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="StringListLHS" type="StringListElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="StringListRHS" type="StringListElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="StringListIsnt" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="StringListLHS" type="StringListElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="StringListRHS" type="StringListElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Bitwise AND - no sense -->
+
+<!-- Bitwise XOR - no sense -->
+
+<!-- Bitwise OR - no sense -->
+
+<!-- Logical AND - no sense -->
+
+<!-- Logical OR - no sense -->
+
+<!-- Conditional - makes sense-->
+
+  <xsd:element name="ConditionalStringListResult" 
+       substitutionGroup="StringListOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="StringListOperationType">
+          <xsd:sequence>
+            <xsd:element name="BooleanTest"       type="BooleanElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="StringListTrueResult"  type="StringListElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="StringListFalseResult" type="StringListElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Compound () statment -->
+
+  <xsd:element name="StringListCompound" substitutionGroup="StringListOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="StringListOperationType">
+          <xsd:sequence>
+            <xsd:choice minOccurs="1" maxOccurs="1">
+              <xsd:element ref="StringListValue"     minOccurs="1" maxOccurs="1" />
+              <xsd:element ref="StringListVariable"  minOccurs="1" maxOccurs="1" />
+              <xsd:element ref="StringListOperation" minOccurs="1" maxOccurs="1" />
+            </xsd:choice>
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--=====================================================================-->
+<!-- REAL -->
+<!--=====================================================================-->
+
+  <xsd:complexType name="RealElement">
+    <xsd:choice minOccurs="1" maxOccurs="1">
+      <xsd:element ref="RealVariable"  minOccurs="1" maxOccurs="1" />
+      <xsd:element ref="RealValue"     minOccurs="1" maxOccurs="1" />
+      <xsd:element ref="RealOperation" minOccurs="1" maxOccurs="1" />
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:element name="RealEquation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="RealElement">
+          <xsd:attribute name="attribute" type="xsd:string" use="required" />	
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="RealValue" type="RealValueType" />
+
+  <xsd:complexType name="RealValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:double">
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:element name="RealVariable" type="RealVariableType" />
+
+  <xsd:complexType name="RealVariableType">
+    <xsd:attribute name="context" type="ContextType" default="self" />
+    <xsd:attribute name="name" type="xsd:string" /> <!-- use="required" /> -->
+  </xsd:complexType>
+
+  <xsd:element name="RealOperation" type="RealOperationType" />
+
+  <xsd:complexType name="RealOperationType">
+  </xsd:complexType>
+
+<!-- Real Operations -->
+
+<!-- Unary operations (-+!~) - +/-/~ make sense for doubles -->
+
+  <xsd:element name="RealUnaryPositive" substitutionGroup="RealOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="RealOperationType">
+          <xsd:choice minOccurs="1" maxOccurs="1">
+            <xsd:element ref="RealVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealOperation" minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealValue"     minOccurs="1" maxOccurs="1" />
+          </xsd:choice>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="RealUnaryNegative" substitutionGroup="RealOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="RealOperationType">
+          <xsd:choice minOccurs="1" maxOccurs="1">
+            <xsd:element ref="RealVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealOperation" minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealValue"     minOccurs="1" maxOccurs="1" />
+          </xsd:choice>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="RealOnesComplement" substitutionGroup="RealOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="RealOperationType">
+          <xsd:choice minOccurs="1" maxOccurs="1">
+            <xsd:element ref="RealVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealOperation" minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealValue"     minOccurs="1" maxOccurs="1" />
+          </xsd:choice>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Multiplicative (*/%) - make sense for doubles -->
+
+  <xsd:element name="RealMultiplication" substitutionGroup="RealOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="RealOperationType">
+          <xsd:sequence>
+            <xsd:element name="RealLHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealRHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="RealDivision" substitutionGroup="RealOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="RealOperationType">
+          <xsd:sequence>
+            <xsd:element name="RealLHS" type="RealElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealRHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="RealRemainder" substitutionGroup="RealOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="RealOperationType">
+          <xsd:sequence>
+            <xsd:element name="RealLHS" type="RealElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealRHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Addative (+-) - makes sense for doubles -->
+
+  <xsd:element name="RealAddition" substitutionGroup="RealOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="RealOperationType">
+          <xsd:sequence>
+            <xsd:element name="RealLHS" type="RealElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealRHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="RealSubtraction" substitutionGroup="RealOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="RealOperationType">
+          <xsd:sequence>
+            <xsd:element name="RealLHS" type="RealElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealRHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Shift (<< >> >>>) - make no sense for strings -->
+
+  <xsd:element name="RealShiftLeft" substitutionGroup="RealOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="RealOperationType">
+          <xsd:sequence>
+            <xsd:element name="RealLHS" type="RealElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealRHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="RealShiftRight" substitutionGroup="RealOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="RealOperationType">
+          <xsd:sequence>
+            <xsd:element name="RealLHS" type="RealElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealRHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="RealUnsignedShiftRight" substitutionGroup="RealOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="RealOperationType">
+          <xsd:sequence>
+            <xsd:element name="RealLHS" type="RealElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealRHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Relational (< <= > >=) - make sense for doubles -->
+
+  <xsd:element name="RealLessThan" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="RealLHS" type="RealElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealRHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="RealLessThanOrEquals" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="RealLHS" type="RealElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealRHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="RealGreaterThan" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="RealLHS" type="RealElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealRHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="RealGreaterThanOrEquals" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="RealLHS" type="RealElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealRHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Equality (== != is isnt) - all make sense for doubles -->
+
+  <xsd:element name="RealEquals" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="RealLHS" type="RealElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealRHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="RealNotEqual" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="RealLHS" type="RealElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealRHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="RealIs" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="RealLHS" type="RealElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealRHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="RealIsnt" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="RealLHS" type="RealElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealRHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Bitwise AND - makes sense -->
+
+  <xsd:element name="RealBitwiseAND" substitutionGroup="RealOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="RealOperationType">
+          <xsd:sequence>
+            <xsd:element name="RealLHS" type="RealElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealRHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Bitwise XOR - no sense -->
+
+  <xsd:element name="RealBitwiseXOR" substitutionGroup="RealOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="RealOperationType">
+          <xsd:sequence>
+            <xsd:element name="RealLHS" type="RealElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealRHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Bitwise OR - no sense -->
+
+  <xsd:element name="RealBitwiseOR" substitutionGroup="RealOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="RealOperationType">
+          <xsd:sequence>
+            <xsd:element name="RealLHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealRHS" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Logical AND - no sense -->
+
+<!-- Logical OR - no sense -->
+
+<!-- Conditional - makes sense-->
+
+  <xsd:element name="ConditionalRealResult" 
+       substitutionGroup="RealOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="RealOperationType">
+          <xsd:sequence>
+            <xsd:element name="BooleanTest"     type="BooleanElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealTrueResult"  type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="RealFalseResult" type="RealElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Compound () statment -->
+
+  <xsd:element name="RealCompound" substitutionGroup="RealOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="RealOperationType">
+          <xsd:sequence>
+            <xsd:choice minOccurs="1" maxOccurs="1">
+              <xsd:element ref="RealValue"     minOccurs="1" maxOccurs="1" />
+              <xsd:element ref="RealVariable"  minOccurs="1" maxOccurs="1" />
+              <xsd:element ref="RealOperation" minOccurs="1" maxOccurs="1" />
+            </xsd:choice>
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--=====================================================================-->
+<!-- INTEGER -->
+<!--=====================================================================-->
+
+  <xsd:complexType name="IntegerElement">
+    <xsd:choice minOccurs="1" maxOccurs="1">
+      <xsd:element ref="IntegerVariable"  minOccurs="1" maxOccurs="1" />
+      <xsd:element ref="IntegerValue"     minOccurs="1" maxOccurs="1" />
+      <xsd:element ref="IntegerOperation" minOccurs="1" maxOccurs="1" />
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:element name="IntegerEquation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerElement">
+          <xsd:attribute name="attribute" type="xsd:string" use="required" />
+        </xsd:extension>
+      </xsd:complexContent>	
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="IntegerValue" type="IntegerValueType" />
+
+  <xsd:complexType name="IntegerValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:integer">
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:element name="IntegerVariable" type="IntegerVariableType" />
+
+  <xsd:complexType name="IntegerVariableType">
+    <xsd:attribute name="context" type="ContextType" default="self" />
+    <xsd:attribute name="name" type="xsd:string" /> <!-- use="required" /> -->
+  </xsd:complexType>
+
+  <xsd:element name="IntegerOperation" type="IntegerOperationType" />
+
+  <xsd:complexType name="IntegerOperationType">
+  </xsd:complexType>
+
+<!-- Integer Operations -->
+
+<!-- Unary operations (-+!~) - +/-/~ make sense for doubles -->
+
+  <xsd:element name="IntegerUnaryPositive" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:choice minOccurs="1" maxOccurs="1">
+            <xsd:element ref="IntegerVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerOperation" minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerValue"     minOccurs="1" maxOccurs="1" />
+          </xsd:choice>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="IntegerUnaryNegative" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:choice minOccurs="1" maxOccurs="1">
+            <xsd:element ref="IntegerVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerOperation" minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerValue"     minOccurs="1" maxOccurs="1" />
+          </xsd:choice>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="IntegerOnesComplement" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:choice minOccurs="1" maxOccurs="1">
+            <xsd:element ref="IntegerVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerOperation" minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerValue"     minOccurs="1" maxOccurs="1" />
+          </xsd:choice>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Multiplicative (*/%) - make sense for doubles -->
+
+  <xsd:element name="IntegerMultiplication" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:sequence>
+            <xsd:element name="IntegerLHS" type="IntegerElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerRHS" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="IntegerDivision" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:sequence>
+            <xsd:element name="IntegerLHS" type="IntegerElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerRHS" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="IntegerRemainder" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:sequence>
+            <xsd:element name="IntegerLHS" type="IntegerElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerRHS" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Addative (+-) - makes sense for doubles -->
+
+  <xsd:element name="IntegerAddition" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:sequence>
+            <xsd:element name="IntegerLHS" type="IntegerElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerRHS" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="IntegerSubtraction" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:sequence>
+            <xsd:element name="IntegerLHS" type="IntegerElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerRHS" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Shift (<< >> >>>) - make no sense for strings -->
+
+  <xsd:element name="IntegerShiftLeft" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:sequence>
+            <xsd:element name="IntegerLHS" type="IntegerElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerRHS" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="IntegerShiftRight" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:sequence>
+            <xsd:element name="IntegerLHS" type="IntegerElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerRHS" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="IntegerUnsignedShiftRight" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:sequence>
+            <xsd:element name="IntegerLHS" type="IntegerElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerRHS" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Relational (< <= > >=) - make sense for doubles -->
+
+  <xsd:element name="IntegerLessThan" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="IntegerLHS" type="IntegerElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerRHS" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="IntegerLessThanOrEquals" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="IntegerLHS" type="IntegerElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerRHS" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="IntegerGreaterThan" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="IntegerLHS" type="IntegerElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerRHS" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="IntegerGreaterThanOrEquals" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="IntegerLHS" type="IntegerElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerRHS" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Equality (== != is isnt) - all make sense for doubles -->
+
+  <xsd:element name="IntegerEquals" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="IntegerLHS" type="IntegerElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerRHS" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="IntegerNotEqual" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="IntegerLHS" type="IntegerElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerRHS" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="IntegerIs" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="IntegerLHS" type="IntegerElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerRHS" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="IntegerIsnt" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="IntegerLHS" type="IntegerElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerRHS" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Bitwise AND - makes sense -->
+
+  <xsd:element name="IntegerBitwiseAND" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:sequence>
+            <xsd:element name="IntegerLHS" type="IntegerElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerRHS" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Bitwise XOR - no sense -->
+
+  <xsd:element name="IntegerBitwiseXOR" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:sequence>
+            <xsd:element name="IntegerLHS" type="IntegerElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerRHS" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Bitwise OR - no sense -->
+
+  <xsd:element name="IntegerBitwiseOR" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:sequence>
+            <xsd:element name="IntegerLHS" type="IntegerElement" 
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerRHS" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Logical AND - no sense -->
+
+<!-- Logical OR - no sense -->
+
+<!-- Conditional - makes sense-->
+
+  <xsd:element name="ConditionalIntegerResult" 
+       substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:sequence>
+            <xsd:element name="BooleanTest"       type="BooleanElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerTrueResult"  type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="IntegerFalseResult" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Compound () statment -->
+
+  <xsd:element name="IntegerCompound" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:sequence>
+            <xsd:choice minOccurs="1" maxOccurs="1">
+              <xsd:element ref="IntegerValue"    minOccurs="1" maxOccurs="1"/>
+              <xsd:element ref="IntegerVariable" minOccurs="1" maxOccurs="1"/>
+              <xsd:element ref="IntegerOperation"
+                   minOccurs="1" maxOccurs="1" />
+            </xsd:choice>
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--=====================================================================-->
+<!-- BOOLEAN -->
+<!--=====================================================================-->
+
+  <xsd:complexType name="BooleanElement">
+    <xsd:choice minOccurs="1" maxOccurs="1">
+      <xsd:element ref="BooleanVariable"  minOccurs="1" maxOccurs="1" />
+      <xsd:element ref="BooleanValue"     minOccurs="1" maxOccurs="1" />
+      <xsd:element ref="BooleanOperation" minOccurs="1" maxOccurs="1" />
+    </xsd:choice>
+  </xsd:complexType>
+
+  <xsd:element name="BooleanEquation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanElement">
+          <xsd:attribute name="attribute" type="xsd:string" use="required" />	
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="BooleanValue" type="BooleanValueType" />
+
+  <xsd:complexType name="BooleanValueType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:element name="BooleanVariable" type="BooleanVariableType" />
+
+  <xsd:complexType name="BooleanVariableType">
+    <xsd:attribute name="name" type="xsd:string" /> <!-- breaks use="required" /> -->
+    <xsd:attribute name="context" type="ContextType" default="self"/>
+  </xsd:complexType>
+
+  <xsd:element name="BooleanOperation" type="BooleanOperationType" />
+
+  <xsd:complexType name="BooleanOperationType">
+  </xsd:complexType>
+
+
+<!-- Boolean Operations -->
+
+<!-- Unary operations (-+!~) - ! make sense for booleans -->
+
+  <xsd:element name="BooleanNot" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:choice minOccurs="1" maxOccurs="1">
+              <xsd:element ref="BooleanValue"    minOccurs="1" maxOccurs="1"/>
+              <xsd:element ref="BooleanVariable" minOccurs="1" maxOccurs="1"/>
+              <xsd:element ref="BooleanOperation"
+                   minOccurs="1" maxOccurs="1" />
+            </xsd:choice>
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Multiplicative (*/%) - make no sense for booleans -->
+
+<!-- Addative (+-) - no sense -->
+
+<!-- Shift (<< >> >>>) - make no sense for booleans -->
+
+<!-- Relational (< <= > >=) - No sense -->
+
+<!-- Equality (== != is isnt) - all make sense for strings -->
+
+  <xsd:element name="BooleanEquals" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="BooleanLHS" type="BooleanElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="BooleanRHS" type="BooleanElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="BooleanNotEqual" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="BooleanLHS" type="BooleanElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="BooleanRHS" type="BooleanElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="BooleanIs" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="BooleanLHS" type="BooleanElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="BooleanRHS" type="BooleanElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="BooleanIsnt" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="BooleanLHS" type="BooleanElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="BooleanRHS" type="BooleanElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Bitwise AND - no sense -->
+
+<!-- Bitwise XOR - no sense -->
+
+<!-- Bitwise OR - no sense -->
+
+<!-- Logical AND - sense -->
+
+  <xsd:element name="LogicalAND" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="BooleanLHS" type="BooleanElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="BooleanRHS" type="BooleanElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Logical OR - makes sense -->
+
+  <xsd:element name="LogicalOR" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="BooleanLHS" type="BooleanElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="BooleanRHS" type="BooleanElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Conditional - makes sense-->
+
+  <xsd:element name="ConditionalBooleanResult" 
+       substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="BooleanTest"       type="BooleanElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="BooleanTrueResult"  type="BooleanElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="BooleanFalseResult" type="BooleanElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Compound () statment -->
+
+  <xsd:element name="BooleanCompound" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:choice minOccurs="1" maxOccurs="1">
+              <xsd:element ref="BooleanValue"     minOccurs="1" maxOccurs="1" />
+              <xsd:element ref="BooleanVariable"  minOccurs="1" maxOccurs="1" />
+              <xsd:element ref="BooleanOperation" minOccurs="1" maxOccurs="1" />
+            </xsd:choice>
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--=====================================================================-->
+<!-- Functions provided by ClassAdds -->
+<!--=====================================================================-->
+<!-- Type predicates (Non-Strict) -->
+<!--  IsUndefined(V) - True iff V is the undefined value. -->
+
+  <xsd:complexType name="CoreBooleanFunctionOnePeram" abstract="true">
+    <xsd:complexContent>
+      <xsd:extension base="BooleanOperationType">
+        <xsd:sequence>
+          <xsd:choice minOccurs="1" maxOccurs="1">
+            <xsd:element ref="BooleanValue"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="BooleanVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="BooleanOperation" minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringValue"      minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringVariable"   minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringOperation"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealValue"        minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealVariable"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealOperation"    minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerValue"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerOperation" minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="SectionValue"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="SectionVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="SectionOperation" minOccurs="1" maxOccurs="1" />
+          </xsd:choice>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="CoreBooleanFunctionOneTimePeram" abstract="true">
+    <xsd:complexContent>
+      <xsd:extension base="BooleanOperationType">
+        <xsd:sequence>
+          <xsd:choice minOccurs="1" maxOccurs="1">
+            <xsd:element ref="StringValue"      minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringVariable"   minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringOperation"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealValue"        minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealVariable"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealOperation"    minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerValue"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerOperation" minOccurs="1" maxOccurs="1" />
+          </xsd:choice>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="CoreIntegerFunctionOneTimePeram" abstract="true">
+    <xsd:complexContent>
+      <xsd:extension base="IntegerOperationType">
+        <xsd:sequence>
+          <xsd:choice minOccurs="1" maxOccurs="1">
+            <xsd:element ref="StringValue"      minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringVariable"   minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringOperation"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealValue"        minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealVariable"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealOperation"    minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerValue"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerOperation" minOccurs="1" maxOccurs="1" />
+          </xsd:choice>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="CoreStringFunctionOneStringParam" abstract="true">
+    <xsd:complexContent>
+      <xsd:extension base="StringOperationType">
+        <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+          <xsd:choice>
+            <xsd:element ref="StringValue"    minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringVariable" minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringOperation" minOccurs="1" maxOccurs="1"/>
+          </xsd:choice>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="CoreIntegerFunctionOneParam" abstract="true">
+    <xsd:complexContent>
+      <xsd:extension base="IntegerOperationType">
+        <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+          <xsd:choice>
+            <xsd:element ref="IntegerValue"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerOperation" minOccurs="1" maxOccurs="1"/>
+            <xsd:element ref="RealValue"        minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealVariable"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealOperation"    minOccurs="1" maxOccurs="1"/>
+          </xsd:choice>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:element name="IsUndefined" type="CoreBooleanFunctionOnePeram" 
+       substitutionGroup="BooleanOperation" />
+
+<!--  IsError(V) - True iff V is the error value. -->
+
+  <xsd:element name="IsError" type="CoreBooleanFunctionOnePeram"
+       substitutionGroup="BooleanOperation" />
+
+<!--  IsString(V) - True iff V is a string value. -->
+
+  <xsd:element name="IsString" type="CoreBooleanFunctionOnePeram"
+       substitutionGroup="BooleanOperation" />
+
+<!--  IsList(V) - True iff V is a list value. -->
+
+  <xsd:element name="IsStringList" type="CoreBooleanFunctionOnePeram"
+       substitutionGroup="BooleanOperation" />
+
+<!--  IsClassad(V) - True iff V is a classad value. -->
+
+  <xsd:element name="IsClassAdd" type="CoreBooleanFunctionOnePeram"
+       substitutionGroup="BooleanOperation" />
+
+
+<!--  IsBoolean(V) - True iff V is a boolean value. -->
+
+  <xsd:element name="IsBoolean" type="CoreBooleanFunctionOnePeram"
+       substitutionGroup="BooleanOperation" />
+
+<!--  IsAbsTime(V) - True iff V is an absolute time value. -->
+
+  <xsd:element name="IsAbsTime" type="CoreBooleanFunctionOneTimePeram"
+       substitutionGroup="BooleanOperation" />
+
+<!--  IsRelTime(V) - True iff V is a relative time value. -->
+
+  <xsd:element name="IsRelTime" type="CoreBooleanFunctionOneTimePeram"
+       substitutionGroup="BooleanOperation" />
+
+<!-- List Membership -->
+<!--  Member(V,L) - True iff scalar value V is a member of the list L. -->
+
+  <xsd:element name="Member" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="StringSearch" type="StringElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="StringList"   type="StringListElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--  IsMember(V,L) - Like Member, but uses is for comparison instead of ==.
+      Not strict on first argument. -->
+
+  <xsd:element name="IsMember" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="StringSearch" type="StringElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="StringList"   type="StringListElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Time Queries   -->
+<!-- CurrentTime() - Get current time (absolute time) -->
+
+  <xsd:element name="CurrentTime" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:sequence>
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--  TimeZoneOffset() - Get time zone offset as a relative time -->
+
+  <xsd:element name="TimeZoneOffset" substitutionGroup="RealOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="RealOperationType">
+          <xsd:sequence>
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--  DayTime() - Get current time as relative time since midnight. -->
+
+  <xsd:element name="DayTime" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:sequence>
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Time Construction -->
+
+<!--  MakeDate(M,D,Y) - Create an absolute time value of midnight for the given day. M 
+can be either numeric or string (e.g., "jan"). -->
+
+  <xsd:element name="MakeDate" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:sequence>
+            <xsd:choice>
+              <xsd:element name="NumericMonth" type="MonthNum"
+                   minOccurs="1" maxOccurs="1" />
+              <xsd:element name="StringMonth" type="MonthName"
+                   minOccurs="1" maxOccurs="1" />
+            </xsd:choice>
+            <xsd:element name="NumericDay" type="DayNum"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="NumericYear" type="YearNum"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+	<xsd:simpleType name="MonthNum">
+		<xsd:restriction base="xsd:integer">
+			<xsd:minInclusive value="0" />
+			<xsd:maxInclusive value="11" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="DayNum">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:minInclusive value="1" />
+			<xsd:maxInclusive value="31" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="YearNum">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:minInclusive value="1901" />
+			<xsd:maxInclusive value="9999" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="MonthName">
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="jan" />
+			<xsd:enumeration value="feb" />
+			<xsd:enumeration value="mar" />
+			<xsd:enumeration value="apr" />
+			<xsd:enumeration value="may" />
+			<xsd:enumeration value="jun" />
+			<xsd:enumeration value="jul" />
+			<xsd:enumeration value="aug" />
+			<xsd:enumeration value="sep" />
+			<xsd:enumeration value="oct" />
+			<xsd:enumeration value="nov" />
+			<xsd:enumeration value="dec" />
+			<xsd:enumeration value="january" />
+			<xsd:enumeration value="february" />
+			<xsd:enumeration value="march" />
+			<xsd:enumeration value="april" />
+			<xsd:enumeration value="may" />
+			<xsd:enumeration value="june" />
+			<xsd:enumeration value="july" />
+			<xsd:enumeration value="august" />
+			<xsd:enumeration value="september" />
+			<xsd:enumeration value="october" />
+			<xsd:enumeration value="november" />
+			<xsd:enumeration value="december" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+<!--  MakeAbsTime(N) - Convert numeric value N into an absolute time (number of 
+seconds past UNIX epoch). -->
+
+  <xsd:element name="MakeAbsTime" type="CoreIntegerFunctionOneTimePeram"
+       substitutionGroup="IntegerOperation" />
+
+<!--  MakeRelTime(N) - Convert numeric value N into a relative time (number of seconds in 
+interval). -->
+
+  <xsd:element name="MakeRelTime" type="CoreIntegerFunctionOneTimePeram"
+       substitutionGroup="IntegerOperation" />
+
+<!-- Absolute Time Component Extraction -->
+
+<!--  GetYear(A) - Get integer year (A=absolute time) -->
+
+  <xsd:element name="GetYear" type="CoreIntegerFunctionOneTimePeram"
+       substitutionGroup="IntegerOperation" />
+
+<!--  GetMonth(A) - 0 = jan; . . . .; 11 = dec -->
+
+  <xsd:element name="GetMonth" type="CoreIntegerFunctionOneTimePeram"
+       substitutionGroup="IntegerOperation" />
+
+<!--  GetDayOfYear(A) - 0 . . . .365 (for leap year) -->
+
+  <xsd:element name="GetDayOfYear" type="CoreIntegerFunctionOneTimePeram"
+       substitutionGroup="IntegerOperation" />
+
+<!--  GetDayOfMonth(A) - 1 . . . .31 -->
+
+  <xsd:element name="GetDayOfMonth" type="CoreIntegerFunctionOneTimePeram"
+       substitutionGroup="IntegerOperation" />
+
+<!--  GetDayOfWeek(A) - 0 . . . .6 -->
+
+  <xsd:element name="GetDayOfWeek" type="CoreIntegerFunctionOneTimePeram"
+       substitutionGroup="IntegerOperation" />
+
+<!--  GetHours(A) - 0 . . . .23 -->
+
+  <xsd:element name="GetHours" type="CoreIntegerFunctionOneTimePeram"
+       substitutionGroup="IntegerOperation" />
+
+<!--  GetMinutes(A) - 0 . . . .59 -->
+
+  <xsd:element name="GetMinutes" type="CoreIntegerFunctionOneTimePeram"
+       substitutionGroup="IntegerOperation" />
+
+<!--  GetSeconds(A) - 0 . . . .61 (for leap seconds) -->
+
+  <xsd:element name="GetSeconds" type="CoreIntegerFunctionOneTimePeram"
+       substitutionGroup="IntegerOperation" />
+
+<!-- Relative Time Component Extraction -->
+
+<!--  GetDays(R) - Get days component in the interval (R= relative time) -->
+
+  <xsd:element name="RelativeGetDays" type="CoreIntegerFunctionOneTimePeram"
+       substitutionGroup="IntegerOperation" />
+
+<!--  GetHours(R) - 0 . . . .23 -->
+
+  <xsd:element name="RelativeGetHours" type="CoreIntegerFunctionOneTimePeram"
+       substitutionGroup="IntegerOperation" />
+
+<!--  GetMinutes(R) - 0 . . . .59 -->
+
+  <xsd:element name="RelativeGetMinutes" type="CoreIntegerFunctionOneTimePeram"
+       substitutionGroup="IntegerOperation" />
+
+<!--  GetSeconds(R)  - 0 . . . .59 -->
+
+  <xsd:element name="RelativeGetSeconds" type="CoreIntegerFunctionOneTimePeram"
+       substitutionGroup="IntegerOperation" />
+
+<!-- Time Conversion  -->
+
+<!--  InDays(T) - Convert time value into number of days -->
+
+  <xsd:element name="InDays" type="CoreIntegerFunctionOneTimePeram"
+       substitutionGroup="IntegerOperation" />
+
+<!--  InHours(T) - Convert time value into number of hours -->
+
+  <xsd:element name="InHours" type="CoreIntegerFunctionOneTimePeram"
+       substitutionGroup="IntegerOperation" />
+
+<!--  InMinutes(T) - Convert time value into number of minutes -->
+
+  <xsd:element name="InMinutes" type="CoreIntegerFunctionOneTimePeram"
+       substitutionGroup="IntegerOperation" />
+
+<!--  InSeconds(T) - Convert time value into number of seconds  -->
+
+  <xsd:element name="InSeconds" type="CoreIntegerFunctionOneTimePeram"
+       substitutionGroup="IntegerOperation" />
+
+<!-- String Functions -->
+
+<!--  StrCat(V1, . . . , Vn) - Concatenates string representations of values V1 
+      through Vn -->
+
+  <xsd:element name="StringCat" type="CoreStringFunctionOneStringParam" 
+       substitutionGroup="StringOperation" />
+
+<!--  ToUpper(S) - Upcases string S -->
+
+  <xsd:element name="ToUpper" type="CoreStringFunctionOneStringParam" 
+       substitutionGroup="StringOperation" />
+
+<!--ToLower(S) - Downcases string S -->
+
+  <xsd:element name="ToLower" type="CoreStringFunctionOneStringParam" 
+       substitutionGroup="StringOperation" />
+
+<!--  SubStr(S,offset [,len]) - Returns substring of S. Negative offsets and lengths
+      count from the end of the string. -->
+
+  <xsd:element name="SubStr" substitutionGroup="StringOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="StringOperationType">
+          <xsd:sequence>
+            <xsd:element name="String" type="StringElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="Offset" type="IntegerElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="Length" type="IntegerElement"
+                 minOccurs="0" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--  RegExp(P,S) - Checks if S matches pattern P (both args must be strings). -->
+
+  <xsd:element name="RegExp" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:sequence>
+            <xsd:element name="Pattern" type="StringElement"
+                 minOccurs="1" maxOccurs="1" />
+            <xsd:element name="String" type="StringElement"
+                 minOccurs="1" maxOccurs="1" />
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Type Conversion Functions -->
+
+<!--  Int(V) - Converts V to an integer. Time values are converted to number of 
+seconds, strings are parsed, bools are mapped to 0 or 1. Other values
+result in error  -->
+
+  <xsd:element name="Int" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:choice>
+            <xsd:element ref="StringValue"      minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringVariable"   minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringOperation"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealValue"        minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealVariable"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealOperation"    minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerValue"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerOperation" minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="BooleanValue"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="BooleanVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="BooleanOperation" minOccurs="1" maxOccurs="1" />
+          </xsd:choice>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--  Real(V) - Similar to Int(V), but to a real value. -->
+
+  <xsd:element name="Real" substitutionGroup="RealOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="RealOperationType">
+          <xsd:choice>
+            <xsd:element ref="StringValue"      minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringVariable"   minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringOperation"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealValue"        minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealVariable"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealOperation"    minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerValue"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerOperation" minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="BooleanValue"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="BooleanVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="BooleanOperation" minOccurs="1" maxOccurs="1" />
+          </xsd:choice>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--  String(V) - Converts V to its string representation -->
+
+  <xsd:element name="String" substitutionGroup="StringOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="StringOperationType">
+          <xsd:choice>
+            <xsd:element ref="StringValue"         minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringVariable"      minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringOperation"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealValue"           minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealVariable"        minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealOperation"       minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerValue"        minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerVariable"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerOperation"    minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="BooleanValue"        minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="BooleanVariable"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="BooleanOperation"    minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringListValue"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringListVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringListOperation" minOccurs="1" maxOccurs="1" />
+          </xsd:choice>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Bool(V) - Converts V to a boolean value. Empty strings, and zero values 
+               converted to false; non-empty strings and non-zero values converted to 
+               true.  -->
+
+  <xsd:element name="Boolean" substitutionGroup="BooleanOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="BooleanOperationType">
+          <xsd:choice>
+            <xsd:element ref="StringValue"      minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringVariable"   minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringOperation"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealValue"        minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealVariable"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealOperation"    minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerValue"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerOperation" minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="BooleanValue"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="BooleanVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="BooleanOperation" minOccurs="1" maxOccurs="1" />
+          </xsd:choice>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!--  AbsTime(V) - Converts V to an absolute time. Numeric values treated as seconds 
+past UNIX  epoch, strings parsed as necessary. -->
+
+  <xsd:element name="AbsTime" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:choice>
+            <xsd:element ref="StringValue"      minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringVariable"   minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringOperation"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealValue"        minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealVariable"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealOperation"    minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerValue"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerOperation" minOccurs="1" maxOccurs="1" />
+          </xsd:choice>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- RelTime(V) - Converts V to an relative time. Numeric values treated as 
+     number of seconds, string parsed as necessary. -->
+
+  <xsd:element name="RelTime" substitutionGroup="IntegerOperation">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="IntegerOperationType">
+          <xsd:choice>
+            <xsd:element ref="StringValue"      minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringVariable"   minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="StringOperation"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealValue"        minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealVariable"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="RealOperation"    minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerValue"     minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerVariable"  minOccurs="1" maxOccurs="1" />
+            <xsd:element ref="IntegerOperation" minOccurs="1" maxOccurs="1" />
+          </xsd:choice>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+
+<!-- Mathematical Functions -->
+
+<!--	Floor(N) - Floor of numeric value N -->
+
+  <xsd:element name="Floor" type="CoreIntegerFunctionOneParam"
+       substitutionGroup="IntegerOperation" />
+
+<!--  Ceil(N) - Ceiling of numeric value N -->
+
+  <xsd:element name="Ceil" type="CoreIntegerFunctionOneParam"
+       substitutionGroup="IntegerOperation" />
+
+<!--  Round(N) - Rounded value of numeric value N -->
+
+  <xsd:element name="Round" type="CoreIntegerFunctionOneParam"
+       substitutionGroup="IntegerOperation" />
+
+<!-- CONTEXT TYPE -->
+
+	<xsd:simpleType name="ContextType">
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="self"/>
+			<xsd:enumeration value="other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>

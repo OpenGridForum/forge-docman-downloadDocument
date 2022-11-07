@@ -1,0 +1,177 @@
+JSDL Telecon Meeting
+====================
+September 10th, 2003 - 22:00 GMT
+================================
+
+
+Attendees:
+==========
+
+Darren Pulsipher (Cadence) - attending GGF9
+Ali Anjomshoaa (EPCC) - attending GGF9
+An Ly (CA)
+Steve McGough (LeSC) - attending GGF9
+Ming Xu (Platform) - attending GGF9
+Hrabri Rajic (DRMAA, Intel) - attending GGF9
+Fred Brisard (CA) - possibly attending GGF9
+Karl Czajkowski (ISI) - attending GGF9
+Andreas Savva (Fujitsu) - attending GGF9
+Hiro Kishimoto (OGSA, Fujitsu) - attending GGF9
+Alian Andrieux (ISI) - attending GGF9
+
+
+Agenda:
+=======
+
+1. Discussion of the contents of the two GGF9 sessions
+
+--> Session 1:
+
+ - "What is JSDL?" general marketing. (10-20 mins.)
+
+   * Include motivation for JSDL
+   * Include interactions and dependencies on other work
+
+
+ - JSDL structure.
+
+   * JSDL Core set.
+   * JSDL Extensibility Mechanism - a tag that allows any XML that 
+     corresponds to a specific system, as defined by a JSDL compliant 
+     schema(?).
+
+
+ - JSDL Spec.
+
+   * Discuss outline of document
+
+
+--> Session 2:
+
+ - OGSI/WS-Agreement
+
+   * See below...
+
+
+2. Discussion of the impact of the OGSI-Agreement framework on 
+   JSDL
+
+ - Does the Agreement language and framework restrict JSDL in its 
+   applicability to non-Grid Service or OGSI architectures?
+
+ - Does it restrict JSDL in its applicability to non-Agreement 
+   frameworks?
+
+(
+ - Talk to be given by Karl Czajkowski, or Steve Tuecke, or Alain Andrieux
+   on Agreement framework and the relation to JSDL
+
+ - Talk to be given by Ming Xu on OGSA/Globus and JSDL
+
+(added after meeting) )
+
+
+3. JSDL Spec
+
+ - Currently drawing up the document outline, for discussion leading up 
+   to and at GGF9
+
+
+4. Discussion of dissemination at Globus World in San Francisco
+
+ - Is it early days?
+
+ - Can GRAAP say a few words about JSDL in their dissemination?
+
+ - Can anyone else outside JSDL say anything about JSDL at Globus World?
+
+
+Discussion:
+===========
+
+Discussion of Agenda items:
+
+1. GGF9 Sessions:
+=================
+
+It was agreed that the outline presented (above) for the two sessions 
+at GGF9 is good.
+
+Steve McGough suggested that emphasis should be put onto the JSDL Spec 
+document, and it was agreed that the discussion of the Spec and the JSDL 
+structure are dependent and the first session would focus around them.
+
+It was agreed that the second session would focus around how JSDL fits 
+into the OGSA and Agreement frameworks and speakers have been invited to 
+lead the discussion.
+
+o Speakers have been invited to talk about the OGSI/WS-Agreement framework 
+  and the relation of JSDL to that. One of Karl Czajkowski, or Steve Tuecke, 
+  or Alain Andrieux will talk on this.
+
+o Ming Xu has been invited to talk about his discussions with the Globus 
+  group and where the JSDL fits into those. He has accepted.
+
+
+2. OGSI/WS-Agreement Framework and JSDL:
+========================================
+
+It was agreed that discussion would be lead in the second JSDL session at 
+GGF9 by one of Karl Czajkowski, or Steve Tuecke, or Alain Andrieux.
+
+Ali requested that those wishing to partake, study the current DRAFT 
+Agreement document, which is linked from the JSDL web page.
+
+It was noted that the current Agreement document is not yet mature and 
+discussions are ongoing in the GRAAP-WG to build on current thoughts and 
+ideas.
+
+
+3. JSDL Spec Doc:
+=================
+
+It was agreed that Ali would send the structure of the spec doc to the 
+list for discussion.
+
+
+4. Dissemination at Globus World:
+=================================
+
+Steve McGough suggested that JSDL should have some exposure. It was 
+undecided as to how we would partake in Globus World next Jan. 2004.
+
+Darren Pulsipher suggested that he might attend Globus World.
+
+Should discuss this perhaps at GGF9. It will be too late then for 
+submission of abstracts, although posters can still be submitted until 
+Oct.
+
+
+5. AOB:
+=======
+
+o It was agreed that the time of the telecon is OK with everyone on line. 
+Anyone not able to attend because of the current scheduled time of 22:00 GMT 
+should let us know. The question will be posed on the JSDL list.
+
+
+o JSDL were asked to talk at one of the OGSA sessions at GGF9 regarding how 
+they may or may not fit into the OGSA picture. It was agreed that we would 
+read relevant documentation and accept if we are able to do this. The 
+following is a brief guide:
+
+Ask the visiting WGs to:
+
+- Look at the OGSA document, particularly the section we think applies to 
+  their working group and present their reaction to the meeting.
+
+- Talk to us about how their work fits into OGSI, OGSA, and Service 
+  Oriented Architecture.
+
+- Is our draft understanding of the work in your service area complete, 
+  consistent, concepts, ...? - Highlight and mismatches they see.
+
+- Present/discuss for about 15 Minutes at the OGSA session. - Expect 
+  10 minutes discussion.
+
+

@@ -1,0 +1,864 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+This is a static archive of the previous Open Grid Forum GridForge content management system saved from host forge.ogf.org file /sf/docman/do/downloadDocument/projects.nm-wg/docman.root.working_drafts/doc14168 at Sun, 06 Nov 2022 04:24:23 GMT
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>
+	An Extensible Schema for Network Measurement and Performance Data
+  </title><style type="text/css" title="Xml2Rfc (sans serif)">
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  text-decoration: underline;
+}
+address {
+  margin-top: 1em;
+  margin-left: 2em;
+  font-style: normal;
+}
+
+body {
+  
+  color: #000000;
+  font-family: verdana, helvetica, arial, sans-serif;
+  font-size: 10pt;
+}
+cite {
+  font-style: normal;
+}
+dl {
+  margin-left: 2em;
+}
+
+dl.empty dd {
+  margin-top: .5em;
+}
+dt {
+  margin-top: .5em;
+}
+h1 {
+  color: #333333;
+  font-size: 14pt;
+  line-height: 21pt;
+  page-break-after: avoid;
+}
+h1.np {
+  page-break-before: always;
+}
+h1 a {
+  color: #333333;
+}
+h2 {
+  color: #000000;
+  font-size: 12pt;
+  line-height: 15pt;
+  page-break-after: avoid;
+}
+h2 a {
+  color: #000000;
+}
+h3 {
+  color: #000000;
+  font-size: 10pt;
+  page-break-after: avoid;
+}
+h3 a {
+  color: #000000;
+}
+h4 {
+  color: #000000;
+  font-size: 10pt;
+  page-break-after: avoid;
+}
+h4 a {
+  color: #000000;
+}
+h5 {
+  color: #000000;
+  font-size: 10pt;
+  page-break-after: avoid;
+}
+h5 a {
+  color: #000000;
+}
+img {
+  margin-left: 3em;
+}
+li {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+ol {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+p {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+pre {
+  margin-left: 3em;
+  background-color: lightyellow;
+}
+
+table {
+  margin-left: 2em;
+}
+
+table.header {
+  width: 95%;
+  font-size: 10pt;
+  color: white;
+}
+td.top {
+  vertical-align: top;
+}
+td.topnowrap {
+  vertical-align: top;
+  white-space: nowrap; 
+}
+td.front {
+  background-color: gray;
+  width: 50%;
+}
+thead {
+  display:table-header-group;
+}
+ul.toc {
+  list-style: none;
+  margin-left: 1.5em;
+  margin-right: 0em;
+  padding-left: 0em;
+}
+li.tocline0 {
+  line-height: 150%;
+  font-weight: bold;
+  font-size: 10pt;
+  margin-left: 0em;
+  margin-right: 0em;
+}
+li.tocline1 {
+  line-height: normal;
+  font-weight: normal;
+  font-size: 9pt;
+  margin-left: 0em;
+  margin-right: 0em;
+}
+li.tocline2 {
+  font-size: 0pt;
+}
+ul.ind {
+  list-style: none;
+  margin-left: 1.5em;
+  margin-right: 0em;
+  padding-left: 0em;
+}
+li.indline0 {
+  font-weight: bold;
+  line-height: 200%;
+  margin-left: 0em;
+  margin-right: 0em;
+}
+li.indline1 {
+  font-weight: normal;
+  line-height: 150%;
+  margin-left: 0em;
+  margin-right: 0em;
+}
+
+.comment {
+  background-color: yellow;
+}
+
+.center {
+  text-align: center;
+}
+.error {
+  font-size: 14pt;
+  background-color: red;
+}
+.figure {
+  font-weight: bold;
+  text-align: center;
+  font-size: 9pt;
+}
+.filename {
+  color: #333333;
+  font-weight: bold;
+  font-size: 12pt;
+  line-height: 21pt;
+  text-align: center;
+}
+.fn {
+  font-weight: bold;
+}
+.hidden {
+  display: none;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.title {
+  color: #990000;
+  font-size: 18pt;
+  line-height: 18pt;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 36pt;
+}
+.vcardline {
+  display: block;
+}
+.warning {
+  font-size: 14pt;
+  background-color: yellow;
+}
+
+
+@media print {
+  .noprint {
+    display: none;
+  }
+  
+  table.header {
+    width: 90%;
+  }
+
+  td.header-l {
+    width: 50%;
+    color: black;
+    background-color: white;
+    vertical-align: top;
+    font-size: 10pt;
+  }
+
+  td.header-r {
+    width: 33%;
+    color: black;
+    background-color: white;
+    vertical-align: top;
+    text-align: right;
+    font-size: 10pt;
+  }
+
+  ul.toc a::after {
+    content: leader('.') target-counter(attr(href), page);
+  }
+  
+  a.iref {
+    content: target-counter(attr(href), page);
+  }
+  
+  .print2col {
+    column-count: 2;
+    -moz-column-count: 2;
+  }
+}
+
+@page {
+  @top-left {
+       content: "RFC "; 
+  } 
+  @top-right {
+       content: "January 2007"; 
+  } 
+  @top-center {
+       content: "
+	An Extensible Schema for Network Measurement and Performance Data
+  "; 
+  } 
+  @bottom-left {
+       content: "Swany"; 
+  } 
+  @bottom-center {
+       content: "Informational"; 
+  } 
+  @bottom-right {
+       content: "[Page " counter(page) "]"; 
+  } 
+}
+
+@page:first { 
+    @top-left {
+      content: normal;
+    }
+    @top-right {
+      content: normal;
+    }
+    @top-center {
+      content: normal;
+    }
+}
+</style><link rel="Author" href="#rfc.authors"><link rel="Copyright" href="#rfc.copyright"><link rel="Chapter" title="1 Introduction" href="#rfc.section.1"><link rel="Chapter" title="2 Design Philosophy" href="#rfc.section.2"><link rel="Chapter" title="3 Basic Elements" href="#rfc.section.3"><link rel="Chapter" title="4 XML Namespaces" href="#rfc.section.4"><link rel="Chapter" title="5 Versioning" href="#rfc.section.5"><link rel="Chapter" title="6 Metadata Chaining" href="#rfc.section.6"><link rel="Chapter" title="7 Operation Metadata" href="#rfc.section.7"><link rel="Chapter" title="8 Base Schema" href="#rfc.section.8"><link rel="Chapter" title="9 Time Schema" href="#rfc.section.9"><meta name="generator" content="http://greenbytes.de/tech/webdav/rfc2629.xslt, Revision 1.291, 2006/10/29 09:03:19, XSLT vendor: SAXON 8.8 from Saxonica http://www.saxonica.com/"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.Creator" content="Swany, M"><meta name="DC.Date.Issued" scheme="ISO8601" content="2007-01"></head><body><table summary="header information" class="header" border="0" cellpadding="1" cellspacing="1"><tr><td class="front left">Network Measurement Working Group</td><td class="front right">M Swany, Editor</td></tr><tr><td class="front left"></td><td class="front right">UDel</td></tr><tr><td class="front left">Intended status: Informational</td><td class="front right">January 2007</td></tr></table><p class="title">An Extensible Schema for Network Measurement and Performance Data</p><h1><a id="rfc.status" href="#rfc.status">Status of this Memo</a></h1><p>This memo provides information for the Grid community. It does not specify any standards or technical recommendations. Distribution is unlimited.</p><h1><a id="rfc.copyrightnotice" href="#rfc.copyrightnotice">Copyright Notice</a></h1><p>Copyright © The Open Grid Forum (2007). All Rights Reserved.</p><hr class="noprint"><h1 id="rfc.section.1" class="np"><a href="#rfc.section.1">1.</a>&nbsp;<a id="intro" href="#intro">Introduction</a></h1><p id="rfc.section.1.p.1">This document presents an extensible encoding standard for network measurement and performance data. Uniform encoding of this class of information is a key problem for federated network management, multi-domain dynamic provisioning of network circuits as well as in advanced distributed computing environments such as Grid computing.</p><p id="rfc.section.1.p.2">This work is born of the need for a common mechanism for the exchange of network measurement and performance data. In the case of research-oriented networks, parties often want to exchange network performance data with neighbors for debugging purposes. In general, however, there is no single system that is in use. In the Grid community, the need to exchange network metrics of various sorts is often highlighted. In short it is highly desirable to have an extensible schema for network performance information that gives a common, general framework for representation and exchange.</p><p id="rfc.section.1.p.3">This document builds on previous versions of the network measurement schemata. This document describes Version 2 of the Grid Forum's Network Measurement Working Group (NM-WG) schema.</p><h2 id="rfc.section.1.1"><a href="#rfc.section.1.1">1.1</a>&nbsp;Goals</h2><p id="rfc.section.1.1.p.1">The goal is to define a neutral representation for network measurements that can be easily extended to support new types of data. This representation should identify forms of network performance data as well as to create standardized mechanism to both describe and publish these metrics.</p><hr class="noprint"><h1 id="rfc.section.2" class="np"><a href="#rfc.section.2">2.</a>&nbsp;Design Philosophy</h1><p id="rfc.section.2.p.1">One of the high-level goals of this representation is to "normalize" the data representation by removing as much redundancy as possible. The basic schema design is based on the observation that network measurement data can be divided into two major classes. The first class is the Metadata, which describes the type of measurement data, the entity or entities being measured and the particular parameters of the measurement. The second class is the data itself, which is at its simplest a timestamp and a value, or vector of values. This division of Metadata and Data is present throughout the system. This structure is present both in the "Messages" sent between various data elements, and in data "Stores" - persistent storage of XML documents representing system state.</p><hr class="noprint"><h1 id="rfc.section.3" class="np"><a href="#rfc.section.3">3.</a>&nbsp;Basic Elements</h1><p id="rfc.section.3.p.1">This schema defines the basic elements that can be used to represent performance data. The first distinction is between the "Metadata", the relatively static information regarding the data, and the "Data" itself, which generally changes over time. The key idea is that for repeated measurements, a common case for performance data in networks and Grids, the Metadata need not be passed repeatedly, saving space and effort.</p><h2 id="rfc.section.3.1"><a href="#rfc.section.3.1">3.1</a>&nbsp;Metadata</h2><p id="rfc.section.3.1.p.1">The Metadata must describe the Data unambiguously. In order to accomplish this, the Metadata must include three key things. They are:</p><dl class="empty"><dd>"Subject" -- The Subject identifies the entity being measured. This could include the network path between a pair of hosts, an interface on a router, or a specific location on the network from which flow or packet data is captured.</dd><dd>"EventType" -- The EventType identifies exactly what sort of measurement Event occurred.</dd><dd>"Parameters" -- The Parameters describe the details of the measurement.</dd></dl><h3 id="rfc.section.3.1.1"><a href="#rfc.section.3.1.1">3.1.1</a>&nbsp;Subject</h3><p id="rfc.section.3.1.1.p.1">The "Subject" identifies the measured entity. For networks this may represent a path between two hosts or an interface on a network device.</p><h3 id="rfc.section.3.1.2"><a href="#rfc.section.3.1.2">3.1.2</a>&nbsp;Event Type</h3><p id="rfc.section.3.1.2.p.1">The "Event Type" is the canonical name of the aspect of the subject being measured, or the actual event (i.e. ``characteristic'') being sought</p><h3 id="rfc.section.3.1.3"><a href="#rfc.section.3.1.3">3.1.3</a>&nbsp;Parameters</h3><p id="rfc.section.3.1.3.p.1">The "Parameters" describe the exact way in which a particular measurement was gathered.</p><h2 id="rfc.section.3.2"><a href="#rfc.section.3.2">3.2</a>&nbsp;Data</h2><p id="rfc.section.3.2.p.1">The "Data" element refers to the "Metadata" which describes it. It contains some number of "Datum" elements, which hold the actual timestamp and value of the measurement, or value of the event.</p><hr class="noprint"><h1 id="rfc.section.4" class="np"><a href="#rfc.section.4">4.</a>&nbsp;XML Namespaces</h1><p id="rfc.section.4.p.1">We have adopted XML namespaces to vary the schema of the basic elements for various different types of measurements.</p><p id="rfc.section.4.p.2">We envision there being two major classes of namespace URIs. The first is a canonical name based on the Hierarchy of Network Measurements (cite). The second is based on an organization's domain name and allows for autonomous extension.</p><hr class="noprint"><h1 id="rfc.section.5" class="np"><a href="#rfc.section.5">5.</a>&nbsp;Versioning</h1><p id="rfc.section.5.p.1">While the working group has made every effort to completely describe a few measurement types, we are well aware that tools, and ideas about how to represent them, may change. For this reason, each of the schema areas must have a version number.</p><p id="rfc.section.5.p.2">To accomplish this, each of the URIs that comprise the namespaces end in a version number. TBD, conforming to recent GFD on namespaces.</p><hr class="noprint"><h1 id="rfc.section.6" class="np"><a href="#rfc.section.6">6.</a>&nbsp;Metadata Chaining</h1><p id="rfc.section.6.p.1">While a complete Metadata block can be used to unambiguously describe a data block, it is often desirable to combine multiple partial Metadata blocks together. The main reason for this is reuse of information. Using the "metadataIdRef" attribute of a Metadata block allows us to form a "chain" of Metadata blocks.</p><hr class="noprint"><h1 id="rfc.section.7" class="np"><a href="#rfc.section.7">7.</a>&nbsp;Operation Metadata</h1><p id="rfc.section.7.p.1">In addition to describing sets of raw data, Metadata blocks can also be used to describe transformations performed on a dataset. Thus a list of Metadata blocks, including origin and transformations, can be used to unambiguously describe the provenance of any network data.</p><p id="rfc.section.7.p.2">This relationship between Metadata blocks is expressed by having the Subject metadataIdRef refer to another Metadata, which denotes having it be input to a operation.</p><hr class="noprint"><h1 id="rfc.section.8" class="np"><a href="#rfc.section.8">8.</a>&nbsp;Base Schema</h1><p id="rfc.section.8.p.1"> <pre>
+# ##############################################################
+# 
+# File:         nmbase.rnc - Main schema definition
+# Version:      $Id: nmbase.rnc 185 2007-01-31 17:28:49Z boote $
+# Purpose:      This is the main relax schema file, it defines 
+#               the general makeup of an NMWG structured message.
+# Reference:    http://books.xmlschemata.org/relaxng/page2.html
+# 
+# ##############################################################
+
+
+# ##############################################################
+# Namespace definitions
+# ##############################################################
+namespace nmwg = "http://ggf.org/ns/nmwg/base/2.0/"
+
+
+# ##############################################################
+# Include additional functionality from other files
+# ##############################################################
+include "nmtime.rnc"
+include "filter.rnc"
+
+# ##############################################################
+# Every suitable NMWG document should begin with either a 
+# 'store' or 'message' element, in the appropriate namespace.
+# Patterns are defined for the content of each element.
+# 
+# Example (using message):
+# 
+# &lt;nmwg:message id="OPTIONAL_ID" 
+#               messageIdRef="OPTIONAL_REFERENCE_ID"
+#               type="REQUIRED_TYPE"
+#               xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;
+# 
+#   &lt;!-- TBD OPTIONAL PARAMETERS --&gt;
+#
+#   &lt;!-- TBD OPTIONAL (MULTIPLE) METADATA --&gt;
+# 
+#   &lt;!-- TBD OPTIONAL (MULTIPLE) DATA --&gt;
+#  
+# &lt;/nmwg:message&gt;
+# 
+# ##############################################################
+
+start =
+        (
+                element nmwg:message {
+                        MessageContent
+                } |
+                element nmwg:store {
+                        StoreContent
+                }
+        )
+
+MessageContent =
+        Identifier? &amp; 
+        MessageIdentifierRef? &amp;
+        Type &amp;
+        Parameters? &amp;                        
+        (
+                Metadata |  
+                Data
+        )+
+        
+        
+StoreContent = 
+        Identifier? &amp; 
+        MessageIdentifierRef? &amp;
+        Type &amp;
+        Parameters? &amp;                        
+        (
+                Metadata |  
+                Data
+        )+        
+
+
+# ##############################################################
+# Metadata is the 'data' that describes physical measurements. 
+# Metadata can be something such as a physical address, or 
+# a geographical location; any form of static, re-usable 
+# designation.  It is important to note that the subject
+# namespace and parameters namespace MUST match (or the parameters
+# can be a generic NMWG) or bad things will occur.
+#
+# Example: 
+# 
+# &lt;nmwg:metadata id="REQUIRED_ID" 
+#                metadataIdRef="OPTIONAL_REFERENCE_ID"
+#                xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;
+# 
+#   &lt;!-- TBD OPTIONAL SUBJECT --&gt;
+# 
+#   &lt;!-- TBD OPTIONAL PARAMETERS --&gt;
+#
+#   &lt;!-- TBD OPTIONAL EVENTTYPE --&gt;
+# 
+#   &lt;!-- TBD OPTIONAL KEY --&gt;
+#  
+#   &lt;!-- ANY OPTIONAL (MULTIPLE) ELEMENT IN ANY NAMESPACE --&gt; 
+#
+# &lt;/nmwg:metadata&gt;
+# 
+# ##############################################################
+        
+Metadata = 
+        element nmwg:metadata {
+                (
+                        Identifier &amp;
+                        MetadataIdentifierRef? &amp;
+                        MetadataContent
+                ),
+                anyElement*
+        }
+
+MetadataBlock =
+        Subject? &amp;
+        Parameters?
+        
+MetadataContent = 
+        (
+                MetadataBlock |
+                FilterMetadataBlock                
+        ) &amp;        
+        EventType? &amp;
+        Key?        
+
+
+# ##############################################################
+# Subject identifies an endPoint (or points), perhaps the name of
+# a service, or some other form of physical location.  For the 
+# purpose of the general case we make no assumptions on potential
+# elements and allow all elements, in any namespace.  Verification
+# can be handled in subsequent schema files.    
+#
+# Example: 
+# 
+# &lt;nmwg:subject id="REQUIRED_ID" 
+#               metadataIdRef="OPTIONAL_REFERENCE_ID"
+#               xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;
+# 
+#   &lt;!-- ANY ELEMENT IN ANY NAMESPACE --&gt;
+#  
+# &lt;/nmwg:subject&gt;
+# 
+# ##############################################################
+
+Subject = 
+        element nmwg:subject {
+                SubjectContent
+        }
+
+SubjectContent = 
+        (
+                Identifier &amp;
+                MetadataIdentifierRef?        
+        ),
+        anyElement*
+        
+
+# ##############################################################
+# Parameters and Parameter elements can be used in a number of 
+# ways: in the message to signify items such as time stamp or
+# authorization, in metadata or data to specify filters or
+# special cases for the information.  A 'parameters' block
+# has an id, and encloses one to many 'parameter' elements. 
+# These elements have a required 'name', and may contain
+# an attribute, element, or text value (only one please, 
+# software using this should consider complex elements, then 
+# text, and finally the value attribute; exceptions should
+# be thrown on duplicates).
+#
+# Example: 
+# 
+# &lt;nmwg:parameters id="REQUIRED_ID" 
+#                  xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;
+# 
+#   &lt;nmwg:parameter name="REQUIRED_NAME" value="OPTIONAL_VALUE"
+#                   xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;
+# 
+#     &lt;!-- ANY TEXT, OR ANY ELEMENT ANY NAMESPACE (IF YOU DID NOT 
+#          USE THE VALUE ATTRIBUTE) --&gt;
+# 
+#   &lt;/nmwg:parameter&gt;
+#  
+#   &lt;!-- MORE PARAMETERS --&gt;
+#   
+# &lt;/nmwg:parameters&gt;
+# 
+# The namespaces can of course be different.
+# 
+# ##############################################################
+
+Parameters = 
+        element nmwg:parameters {
+                ParametersContent
+        }
+   
+ParametersContent =    
+        Identifier &amp;
+        Parameter+
+   
+Parameter = 
+        element nmwg:parameter { 
+                attribute name { xsd:string } &amp;
+                (
+                        attribute value { xsd:string } |
+                        (
+                                anyElement |
+                                text
+                        )
+                )
+        }   
+
+
+# ##############################################################
+# Event type is a simple text element used to describe the
+# characteristic or event of the data.
+#
+# Example: 
+# 
+# &lt;nmwg:eventType xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;
+# 
+#   &lt;!-- TEXT --&gt;
+#  
+# &lt;/nmwg:eventType&gt;
+# 
+# ##############################################################        
+
+EventType =
+        element nmwg:eventType { xsd:string }      
+
+   
+# ##############################################################
+# The key is used to return a 'pointer' or otherwise special chunk
+# of identifying information in response to a request.  For now
+# this information is enclosed only within a parameters block.
+# The optional ID can be used to track past searches.
+#
+# Example: 
+# 
+# &lt;nmwg:key id="OPTIONAL_ID" 
+#           xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;
+# 
+#   &lt;!-- OPTIONAL PARAMETERS --&gt;
+#  
+# &lt;/nmwg:key&gt;
+# 
+# ##############################################################
+   
+Key = 
+        element nmwg:key {
+                Identifier? &amp;
+                (
+                        Parameters |
+                        FilterParameters                                
+                )
+        }        
+        
+           
+# ##############################################################
+# The data block is complex, and has the potential to contain
+# many things.  The data block can be used to return a metadata
+# block from a request, commonTime or datum elements, keys, 
+# or something that we have perhaps not defined as of yet.  
+#
+# Example: 
+# 
+# &lt;nmwg:data id="REQUIRED_ID" 
+#            metadataIdRef="OPTIONAL_REFERENCE_ID" 
+#            xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;
+# 
+#   &lt;!-- OPTIONAL (MULTIPLE) METADATA --&gt;
+# 
+#           &lt;!-- OR --&gt;
+#
+#   &lt;!-- TBD OPTIONAL (MULTIPLE) COMMON TIME ELEMENTS AND 
+#        OPTIONAL (MULTIPLE) DATUM ELEMENTS--&gt;
+# 
+#           &lt;!-- OR --&gt;
+#  
+#   &lt;!-- TBD OPTIONAL (MULTIPLE) DATUM ELEMENTS --&gt;
+# 
+#           &lt;!-- OR --&gt;
+#  
+#   &lt;!-- OPTIONAL (MULTIPLE) KEY ELEMENTS --&gt;
+# 
+#           &lt;!-- OR --&gt;
+# 
+#   &lt;!-- ANY OPTIONAL (MULTIPLE) ELEMENT IN ANY NAMESPACE --&gt;
+#   
+# &lt;/nmwg:data&gt;
+# 
+# ##############################################################
+   
+Data =
+        element nmwg:data {
+                (
+                        Identifier &amp;
+                        MetadataIdentifierRef? &amp;
+                        (
+                                Metadata* |
+                                (
+                                        commonTime+ &amp; 
+                                        Datum*
+                                ) |
+                                Datum* |
+                                Key*
+                        )
+                ),
+                anyElement*
+        }
+
+# ##############################################################
+# CommonTime is used a a shortcut able to 'factor out' a frequently
+# occurring time range that a bunch of datum (or other) elements
+# might share, thus reducing complexity of XML representation.  
+# CommonTime is similar to the other NMWG time stamps (from 
+# nmtime.rnc) in its potential time representations.
+#
+# Example: 
+# 
+# &lt;nmwg:commonTime type="REQUIRED_TYPE" value="OPTIONAL_VALUE"
+#                  duration="OPTIONAL_DURATION" 
+#                  inclusive="OPTIONAL_INCLUSIVE_FLAG"
+#                  xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;
+# 
+#   &lt;!-- TBD OPTIONAL START TIME ELEMENT (USE END TIME OR DURATION) --&gt;
+#  
+#   &lt;!-- TBD OPTIONAL END TIME ELEMENT (ONLY WITH START TIME) --&gt;
+#  
+#   &lt;!-- TBD OPTIONAL TIME VALUE ELEMENT (USE IF NO VALUE ATTRIBUTE) --&gt;
+#  
+#   &lt;!-- TBD OPTIONAL (MULTIPLE) DATUM ELEMENTS --&gt;
+# 
+#   &lt;!-- ANY OPTIONAL (MULTIPLE) ELEMENT IN ANY NAMESPACE --&gt;
+# &lt;/nmwg:commonTime&gt;
+# 
+# ##############################################################
+
+commonTime = 
+        element nmwg:commonTime {
+                (
+                        Type &amp;
+                        (
+                                TimeStamp |
+                                (
+                                        StartTime &amp; 
+                                        (
+                                                EndTime | 
+                                                Duration 
+                                        )
+                                )
+                        ) &amp;
+                        Datum*
+                ),
+                anyElement*
+        }
+
+
+# ##############################################################
+# The datum is meant to be generic in this case, because specific
+# namespace declarations should be used to better define what
+# format that datum should have.
+#
+# Example: 
+# 
+# &lt;nmwg:datum ANY_ATTRIBUTE
+#             xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"&gt;
+# 
+#   &lt;!-- ANY ELEMENT IN ANY NAMESPACE OR ANY TEXT --&gt;
+#  
+# &lt;/nmwg:datum&gt;
+# 
+# ##############################################################
+
+Datum =
+        element nmwg:datum {
+                anyThing  
+        }
+        
+         
+# ##############################################################
+# Common elements defined as named patterns, as they are re-used
+# several times.
+# ##############################################################
+                
+Identifier =
+        attribute id { xsd:string }
+
+MetadataIdentifierRef =
+        attribute metadataIdRef { xsd:string }
+
+MessageIdentifierRef =
+        attribute messageIdRef { xsd:string }
+    
+Type = 
+        attribute type { xsd:string }    
+
+
+# ##############################################################
+# This sequence allows any element, attribute, or text (regardless 
+# of name, or namespace) into the document when invoked.
+# ##############################################################
+
+anyElement = 
+        element * { 
+                anyThing 
+        }
+
+anyAttribute = 
+        attribute * { text }
+
+anyThing = 
+        ( 
+                anyElement | 
+                anyAttribute | 
+                text 
+        )*
+        
+        
+# ##############################################################
+# This sequence allows any element, attribute, or text (only in the 
+# NMWG namespace) into the document when invoked.
+# ##############################################################
+        
+anyNMWGElement = 
+        element nmwg:* { 
+                anyNMWGThing 
+        }
+
+anyNMWGAttribute = 
+        attribute * { text }
+
+anyNMWGThing = 
+        ( 
+                anyNMWGElement | 
+                anyNMWGAttribute | 
+                text 
+        )*        
+
+	    </pre> </p><hr class="noprint"><h1 id="rfc.section.9" class="np"><a href="#rfc.section.9">9.</a>&nbsp;Time Schema</h1><p id="rfc.section.9.p.1"> <pre>
+# ##############################################################
+# 
+# File:         nmtime.rnc - NMWG Time definitions
+# Version:      $Id: nmtime.rnc 185 2007-01-31 17:28:49Z boote $
+# Purpose:      This describes a general time format for 
+#               representing measurements.  It is far from complete, 
+#               and may be best represented by other methods.
+# Reference:    http://books.xmlschemata.org/relaxng/page2.html
+#                         
+# ##############################################################
+
+
+# ##############################################################
+# Namespace definitions
+# ##############################################################
+namespace nmtm = "http://ggf.org/ns/nmwg/time/2.0/"
+
+
+# ##############################################################
+# Regular time is attached to a specific datum instance, it is 
+# essentially the the same as before, but cannot have anything 
+# 'inside' of it.  The type can be simple like UNIX, etc. or it 
+# could be something like timeRange, or timeInterval.  If this is 
+# the case we would then see the two extra time designators for 
+# the start and end (or duration)
+# 
+# Example:
+# 
+# &lt;nmtm:time type="REQUIRED_TYPE" value="OPTIONAL_VALUE"
+#            duration="OPTIONAL_DURATION" 
+#            inclusive="OPTIONAL_INCLUSIVE_FLAG"
+#            xmlns:nmtm="http://ggf.org/ns/nmwg/time/2.0/"&gt;
+# 
+#   &lt;!-- TBD OPTIONAL START TIME ELEMENT (USE END TIME OR 
+#        DURATION) --&gt;
+#  
+#   &lt;!-- TBD OPTIONAL END TIME ELEMENT (ONLY WITH START TIME) --&gt;
+#  
+#   &lt;!-- TBD OPTIONAL TIME VALUE ELEMENT (USE IF NO VALUE 
+#        ATTRIBUTE) --&gt;
+#  
+# &lt;/nmtm:time&gt;
+# 
+# ##############################################################
+
+Time = 
+        element nmtm:time {
+                attribute type { xsd:string } &amp;
+                (
+                         TimeStamp |
+                         (
+                                StartTime &amp; 
+                                ( 
+                                        EndTime | 
+                                        Duration
+                                )
+                         )
+                )
+        } 
+
+TimeStamp =   
+        ( 
+                attribute value { xsd:string } |
+                element nmtm:value { xsd:string }
+        )
+
+Duration =
+        attribute duration { xsd:string }
+
+TimeContent = 
+        attribute type { text } &amp;
+        attribute inclusive { text }? &amp;
+        TimeStamp        
+
+StartTime = 
+        element nmtm:start {
+                TimeContent
+        }
+   
+EndTime = 
+        element nmtm:end {
+                TimeContent
+        }
+	    </pre> </p><hr class="noprint"><h1 id="rfc.authors" class="np">Author's Address</h1><address class="vcard"><span class="vcardline"><span class="fn">Martin Swany</span>
+          (editor)
+        <span class="n hidden"><span class="family-name">Swany</span><span class="given-name">Martin</span></span></span><span class="org vcardline">
+      University of Delaware
+    </span></address><h1><a id="rfc.copyright" href="#rfc.copyright">Full Copyright Statement</a></h1><p>Copyright © The Open Grid Forum (2007). All Rights Reserved.</p><p>This document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published and distributed, in whole or in part, without restriction of any kind, provided that the above copyright notice and this paragraph are included on all such copies and derivative works. However, this document itself may not be modified in any way, such as by removing the copyright notice or references to the OGF or other organizations, except as needed for the purpose of developing Grid Recommendations in which case the procedures for copyrights defined in the OGF Document process must be followed, or as required to translate it into languages other than English.</p><p>The limited permissions granted above are perpetual and will not be revoked by the OGF or its successors or assignees.</p><p>This document and the information contained herein is provided on an &#8220;As Is&#8221; basis and the OGF disclaims all warranties, express or implied, including but not limited to any warranty that the use of the information herein will not infringe any rights or any implied warranties of merchantability or fitness for a particular purpose.</p><hr class="noprint"><h1 class="np"><a id="rfc.ipr" href="#rfc.ipr">Intellectual Property</a></h1><p>The OGF takes no position regarding the validity or scope of any intellectual property or other rights that might be claimed to pertain to the implementation or use of the technology described in this document or the extent to which any license under such rights might or might not be available; neither does it represent that it has made any effort to identify any such rights. Copies of claims of rights made available for publication and any assurances of licenses to be made available, or the result of an attempt made to obtain a general license or permission for the use of such proprietary rights by implementers or users of this specification can be obtained from the OGF Secretariat.</p><p>The OGF invites any interested party to bring to its attention any copyrights, patents or patent applications, or other proprietary rights, which may cover technology that may be required to practice this recommendation. Please address the information to the OGF Executive Director.</p><!-- forge.gridforum.org footer.html -->
+<br> <hr>
+<table width='100%'> 
+ <tr>
+  <td align='left'>   <a href='http://www.ogf.org/' target='_blank' style='border: 0 px;'><img src='../../../../../../ogf-it/opengridforum.gif' alt='The Open Grid Forum' style='border:0px white solid;'></a><td>
+  <td align='center'> <a href='mailto:webmaster@ogf.org'>Contact Webmaster</a> 
+                    | <a href="../../../../../tracker/do/createArtifact/projects.ggf-info/tracker.html">Report a problem</a>
+                    | <a href="../../../../../wiki/do/viewPage/projects.ggf-info/wiki/HomePage.html">GridForge Help</a>
+                    </td>
+  <td align='right'>  
+<!--		<img src='/ogf-it/powered_by_dell.gif' alt='Powered by Dell'> -->
+<!-- Begin DigiCert/ClickID site seal HTML and JavaScript -->
+<div id="DigiCertClickID_sxSDRU4L">
+  <a href="http://www.digicert.com/">SSL Certificates</a>
+</div>
+<script type="text/javascript">
+var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_sxSDRU4L", "10", "m", "black", "sxSDRU4L"]);(function(){var cid=document.createElement("script");cid.type="text/javascript";cid.async=true;cid.src=("https:" === document.location.protocol ? "https://" : "http://")+"seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
+</script>
+<!-- End DigiCert/ClickID site seal HTML and JavaScript -->
+  </td>
+ </tr>
+</table>
+<!-- google analytics code -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6775861-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+This is a static archive of the previous Open Grid Forum GridForge content management system saved from host forge.ogf.org file /sf/docman/do/downloadDocument/projects.nm-wg/docman.root.working_drafts/doc14168 at Sun, 06 Nov 2022 04:24:23 GMT
+</html>

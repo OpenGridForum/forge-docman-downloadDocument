@@ -1,0 +1,72 @@
+JSDL phone conference
+=====================
+
+24 January 2007
+
+Participants
+------------
+Andreas Savva, Fujitsu
+Steve McGough, Imperial College
+Michel Drescher, Fujitsu
+Ali Anjomshoaa, EPCC
+Alessandro Maraschini, gLite project
+Donal Fellows, UoM
+
+Minutes: Michel Drescher
+
+1. Early discussion
+===================
+- Agenda bashing
+  -- no changes
+  
+2. OGF19 session planning
+=========================
+- no real update
+- maybe meet by Wednesday to finish up session planning
+  -- chairs appreciation night is on Thursday night
+- ParameterSweep presentation
+  -- change the focus towards requirements and use cases
+  -- may be present XML schema
+  -- clear up issues where the proposal is located in processing
+     wrt EMS
+  -- AI-0124a: Ali to contact Michel to do ParamSweep presentation
+  -- Steve has people shoowing interest in ParamSweep
+     --- simple as possible
+     --- avoid XPath if possible
+- AI-0124b: Andreas to contact Joel for a dial-in polycon
+
+
+3. JSDL 1.1
+===========
+- Andreas produced a draft for JSDL 1.1
+  -- fixed copyright, copyright years
+  -- errata artifacts applied to the doccument
+- Michel takes the pen for the next edits
+- AI-0124c: Michel to check the tracker artifacts Andreas applied to the
+  document
+- artf5648: "Diskspace for file systems"
+  RAID volumes are and issue; artifact is assigned to Andreas to solve
+- artf5497: "FileSystemMountSource not defined in the schema"
+  -- Create a jsdl-errata schema that cntain these kind of things
+- AI-0124d: Michel to create a draft of this jsdl-errata schema
+- artf5564: "Type or Argument element"
+  -- xsd:string does not do any processing to its content
+  -- xsd:normalizedString does some application
+- discussions are further captured in the tracker artifacts
+- all issues previously assigned to Darren are now assigned to Andreas
+
+4. Extensions
+=============
+- The group is discussing the Parallel (SPMD) Application andd its relations
+  to MPI
+
+
+
+Action Items
+------------
+
+AI-0124a: Ali to contact Michel to do ParamSweep presentation
+AI-0124b: Andreas to contact Joel for a dial-in polycon
+AI-0124c: Michel to check the tracker artifacts Andreas applied to the 
+          document
+AI-0124d: Michel to create a draft of an jsdl-errata schema

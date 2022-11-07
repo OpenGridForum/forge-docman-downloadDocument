@@ -1,0 +1,92 @@
+JSDL Teleconference - 16 July 2008
+===================================
+
+* Participants
+
+  Fred Brisard
+  Michel Drescher
+  Donal Fellows
+  David Meredith
+  Andreas Savva
+
+  Apologies: Steve McGough, Geoff Williams
+  Minutes: Andreas Savva
+
+* Summary of decisions
+
+   - Agreed that making Parameter/function abstract seems to solve the
+     main problem of how to specify the file template extension
+   - Agreed that the JsdlElement concrete definition should be in the
+     jsdl-sweep.xsd so that the main specification is standalone and
+     independent of the file template extension
+
+* Summary of actions
+
+   - ACTION: David Meredith to rework the examples in the wiki and
+             update the file template schema/defintion
+   - ACTION: Michel Drescher to update the main parameter sweep
+             specification with the abstract definitions
+
+* Parameter Sweep: Issues
+** File Sweeping Proposal 
+
+   - Reviewed proposal on wiki by David Meredith and Geoff Williams
+   http://forge.gridforum.org/sf/wiki/do/viewPage/projects.jsdl-wg/wiki/ParameterSweepExtensionInputFileSweeping2
+
+   - The proposal is based on making the Parameter and Function
+     abstract in jsdl-sweep.xsd schema and then providing concrete
+     definitions in parameters.xsd
+
+   - Reviewed examples. Some of the discussion/comments 
+     - If assign=false then use the "default=" value
+       - Suggested that there is no need for both assign and default
+         if the value is only used when assign=true
+       - 'static' instead of 'default' or maybe just 'assign' as
+         alternative naming; or
+       - just as an outerloop with a single value; or
+       - a function that returns always the same value; or
+       - preprocessing files to get the static definitions
+     - 'default' attribute was suggested as an addition to the main
+       sweep schema at OGF23 but it is not clear if it makes sense
+       there since in the non-file template case all values are
+       provided
+
+   - Since the template data file is modified there is a question on
+     how to ensure that the original file can be used before each
+     sweep instance. One way is to require a data staging element to
+     appear. Discussed whether it should be mandated or recommended
+     with the rough consensus towards recommending.
+
+   - Naming of xsd file? Parameter or Target or ...
+     - perhaps file-sweep.xsd
+
+   - Is extensibility on elements (xsd:any) necessary or not (as in
+     the GFD.56)
+     - Need clearer understanding of the use case for this kind of
+       extensibility for the sweep spec given its much narrower scope
+
+   - How to support different sets of substitutions within the same
+     file? 
+     - Not addressed but seems like a needed use case. 
+     - Perhaps define as two different sets with the same template
+       file and then define that in such a case the changes have to be
+       merged. 
+
+
+   - Agreed that making Parameter/function abstract seems to solve the
+     main problem of how to specify the file template extension
+   - Agreed that the JsdlElement concrete definition should be in the
+     jsdl-sweep.xsd so that the main specification is standalone and
+     independent of the file template extension
+
+
+   - ACTION: David Meredith to rework the examples in the wiki and
+             update the file template schema/defintion
+   - ACTION: Michel Drescher to update the main parameter sweep
+             specification with the abstract definitions
+
+* Next call 
+
+   - Next parameter call scheduled for July 30th
+   - Next call (July 23th) will probably be on Activity schema
+     (pending confirmation)

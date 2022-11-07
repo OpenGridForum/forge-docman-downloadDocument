@@ -1,0 +1,307 @@
+JSDL Telecon Minutes
+====================
+February 11th, 2004 - 14:00 GMT
+===============================
+
+
+Attendees:
+==========
+
+Ali Anjomshoaa (EPCC)
+Darren Pulsipher (Cadence)
+Steve McGough (LeSC)
+Lee Cook (IBM)
+Fred Brisard (CA)
+An Ly (CA)
+Michal Kosiedowski (Poznan)
+Donal Fellows (Manchester Uni.)
+
+
+Apologies:
+==========
+
+Andreas Savva (Fujitsu)
+
+
+Discussion:
+===========
+
+Administrative:
+---------------
+
+o Attrs. to Andreas to compile into a document for submission for GGF10, 
+  ASAP?
+
+
+Data Attributes:
+----------------
+
+o Ali - Agrees with lots of Donal's comments (see appended e-mail below)
+
+o Steve: to fold Donal's comments into the Data attributes document.
+
+o Ali - Why do we need separate FileName and FileLocation attributes?
+        We should have a single attribute that 'specifies' a file, 
+        including its location and name.
+
+o Donal on Distinguishing files by their name and location.
+
+o Ali - Why do we need separate Name and Location Attr.?
+
+o Donal - Name and Location are the same thing, a la Fully Qualified Names.
+
+o Steve to address this in the document. (merge attributes, rename and 
+  redefine?)
+
+---
+
+o Steve - Allowing job directory (working directory) to have 
+          subdirectories?
+
+o Donal - Yes why not.
+
+---
+
+o Lee on Donal's comment 1.2.1. (see appended e-mail below)
+
+o Donal - Just trying to break down the problem here.
+
+---
+
+o Ali - I agree with Steve's comment regarding granularity of files being 
+        on a per file basis. If my job needs 20 files, I'll have 20 
+        e.g. JobFile attributes each specifying each of the 20 files.
+
+o Ali on FileSets: explicit file specification on a per file basis.
+
+o Donal: Agree.
+
+o Steve: for Staging in and out, explicit file specification 
+         for individual files.
+
+---
+
+o Steve on file sources: preferred order of file sources?
+
+o Re: file sources: a file specification doesn't require a source but may 
+      have 'a' or multiple sources: i.e. {0..n}
+
+---
+
+o Fred: File Collisions, two files with the same name coming from different 
+        sources to the execution env. can collide.
+
+--> We need to specify where the files get staged to as well as where 
+    they're coming from. Steve and Andreas to put into spec.
+
+---
+
+o Donal - FileSets are completely optional. Use for convenience.
+
+o Ali - need for this to be transparent in the spec.
+
+--> BEWARE of collisions, leave un-expected collisions to the system 
+    implementations of job submission and job execution. Fail job in 
+    case of unexpected collisions.
+
+ - Note: discuss 'source' and 'target' for 'staging in' and 'staging out'
+
+--> To take this to the mailing list, Fred, Donal, Steve, Ali
+
+---
+
+o Ali - Agree somewhat with Donal on file deletion. Would like to see this 
+        tied to each specified file. i.e. some files are deleted after 
+        execution is complete, others can hang around for perhaps the next 
+        job to use! The latter would depend on an environment were work-flow
+        could use the JSDL in this way.
+
+o Ali: deletion and cleanup tied to the file and data.
+
+o Donal: Agree.
+
+o Fred: To put his comments regarding this onto the list.
+         "JobExecutionDirectory" persisted across multiple jobs?
+         Re: Sequence of jobs to run.
+
+o Ali: perhaps we should make the requirement that some data should 
+       persist rather than a file be deleted. i.e. require that files 
+       and or data persist after the job (default behaviour is to delete).
+
+o Donal: Agree.
+
+---
+
+o Lee: Lee's Security attr. (still to discuss with Darren)
+
+o Ali: on next week's agenda
+
+---
+
+o Lee: Asit's WS-Agreement stuff, presentation, e-mail?
+
+o Ali: Hopefully soon.
+
+
+
+Actions:
+--------
+
+Steve: to fold in Donal's e-mail and comments from these minutes.
+Fred: to ping list with his comments and questions.
+
+
+AOB:
+----
+o Lee: Use-cases, are we referencing the NPi ones?
+o Ali, Fred: Use NPi as starting point and go on from there.
+
+
+DONM:
+-----
+February 18th, 2004 - 14:00 GMT (90 min.)
+
+ - Agenda items will include:
+
+   o Spec/WG readiness for GGF10
+   o Lee's Security attributes
+
+
+----------------------
+
+Appended e-mail from Donal re: Data Attrs from Steve and Andreas
+----------------------------------------------------------------
+
+1.1: I'm tempted to say that there is not yet enough implementation 
+experience for this to be standardizable at this stage
+
+1.2: I agree with the comment that staging ought to be handled through 
+data attributes.  While some job managers might support other mechanisms 
+for dealing with things like stdio streams, staging is a least common 
+denominator and it is also fairly easy to make work.
+
+1.2.1: We really need to have a basic model of what a job does.  Here's 
+one.  A job runs in a directory (the job directory) and updates a set of 
+files in that directory (and potentially elsewhere).  Stage-In is the 
+process of getting files into that directory before the job runs.  
+Stage-Out is the process of getting files out of that directory once the 
+job has run.  This gives a basic model of:
+   Submit->Stage-In->Execute->Stage-Out->{Finished}
+We do not define whether stage-in is done synchronously with submission 
+or asynchronously following submission.
+
+The name of the file (do we permit directory separators?) is the name 
+in/relative-to the job directory of the file.
+
+I'm tempted to say that we say that a JSDL-compliant job submission 
+engine may have two methods of dealing with the naming of a directory.  
+It should either transfer the entire directory (recursively) named or 
+fail, and the job submission engine should support introspection (by 
+some appropriate method we do not define) of what that behaviour will be.
+
+1.2.2: I think that the staging should always have the job directory as 
+either source or target.  Other transfers are the responsibility of 
+other services.  Given that, a FileLocation has no meaning locally; it 
+is identified with the name of the file.  (Note that the job engine 
+should support efficient staging of files from local sources, of course.)
+
+1.2.3: I don't quite see where you're going with this.  Amorphous clouds 
+of files make me feel a bit unhappy.  ;^)  Perhaps we need to use this 
+to cluster files together for some purpose, but we should define what 
+that purpose is.
+
+1.2.4: It would be tremendously helpful if we distinguish between files 
+that are deleted upon termination of the execution stage of the job 
+(e.g. staged-in input data) and files that are deleted when the job is 
+disposed with.  Perhaps we could do with being able to specify a set of 
+files (i.e. by allowing the attribute to be attached to a FileSet as 
+well as an individual file and the overall job description)
+
+1.3: This feels out of scope to me.
+
+1.4.1: Why get fancy?  Why not just use a URL/URI?
+
+1.4.2: I'd prefer to have a master StageIn attribute and a master 
+StageOut attribute.  The direction would then be implicit in the overall 
+context.
+
+1.4.3: Being able to stage multiple files (in a set) from a single 
+source would potentially enable much more efficient transfer, and it 
+would be pretty easy to convert it into transfer instructions for each 
+single file in the set where multi-file transfers are not supported.
+
+1.4.4: I don't think streaming data is supported well by all job 
+engines, so it probably ought to be an extension.  Out of scope.
+
+2.*: I don't quite see where this is going either.  Looks like I'm going 
+to have to write my own suggestion.
+
+I start out with a sort-of abstract example, so people can see how these 
+things fit together.
+
+<StageIn>
+   <File name="foobar" deleteOnTerminate="true">
+      <Source ref="gsiftp://some.where.com/foo/bar/foobar" />
+      <!-- If transfer from the first location fails, try the second one 
+and so on in order-->
+      <Source ref="gsiftp://some.where.com/foo.old/bar.old/foobar" />
+      <Source ref="file:/local/copy/of/foobar" />
+   </File>
+   <FileSet deleteOnTerminate="true">
+      <Source ref="http://somewhere.else.org/" />
+      <File name="abc" />
+      <File name="def" />
+      <File name="ghi">
+         <!-- Additional less-preferred location for this one -->
+         <Source ref="https://some.where.com/ghi" />
+      </File>
+   </FileSet>
+</StageIn>
+<StageOut>
+   <File name="results" deleteOnTerminate="false">
+      <Target ref="unicore://qwerty.uiop.ac.uk:4433/Service/">
+         <!-- Extensible support for protocol-specific information, of 
+course -->
+         <unicore:xlogin>targetIdentity</unicore:xlogin>
+      </Target>
+   </File>
+   <File name="unwanted.file" deleteOnTerminate="true"/>
+</StageOut>
+<RetainJobDirectory>true</RetainJobDirectory>
+
+OK, explaining.  The StageIn "attribute" is for setting the scene for 
+the job.  Its body lists Files or FileSets.  Each File has a name (which 
+describes the location of the file relative to the job directory), a 
+deleteOnTerminate flag (change to cleanUpOnTermination if you prefer) 
+and a set of sources listed in order of preference.  Each source 
+describes one location that the file might be obtained from; if no 
+source is defined, the file is assumed to pre-exist in the job directory 
+(this may happen if the file is transferred from the submitter as part 
+of the SOAP request as an attachment, but likes outside JSDL spec.)  A 
+fileset allows the application of deleteOnTerminate and a source list to 
+many files in the common case where the data is many files that are 
+similar; note that the usual RFC-defined URL composition rules are to be 
+used to build the actual urls to use to download files as part of a 
+fileset, and that individual files may have their deleteOnTerminate flag 
+overridden, or the list of sources *appended* to.
+
+StageOut is pretty similar except it is Targets instead of Sources.  
+Files may be deleted early by staging them out without a Target and with 
+the deleteOnTerminate flag set to true.  Also note that Target (and 
+Source) elements have extensible content so protocol-specific 
+information can be put in there which presumably the job engine would 
+find helpful (the port restriction stuff mentioned in the document that 
+started the discussion would also go here, since there's no way that it 
+is relevant to all protocols.)  JSDL shouldn't constrain that 
+information though.
+
+I also add a RetainJobDirectory attribute to allow the user to request 
+that the job manager doesn't delete the job directory automatically on 
+completion of the job (which in turn would delete all files used by the 
+job in the dir, including ones not mentioned in either StageIn or 
+StageOut attributes.)
+
+I think this is rich enough to describe a lot of stuff, and yet simple 
+enough that most code won't have problems handling it.
+
+Donal.

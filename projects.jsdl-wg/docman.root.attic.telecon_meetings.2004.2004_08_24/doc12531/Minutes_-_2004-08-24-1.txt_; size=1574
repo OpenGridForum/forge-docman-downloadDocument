@@ -1,0 +1,77 @@
+JSDL telecon 24th Aug 2004
+--------------------------
+
+Attendees
+---------
+
+Donal,
+Steve,
+Subir,
+Anuj,
+Ali,
+Andreas,
+Fred,
+Saga
+
+
+Agenda
+------
+
+o Spec. update and status
+o Discussion of operators
+o GGF12 activity
+
+
+GGF12
+-----
+Andreas - demo at GGF12?
+Steve - Can do an Imperial demo at the last session.
+
+
+
+Steve on Operators
+------------------
+
+o Discussion at last telecon on operators.
+
+o Donal concerned about the complexity of introducing operators like XOR!
+
+o Steve - motivation for XOR.
+
+o Donal preference for AND, OR, and NOT, no numerical operations, and 
+   * notMoreThan - useful for memory constraints
+   * notLessThan - useful for processor speed constraints
+   * exactlyEqualTo - useful for host names
+
+  Leave out for now:
+   * approximatelyEqualTo - someone's bound to want this, even though its
+     exact interpretation would be implementation-defined.
+
+o Steve to come up with schema for these operations and revise the JSDL.xsd
+
+  AND, OR, NOT, ==, <=, >=
+
+
+o Andreas - are all these operations required to be understood by JSDL 
+            compliant systems?
+
+o Steve - Yes, these are all required.
+
+o Steve - to come up with list of reserved key words that JSDL wishes to 
+  use in the future.
+
+
+
+Spec
+----
+o Chase up Darren on current status, location of spec.
+
+
+GGF12 discussion
+----------------
+o To discuss required vs. optional operations
+o To discuss where numerical operations fit in (how they fit in?)
+o To discuss the open issues in the spec: list them prior to discussion
+o To discuss topology, examples from Chris... will be at GGF12
+
+

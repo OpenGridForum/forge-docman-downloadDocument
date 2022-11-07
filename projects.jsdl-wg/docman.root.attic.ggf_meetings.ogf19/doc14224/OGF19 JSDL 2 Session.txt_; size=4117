@@ -1,0 +1,92 @@
+-- JSDL-WG Session 2 --
+
+OGF19, Chapel Hill, NC, USA
+Friday 2nd Feb 2007
+
+Chairs: Andreas Savva, Stephen McGough
+Scribe: Ali Anjomshoaa (& Andreas Savva)
+
+-------------------------------------------------------------------------------------
+* JSDL v1.1 issues
+-------------------------------------------------------------------------------------
+
+  Andreas discussed the state of JSDL 1.1, and in particular the
+  desire not to make schema changes unless there are very good
+  reasons. So far issues are mainly (but not completely) spec
+  (definition) errata.
+
+  Hiro: Re GFSG and Editor Errata Process, or rather, lack of. Is this
+  just an errata release?
+  
+  Andreas: We would use an OGF Editor Errata Process if there was
+  one. For now, we are considering some additions e.g. software
+  resource or library, as well as errata, but, keeping schema and
+  namespace unchanged - to help implementors keep their JSDL 1.0 based
+  implementations the same. The additions would be done in a separate
+  namespace and use the extnsibility points in the main schema.
+
+  Andreas showed the issues that may require feature additions:
+  - artf5562: Dave Snelling suggested checking the BES spec to see if
+    the "software resource" or "library" has been included, if not,
+    then make this a low priority. (Andreas will check)
+
+ - artf5641: Optionality on elements is a thorny problem and would be
+   better to think about very carefully. Probably a good topic to
+   leave for v2.0.
+
+ - artf5497: An element is specified in the spec but missing in the
+   schema. Noone has complained about this (and so changing the schema
+   to fix it is probably not necessary).  One idea is to just delete
+   it from the spec, if this is just an errata release.
+
+ - Dave Snelling: Proposed to publish just an Errata release (no
+   additions), once an editor process is in place for this.
+
+ Andreas and Steve agreed as long as a process for Errata is put into
+ place soon. Otherwise the group may move forward to publish a new
+ document. Need to discuss on the list and calls.
+
+-------------------------------------------------------------------------------------
+* JSDL Parameter Sweep Extension (Ali and Michel)
+-------------------------------------------------------------------------------------
+
+  Ali gave an overview of the possible usage scenarios and motivation
+  for feature set. Michel described detailed features that should be
+  supported. (See slides.)
+
+  There was a lot of interest and a number of topics came up.
+  - Iteration of parameter values dependent on resource availability,
+    or application need. Need conditional iteration, parameter sweeps.
+  - Also consider parameter sweeps dependent on application result
+    outcome - application dependent. Consider Nimrod!
+ 
+  Agreed to start work on this extension. A number of different
+  requirements were expressed and a next step is to clarify the scope.
+  Continue the discussion on the list and teleconfs and invite
+  interested parties to join the work.
+
+-------------------------------------------------------------------------------------
+* JSDL 2.0
+-------------------------------------------------------------------------------------
+
+ Andreas gave an overview of issues with JSDL 1.0 and motivation for
+ the next major version (see slides).  Some work is already happening
+ (XQuery requirements) but there are many gaps, e.g.,
+ dependencies/workflow, information modeling etc, that have to be
+ filled in before a next major version becomes possible.
+
+ The Chairs think that an incremental approach---rolling out new
+ features are extensions to 1.0 and using established implementations
+ to test them incrementally and inform the design---is necessary. Once
+ everything is in place then publication of a 2.0 is possible.
+
+ Fabio (over the phone) gave a quick overview of Requirements
+ slides. Due to lack of time the presentation will be re-scheduled on
+ a JSDL teleconference.
+
+ This work will gradually start taking center stage as other work is
+ completed.
+
+ 
+
+

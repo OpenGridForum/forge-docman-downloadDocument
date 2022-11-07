@@ -1,0 +1,69 @@
+DAIS Telcon - 18 April 2008
+===========================
+
+Attendees:
+	Mario Antonioletti, EPCC
+	Dave Pearson, Oracle
+	Isao Kojima, AIST
+	Steven Lynden, AIST
+
+Actions:
+--------
+
+[Mario] Take the DAIO work out of the charter on consultation with Thomas.
+
+[Mario] Get in touch with Dave de Roure about the RDF work.
+
+[Isao]  Put in a DAIS session request for OGF23.
+
+[Mario] Make some additional modifications and then submit for AD approval.
+
+        Chasing up one or two things.
+
+[All]   Come with use case examples for SAGA. Templates sent to the mailing
+        list by Andre:
+
+        http://www.ogf.org/pipermail/dais-wg/2008-February/000231.html
+
+[Andre] Send out example APIs for files.
+
+
+[Miguel] Post DAIS spec issues to the list.
+
+[Mario] Collect existing spec issues in one location.
+
+[Mario] Try to coordinate existing DAIS implementations.
+
+Completed Actions:
+------------------
+
+[Mario] Check that Isao has Admin privileges for the DAIS GridForge account.
+
+        Isao does have privileges.
+
+[Isao]  Add the proposed RDF work to the DAIS charter with deliverables and
+        notify once this is done.
+
+        Isao added the RDF work.
+
++---
+
+Isao will be attending OGF23, Steve Lynden does not know yet, Mario
+will and Dave Pearson will not be able to make it. 
+
+ISao will put in a session request for OGF23.
+
+Dave asked as they are inviting proposals for BoFs at OGF23 it might
+be worth putting in a proposal for semantic technologies BoF, use the
+semantic web to raise the profile of the DAIS group. Get in touch with
+Carole Goble and Dave de Roure.
+
+
+Dave has got details for the 2nd European semantic technology
+conference, in Vienna in Sep. Last year the conference had over 150
+people last year.  This event ould be used to promote the DAIS RDF
+work - Dave did this. Someone from the DAIS RDF initiative should try
+to attend this meeting and give a presentation - Dave will send out an
+email with the meeting details.
+
+

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--*
+    * Simple application invokation
+    * 
+    * User wants to run the application 'gnuplot' to produce a substantial
+    * number of plotted graphical files based on some data shipped in from
+    * elsewhere (as part of a workflow) which a front-end application will
+    * then build into an animation of spinning data.
+    * 
+    * Front-end application knows URL for data file which must be staged
+    * in.
+    * 
+    * Front-end application wants to stage in a control file that it
+    * specifies directly which directs gnuplot to produce the output files.
+    * 
+    * Front-end application knows how many output graphic files are
+    * produced and what their names are and wants to stage them to itself
+    * upon successful completion of the job and would prefer to stage them
+    * as some kind of archive file.
+    * 
+    * In case of error, messages should be produced on stderr (also to be
+    * staged on completion) and no images are to be transferred.
+    *-->
+
+<jsdl:job xmlns:jsdl="http://www.gridforum.org/JSDL"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:unicore="http://www.unicore.org/schema/jsdl"
+      xsi:schemaLocation="http://www.gridforum.org/JSDL jsdl.xsd">
+  <jsdl:JobIdentification>
+    <jsdl:JobName>Simple application invokation</jsdl:JobName>
+    <jsdl:Extend name="unicore:job"/> <!-- Mark as unicore-generated job -->
+    <!-- I forget the exact format for these Unicore ids... -->
+    <jsdl:Extend name="unicore:AAId">3452325707234</jsdl:Extend>
+  </jsdl:JobIdentification>
+  <jsdl:Resource>
+    <jsdl:CPUCount>1</jsdl:CPUCount> <!-- Not parallel job! -->
+    <jsdl:PhysicalMemory>20971520</jsdl:PhysicalMemory>
+  </jsdl:Resource>
+  <jsdl:SoftwareRequirements>
+    <!-- Only execute on systems where gnuplot application is installed -->
+    <jsdl:Extend name="unicore:Application">gnuplot</jsdl:Extend>
+    <!-- Default limits are fine -->
+  </jsdl:SoftwareRequirements>
+  <jsdl:Application>
+    <!-- type should be xsd:token not xsd:string -->
+    <jsdl:ExecutableName type="jsdl:onPath">gnuplot</jsdl:ExecutableName>
+    <jsdl:Argument>control.txt</jsdl:Argument>
+  </jsdl:Application>
+  <jsdl:DataAttributes>
+    <jsdl:File>
+      <jsdl:FileName>control.txt</jsdl:FileName>
+      <jsdl:Source>http://foo.bar.com/~me/control.txt</jsdl:Source>
+      <!-- File is not to be retained; attribute missing from schema -->
+      <jsdl:DeleteOnTermination/>
+    </jsdl:File>
+    <jsdl:File>
+      <jsdl:FileName>output1.png</jsdl:FileName>
+      <!-- I've made this one up; it indicates that the file is to be
+           shipped back to the user as part of the general job
+           response mechanism. -->
+      <jsdl:Target>unicore:spooltouser</jsdl:Target>
+      <!-- File is not to be retained; attribute missing from schema -->
+      <jsdl:DeleteOnTermination/>
+    </jsdl:File>
+    <jsdl:File>
+      <jsdl:FileName>output2.png</jsdl:FileName>
+      <jsdl:Target>unicore:spooltouser</jsdl:Target>
+      <jsdl:DeleteOnTermination/>
+    </jsdl:File>
+    <jsdl:File>
+      <jsdl:FileName>output3.png</jsdl:FileName>
+      <jsdl:Target>unicore:spooltouser</jsdl:Target>
+      <jsdl:DeleteOnTermination/>
+    </jsdl:File>
+    <jsdl:File>
+      <jsdl:FileName>output4.png</jsdl:FileName>
+      <jsdl:Target>unicore:spooltouser</jsdl:Target>
+      <jsdl:DeleteOnTermination/>
+    </jsdl:File>
+    <jsdl:File>
+      <jsdl:FileName>output5.png</jsdl:FileName>
+      <jsdl:Target>unicore:spooltouser</jsdl:Target>
+      <jsdl:DeleteOnTermination/>
+    </jsdl:File>
+    <jsdl:File>
+      <jsdl:FileName>output6.png</jsdl:FileName>
+      <jsdl:Target>unicore:spooltouser</jsdl:Target>
+      <jsdl:DeleteOnTermination/>
+    </jsdl:File>
+    <jsdl:File>
+      <jsdl:FileName>output7.png</jsdl:FileName>
+      <jsdl:Target>unicore:spooltouser</jsdl:Target>
+      <jsdl:DeleteOnTermination/>
+    </jsdl:File>
+    <jsdl:File>
+      <jsdl:FileName>output8.png</jsdl:FileName>
+      <jsdl:Target>unicore:spooltouser</jsdl:Target>
+      <jsdl:DeleteOnTermination/>
+    </jsdl:File>
+    <jsdl:File>
+      <jsdl:FileName>output9.png</jsdl:FileName>
+      <jsdl:Target>unicore:spooltouser</jsdl:Target>
+      <jsdl:DeleteOnTermination/>
+    </jsdl:File>
+    <jsdl:File>
+      <jsdl:FileName>output10.png</jsdl:FileName>
+      <jsdl:Target>unicore:spooltouser</jsdl:Target>
+      <jsdl:DeleteOnTermination/>
+    </jsdl:File>
+  </jsdl:DataAttributes>
+</jsdl:job>

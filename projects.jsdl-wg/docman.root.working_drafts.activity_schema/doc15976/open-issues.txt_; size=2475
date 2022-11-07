@@ -1,0 +1,95 @@
+
+[-] pending
+[x] done (needs checking)
+[o] done (checked by someone)
+
+>    2. Activity instance document specification
+
+  [x] Andreas to review doc and accept changes
+
+> DOCUMENT:
+> - Clarification of terminology: activity versus activity
+>   instance. The former is what the user/application/client/... wants
+>   to have executed. The latter is generated according to this
+>   specification. Check whole document for consistency. Introduce
+>   terms.
+
+  [x] Check for consistency and description of terms (andreas)
+
+   in progress...
+   
+  [x] Delete glossary at the back (andreas)
+
+> - Enumeration of figures (3 is missing).
+
+  [x] Check and fix (andreas)
+ 
+> - De-bold all references to references.
+
+  [x] Remove references from captions (andreas)
+
+> - Do we provide Annex B (If not, adjust Section 3)
+
+  [-] One for initial Activity instance entry and one with usage
+      records and so on (philipp)
+
+> - What was the decision re. Section 4? Fill or delete?
+
+  [x] Delete (andreas) 
+
+> - Is 5.10.6 example correct?
+
+  [x] Change URI to tempuri.org   (andreas)
+
+> - Adjust 6.2.5 to 6.1.5?
+
+  [-] Adjust the JSDL example to fit the UR (probably easier)
+  [-] adjust the UR example to make sense (e.g., recent date)
+
+> - Insert missing references.
+
+  [-] (philipp)
+
+> XSD:
+> - Link to the OGF/W3C location of schemata, not the local ones.
+
+  [-] (philipp)
+
+> - Take special care re UR URL!
+
+  [-] (philipp)
+
+> - Check XSD versus specification.
+
+  [-] Change the element names in the XSD for the ogf specs to match
+      those used in the spec (philipp)
+
+> - THEN add XSD to Annex A.
+
+  [-] When the document is done (philipp)
+
+- Other discussion
+
+  [x] Fix the footer:  example@ggf.org -> jsdl-wg (andreas)
+
+- UR section
+  - history entry order cannot be relied on, it might be different from the UR
+  - Need to reason based on  start / end fields of UR record
+
+  [x] Andreas to add some explanatory text to the spec 
+
+- Security section 
+
+  [x] Could add signatures overall and/or on individual entries. Minor
+      rewrite to describe both possibilities (andreas)
+
+- From Jun 2 Teleconference
+  [-] Section 5.2: minor editorial change for last sentence
+  [-] Add reference to security section in extensibility section of
+      activityhistoryentry (4.1.7), activitydocument (4.4.7)
+  [-] State clearly that entries are only appended, no modification
+      possible
+  [-] Delete subtype text in UR definition
+  [-] delegate text check
+  [-] Other minor editorial checks 
+

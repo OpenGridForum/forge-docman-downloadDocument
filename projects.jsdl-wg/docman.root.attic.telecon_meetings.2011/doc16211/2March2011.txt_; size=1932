@@ -1,0 +1,69 @@
+JSDL Telecon
+2 March 2011
+
+Attendees
+---------
+	Mark Morgan (minutes, chair)
+	Michael Saravo
+	Morris Riedel
+	Etienne Urbah
+	Michaela Lechner
+	John Karpovich
+
+Not Attending
+-------------
+	Aleksandr Konstantinov
+	Stuart Martin
+	Phillip Wieder
+
+Agenda
+------
+	* Roll Call and Minutes
+	* Approve last meetings minutes
+		- Minutes approved with no changes on 2 March 2011
+	* Action Item Review from Last Week
+	* Agenda Bashing
+	* Discussing Use Case Templates
+		- I reviewed the use cases as asked and have received no futher
+		  submissions.  This week we will vote on which use case template
+		  to use
+    * Call to Action -- write use cases
+    * Start talking about Requirements
+    * Teleconferencing Software
+    * Action Item Review
+
+* Use Case Template
+	- Mark votes for Etienne's
+	- Morris votes for Etienne's (minor), but care must be taken not to go to
+		deep down the rabbit hole
+	- Etienne agrees with Morris
+	- Michaela votes for Etienne's but may need help
+	- Saravo votes for Etienne's
+	- Karpovich votes for Etienne's
+
+* Requirements
+	- wait until use cases done
+	- start thinking about requirements document template
+		-- PGI version?
+
+* Agreements
+	- Agreed on use case template format
+
+Action Item Review from Last Time
+---------------------------------
+	* Starting working on Use cases
+	* Everyone read http://forge.gridforum.org/sf/go/doc16024
+		- Prepared to vote on use case format in two weeks
+	* Start working on almost-normative specifications
+	* Everyone take a look at a link by Etienne:
+	http://forge.gridforum.org/sf/wiki/do/viewPage/projects.pgi-wg/wiki/ReqJD3
+	* Mark to come up with comparison of Etienne's Use Case Document
+		and JSDL Use Case Document and PGI Use Case template.
+
+Action Items
+------------
+	* Mark to officially produce use case template 
+		- by the 4th of March
+	* People start writing use cases
+		- abstract or summary (1 page max) of what the use case will be by
+		  16th of March

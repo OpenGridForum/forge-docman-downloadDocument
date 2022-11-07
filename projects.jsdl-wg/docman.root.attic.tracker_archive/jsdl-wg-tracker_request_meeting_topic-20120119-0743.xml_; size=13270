@@ -1,0 +1,458 @@
+<?xml version="1.0"?>
+<!DOCTYPE datalist PUBLIC "-//VA Software, Inc.//DTD DataList Export 1.1//EN"
+    "http://schema.vasoftware.com/sf/dtd/sf-datalist-export_1_1.dtd">
+
+<datalist>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5238</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>(1150) Extension Name and Version tag</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>We have talked about people being able to generate their own extension set to JSDL. It would be useful to allow a document not only to be taged with the JSDL version that it is written in but also the names of the extension sets that have been used and the version of those extension sets. Discuss.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Stephen McGough</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>29.11.2004</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>21.05.2005</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>21.05.2005</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value>Next call</field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Stephen McGough</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5238/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5239</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>(1129) Agenda for Face to Face</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Come up with the Face to Face meeting agenda.
+Examples first
+Schema
+Specification.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Darren Pulsipher</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>05.10.2004</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>06.05.2005</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>06.05.2005</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value>Next call</field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>1</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Darren Pulsipher</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5239/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5240</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>(1128) Status of Spec assigments</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>We will be discussion the status of the spec and the assignments that have been made.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Darren Pulsipher</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>05.10.2004</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>06.05.2005</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>06.05.2005</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value>Next call</field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>1</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Darren Pulsipher</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5240/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5241</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>(1152) Webservice ApplicationType Example</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>We need to flesh out what we're going to do about the non &#034;normal executable&#034; ApplicationTypes; the webservice one is attracting particular attention and could do with some additional fleshing out than the very bare bones we did at the F2F..</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Donal Fellows</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>30.11.2004</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>06.05.2005</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>06.05.2005</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value>Next call</field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>1</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Fred Brisard</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5241/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5242</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>(1148) JSDL XML namespace</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>The current schema uses the namespace &#034;http://www.gridforum.org/JSDL&#034;. Do we need to document that in the spec? If so, should we make http://www.gridforum.org/JSDL final. .</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>William Lee</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>25.11.2004</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>06.05.2005</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>06.05.2005</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value>Next call</field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5242/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5243</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>(1119) Finalize Face to Face Location and Attendees</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>We need to finalize the location and time.
+
+ Nov. 17 - 19  in London - 10 am - 7pm Tentiative
+     - Location - CA (Fred), Fj (Andreas)
+
+.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Darren Pulsipher</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>28.09.2004</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>05.10.2004</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>05.10.2004</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value>Next call</field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>1</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Darren Pulsipher</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5243/</field-value>
+    </field>
+  </element>
+</datalist>

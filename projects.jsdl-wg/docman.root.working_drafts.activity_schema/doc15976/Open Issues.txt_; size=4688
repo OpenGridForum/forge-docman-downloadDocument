@@ -1,0 +1,121 @@
+[-] pending
+[x] done (needs checking)
+[o] done (checked by someone)
+
+>    2. Activity instance document specification
+
+  [x] Andreas to review doc and accept changes
+
+> DOCUMENT:
+> - Clarification of terminology: activity versus activity
+>   instance. The former is what the user/application/client/... wants
+>   to have executed. The latter is generated according to this
+>   specification. Check whole document for consistency. Introduce
+>   terms.
+
+  [x] Check for consistency and description of terms (andreas)
+
+   in progress...
+   
+  [x] Delete glossary at the back (andreas)
+
+> - Enumeration of figures (3 is missing).
+
+  [x] Check and fix (andreas)
+ 
+> - De-bold all references to references.
+
+  [x] Remove references from captions (andreas)
+
+> - Do we provide Annex B (If not, adjust Section 3)
+
+  [-] One for initial Activity instance entry and one with usage
+      records and so on (philipp)
+
+> - What was the decision re. Section 4? Fill or delete?
+
+  [x] Delete (andreas) 
+
+> - Is 5.10.6 example correct?
+
+  [x] Change URI to tempuri.org   (andreas)
+
+> - Adjust 6.2.5 to 6.1.5?
+
+  [x] Adjust the JSDL example to fit the UR (probably easier)
+  [x] adjust the UR example to make sense (e.g., recent date)
+
+> - Insert missing references.
+
+  [-] (philipp)
+
+> XSD:
+> - Link to the OGF/W3C location of schemata, not the local ones.
+
+  [x] (philipp)
+
+> - Take special care re UR URL!
+
+  [x] (philipp)
+
+> - Check XSD versus specification.
+
+  [-] Change the element names in the XSD for the ogf specs to match
+      those used in the spec (philipp)
+
+> - THEN add XSD to Annex A.
+
+  [-] When the document is done (philipp)
+
+- Other discussion
+
+  [x] Fix the footer:  example@ggf.org -> jsdl-wg (andreas)
+
+- UR section
+  - history entry order cannot be relied on, it might be different from the UR
+  - Need to reason based on  start / end fields of UR record
+
+  [x] Andreas to add some explanatory text to the spec 
+
+- Security section 
+
+  [x] Could add signatures overall and/or on individual entries. Minor
+      rewrite to describe both possibilities (andreas)
+
+- From Jun 2 Teleconference
+  [x] Section 5.2: minor editorial change for last sentence
+  OLD TEXT "The UsageRecord element defines a particle of usage information in a format that is compatible with the OGF Usage Record specification [UR]. All elements defined by the specification [UR] and extensions MAY be used when describing an activity?s resource usage. Where an activity instance document contains multiple UsageRecord elements, it is not generally safe to assume that the UsageRecord elements present in later ActivityHistoryEntry elements override the earlier elements. The UsageRecord StartTime and EndTime elements MUST be used to determine the periods that individual UsageRecord elements refer to. Also if an activity was moved from one system to another part way through its execution, the usage records for the first system MUST NOT be overridden by the second; though they MAY be rendered obsolescent by it, depending on the exact way in which responsibilities are assigned, which is outside the scope of this document."  
+  
+  [x] Add reference to security section in extensibility section of
+      activityhistoryentry (4.1.7), activitydocument (4.4.7)
+      
+  [x] State clearly that entries are only appended, no modification
+      possible
+  4.4.1 NEW TEXT: "Once an ActivityHistoryEntry is written, it MUST NOT be altered. Additional information about the respective activity has to be appended to the ActivityHistory by adding a new ActivityHistoryEntry element."
+  
+  [x] Delete subtype text in UR definition --> see 5.2.2
+  
+  [x] delegate text check
+  
+  [x] Other minor editorial checks
+  
+- Plus
+  [x] Namespace of activity XSD adjusted
+  [x] Namespace for OGF-specific schema added to spec.
+  [x] HIstory --> History
+  
+- Open questions
+ - "The UsageRecord StartTime and EndTime elements MUST be used to determine the periods that individual UsageRecord elements refer to". - Really a MUST?
+  [x] Text adjustment
+  
+ - BES (& activity) schema should be available at ogf.org
+  [-] Email to BES asking to put the schema online.
+ 
+ - Are the substituents for abstarct elements "examples" or is there a better word (proposal/suggestion/...)?
+  [x]
+  
+  
+ - From June 9 teleconference (and doc. check)
+   [-] Resolve JLML acronym and add respective text at p. 3
+   [x] "Note that there MUST exist at least an initial and one final entry to describe the entire lifecycle of an activity." --> Changed to "a final entry" to avoid misunderstandings re. "at least one final ..."
+ 

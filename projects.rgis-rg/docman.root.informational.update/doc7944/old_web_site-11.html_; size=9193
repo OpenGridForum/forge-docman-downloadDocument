@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+  
+This is a static archive of the previous Open Grid Forum GridForge content management system saved from host forge.ogf.org file /sf/docman/do/downloadDocument/projects.rgis-rg/docman.root.informational.update/doc7944/magowan-ggf5.ppt at Sun, 06 Nov 2022 21:58:15 GMT
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta name="generator" content=
+    "HTML Tidy for Linux/x86 (vers 1st March 2002), see www.w3.org">
+
+    <title>Relational Grid Information Services Research Group
+    (RGIS-RG)</title>
+    <link rel="stylesheet" href="old_web_site-2.html_%3b%20size%3d9193" type="text/css">
+  </head>
+
+  <body>
+    <h1 align="center">Relational Grid Information Services
+    Research Group (RGIS-RG)</h1>
+    <a href="http://www.gridforum.org/"><img src="old_web_site-3.html_%3b%20size%3d9193" width=
+    "20%" align="left" border="0" alt="ggf gif"></a> 
+
+    <p>This is a research group of the <a href=
+    "http://www.gridforum.org/">Global Grid Forum</a> under the
+    recently merged <a href=
+    "http://www.gridforum.org/4_GP/Perf.htm">Information Systems and Performance Area</a>.</p>
+
+    <table summary="none">
+      <tr>
+        <th align="left" valign="top">Chairs:</th>
+
+        <td>Steve Fisher &lt;<a href=
+        "mailto:s.m.fisher@rl.ac.uk">s.m.fisher@rl.ac.uk</a>&gt;</td>
+      </tr>
+
+      <tr>
+        <td>
+        </td>
+
+        <td>Susan Malaika&gt; &lt;<a href=
+        "mailto:malaika@us.ibm.com">malaika@us.ibm.com</a>&gt;</td>
+      </tr>
+
+      <tr>
+        <th valign="top" align="left">Mailing List:</th>
+
+        <td colspan='2'><a href=
+        "mailto:rgis-rg@gridforum.org">&lt;rgis-rg@gridforum.org&gt;</a>
+        is used for working group communication.</td>
+      </tr>
+
+      <tr>
+        <th valign="top" align="left">Subscription Request:</th>
+
+        <td colspan='2'>send an email to <a href=
+        "mailto:majordomo@gridforum.org">&lt;majordomo@gridforum.org&gt;</a><br>
+
+         with the body "subscribe rgis-rg"</td>
+      </tr>
+
+      <tr>
+        <th valign="top" align="left">Web Site:</th>
+
+        <td colspan='2'>Home Page : <a href=
+        "http://hepunx.rl.ac.uk/ggf/rgis-rg/">http://hepunx.rl.ac.uk/ggf/rgis-rg/</a><br>
+
+         Email Archive: <a href=
+        "http://www-unix.gridforum.org/mail_archive/rgis-rg/maillist.html">
+        http://www-unix.gridforum.org/mail_archive/rgis-rg/maillist.html</a></td>
+      </tr>
+    </table>
+
+    <h2>Purpose</h2>
+
+    <p>The RGIS research group serves researchers who are exploring
+    approaches based on data models such as the relational data
+    model for defining, communicating, recording, and querying
+    static and dynamic Grid information. It is expected that a
+    working group or groups will be formed to create standards for
+    interoperability.</p>
+
+    <h3>Related Global Grid Forum Groups outside the ISP area</h3>
+
+    <p>RGIS-RG is a research group. RGIS-RG is exploring areas for
+    further work concerning databases, especially when databases
+    are used as part of the grid infrastructure itself. The
+    Database Access and Integration Services <a href=
+    "http://www.cs.man.ac.uk/grid-db/">(DAIS)</a> group is
+    producing a specification for data access to existing databases
+    on the grid. OGSA-DAI is one possible reference implementation
+    for DAIS. RGIS-RG complements the efforts of the DAIS group.
+    They may interact in two ways. Data access and integration may
+    generate requirements that should be met by grid information
+    systems. Grid information systems may generate requirements
+    that should be met by data access and integration services.</p>
+
+    <h2>Next Agenda</h2>
+
+    <ul>
+      <li><a href="old_web_site-4.html_%3b%20size%3d9193">GGF8</a></li>
+    </ul>
+
+    <h2>Milestones</h2>
+
+    <ol>
+      <li>Coordinate among different reseach efforts, producing
+      informational drafts. The goal of this coordination is to
+      further the research efforts of the individual groups through
+      cross-pollination.</li>
+
+      <li>Create an archive of GIS and performance data, and traces
+      of queries to this data, and write an informational draft
+      describing the traces and their properties</li>
+
+      <li>Develop appropriate extensible schemas and indices for
+      Grid information, including an extensible type hierarchy for
+      data objects, and the definition of a set of core types. This
+      will be done in cooperation with the GIS and Performance
+      working groups. This is expected to produce at least two
+      informational drafts</li>
+
+      <li>Determine whether spinning off a working group is
+      warranted (due: 2003)</li>
+    </ol>
+    In addition, the group may pursue the following goals: 
+
+    <ol>
+      <li>Define a set of use cases, producing informational
+      draft</li>
+
+      <li>Define a set of common "canned queries", producing
+      informational draft</li>
+    </ol>
+    <em>These milestones all need reconsidering during GGF8</em> 
+
+    <h2>Talks</h2>
+
+    <ul>
+      <li>
+        GGF 6 (Chicago), October, 2002. 
+
+        <div style="margin-left: 2em">
+          <a href="old_web_site-5.html_%3b%20size%3d9193">Open Discussion of Future
+          Agenda</a>
+        </div>
+      </li>
+
+      <li>
+        GGF 5 (Edinburgh), July, 2002. 
+
+        <ul>
+          <li><i>Performance Comparison of Grid Information
+          Services</i>, Beth Plale. (<a href=
+          "old_web_site-6.html_%3b%20size%3d9193">ppt</a>)</li>
+
+          <li><i>The R-GMA Mediator Revisited</i>, Werner Nutt. (<a
+          href="old_web_site-7.html_%3b%20size%3d9193">ppt</a>)</li>
+
+          <li><i>The NorduGrid Information Model</i>, Balazs Konya.
+          (<a href="old_web_site-8.html_%3b%20size%3d9193">ppt</a>)</li>
+
+          <li><i>Querying Distributed Data Using Grid
+          Messaging</i>, Peter Kunszt. (<a href=
+          "old_web_site-9.html_%3b%20size%3d9193">ppt</a>)</li>
+
+          <li><i>Unified Relational GIS: Workloads, Schemas, and
+          Early Performance Results</i>, Peter Dinda. (<a href=
+          "old_web_site-10.html_%3b%20size%3d9193">pdf</a>)</li>
+
+          <li><i>R-GMA and OGSA</i>, James Magowan. (<a href=
+          "old_web_site-11.html_%3b%20size%3d9193">ppt</a>)</li>
+        </ul>
+      </li>
+
+      <li>
+        GGF 4 (Toronto), February, 2002. 
+
+        <ul>
+          <li><i>The Role of a Mediator in R-GMA</i>, Manfred
+          Oevers. (<a href="old_web_site-12.html_%3b%20size%3d9193">ppt</a>)</li>
+
+          <li><i>Spitfire: A Relational DB Service for the
+          Grid</i>, Peter Kunszt. (<a href=
+          "old_web_site-13.html_%3b%20size%3d9193">ppt</a>)</li>
+
+          <li><i>Key Concepts and Services of a Grid Information
+          Service</i>, Beth Plale, Peter Dinda, Michael Helm,
+          Gregor von Laszewski, John McGee (Presented by Beth
+          Plale).</li>
+        </ul>
+      </li>
+
+      <li>
+        GGF 3 (Frascati), October 2001. 
+
+        <ul>
+          <li>Due to 9/11, the RGIS RG did not meet at this
+          GGF.</li>
+        </ul>
+      </li>
+
+      <li>
+        GGF 2 (Washington), July, 2001. 
+
+        <ul>
+          <li><i>GMA and the Relational Data Model - Progress
+          Report, Protocols, and Where We Might Have
+          Strayed...</i>, Steve Fisher, 2001. (Presented in the
+          Performance WG) (<a href="old_web_site-14.html_%3b%20size%3d9193">pdf</a>)</li>
+        </ul>
+      </li>
+
+      <li>
+        GGF 1 (Amsterdam), March, 2001. 
+
+        <ul>
+          <li><i>Relational Model For Information and
+          Monitoring</i>, Steve Fisher. (Presented in the
+          Performance WG) (<a href="old_web_site-15.html_%3b%20size%3d9193">pdf</a>)</li>
+
+          <li><i>A Unified Relational Approach to Grid Information
+          Services</i> (Presentation of informational draft), Peter
+          Dinda and Beth Plale. (Presented by Peter Dinda in the
+          GIS WG) (<a href="old_web_site-16.html_%3b%20size%3d9193">powerpoint</a>)</li>
+        </ul>
+      </li>
+
+      <li>
+        Grid Forum (United States) 
+
+        <ul>
+          <li><i>LDAP Query Access: Challenges and
+          Opportunities</i>, Beth Plale and Peter Dinda, October,
+          2000. (Presented by Beth Plale at Grid Forum 5 in the GIS
+          WG) (<a href="old_web_site-17.html_%3b%20size%3d9193">powerpoint</a>)</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Papers (Informational Drafts)</h2>
+
+    <ul>
+      <li>B. Plale, P. Dinda, and G. von Laszewski, <i>Key Concepts
+      and Services of a Grid Information Service</i>, Informational
+      Draft (<a href=
+      "http://www.cs.indiana.edu/~plale/documents/pdcs2002.pdf">pdf</a>)</li>
+
+      <li>B. Konya, <i>The NorduGrid Information System</i>,
+      Informational Draft (<a href="old_web_site-18.html_%3b%20size%3d9193">pdf</a>)</li>
+
+      <li>W. Hoschek, G. McCance, <i>Grid Enabled Relational
+      Database Middleware</i>, Informational Draft (<a href=
+      "old_web_site-19.html_%3b%20size%3d9193">pdf</a>)</li>
+
+      <li>B. Coghlan, <i>A Case for Relational GIS/GMA using
+      Relaxed Consistency</i>, Grid Forum Informational Draft
+      GWD-GP-11-1 (<a href="old_web_site-20.html_%3b%20size%3d9193">pdf</a>)</li>
+
+      <li>S. Fisher, <i>Relational Model for Information and
+      Monitoring</i>, Grid Forum Informational Draft GWD-GP-7-1 (<a
+      href="old_web_site-21.html_%3b%20size%3d9193">pdf</a>)</li>
+
+      <li>P. Dinda, B. Plale, <i>A Unified Relational Approach to
+      Grid Information Services</i>, Grid Forum Informational Draft
+      GWD-GIS-012-1 (<a href="old_web_site-22.html_%3b%20size%3d9193">pdf</a>, <a href=
+      "old_web_site-23.html_%3b%20size%3d9193">ps</a>).</li>
+    </ul>
+  <!-- forge.gridforum.org footer.html -->
+<br> <hr>
+<table width='100%'> 
+ <tr>
+  <td align='left'>   <a href='http://www.ogf.org/' target='_blank' style='border: 0 px;'><img src='../../../../../../../ogf-it/opengridforum.gif' alt='The Open Grid Forum' style='border:0px white solid;'></a><td>
+  <td align='center'> <a href='mailto:webmaster@ogf.org'>Contact Webmaster</a> 
+                    | <a href="../../../../../../tracker/do/createArtifact/projects.ggf-info/tracker.html">Report a problem</a>
+                    | <a href="../../../../../../wiki/do/viewPage/projects.ggf-info/wiki/HomePage.html">GridForge Help</a>
+                    </td>
+  <td align='right'>  
+<!--		<img src='/ogf-it/powered_by_dell.gif' alt='Powered by Dell'> -->
+<!-- Begin DigiCert/ClickID site seal HTML and JavaScript -->
+<div id="DigiCertClickID_sxSDRU4L">
+  <a href="http://www.digicert.com/">SSL Certificates</a>
+</div>
+<script type="text/javascript">
+var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_sxSDRU4L", "10", "m", "black", "sxSDRU4L"]);(function(){var cid=document.createElement("script");cid.type="text/javascript";cid.async=true;cid.src=("https:" === document.location.protocol ? "https://" : "http://")+"seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
+</script>
+<!-- End DigiCert/ClickID site seal HTML and JavaScript -->
+  </td>
+ </tr>
+</table>
+<!-- google analytics code -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6775861-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+
+This is a static archive of the previous Open Grid Forum GridForge content management system saved from host forge.ogf.org file /sf/docman/do/downloadDocument/projects.rgis-rg/docman.root.informational.update/doc7944/magowan-ggf5.ppt at Sun, 06 Nov 2022 21:58:15 GMT
+</html>
+

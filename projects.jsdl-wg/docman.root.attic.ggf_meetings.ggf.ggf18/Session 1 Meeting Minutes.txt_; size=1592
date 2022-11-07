@@ -1,0 +1,38 @@
+
+ Agenda Approved as proposed.
+ Ali has resigned as Co-Chair of the working group
+ Andreas Savva was voted in as chair for submission to GSFG for approval.
+ 
+ Talk on the HPC Basic Profile:
+ 	Chris S. gave an overview.
+ 	- Data is out of the HPC Basic Profile.
+ 	- The HPC JSDL extension will be submitted through the JSDL
+ 	  group for public comment.
+ 	- Try and move HPC JSDL extension into the first session.
+ 
+ Overview of emerging extensions
+ 	Michel presenting on Job Groups
+ 	- Job Groups have Hierarchal groups.
+ 	- Some types of dependencies have been mentioned.
+ 	- Questions about why do this with Xquery on the plate of
+ 	  something to do.
+ 	- Should we wait until 2.0 instead of basing from 1.1?
+ 	- Question, can two jobs start at the same time?
+ 	Parameter Sweep Extension
+ 	- We need to discuss what other options and why we have
+ 	  decided to do parameter sweeps. What is the benefit to doing
+ 	  parameter sweeps?
+ 	- This really is a part of workflow type definitions.
+ 	- This is good stuff, but may be out of scope for JSDL. It
+ 	  could go into a workflow group instead.
+ 
+ HPC Basic Profile revisited.
+ 	- Question to change in WorkingDirectory definition. We
+ 	  changed the fault state if the working directory does not
+ 	  exist.
+ 	- WorkingDirectory must be absolute.
+ 	- Walltime limit should be moved into the BES specification
+ 	  under the BES information segment.
+ 	-File name delimiter. Should we continue to just use a
+ 	xsd:string or should be move to a xsd:uri. FileURIs must be
+ 	supported then we need to use it.

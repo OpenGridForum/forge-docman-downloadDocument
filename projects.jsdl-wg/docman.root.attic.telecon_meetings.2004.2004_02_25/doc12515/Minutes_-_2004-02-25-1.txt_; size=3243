@@ -1,0 +1,132 @@
+JSDL Telecon Minutes
+====================
+February 25th, 2004 - 14:00 GMT
+===============================
+
+
+Attendees:
+==========
+
+Ali Anjomshoaa (EPCC)
+Andreas Savva (Fujitsu)
+Steve McGough (LeSC)
+Fred Brisard (CA)
+Lee Cook (IBM)
+
+
+Apologies:
+==========
+
+
+Discussion:
+===========
+
+Administrative:
+---------------
+
+ o Andreas has put draft JSDL specification (v0.2) out on GridForge under 
+   public access.
+ o Ali will advertise this on the JSDL list.
+ o Ali will do some tidying up of the specification between now and GGF10 
+   (with Andreas).
+
+ o Defer schema logistics discussion to GGF10. (M1 -> M2)
+ o Defer translation table authoring to GGF10 for discussion. (M1 -> M2)
+
+ o No more work on the specification for authors, until GGF10.
+
+
+GGF10 - 4 sessions:
+-------------------
+ o Fred: presentation on scheduling and resource attributes. An writing 
+         talk for resource attributes.
+
+ o Ali: JSDL sessions:
+
+   Thursday, March 11, 2004
+   ------------------------
+   8:30 a.m. - 10:00 a.m.
+   JOB SUBMISSION DESCRIPTION LANGUAGE-WG #4 (SRM)
+
+   4:00 p.m. - 5:30 p.m.
+   JOB SUBMISSION DESCRIPTION LANGUAGE-WG #1 (SRM)
+
+   6:00 p.m. - 7:30 p.m.
+   JOB SUBMISSION DESCRIPTION LANGUAGE-WG #2 (SRM)
+
+   Friday, March 12, 2004
+   ----------------------
+   2:00 p.m. - 3:30 p.m.
+   JOB SUBMISSION DESCRIPTION LANGUAGE-WG #3 (SRM)
+
+
+ o Andreas: scheduling and resource are main bit of the specification, 
+            should come earlier.
+
+--
+
+ o Andreas: to try to get Frank Siebenlist from Globus to talk to us 
+            about security. (15 - 20 mins. talk and questions).
+
+ o Ali: must ensure Frank's talk is within JSDL scope and highlights issues 
+        important to us.
+
+--
+
+ o Ali: to find out from Stacey about telecon for Thursday AM.
+
+
+Informal Meeting on Monday/Tuesday of GGF10 week?
+-------------------------------------------------
+ o Fred at The Westin Grand, can meet Ali on Monday evening.
+ o Andreas at NH Berlin-Mitte, arrives Tuesday evening.
+ o Ali at Maritim Pro Arte Hotel Berlin, to meet with Fred Monday evening.
+ o Steve at ?
+
+ o Ali to Meet Fred on Monday evening the 8th.
+
+
+JSDL - What is?
+---------------
+ o Lee - use-cases of repeatability useful.
+
+ o Steve - charter, defining language to get a job running on a resource.
+           If it includes scheduling stuff then so be it.
+           Scheduling bolt onto the core?
+
+ o Lee - One attribute - calendar attribute - covers a lot of the ground.
+
+ o Fred - If we start to include scheduling attributes, we may complicate 
+          JSDL and have to include a scheduling model.
+
+ o Ali - Scheduling ontology BoF at GGF10. Should consider participation.
+
+--
+
+ o Ali - request that JSDL definitions be sent out to the list by all so 
+         that we can do requirements capture between us (core group first).
+
+--
+
+ o Lee - Security, broader scope of GGF work needs to be taken into 
+         consideration.
+
+ o Ali: Andreas to invite Frank S. to talk to us.
+
+
+AOB:
+----
+o Ali: organise face2face after the schema work is well underway 
+       (around GGF11???).
+
+
+DONM:
+-----
+March 3rd, 2004 - 14:00 GMT (90 min.)
+
+ - Agenda items will include:
+   o readiness for GGF10.
+   o review of 4 meeting agendas.
+   o review of slides.
+
+----------------------

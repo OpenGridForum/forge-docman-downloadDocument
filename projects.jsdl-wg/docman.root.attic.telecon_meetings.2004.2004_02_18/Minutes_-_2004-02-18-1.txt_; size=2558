@@ -1,0 +1,107 @@
+JSDL Telecon Minutes
+====================
+February 18th, 2004 - 14:00 GMT
+===============================
+
+
+Attendees:
+==========
+
+Ali Anjomshoaa (EPCC)
+Donal Fellows (Manchester Uni.)
+Andreas Savva (Fujitsu)
+Steve McGough (LeSC)
+Fred Brisard (CA)
+Lee Cook (IBM)
+
+
+Apologies:
+==========
+
+Steve McGough (LeSC) (last 25 mins.)
+
+
+Discussion:
+===========
+
+Administrative:
+---------------
+
+o Updates of attribute sets to Andreas (or GridForge) by end of 
+  Friday 20th PST.
+
+
+Data Attributes:
+----------------
+
+o Andreas and Steve to review data attributes by next week. Take into 
+  account Donal and Michal's comments on the list and the minutes from 
+  the 11/02/04 meeting. Then put in the doc and send out to the list.
+
+
+Security Attributes:
+--------------------
+
+Ali: Do we need all this security stuff? And if so how much of it do we 
+     need in the JSDL?
+
+Lee: WS-Security - web service security workflow through the Grid.
+     Submission vs. Execution, the former being addressed WS-Security.
+
+Ali: Do security and scheduling stuff belong in JSDL?
+
+Steve: Onion shell analogy scheduling-layer/security-layer/resource-layer 
+       requirements.
+Ali: Same as Job categories!
+
+Fred: Danger of running away with the details of scheduling etc. in the 
+      JSDL and coming up with a model rather than a language.
+
+Lee: on the scheduling attributes: trigger and repeatability, meet the 
+     needs of the job to run at a particular time; are powerful.
+
+Donal: What is the minimum scheduling attribute set that we need?
+
+Lee: leaving this stuff out would put a dependency on behalf of the JSDL, 
+     i.e. need a workflow now! Who would provide the scheduling attributes 
+     that we throw out?
+
+---
+
+Ali: Clean up the attributes, send to Andreas by end of 
+     Friday 20th Feb. PST.
+
+
+GGF10:
+------
+
+o Lee - possibly remote conference.
+
+o Ali to set up remote conference call for GGF10 meetings.
+
+o Donal, possibly be there.
+
+o Sessions:
+  - Fred: to lead a discussion on scheduling and resource attributes
+          and JSDL scope (re: scheduling model in or out of JSDL).
+  - Andreas: to lead a discussion on data attributes.
+  - Ali : JobID and security attributes.
+
+
+AOB:
+----
+o Lee: Want to highlight: "What is JSDL?" in the document.
+
+
+DONM:
+-----
+February 25th, 2004 - 14:00 GMT (90 min.)
+
+ - Agenda items will include:
+
+   o Spec/WG readiness for GGF10
+   o ?? Please send your issues to the list.
+   o Tentatively discussion of JSDL requirements (again) so that we 
+     as a small group can try and reach some agreement!
+
+----------------------

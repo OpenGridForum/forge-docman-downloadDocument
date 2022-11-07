@@ -1,0 +1,249 @@
+JSDL-WG Meeting Minutes
+-----------------------
+GGF11 (Honolulu)
+----------------
+Sessions 1 to 5
+---------------
+
+Session 1 - Monday 7th June 2004, 12:30 - 14:00 (Local Time)
+============================================================
+
+Darren - Introduction to JSDL-WG work at GGF11 and our goals for this meeting.
+
+Steve - General introductory overview of JSDL and our aims.
+
+Darren - Explanation of rules of engagement - we are going to go through the 
+         specification and discuss each section in detail.
+
+       - JSDL descriptions are for job templates!
+
+Diving into the Spec.
+---------------------
+
+Introduction:
+-------------
+JSDL categories:
+
+  Discussing Basic Scheduling requirements:
+    Gone. Pushing to outside the JSDL. e.g. to OGSA's EMS. Don't need this 
+    for job templates.
+
+  Discussing Security requirements:
+    Gone. Pushing to outside the JSDL. e.g. to OGSA's EMS. Don't need this 
+    for job templates.
+
+  Adding paragraph to spec about security and scheduling needs being outside 
+  the scope of JSDL.
+
+Q: Is the JSDL atomic?
+A: Not atomic.
+
+Delete Sub-sections 3.1 to 3.3
+
+Asit - question about Agreement - should re-use the Agreement and Guarantee 
+       terms' constraint schema.
+
+We should write a primer companion for the JSDL's normative schema and put 
+all context info there.
+
+Attributes:
+-----------
+  Insert JobName in addition to JobAnnotation
+
+  Take out mutability because the JSDL doc is a template job description.
+
+  Move usage of attributes to the primer.
+
+  Remove SubmissionUserName attribute, since JSDL is a template doc.
+
+  Change ExecutionUserName to describe the ID of the user under whose 
+  ID the job is executed.
+
+  Need a UserGroupName that is like the gid of a user, and, have an 
+  ExecutionUserGroupName to define the non-computing group id of a 
+  job.
+
+
+Session 2 - Tuesday 8th June 2004, 12:30 - 14:00 (Local Time)
+=============================================================
+
+Disscussion of Group attributes:
+--------------------------------
+  ExecutionUserName
+  ExecutionUserGroupName
+  UserGroupName
+  JobGroupName
+
+Chris - move ExecutionUserName to ExecutionUserID, which should contain the 
+        userID and the groupID of the user.
+
+Discussion of UserGroup and JobGroup and JobProject names:
+  removed UserGroupName
+  kept JobProjectName
+    will edit later...
+
+JobCategory - kept... 
+
+Darren - summarising list of JobID attributes.
+
+
+Moving onto Job Resources:
+--------------------------
+Host - 
+  host name or IP address?
+  host vs. abstract resource - Host attribute can be both.
+  affinity removed.
+
+"The Preference Mechanism":
+  Need a generic preference clause in the spec regarding how one specifies 
+  the priority of a list of an attribute. "The preference mechanism".
+
+CPU - 
+  Taken out Count from CPU.
+
+  Chris - Count is independent from the CPU. Chris to send e-mail on count 
+  to the list.
+
+The major issue is that the attributes are interrelated and that a number of 
+attributes are not independent and should be specified on a per CPU or a per 
+host level.
+
+We should work on the fact that we are addressing attributes for a single job 
+that runs on a physical host.
+
+PhysicalMemory - 
+
+Network - 
+  do we need this?
+  OK, leave it in.
+
+Discussion of JSDL-WG telecon times - defer...
+
+
+Session 3 - Tuesday 8th June 2004, 16:00 - 17:30 (Local Time)
+=============================================================
+
+Discussion of telecon times - alternate between 13:00 GMT and 21:00 GMT 
+every week. This way folks can attend at least one session a week.
+
+Continue discussion of the spec's resource attributes:
+------------------------------------------------------
+FileSystemSpace - 
+
+HostUsage - 
+  changed to ExclusiveExecution
+
+All resource attributes can be specified for a host, so put all inside 
+the Host attribute and can then specify multiple hosts with specific 
+resource requirements for those hosts to provide flexibility in the language.
+
+Env Vars - 
+
+Software Requirements:
+----------------------
+OperatingSystem - 
+
+VirtualMemory - 
+  changed to ProcessVirtualMemoryLimit
+
+Added JobVirtualMemoryLimit
+
+Priority - 
+  struck out.
+
+CPUTimeLimit - 
+  specify time units?
+  use Usage Record units.
+
+WallTimeLimit - 
+  ditto as above...
+
+ProcessQueue - 
+  changed to Queue.
+
+Chris - send an e-mail to the list for all of the software requirements 
+        for OS limits...
+
+Application Requirements:
+-------------------------
+Executable - 
+  add 'name' property.
+
+Arguement - 
+
+StdOut, StdIn, StdErr - 
+  change to (0..n)
+
+
+Session 4 - Wednesday 9th June 2004, 10:00 - 11:30 (Local Time)
+===============================================================
+
+Starting with File in Data Section:
+-----------------------------------
+File - 
+
+  FileSystemName is causing problems. What is the need for this?
+  FileSystemSpace requirement in the resources section is not clear.
+  Will come back to address these issues.
+
+  Target {0..n} is a _list_, so that the file is staged out to ALL of the 
+  Targets.
+
+  Source {0..n} is a _choice_, so that the file is staged from ANY of the 
+  Sources.
+
+  Changed Overwrite (and Append) to CreationFlag that is an enumeration 
+  type with values {overwrite, append, prepend}.
+
+Start an issues list, as a tracker and in the document (Andreas to help?).
+
+Discussion of multiple host/CPU requirements:
+---------------------------------------------
+Chris - introduces the LSF case - sent to the list.
+
+ - Trying to bash out a schema to address the issue.
+
+We are at the right stage to start to write the schema to match the spec 
+currently, then float on the list and to start to write JSDL docs to 
+suite our use-cases, and then suggest improvements to the schema that 
+would then feed back to the spec.
+
+Session 5 - Wednesday 9th June 2004, 12:45 - 14:15 (Local Time)
+===============================================================
+
+Steve - Going through preliminary xsd schema.
+
+Unit specifications will be taken from Usage Record-WG.
+
+Steve is typing an example JSDL doc while we come up with a JSDL schema for 
+an example of a job description for a job request.
+
+Andreas - we should write up in English what this example JSDL doc is 
+encapsulating/describing.
+
+This JSDL example doc will be used by Steve to produce a preliminary xsd 
+schema for the JSDL.
+
+This preliminary schema will then be sent out on the list with the example 
+JSDL doc that it was derived from. Others will be encouraged to write 
+use-case job descriptions using the schema and give the group feedback and 
+requirements.
+
+FileSystem attribute is causing problems. It is not completely clear what 
+requirement this attribute is addressing.
+
+Fred - the attributes under HostType are restricting the Hosts that can run 
+       the job. You can specify a number of HostNames under each HostType.
+
+       Can also make these restrictions under the Job, HostType, and 
+       HostName levels.
+
+Ping Jim Pruyne of GRAAP to find out about constraints mechanisms from 
+WS-Agreement or WS-Policy, i.e. our "preference mechanism".
+
+Need to add FileSystemName for each File, which is linked to the FileSystem 
+in the resources section.
+
+Borrow logical operations from Agreement? OWL?
+
+

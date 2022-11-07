@@ -1,0 +1,52 @@
+OGF Teleconference - 11 November 2009
+=====================================
+
+* Participants
+  Donal Fellows
+  David Meredith
+  Andreas Savva
+
+> Agenda:
+>          1. Agenda bashing & quick status update
+>             - OGF27 followup
+>               - Approve minutes, review actions
+>                 - http://www.ogf.org/gf/event_schedule/index.php?id=1762
+>                 - http://www.ogf.org/gf/event_schedule/index.php?id=1763
+>                 -  
+
+Action: Andreas to send PGI JSDL document to the list
+
+Reminder:
+    * In-depth evaluation of adding signature to the document is necessary. Discussion at the next telecon. 
+    * [ACTION/Donal]: Prepare proposal for next telecon.
+
+This is already in the tracker.
+
+Approved minutes (raise objections on the list if disagree)
+
+> http://www.ogf.org/pipermail/jsdl-wg/2009-October/001255.html
+
+Talk about this on next call.
+
+>          2. Activity instance document schema
+>             - Tracker review
+>               https://forge.gridforum.org/sf/go/projects.jsdl-wg/tracker.activity_schema
+>             - Draft review (if revised text available)
+
+Skipped due to lack of quorum.
+
+>          3. Other business
+>             - http://www.ogf.org/pipermail/jsdl-wg/2009-October/001253.html
+
+- Dave gave an overview of DataMINX project, incl. example of schema
+  http://code.google.com/p/dtsproject/wiki/OriginsOfTheDtsSchema
+- They will be doing a profile proposal for dmi & jsdl
+- Agreed to arrange for discussion time on a future call
+
+
+>             - Parameter sweep implementation questions
+
+- substring matching and potentially changing length of strings
+- A full implementation of the spec is underway
+
+* Next call: Nov 25, 12pm UTC / 9pm JST

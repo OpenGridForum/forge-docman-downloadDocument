@@ -1,0 +1,47 @@
+JSDL Teleconference - 8 October 2008
+=====================================
+
+* Participants
+
+  Geoff Williams
+  Philipp Wieder
+  Andreas Savva (minutes)
+  David Meredith
+  Steve McGough
+  Michel Drescher
+
+  Apologies: Fred Brisard, Donal Fellows
+
+* Status updates
+
+** Parameter sweep status
+   - Submitted and in AD review. Should be coming to public comment in
+     a couple of weeks
+
+** Activity instance document schema
+   - Action to update requirements list and prioritize for next call
+
+* New work items
+** JSDL SPMD experience document
+   - Andreas will setup the initial survey based on the JSDL
+     Experience survey
+   - Not sure how many implementators there are; not particularly
+     urgent but should get it started
+
+** Required/optional attribute microspec
+
+   - Steve will do a draft, November timeframe
+       
+** New resource requirements (xpath/xquery+glue)
+
+   - Andreas to contact Sergion again
+   - Might need to coordinate with HPCP-WG if they are planning
+     anything in this space
+   - Perhaps next March as the timeframe to complete this
+
+* Next call
+
+  Probably in three weeks time since 10/22 seems difficult for a
+  number of the participants.
+
+

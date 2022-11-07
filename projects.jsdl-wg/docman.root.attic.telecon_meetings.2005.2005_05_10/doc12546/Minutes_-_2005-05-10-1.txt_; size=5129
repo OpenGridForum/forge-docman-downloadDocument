@@ -1,0 +1,181 @@
+May 10, 2005
+------------
+
+Agenda
+------
+ Address open issues and trackers on spec and normative schema.
+
+Attendees
+---------
+ Darren
+ Steve
+ Ali
+ Donal
+ Karl
+ Michel
+ Andreas
+
+Other
+-----
+ Possible JSDL meeting to go with the OGSA F2F meeting in London.
+
+
+Agenda & Minutes
+----------------
+
+ 5) Section 3 (spec doc) general revision and polishing up
+
+    --> On Going
+
+    --> Action: Ali
+
+
+ 6) Update explanation for jsdl:other usage
+
+    - jsdl:other is the value for e.g. other arch and OS name etc.
+
+    - Have defined this and behaviours - have to be able to process it and 
+      must reject the document if can't be processed.
+
+    - To add extra information that is allowed to be ignored if can't be 
+      processed, but, jsdl:any can't be ignored.
+
+    - Section 4.2 - placeholder (maybe better in the Extending JSDL section).
+
+    - "JSDL consumers must be able to understand and implement ALL job
+      requirements, even extensions, for the elements that they support."
+
+    --> On Going
+
+    --> Action: Andreas to update spec with Michel and Steve's text and 
+                add above statement re: support for extensions.
+
+
+ 8) JSDL compliance levels
+    How much of JSDL a system must support, not just process.
+    Probably a topic for later.
+
+    - Placeholder, will come up later!
+
+    - Michel's e-mail to the list:
+    http://www-unix.gridforum.org/mail_archive/jsdl-wg/2005/04/msg00111.html
+
+    - Ali's e-mail to the list:
+    http://www-unix.gridforum.org/mail_archive/jsdl-wg/2005/05/msg00007.html
+
+    - Part of Ali's suggested text for Section 2 (see e-mail at above URL):
+
+      "The key word support, with respect to a JSDL consuming system 
+      supporting the JSDL specification and the language constructs, refers 
+      to the ability of that system to parse a JSDL document.  That is, 
+      the consuming system must be able to interpret the language constructs 
+      and assign to them the semantics described in this specification and 
+      the values assigned to them in that JSDL document. All JSDL 
+      consuming systems must, therefore, support all of the JSDL 
+      language constructs."
+
+    - For post-v1.0 - Add to Ali's text:
+
+      "A JSDL consumer that supports JSDL but cannot satisfy ALL the 
+      job requirements in a JSDL document, MUST NOT instantiate a job 
+      from that document."
+
+    --> On Going
+
+    --> Action: Andreas to update section 2.
+
+
+ 9) The statement "If not supported then the consuming system MUST reject
+    the document." needs a bit more explanation or re-write.
+
+    - Refer to Notational Conventions.
+
+    [see  number 8 above]
+
+
+11) Filesystem name and type and filesystem reference in DataStaging
+
+    - This needs to be specified? Needs more explanation?
+
+    - FileSystemID changed to FileSystemName
+    - Define well known filesystem names: HOME and TMP
+
+    - Donal's e-mails to the list:
+    http://www-unix.gridforum.org/mail_archive/jsdl-wg/2005/05/msg00006.html
+    http://www-unix.gridforum.org/mail_archive/jsdl-wg/2005/05/msg00008.html
+
+    - Action: Andreas
+
+    --> On Going
+
+
+12) MountPoint environment variable. Is the current approach ok, or
+    should we provide a separate mechanism, e.g., a tag that if present
+    provides the name of the environment variable in which the
+    MountPoint value must be present.
+
+    - If a Mountpoint environment variable is not specified, then the name 
+      of the filesystem is used for the value of the env var.
+
+    - Action: Andreas
+
+    --> On Going
+
+    [linked to number 11 above]
+
+
+14) DRMAA use case for defining filenames. We have to at least be able
+    to show an example of how to define and stage out an <Output> file.
+
+    - Action: Andreas
+
+    --> On Going
+
+    [linked to number 11 above]
+
+
+16) Process Topology needs review. In particular are the examples ok or
+    not, are the definition correct and so on. Delete the yellow
+    comments once that is done. Not sure if we should define the precise
+    allocation behaviour or allow for that to be defined instead.
+
+    - Action: ALL to review this section (Section 6 in 0.9.5-01).
+        - ProcessCount to be put back into POSIX Application.
+        - ProcessCountLimit in the POSIX Application.
+
+    - Karl's e-mail to the list:
+    http://www-unix.gridforum.org/mail_archive/jsdl-wg/2005/04/msg00151.html
+
+    - Karl: recommends an attribute on the <resource> element to describe the 
+      requirement for a "4 CPU machine" vs. "4 CPUs on A machine".
+
+    --> On Going
+
+    - Action: Andreas and Karl to address this on the mailing list.
+
+
+17) Section "Extending JSDL" needs an owner. I expect this section to be
+    about 1 page long so should not be too much trouble.
+
+    [see  number 6 above]
+
+
+19) Re-check terminology for process topology and delete comments
+
+    [see  number 16 above]
+
+
+31) Complete example sub-sections
+
+    - Need examples for elements.
+
+    --> On Going
+
+
+v1.0 GridForge Trackers
+-----------------------
+1275 - Steve - change to 'Fixed'
+1285 - Michel: Andreas' Intro Slides - change to 'Fixed'
+1327 - Ali: Andreas' Intro Slides - is now 'Pending'
+1391 - Donal - is now 'Fixed'
+

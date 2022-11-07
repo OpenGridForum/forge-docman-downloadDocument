@@ -1,0 +1,56 @@
+JSDL Teleconference -  14 April 2010
+====================================
+
+* Participants
+
+  Alexander Papaspyrou
+  Philipp Wieder
+  Andreas Savva
+
+  Apologies: Donal Fellows  
+
+* Agenda:
+
+>    1. Agenda bashing & quick status update
+>    2. OGF28 sessions review
+>       - Minutes approval, actions etc
+
+     Alexander to upload to gridforge / OGF28 schedule
+
+>    3. Activity instance document specification
+>       - Status and work needed to submit the 
+>         spec for public comment
+
+From Philipp's email to the list:
+
+> Things to be clarified or added:
+> - Section 4: do we want it
+
+Delete it, there is a definitino of enumerations in the sections they are used
+
+> - XML Snippet colours have to be adopted (ny me)
+
+Philipp will do
+
+> - Sequence diagram example has to be added
+
+- Add numbers to Fig.2 steps
+- Alexander to describe steps (operations are informative)
+- Philipp to do sequence if necessary
+
+> - Some references are missing
+
+WS-Agreement
+WS-Addressing
+RFC UUID
+
+also 
+
+Full attribution, no "et al"
+
+> - Security section missing
+
+Remind Donal and reassign at next call if necessary
+
+* Next call: April 28, same UTC timeslot
+- Andreas to check Donal's availability

@@ -1,0 +1,94 @@
+JSDL Teleconference - 7 November 2007
+=====================================
+
+* Participants
+
+  Fred Brisard
+  Steve McGough
+  Alexander Papaspyrou
+  Andreas Savva
+  Philipp Wieder
+
+  Minutes: Andreas Savva
+
+* Activity schema 
+
+** Overview
+
+  Did a quick review of the presentations and state of the discussion
+  from the OGF21 session:
+  - UDAP
+    - covering entire lifecycle of activity, including monitoring,
+      provenance, security etc
+    - Workflow is description of how activities relate to each other
+    - Seems to fit with figure from GFD.56 (Philipp tried to explain
+      it in those terms)
+  - GridSAM/BES
+    - Fits with GFD.56
+    - Has added some features by necessity within JSDL document. Would
+      like to formalize the relation of such features (e.g., security)
+      to the JSDL doc
+    - BES defined Activity document contains JSDL document
+  - NAREGI
+    - Defined top level schema for 'simple' and 'complex' activity
+    - Identified certain features to include in addition to JSDL
+    - Co-allocation semantics are part of the complex activity
+      definition
+  - CIM Job
+    - Mainly for batch job / CGS (GGF)
+    - The top level entities for Job could be extended for this work
+  - GLUE
+    - Information model top level entity for Activity
+    - specific attributes from nordugrid
+
+- UDAP implementation 
+  - Has support for CIM based information service and model and for
+    BES (BES Container information model by Ellen)
+  - Relation with GLUE is something to look into when a more mature
+    GLUE draft is available
+
+** Scope discussion 
+
+The first goal is to define the scope of the activity work. One
+approach is to have
+  - short term work for just the top level model, incl.  main
+    entities, and not go into details for each entity;
+  - longer term within a new group that will coordinate interaction
+    with other related groups
+
+Discussed whether it is necessary to go into details (not necessarily
+exhaustive) for each entity. It may be possible to point to some
+existing work in some cases but would not want to go to great detail
+from the beginning. It depends on how interested people are; and in
+any case is probably work for other groups.
+
+Discussed some details of UDAP, for example its potential relation to
+RSS and whether the candidates/plans/etc should be archived in it. It
+is an open question even with the current UDAP spec. In any case this
+kind of decisions are probably out of scope for standardization, at
+least at the beginning.
+
+Discussed the distinction of what would go into an activity document
+vs what would go in JSDL. JSDL could remain as just the template with
+instance information in the Activity.
+  - Would definition of dependencies in scope? The container/entity
+    that holds a dependencies/workflow document could be defined; but
+    not what the dependency language is (can use any language)
+
+The group would like to see more description of UDAP. There is no
+public document available yet, however. IPR is by Juelich &
+EPCC---work done as part of NextGRID project---but it should not be a
+problem.
+
+ACTION: Philipp will arrange for a document to be made available to
+        the group within the next couple of week.
+
+Agreed to the above mentioned "short term plan" as the first goal. It
+is still not decided if all the work will be done within the JSDL-WG;
+an initial/strawman will be worked on until the next OGF.
+
+Scope needs to be refined. The group will discuss it further next call
+and put some text (mission statement) together.
+
+Agreed to Nov 28 for the next call. Next week is SC07 and the week
+after is Thanksgiving in the US.

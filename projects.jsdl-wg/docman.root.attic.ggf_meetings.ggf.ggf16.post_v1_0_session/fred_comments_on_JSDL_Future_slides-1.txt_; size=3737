@@ -1,0 +1,104 @@
+From Fred.Brisard@ca.com Thu Feb 16 13:20:19 2006
+Date: Thu, 16 Feb 2006 08:18:56 -0500
+From: "Brisard, Fred D" <Fred.Brisard@ca.com>
+To: A S McGough <asm@doc.ic.ac.uk>, JSDL WG <jsdl-wg@gridforum.org>
+Subject: RE: [jsdl-wg] Future plans for JSDL
+
+Hi Steve,
+
+My comments --
+
+[Slide 3]
+Consider adding "Conditional data staging" - that is, allow some form of
+conditional processing of data staging.  For example, on stage in, it
+would be useful to support the capability of the same data being staged
+from more than one source in case one of the sources is unavailable.  On
+stage out, it would be useful to only stage out data if the program ran
+correctly - possibly even detecting a result value and staging data out
+based on that value.
+
+Regarding the item "Relationship to CDDLM" - The relationship regarding
+data staging with CDDLM is confusing to me.  I believe that data staging
+is a "provisioning" issue yet we seem to accept that data staging is
+acceptable within JSDL and other forms of provisioning are not.  Maybe
+we should be identifying required resources in JSDL that reference
+entities within CDDLM.  These entities could be anything related to
+provisioning.  Even the concept of the machine attributes could be
+handled this way.  Maybe JSDL should get out of the business of
+identifying specific resource information and just refer to resources
+known to CDDLM.
+
+[Slide 4]
+
+Title should be Application types and adjust body of slide
+
+Consider "workflow" as a job type.  Workflows can typically be invoked
+as a web service, but we delineate other job types such as "Scripting
+Language" that can be specified as command line jobs so why not specify
+workflow as a job type.
+
+[Slide 5]
+
+Regarding "workflow" - maybe a JSDL document is just a workflow
+activity.
+
+[Slide 6]
+
+Regarding "Scheduling to ..." - would data availability be covered under
+"events"?
+
+
+[Overall]
+
+There are lots of good thoughts here; and lots of opportunity for more
+hard work.  I continue to be concerned with the large number of GGF
+specifications and their relationships.  OGSA-BES is trying to integrate
+components created using these specs, but I believe that we still need a
+better understanding of the overall architecture that binds these
+components.
+
+Best regards, Fred
+
+
+
+Fred Brisard
+fred.brisard@ca.com
+-----Original Message-----
+From: owner-jsdl-wg@ggf.org [mailto:owner-jsdl-wg@ggf.org] On Behalf Of
+A S McGough
+Sent: Thursday, February 16, 2006 7:03 AM
+To: JSDL WG
+Subject: [jsdl-wg] Future plans for JSDL
+
+All,
+
+We had a session here at GGF16 where we brain stormed some ideas for 
+where JSDL should go next. This also included some material which had 
+come up from the last OGSA f2f meeting. Attached are the edited slides 
+from this session which lists some of the areas where people think that 
+JSDL should look into.
+
+The things that need doing now include:
+
+1) Request from the list for items that were missed out from the
+session.
+2) Classify these items as:
+    a) Out of Scope (TM)  b) Extensions for JSDL 1.0  c) New 
+functionality for JSDL 2.0 d) Separate to JSDL versions (eg items for a 
+primer document)
+3) Prioritise the items. From the session parallel jobs seemed to be the
+
+thing most people wanted next.
+
+steve..
+
+-- 
+------------------------------------------------------------------------
+Dr A. Stephen McGough                       http://www.doc.ic.ac.uk/~asm
+------------------------------------------------------------------------
+Technical Coordinator, London e-Science Centre, Imperial College London,
+Department of Computing, 180 Queen's Gate, London SW7 2BZ, UK
+tel: +44 (0)207-594-8409                        fax: +44 (0)207-581-8024
+------------------------------------------------------------------------
+
+

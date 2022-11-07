@@ -1,0 +1,85 @@
+JSDL Teleconference - 9 April 2008
+==================================
+
+* Participants
+
+  Andreas Savva
+  Alexander Papaspyrou
+  Shabhaz Memon
+  Geoff Williams
+  Philipp Wieder
+  Donal Fellows
+  Chris Smith
+  Steve McGough
+
+  Apologies: Fred Brisard
+
+* Status update
+** JSDL Errata release is now out of public comment. A single comment
+   on checking the file examples.
+** Noted OGF23 deadlines; early registration deadline is April 11.
+** Parameter sweep update Geoff has uploaded a number of
+   issues/suggestions to the tracker and wiki. These will be discussed
+   on the next parameter sweep call, probably in two weeks time. He
+   has also been following up with a contact at Nimrod as well as with
+   Kisti.
+
+* Use cases for activity schema
+
+  Discussed the three use cases/set of requirements sent to the list 
+
+** Scheduling use case
+   - http://www.ogf.org/pipermail/jsdl-wg/2008-April/000992.html and
+        https://forge.gridforum.org/sf/go/doc15178?nav=1
+
+   This is actually a set of use cases consisting of multiple
+   scenarios. Activity template submitted to the primary scheduler is
+   JSDL. This is probably also what is submitted to the secondary
+   scheduler but with some additional information, e.g., a reference
+   to the Activity instance(conceptually only one), created to track
+   the information.
+   - For provenance purposes would have to record the delegation to the
+     secondary scheduler. The detailed schema for this would not in
+     scope; only the definition of a 'container' in the top level
+     Activity schema
+
+** Unicore etc
+   - http://www.ogf.org/pipermail/jsdl-wg/2008-April/000991.html
+
+   A set of requirements; the first two from Unicore use cases. The
+   next two are along the lines of the Platform use case---recording
+   information at certain events or state transitions, including
+   failure conditions.
+
+** Platform
+   - http://www.ogf.org/pipermail/jsdl-wg/2008-April/000989.html
+
+   Monitoring/tracking information including resource usage
+   information over the job's lifetime.
+
+   Agreed that consistency or storage/caching methods of the activity
+   information is out of scope of the schema work. Access mechanisms
+   are also not in immediate scope of the schema work; did note the
+   various possibilities of accessing, including querying a BES
+   container.
+
+** Conclusion
+
+  Agreed to do a more consistent writeup using a common template, and
+  to keep things simple and brief. Some high-level UML is ok, but
+  there is no need to go to the level of sequence diagrams. It is NOT
+  a target to create an OGF document out of these use cases. Just to
+  identify and document requirements. So the wiki might be the place
+  where these are stored eventually.
+
+  ACTION: Andreas will check the Glue use case template and see if it
+          can be used here.
+
+  Target for OGF23 is to identify and list the requirements from the
+  use cases.
+
+* Next call
+
+  - In two weeks time: April 23. 
+  - A separate announcement will be sent to the list.
+

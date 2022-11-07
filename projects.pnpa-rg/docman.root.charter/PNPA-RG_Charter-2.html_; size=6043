@@ -1,0 +1,97 @@
+<p><strong>Charter for GGF Research Group on Particle and Nuclear Physics Applications
+    (PNPA)</strong><br>
+      <br>
+  The Particle and Nuclear Physics Applications Research&nbsp;Group provides
+  a forum for discussion of issues related to particle and nuclear physics applications
+  and production grids. There are three specific goals, all with the overarching
+  aim of ensuring that HENP actively participates in setting requirements and
+  defining standards to ensure that its needs are met and to bring its experiences
+in deploying and using large scale grids to the grid community as a whole. </p>
+<ul>
+  <li>To bring the requirements of the HENP community to the GGF in order to
+    explain and inform the wider grid community of the specific needs and issues
+    of HENP </li>
+  <li>To ensure participation of the HENP community in grid standardization efforts,
+    particularly in those areas and services essential to the successful use
+    of grids in HENP. </li>
+  <li>To provide early feedback to GGF technical working groups on the success
+    or failure of various grid software components as used in high performance
+    production activities by HENP experiments.<br>
+  </li>
+</ul>
+<p>The particle and nuclear physics community has over the past few years provided
+  the driving applications and made significant contributions to several projects
+  (EDG, DataTAG, PPDG, GriPhyN, SiteAAA, iVDGL, Nordugrid) that have been actively
+  involved in&nbsp;developing and deploying prototype, and now production, grid
+  applications. Many of the participants in these projects are active participants
+  or leaders of existing or new GGF working groups or research groups. Current
+  areas of interest include security, high throughput data transport, data intensive
+  management&nbsp;and access services, and information schema definition. As
+  the community continues to develop and adopt higher level and more comprehensive
+  services it is anticipated that we will contribute to other areas of work such
+  as production and operations services, scheduling and job description, databases,
+  frameworks and applications, and network and resource&nbsp; management.<br>
+    <br>
+  The PNPA Research Group will provide a venue to bring together domain application
+  scientists together with the information technologists and researchers in grid
+  technologies, at the leading forum for standards. HENP experiments are deploying
+  petascale production grids now. We aim to identify the requirements of, and
+  communicate experiences from, these deployments as they relate to the GGF.
+  We believe there are important commonalities in requirements across the experiments
+  in the field which can be collected and documented as a common set. </p>
+<p> Members of this Research Group will include representatives of the LHC Computing
+  Grid, Trillium, and other grid projects in the field. These projects must deliver
+  and deploy production grid middleware and services to enable scientific analysis
+  on a global scale. The research group will also ensure that grid developments
+  driven by the larger projects within HENP will also be compatible and useable
+  by other experiments within HENP. </p>
+<p><strong>Scope:</strong></p>
+<p>The scope of this research group will include the following: </p>
+<ul>
+  <li>Communicate areas of GGF work relevant to the community and vice versa.
+    Propose mechanisms for the community to participate in existing, or propose
+    new, working groups or research groups. </li>
+  <li>Identify clear examples of the diverse use of the grid within the particle
+    and nuclear physics community. This includes issues of access to, and archiving
+    of, petascale datasets, services for virtual sub-organizations in a global
+    community, and intelligent management of workflows and scheduling of a complex
+    mix of petaop jobs needed by our community. </li>
+  <li>Discuss state of standards, within the community and between the community
+    and other application domains. </li>
+  <li>Explore possible reference architectures for the community&rsquo;s distributed
+    grid applications. </li>
+  <li>Identify how the grid is being challenged by the particle and nuclear physics
+    sciences, and communicate these requirements in the GGF forum. </li>
+  <li>Promote issues related to production, operations and maintenance. </li>
+</ul>
+<p><strong>Action Items:<br>
+</strong></p>
+<ul>
+  <li>Hold workshops at GGF meetings of varying length (from 1 hour to 1 day)
+    and different focus areas related to the activities in the field, for communication
+    and discussion of the ongoing program and plans of the community. </li>
+</ul>
+<p><strong>Deliverables:</strong></p>
+<ul>
+  <li>An informational document that defines the requirements of the HENP community
+    at this time from GGF WG and RGs - Initial draft Mar 2004. </li>
+  <li>An initial informational document directed to grid designers and users
+    in the HENP community summarizing GGF standards and recommended practices
+    that could be adopted to HENP computing problems &ndash; Initial draft summer
+    2004 </li>
+  <li>An initial informational document (or series of documents) that relates
+    the Application Area experiences to date to the goals and scope of the GGF &ndash; August
+    2004. </li>
+</ul>
+<p><strong>Goals/Milestones:</strong></p>
+<ul>
+  <li>GGF8 (June 2003): BOF Discussion of the Research Group charter </li>
+  <li>GGF10 (Mar 2004): &frac12; day workshop which includes presentations and
+    discussion of the program of the area. </li>
+  <li>GGF10 (Mar 2004): Meeting of RG to discuss initial draft of the informational
+    document on Requirements of the HENP community for Grid Services. </li>
+  <li>June 2003-March 2004: Actively present the charter and engage the community
+    of particle and nuclear physicists and obtain endorsements. </li>
+  <li>Review the activities and relevance of the Research Group June 2004 </li>
+  <li>Review the activities and relevance of the Research Group June 2005 </li>
+</ul>

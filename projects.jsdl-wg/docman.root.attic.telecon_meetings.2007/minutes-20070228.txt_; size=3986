@@ -1,0 +1,101 @@
+JSDL Teleconference - 28 February 2007
+======================================
+
+* Participants
+
+  Joe Bester
+  Fred Brisard
+  Michel Drescher
+  Donal Fellow
+  An Ly
+  Steve McGough
+  Andreas Savva
+
+  Minutes: Andreas Savva
+
+>  1. Early discussion/Agenda bashing (10min)
+>       == Note OGF IPR rules apply ==
+>       - Who is attending OGSA March F2F; arranging a session
+
+  - Donal, Andreas, Michel are attending
+  - Steve probably; waiting on funding
+  - Agreed to a session at the OGSA F2F; will be working on agenda
+    details on next week's call
+
+>       - Time slot after US Daylight Saving Time on Mar.11
+
+  - Stay on the same UTC slot. US goes one hour later after March 11;
+    Europe after March 25; Japan stays at the same time.
+
+>  2. Updates on drafts and assignments (20min)
+>       - OGF errata process update
+
+  - Andreas showed the text describing the proposed OGF errata
+    process. This is being worked on by the GFSG and is not public
+    yet.
+  - Agreed that "JSDL 1.1" should be done as "JSDL 1.0 errata" as
+    discussed at OGF19
+  - Likely to be the first errata document for OGF. Agreed to feed
+    back to the proposed Errata process any problems the group runs
+    into.
+  - The OGF has to make this Errata process public first
+
+>       - JSDL 1.1 as 'JSDL 1.0 errata' and status review
+
+  - Only Chris Smith has contributed proposed text to the 1.0 tracker
+    so far
+  - Artifact owners should review their assignments and submit text
+  - Andreas took the pen on the document
+
+>       - SPMD review (a new draft should be out before the call)
+
+  - Andreas has uploaded draft 5 with changes agreed at OGF19. 
+  - Discussed the change of SPMDVariation from an enumeration to a URI
+    type
+    - Agreed that there should be a comment (annotation) in the schema
+      to implementers to refer to the specification for values
+    - Donal suggested that a URN may be an option; security specs
+      often use that form; another possibility is fragments
+      - Decided to stay with URIs
+  - The SPMDVariation list is not meant to be exhaustive and proposals
+    for more names will be solicited on the list. (But should be
+    adopted/well-known and have a stable location to refer to.)
+  - There are a couple of instances where 'ggf' should be changed to
+    'ogf'
+  - Andreas has asked for comments from some people and will review
+    and push to the list next week.
+ 
+>  3. Parameter sweep (30min)
+
+  - Michel went through the Parameter Sweep presentation (not
+    available online)
+
+** p4: Setting the position of the work in the EMS picture
+** p5 
+   - Discussed a number of issues: failure management, how to abort,
+     etc. Some are policy issues, but all are service related and out
+     of scope.
+   - The main thing to keep in mind is that the proposal is just for a
+     document type; service definition is out of scope
+   - How about the overhead of expanding and then (possibly)
+     collapsing the jsdl documents if the consuming system has a
+     native parameter sweep function
+     - Also would like to be able to map to native parameter sweep
+     - It is an implementation issue
+   - The presentation seemed to imply that there is always an
+     expansion; might want to make it clearer that this is not
+     necessarily the case.
+
+** p6-9 Discussion on xml constructs to define the sweep 
+   - Uses XPath 2.0
+   - Some boundary cases (multi-dimension values with exceptions,
+     fewer values per dimension, etc) may not be doable
+   - Is it possible to substitute an arbitrary xml fragment with
+     another?
+     - Might be doable with XPath but need to check
+   - XPath 2.0 may be perceived as complex; some people have expressed
+     desire to use something 'simple'---not clear what the definition
+     of 'simple' is.
+
+** p10: There is a file package with examples online
+   http://forge.ggf.org/sf/go/projects.jsdl-wg/frs.jsdl_wg

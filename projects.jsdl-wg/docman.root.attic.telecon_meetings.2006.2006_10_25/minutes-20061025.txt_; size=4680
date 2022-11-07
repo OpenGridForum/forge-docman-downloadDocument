@@ -1,0 +1,107 @@
+JSDL Teleconference minutes - 25 October 2006
+=============================================
+
+* Participants
+
+  Fabio Benedetti (IBM)
+  Fred Brisard (CA)
+  Michel Drescher (Fujitsu)
+  Donal Fellows (UoM)
+  An Ly (CA)
+  Andreas Savva (Fujitsu)
+  Ellen Stokes  (IBM)
+
+  Minutes: Andreas Savva
+
+> 1. Agenda bashing
+> 2. Logistics
+>    - Confirm UTC teleconference time slot after summer time ends; also
+>      call frequency
+
+     Agreed to keep the same day (Wednesday) and *UTC time* (2pm) for
+     the teleconferences.
+
+     Call frequency was not discussed in detail. There may be a call
+     next week if there is sufficient material to discuss. Otherwise
+     due to the OGSA F2F & SC06 the next call may be in late November.
+
+
+>     - Confirm session at next OGSA F2F (Nov 9,10). OGSA F2F tentative
+>       agenda is on the wiki:
+> https://forge.gridforum.org/sf/wiki/do/viewPage/projects.ogsa-wg/wiki/2006NovF2F
+
+    Agreed that discussing XQuery and how it might fit in JSDL 2.0 (or
+    even in JSDL 1.0/1.1) is a good idea.
+    
+    Michel already has a slot scheduled but probably more time is
+    needed. Together with Ellen's material (info model/container etc)
+    it should take half-a-day or more.
+
+    The agenda for the F2F needs more detailing. It was agreed that
+    this can be done offline.
+
+    Michel is working on examples and a presentation and he will post
+    them before the F2F for people to prepare.
+
+> 3. Decide backwards compatibility approach (for JSDL 1.1)
+>    - Discuss draft to be sent out by Michel and Donal.
+
+    Michel gave an overview of the versioning document and the group
+    discussed various possibilities to add more enforcement (e.g.,
+    mandatory 'version' attribute on top-level jsdl element); or more
+    fine-grained versioning (e.g,. 'version' attribute on individual
+    elements). Agreed that keeping things simple as a start is a good
+    idea. The overall approach looks good.
+
+    Discussed specific versioning choices for JSDL 1.0/1.1 and
+    2.0. JSDL 1.0 is out and does not have the 'schema' 'version'
+    attribute. Also implementers have not reported any schema bugs
+    that need fixing. Mostly requests have been for clarifications or
+    additional explanation. And there is a plan for a JSDL 2.0 with
+    substantial schema changes.
+
+    Given the above it was agreed that a conservative approach for
+    JSDL 1.1 is probably best in order to minimize implementation
+    costs. This would mean no schema changes and only text changes for
+    clarifications or to tighten definitions. (Even though there are
+    some bugs that would require schema changes to fix they are not
+    high-priority and there is no point to invalidate existing JSDL
+    documents, especially when a major revision (2.0) is also being
+    considered.)
+
+    Agreed that the version attribute should be done for JSDL 2.0.
+
+    Agreed that easy conversion between 1.0/1.1 and
+    2.0 documents is a worthwhile target.
+
+    The versioning document may be a nice document to put out
+    eventually as a community practice or experience document.
+
+> 4. Review any new extension drafts
+>    - A new draft for Parallel Application (SPMDApplication) should
+>      be ready.
+
+     Andreas posted a new draft for 'parallel application' and
+     highlighted some of the schema issues:
+     - How to express that the SPMDNumberOfProcesses element should
+       have no value if the actualtotalcpucount is true?
+       - Initial definition uses nillable; it is not clear if it
+         carries the correct semantics but may be safe for tooling
+       - A union of integer and a special value is possible but may
+         cause problems with some tooling
+       - Using choices---again tooling support might be problematical
+       - No clear decision. Andreas to research this further---get
+         feedback from implementers or potential adopters.
+     - SPMDVariation should be string or an enumeration?
+       - Initial definition is half-way between these. Agreed that it
+         is probably best to do this as an enumeration using the same
+         approach as in JSDL 1.0: Use the 'other' escape value and
+         extensibility element for the value.
+       - Should the enumeration values be in a separate schema?
+         Maybe. This is also something to consider for the 1.x to
+         2.0 change. Many 1.0 enumerations are based on CIM and maybe
+         WS-CIM work can be leveraged.
+
+     Andreas will produce a new version, review on another call and
+     (perhaps in parallel) send it to other stakeholders for comments.
+     

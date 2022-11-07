@@ -1,0 +1,132 @@
+Network Markup Language Working Group Charter
+Open Grid Forum, Infrastructure Area
+
+1.	Administrative Information
+Name and Acronym:
+Network Markup Language Working Group (NML-WG)
+
+Chairs:
+	Martin Swany <swany@cis.udel.edu>
+Paola Grosso <grosso@science.uva.nl>
+
+
+Secretary(s)/Webmaster(s):
+The above chairs agreed to cover this role
+
+Email list:	
+nml-wg@ogf.org
+
+Web page: 
+https://forge.gridforum.org/projects/nml-wg
+
+2.	Charter
+Focus/Purpose
+Interesting new developments in research networks have taken place in the last years. In particular there has been a greater focus on offering applications circuit-switched connections, a.k.a lightpaths that can provide guaranteed network services.
+With the increased use of these connections, the complexity of provisioning such paths across multiple networks has become more and more evident.
+
+One of the major issues is still the lack of an agreed upon way to describe the optical network topology between providers. While several tools exist to provision lightpaths within a single domain, they cannot interoperate among each other because they do not have ways to exchange information on the underlying topology.
+
+The Network Markup Language Working Group intends to address the problem of inter-domain lightpath provisioning by defining a standard schema for network topology description; this schema can be used for information exchange at the network domain boundary.
+
+To achieve this goal we intend to  combine and homogenize efforts of multiple projects. At the time of writing the groups and projects involved are: System and Network Engineering group of the University of Amsterdam, Network Management WG of the OGF, and GEANT2 in particular, as well as efforts in the Global Lambda Integrated Facility (GLIF), Internet2 and ESnet communities.
+
+Scope
+The scope of the Network Markup Language Working Group is to define a schema (or a set of schema if necessary) to describe:
+•	a layer independent network topology and
+•	properties that are common across for multiple network technologies, as well as
+•	a mechanism so that other working groups or other projects may combine technology specific schemas with the schemas created by the NML working group.
+
+The working group will not look into policy related schemas, nor into schemas related to scheduling and reservation.
+
+The working group will use existing schemes as starting point, and aims to build as much as possible on work done in the IETF Netconf, CCAMP and IPPM working groups, if deemed applicable.
+
+
+Goals/Deliverables
+The goals of this working group is to deliver the following documents.
+
+Title - Informational document on context of the work 
+
+Abstract - The NML-WG goal is to define a schema for description of optical hybrid network topologies. This schema is to be used by lightpath provisioning application to exchange topology information intra and inter domain. This document constitutes provides a detailed overview
+of the framework in which the working group operates, detailing the already existing topology
+schemas and providing the basis for the integration of the various projects.
+
+Type – Informational document
+
+Milestone	Target Date	Completed	Completion Date
+First Draft for Review	End 2007		
+Public comment			
+Published			
+
+Title - First schemata 
+
+Abstract – This document contains the first schemata of the NML-WG. It will provide users and operators with a standardized schema to describe optical hybrid networks, and lightpath services.
+
+Type – Recommendation document
+
+Milestone	Target Date	Completed	Completion Date
+First Draft for Review	Mid 2008		
+Public comment			
+Published			
+
+
+Title Informational document on experiences and early implementations
+
+Abstract – This document will collect the results and feedback of the implementation of the first NML schemata. It will focus on use-cases and applications and will derive from this the requirements for the work to be performed for the second schemata.
+
+Type – Informational document
+
+Milestone	Target Date	Completed	Completion Date
+First Draft for Review	End 2008		
+Public comment			
+Published			
+
+
+Title - Final schemata
+
+Abstract – This schema is the final document produced by the NML-WG. The final schema will incorporate all changes and requirements brought forward by user of the first schema and by the GGF community at large.
+
+Type – Recommendation document
+
+Milestone	Target Date	Completed	Completion Date
+First Draft for Review	Mid 2009		
+Public comment			
+Published			
+
+
+Management Issues
+The working group will hold frequent meetings, either teleconferences or F2F. The co-chairs and other members will also attend OGSA WG meetings as appropriate, including joint review discussions before every milestone. The group will liaise with other working groups in the infrastructure area..
+
+Evidence of commitments to carry out WG tasks
+The working group has already identified several group members committed to perform the work.
+
+The following people are committed as author:
+•	Jeroen van der Ham, University of Amsterdam
+•	Bert Andree, university of Amsterdam
+•	Martin Swany, University of Delaware
+
+The following people are committed as reviewer:
+•	Cees de Laat, University of Amsterdam
+•	Paola Grosso, university of Amsterdam
+•	Freek Dijkstra, University of Amsterdam
+•	Anand Patil, Dante
+•	Jerry Sobiesky, MAX
+•	Chris Tracy, MAX
+•	John Vollbrecht, Internet2
+
+The members of the WG will also actively seek to recruit further members. One intention of forming a WG is to increase the visibility of the existing work and hence encourage further participation beyond the existing core.
+
+Pre-existing Document(s) (if any)
+
+This work will be based on:
+-	Network Description Language (NDL) RDF Schema by the System and Network Engineering group of the University of Amsterdam. 
+See http://www.science.uva.nl/research/sne/ndl/
+-	UML schema used in perfSONAR for network description;
+-	UML schema used in the cNIS project in GEANT2 for network description.
+
+The OGSA v1.0 document describes the capabilities of the data subset of OGSA.  The data design team is working on an informational document describing the architecture.  Other material has been contributed as input for discussion.
+
+Documents from the Network Measurement Working Group (NM-WG) are also relevant and taken into consideration.
+
+Exit Strategy
+The work of the NML-WG will be deemed complete upon the delivery of a first version of each of the deliverables listed above in the section entitled "Goals". The preliminary schedule for the release of deliverables is provided above.
+

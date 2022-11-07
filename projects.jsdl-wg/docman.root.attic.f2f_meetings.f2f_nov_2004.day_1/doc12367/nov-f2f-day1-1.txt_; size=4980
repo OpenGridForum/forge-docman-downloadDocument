@@ -1,0 +1,148 @@
+* JSDL F2F 11/17
+================
+
+* Participants
+
+  Darren Pulsipher
+  Stephen McGough
+  William Lee
+  Donal Fellows
+  Andreas Savva
+  Sayaka Akioka
+  Fred Brisard
+  David Snelling 
+  Kazushige Saga
+  Nathalie Furmento
+  Michel Drescher
+
+* Position statements
+ 
+** Steve's presentation
+
+  - JSDL and what is the scope
+    ! Use the figures/add text to the spec under purpose/scope >Steve, Andreas
+  - How do the 'things' outside the JSDL box fit in
+    - Outside, and we don't define them 
+    - Probably some intersections with jsdl, e.g, agreement and policy
+      ! Need to define this relation better > JSDL-WG
+
+  - Workflow is outside and encapsulates JSDL
+    - Co-allocation or workflow or parametric study and so on
+    
+** Dave's presentation
+
+   - User section as required?
+   - GridId as a required component?
+     - Is it something implied by the submission and does not have to
+       specified in the schema
+     - Not all submissions will need it; if it used on a DRM system
+       that does not have grid ids.
+
+   - Application
+     - modifications here are Version, (executableType?), Argument as
+       a single element rather than a list.
+       - executableType is * because it has an id
+     - argument as a single 'string'
+       - ordering in the schema is tough (constructs make schema
+         verbose)
+   
+   - Resource 
+     - Added AbstractName; (ggf12 changed host to hostname; morphed to
+       this)
+     - limits are here should they be in a different section?
+     - filesystem has id but not a name anymore
+
+   - Data transfer
+     - source probably need to be a type to be able ot add
+       extensibility
+     - cardinality of source/destination is ?, can make it * using the
+       profiles.
+
+   - 3 rules to process/refine the document; single description
+     (unique ids), pick only one profile, if it overlaps the top
+     section profile supersedes.
+     - e.g., multiple source or destinations by defining multiple
+       profiles
+
+   - another type of refinement (rather enrichment) is adding profiles
+     to a job document.
+
+   - executableType make it ? unless someone can come up with
+     justification for making it *
+
+   - pseudoSchema is w3c lightweight method to describe schemas
+
+======
+   ! Add pseudo schema description in the document in addition to the
+     full schema; and switch to the full version (normative) at the
+     end.
+
+   - Add examples to the document as we move along.
+
+   - Typing information added; initially just the xsd types used
+
+   - Can the profiles support all the use cases in the document (under
+     the operators)
+     - Seem to cover uc 1 & 2 but not 3 (which is an exclusion
+       scenario)
+       - exclusion is needed because for example the application might
+         not work right on some special kind of resource.
+     - Does this point to a need for operators (NOT) in the profile or
+       operators in the job description?
+       - Need to allow operators on some of the elements
+	 - Not-equal
+	 - Other operators may already be in the document
+
+     - rule is replace & add. If the id appears in the job definition
+       then it replaces. If not then it is added.
+     
+   - preference: profiles are named. preference can be applied to them
+     by an outside framework, e.g., agreement.
+     - Do a WS-Agreement example > Andreas
+
+   - Comparison operators
+     - normative list added in the spec
+     - default is equalTo
+     - do we want to be able to combine them or do we create new ones
+       - Agreed to not allow combinations
+       - Do not allow extensibility on the operator
+       - Need to define the whole element again if you want to use a
+         different operator set.
+
+   - JobIdentification in Profile
+     - do not allow in the profile. cannot change the 'identification'
+       of a job definition. Write a different document instead.
+
+   - Moved JobGroupName, UserGroupName and will revisit to decide
+     what to keep and how to define. The explanation currently is not
+     clear enough.
+     - Sent an email to the list to solicit more input for further
+       discussion.
+
+   - JobCategory: Not sure if this is part of the identification. It
+     looks more like a resource (or scheduling?) Moved to resource and
+     revisit.
+
+   - UserCredentials: refer to ds:Keyinfo as an example from the UR
+     spec.
+
+   - ExecutionUserId: split out group id to ExecutionGroupId to allow
+     for overriding them separately by the profiles.
+
+
+=====
+
+  - Other actions:
+    - Purpose/scope: darren/steve/andreas prepare text for later in the
+      meeting.
+
+
+====== To discuss ===
+
+   - Empty sections in the schema and are they allowed or what do they
+     mean.
+   - Do we want to make process topology a separate section or is it
+     ok to be part of the resource
+   - Revisit the UserCredentials: Do we need to allow for multiple
+     credentials. And do we have to allow them to be attached at
+     different parts of the document? preference and so on.

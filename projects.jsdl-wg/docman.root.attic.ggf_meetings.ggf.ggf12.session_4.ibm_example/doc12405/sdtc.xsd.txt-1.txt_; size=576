@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://foo.org/sdtc" xmlns:sdtc="http://foo.org/sdtc">
+<import namespace="http://www.w3.org/2001/XMLSchema" schemaLocation="../query2SQL/XMLSchema.xsd"/>
+  <complexType name="OpType">
+    <sequence>
+      <choice minOccurs="1" maxOccurs="2"> 
+        <element name="SDT" type="string"></element>
+        <element name="And" type="sdtc:OpType"></element>
+        <element name="Or" type="sdtc:OpType"></element>
+      </choice>
+    </sequence>
+  </complexType>
+</schema>

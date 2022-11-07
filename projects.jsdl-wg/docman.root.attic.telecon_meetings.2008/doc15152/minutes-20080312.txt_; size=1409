@@ -1,0 +1,48 @@
+JSDL Teleconference 12 March 2008
+=================================
+
+* Participants
+
+  Alexander Papaspyrou
+  Steve McGough
+  Geoff Williams
+  Andreas Savva
+
+  Apologies: Fred Brisard, Philipp Wieder
+
+  Minutes: Andreas Savva
+
+* Logistics
+  
+** Confirm teleconf slot for future calls
+
+  New time slot seems ok. It will move an hour for UK & Europe after
+  the change to summer time. US (already changed) and Japan (no
+  change) stay the same.
+
+** Next call
+
+   - Andreas and Steve are not available March 27.
+   - Andreas will check if there is enough material for a call next
+     week.
+   - Possible next date otherwise is Apr.2. 
+     - Andreas is not available; Steve will decide if there is a call
+   - Apr.9 is the next firm date for a call.
+
+* Parameter Sweep
+
+** Parameter sweep value from file 
+   - Need more information on specifics; the wiki can be used for
+     this.
+   - Once there is sufficient information arrange to discuss this on
+     a teleconference.
+
+** Non-integer or negative integer values
+   - Float as values in sweeps was discussed before; issue seems to
+     have the accuracy of representation. (?)
+   - Could allow negative integer and positive for step values; it can
+     be defined in the schema
+   - Geoff should put issues in the tracker for discussion/tracking
+
+** Tracker issues discussed and updates directly in tracker
+

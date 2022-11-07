@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0049)http://www.csm.ornl.gov/ghpn/GHPN_Milestones.html -->
+<HTML>
+This is a static archive of the previous Open Grid Forum GridForge content management system saved from host forge.ogf.org file /sf/docman/do/downloadDocument/projects.ghpn-rg/docman.root.milestones/doc10891/2 at Sun, 06 Nov 2022 15:06:13 GMT
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<HEAD><TITLE>Milestones</TITLE>
+<META http-equiv=content-type content="text/html; charset=ISO-8859-1">
+<META content="MSHTML 5.50.4923.2500" name=GENERATOR></HEAD>
+<BODY><BIG><BIG><BIG><BIG>Milestones<BR><BR></BIG></BIG></BIG></BIG>* June 6th 
+2003.&nbsp; First drafts of the two top-ten documents. Begin<BR>circulation with 
+other groups.<BR><BR>* By GGF9 cutoff date. First draft of a new GWD-I track 
+document. What<BR>demands do grid applications really put on the network? Do 
+some grid<BR>applications abuse the network? Among things, this draft 
+will<BR>cross-reference the OGSA use-cases document and GHPN's 
+own<BR>draft-net-issues-with-grids, to characterize actual network 
+utilization<BR>patterns according to several metrics.<BR><BR>* By GGF10 cutoff 
+date. Combine feedback from other groups, submit the two<BR>top-ten documents 
+for GWD-I track.<BR><BR>* By GGF10 cutoff date. First draft of a new GWD-I track 
+document. Sensor<BR>nets, post VonNeumann architectures ... what is the impact 
+on Grids and<BR>their usage of the network? In which ways can networking 
+research help?<BR><BR><!-- forge.gridforum.org footer.html -->
+<br> <hr>
+<table width='100%'> 
+ <tr>
+  <td align='left'>   <a href='http://www.ogf.org/' target='_blank' style='border: 0 px;'><img src='../../../../../../../ogf-it/opengridforum.gif' alt='The Open Grid Forum' style='border:0px white solid;'></a><td>
+  <td align='center'> <a href='mailto:webmaster@ogf.org'>Contact Webmaster</a> 
+                    | <a href="../../../../../../tracker/do/createArtifact/projects.ggf-info/tracker.html">Report a problem</a>
+                    | <a href="../../../../../../wiki/do/viewPage/projects.ggf-info/wiki/HomePage.html">GridForge Help</a>
+                    </td>
+  <td align='right'>  
+<!--		<img src='/ogf-it/powered_by_dell.gif' alt='Powered by Dell'> -->
+<!-- Begin DigiCert/ClickID site seal HTML and JavaScript -->
+<div id="DigiCertClickID_sxSDRU4L">
+  <a href="http://www.digicert.com/">SSL Certificates</a>
+</div>
+<script type="text/javascript">
+var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_sxSDRU4L", "10", "m", "black", "sxSDRU4L"]);(function(){var cid=document.createElement("script");cid.type="text/javascript";cid.async=true;cid.src=("https:" === document.location.protocol ? "https://" : "http://")+"seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
+</script>
+<!-- End DigiCert/ClickID site seal HTML and JavaScript -->
+  </td>
+ </tr>
+</table>
+<!-- google analytics code -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6775861-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</BODY>
+This is a static archive of the previous Open Grid Forum GridForge content management system saved from host forge.ogf.org file /sf/docman/do/downloadDocument/projects.ghpn-rg/docman.root.milestones/doc10891/2 at Sun, 06 Nov 2022 15:06:13 GMT
+</HTML>

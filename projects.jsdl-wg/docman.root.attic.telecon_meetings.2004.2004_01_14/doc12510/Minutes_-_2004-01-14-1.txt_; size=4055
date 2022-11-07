@@ -1,0 +1,158 @@
+JSDL Telecon Minutes
+====================
+January 14th, 2004 - 23:00 GMT
+==============================
+
+
+Attendees:
+==========
+
+Alain Andrieux (ISI)
+Andreas Savva (Fujitsu)
+Ali Anjomshoaa (EPCC)
+Darren Pulsipher (Cadence)
+Steve McGough (LeSC)
+Lee Cook (IBM)
+Fred Brisard (CA)
+An Ly (CA)
+
+
+Apologies:
+==========
+
+
+Discussion:
+===========
+
+Administrative:
+---------------
+
+The Agenda included:
+--------------------
+o Brief discussion of the new milestones, please see:
+   http://www.epcc.ed.ac.uk/~ali/WORK/GGF/JSDL-WG/#milestones
+o Planning for milestone M1
+o Brief discussion of plans for GGF10, planning for 4 sessions
+o Discussion of JSDL attribute properties (we'll start from scratch for
+  each one and use our discussions to guide us, so come with your
+  thinking caps on!) Currently on the table is:
+    - requirement of attributes
+    - multiplicity of attributes
+    - negotiability of attributes
+    - value types for attribute values
+
+  (90 mins.)
+
+
+Milestones:
+-----------
+o Ali: Went through M1 and M2 - no comments.
+
+
+Planning for milestone M1 - Spec Production:
+--------------------------------------------
+o Ali: Planning for M1: Spec. production in parallel by authors, then send 
+       to Andreas for consolidation.
+
+o Andreas: Produce the spec sections in parallel and upload to GridForge as 
+           seperate documents. when ready to submit to GGF as draft, Andreas 
+           will consolidate.
+
+--> CONCLUSION: produce sections in parallel as txt files and send to 
+                Andreas.
+
+
+ - Important Dates
+   ---------------
+o 03/02/04 - Status check: update on spec sections by Tue 3rd Feb.
+o 04/02/04 - Will discuss spec status at the telecon on Wed 4th Feb.
+o 09/02/04 - Authors to submit their sections to GridForge(?) and Andreas, 
+               by Mon 9th Feb.
+o 13/02/04 - Draft of spec ready for GGF10 by Fri 13th Feb.
+
+
+ - Category Ownership
+   ------------------
+o Data Attrs. - with Steve and Andreas
+o Job ID Attrs. - with Ali
+o Resource Attrs. - with An
+o Scheduling Attrs. - with Fred
+o Security Attrs. - with Alain
+
+
+Planning for GGF10:
+-------------------
+o GGF10: 4 sessions, book by Tue. 24th Feb.
+ - generic titles until the 18th Feb.
+ - 3 min. intro. at start of each session
+
+
+
+Discussion of Attr. Properties:
+-------------------------------
+
+    - Requirement of Attributes
+      -------------------------
+o Compulsory Attrs.: minimum multiplicity of 1
+  - must be in all JSDL instance documents
+
+o All other Attrs.: in a JSDL doc are 'required'
+  - must be scheduled and satisfied.
+
+o Optional Attrs. are out!
+
+o The 'source' of required attributes (i.e. user, system, etc.) is out of 
+  JSDL scope.
+
+
+    - multiplicity of attributes
+      --------------------------
+o Attributes can appear, according to the spec,
+ -  0 or more times
+ -  1 or more times
+ -  or an exact number of times
+
+
+( Sideline discussion:
+  --------------------
+  (JSDL doc is a description for a job-node in a workflow, 
+     i.e. granularity of 'job' is a job-node not a whole workflow)
+  (JSDL describes dependancies on the outputs and status of immediately 
+     relevant jobs - using a scheduling attribute)
+
+
+    - negotiability of attributes
+      ---------------------------
+o Do we allow mutability of attribute values?
+o JSDL can change for mutability before submission! (Steve)
+o JSDL doc can be dynamic until the negotiation cycle is complete. (Alain)
+o So the JSDL document is not ready for submission until both requestor 
+  and provider are happy with it, re: negotiation.
+
+o We need to decide at what stage the JSDL doc becomes validated.
+o Lots of questions need answering!
+
+
+    - value types for attribute values
+      --------------------------------
+o In Steve's hands.
+o Question: How strongly typed do we want JSDL to be? (Steve)
+   Loosely typed -> no validation required
+   Tightly typed -> validation not only of type, but also of the value and
+                    range
+
+o Start with loosely typed???
+o Steve to e-mail list on this.
+
+
+AOB:
+====
+
+o NONE
+
+
+DONM:
+=====
+
+o 21st Jan. 2004 - 23:00 GMT
+

@@ -1,0 +1,154 @@
+INFOD Current Actions
+=====================
+
+This is a list of current actions.  Each action has a serial number, once it
+is closed it is moved to a companion document of closed actions.
+
+==============================================================================
+
+
+43     Describe the two approaches for traceability through multiple disseminators
+
+        (1) Re-pacakaging a message at each hop in a new header
+        (2) Removing the header and adding a new appropriate message
+            header after transformation
+
+       - Date 3 Oct 2005
+       - Owner: 
+       - Target: 
+      
+
+48     Define sequence number and message groups in the context of transactions
+
+       - Date 3 Oct 2005
+       - Owner: 
+       - Target:
+
+
+108    Define vocabulary WS to support non-XML Data Vocabularies
+
+       - Date: 12 Feb 2006
+       - Owner: 
+       - Target:
+
+
+129    Find how to deal with nested vocabularies in XML
+
+       - Date: 17 May 2006
+       - Owner: Dieter
+       - Target: 
+
+
+140    How do we deal with "delta messages" (optimisation of notification)
+
+       - Date: 17 May 2006
+       - Owner: Dieter
+       - Target: 
+
+
+150    Check that notify() message actually works as planned
+
+       - Date: 15 Jun 2006
+       - Owner: Vijay
+       - Target: 18 Jan 2007
+
+       Have not managed yet. Now using .Net but still some problems -
+       so far no success with any tool. Will modify the WSDL and check
+       with IBM implementation.
+
+
+155    How do we deal with retention periods?
+ 
+       Separation of data retention from data publishing
+
+       - Date: 1 Jul 2005
+       - Owner: Dieter
+       - Target date:
+
+
+156    How do the propagation interface(s) differ from the consume
+       interfaces and what is stored in the registry?
+
+       - Date: 1 Jul 2005
+       - Owner: Shailendra, Cecile
+       - Target date:
+
+
+160    What's special about INFOD disseminators?
+
+       * Retention of information
+       * Querying information
+       * Auditing and tracking
+
+       - Date: 1 Jul 2005
+       - Owners:
+       - Target date:
+
+
+164    Merge use case doc
+
+       - Date: 3 Aug 2006
+       - Owner: Dieter
+       - Target: 15 Feb 2007
+  
+
+172    Add explanation that we will change from WSN when there is a
+       succesful standard
+
+       - Date: 9 Sep 2006
+       - Owner: Steve F
+       - Target: OGF19
+
+
+178    Mention charter evolution to area director
+
+       - Owner: Steve F.
+       - Date: 9 Sep 2006
+       - Target: 28 Sep 2006
+
+
+182   Framework of chapter 2 of next spec
+
+      - Owner: Dieter
+      - Date: 28 Sep 2006
+      - Target: 
+
+
+187   Send responses to Peter Niblett and Matt Roberts
+
+      - Owner: Vijay
+      - Date: 7 Dec 2006
+      - Target: 4 Jan 2006
+
+
+191   Update chapter 1 
+
+      - Owner: Steve
+      - Date: 21 Dec 2006
+      - Target: OGF19
+
+
+192    Update chapter 2 to end
+
+      - Owner: Dieter and Ronny
+      - Date: 21 Dec 2006
+      - Target: OGF19
+
+        Work has started
+
+
+194   Consider relationship between Consumers and DataVocabularies for
+      the next spec.
+
+      - Date: 4 Jan 2007
+
+
+195   Prepare - and if nobody objects - send e-mail to Dave Berry about
+      student's planned work.
+
+      - Owner: Vijay
+      - Date: 1 Feb 2007
+      - Target: 8 Feb 2007
+
+
+196

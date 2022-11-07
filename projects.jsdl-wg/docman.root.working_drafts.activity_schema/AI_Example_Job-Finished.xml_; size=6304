@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aid:ActivityDocument xmlns="http://schemas.ogf.org/jsdl/2010/06/activity-instance-description-ogf"
+ xmlns:aid-ogf="http://schemas.ogf.org/jsdl/2010/06/activity-instance-description-ogf"
+ xmlns:aid="http://schemas.ogf.org/jsdl/2010/06/activity-instance-description"
+ xmlns:jsdl="http://schemas.ggf.org/jsdl/2005/11/jsdl"
+ xmlns:jsdl-posix="http://schemas.ggf.org/jsdl/2005/11/jsdl-posix"
+ xmlns:ur="http://schema.ogf.org/urf/2003/09/urf"
+ xmlns:wsa="http://www.w3.org/2005/08/addressing"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://schemas.ogf.org/jsdl/2010/06/activity-instance-description http://schemas.ogf.org/jsdl/2010/06/activity-instance-description-ogf"
+ id="ea196512-9cb7-4a14-91b0-2dde749a5f7d">
+    
+    <aid:ActivityDescription>
+        This activity instance has been generated due to an activity 
+        request submitted to the scheduling service with the following
+        URI: http://tempuri.org/services/activityscheduler. The activity 
+        request has been received at 2010-05-10T11:11:11.11. The 
+        activity instance has been created 2010-05-10T11:11:44.44 by the 
+        organization’s activity store with the following URI: 
+        http://tempuri.org/services/activitystore.
+    </aid:ActivityDescription>
+    
+    <aid:ActivityHistory>
+        <aid:ActivityHistoryEntry timestamp="2010-05-10T11:11:44.44" category="initial">
+            
+            <aid:Status>
+                <ActivityStatus state="Pending">
+                </ActivityStatus>
+            </aid:Status>
+            
+            <JobDefinition>
+                <jsdl:JobDescription>
+                    <jsdl:JobIdentification>
+                        <jsdl:JobName> My gnuplot invocation</jsdl:JobName>
+                        <jsdl:Description> Simple application invocation
+                        </jsdl:Description>
+                    </jsdl:JobIdentification>
+                    <jsdl:Application>
+                        <jsdl:ApplicationName>gnuplot</jsdl:ApplicationName>
+                        <jsdl-posix:POSIXApplication>
+                            <jsdl-posix:Executable>/usr/local/bin/gnuplot
+                            </jsdl-posix:Executable>
+                            <jsdl-posix:Argument>control.txt</jsdl-posix:Argument>
+                            <jsdl-posix:Input>input.dat</jsdl-posix:Input>
+                            <jsdl-posix:Output>output1.png</jsdl-posix:Output>
+                        </jsdl-posix:POSIXApplication>
+                    </jsdl:Application>
+                    <jsdl:Resources>
+                        <jsdl:IndividualPhysicalMemory>  
+                            <jsdl:LowerBoundedRange>1293942784.0
+                            </jsdl:LowerBoundedRange>
+                        </jsdl:IndividualPhysicalMemory>
+                        <jsdl:TotalCPUCount><jsdl:Exact>1.0</jsdl:Exact>
+                        </jsdl:TotalCPUCount>
+                    </jsdl:Resources>
+                    <jsdl:DataStaging>
+                        <jsdl:FileName>control.txt</jsdl:FileName>
+                        <jsdl:CreationFlag>overwrite</jsdl:CreationFlag>
+                        <jsdl:DeleteOnTermination>true</jsdl:DeleteOnTermination>
+                        <jsdl:Source>
+                            <jsdl:URI>http://tempuri.org/~me/control.txt</jsdl:URI>
+                        </jsdl:Source>
+                    </jsdl:DataStaging>
+                </jsdl:JobDescription>
+            </JobDefinition>
+            
+            <aid:ManagerReference>
+                <wsa:Address>
+                    http://tempuri.org/services/activitystore                    
+                </wsa:Address>
+            </aid:ManagerReference>
+        </aid:ActivityHistoryEntry>
+        
+        <aid:ActivityHistoryEntry timestamp="2010-05-10T11:22:22.22" category="intermediate">
+            
+            <aid:Status>
+                <ActivityStatus state="Running">
+                </ActivityStatus>
+            </aid:Status>
+            
+            <aid:ManagerReference>
+                <wsa:Address>
+                    http://tempuri.org/services/activitystore                    
+                </wsa:Address>
+            </aid:ManagerReference>
+        </aid:ActivityHistoryEntry>
+        
+        <aid:ActivityHistoryEntry timestamp="2010-05-10T11:44:44.44" category="final">
+            
+            <aid:Status>
+                <ActivityStatus state="Finished">
+                </ActivityStatus>
+            </aid:Status>
+            
+            <aid:ManagerReference>
+                <wsa:Address>
+                    http://tempuri.org/services/activitystore                    
+                </wsa:Address>
+            </aid:ManagerReference>
+            
+            <UsageRecord>
+                <ur:RecordIdentity
+                    ur:recordId="http://tempuri.org/mscf/colony/PBS.1234.0"
+                    ur:createTime="2010-05-10T11:44:44.44" /> 
+                <ur:JobIdentity> 
+                    <ur:LocalJobId>PBS.1234.0</ur:LocalJobId> 
+                </ur:JobIdentity> 
+                <ur:UserIdentity> 
+                    <ur:LocalUserId>scottmo</ur:LocalUserId> 
+                </ur:UserIdentity> 
+                <ur:Charge>2870</ur:Charge> 
+                <ur:Status>completed</ur:Status> 
+                <ur:Memory ur:storageUnit="MB">1234</ur:Memory> 
+                <ur:ServiceLevel ur:type="QOS">Gold level</ur:ServiceLevel> 
+                <ur:Processors>1</ur:Processors> 
+                <ur:ProjectName>mscfops</ur:ProjectName> 
+                <ur:MachineName>Colony</ur:MachineName> 
+                <ur:WallDuration>PT1S</ur:WallDuration> 
+                <ur:StartTime>2010-05-10T11:22:22.22</ur:StartTime> 
+                <ur:EndTime>2010-05-10T11:33:33.33</ur:EndTime> 
+                <ur:NodeCount>1</ur:NodeCount> 
+                <ur:Queue>batch</ur:Queue> 
+                <ur:Resource ur:description="quoteId">1435</ur:Resource> 
+                <ur:Resource ur:description="application">gnuplot</ur:Resource> 
+                <ur:Resource ur:description="executable">gnuplot</ur:Resource>
+            </UsageRecord>
+        </aid:ActivityHistoryEntry>
+    </aid:ActivityHistory>
+    
+</aid:ActivityDocument>   

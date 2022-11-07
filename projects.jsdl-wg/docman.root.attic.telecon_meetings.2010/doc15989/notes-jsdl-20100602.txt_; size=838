@@ -1,0 +1,30 @@
+JSDL Teleconference -  2 June 2010
+==================================
+
+* Participants
+    Alexander Papaspyrou
+    Donal Fellows  
+    Philipp Wieder
+    Andreas Savva
+
+* Agenda:
+> 
+>   1. Agenda bashing & quick status update
+>   2. Activity instance description specification
+>      Document & issue review in preparation for pc submission
+
+    - Section 5.2: minor editorial change for last sentence
+    - Add reference to security section in extensibility section of
+      activityhistoryentry (4.1.7), activitydocument (4.4.7)
+    - State clearly that entries are only appended, no modification
+      possible
+    - Delete subtype text in UR definition
+    - delegate text check
+    - Other minor editorial checks 
+
+    Philipp to have the pen till next week Tuesday
+
+>   3. Other business
+>      - OGF29 session
+
+* Next call: June 9

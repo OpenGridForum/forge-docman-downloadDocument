@@ -1,0 +1,148 @@
+JSDL-WG GGF10 (Berlin) Session 3
+--------------------------------
+
+Thursday 11th March 2004, 18:00 - 19:30 (local time)
+----------------------------------------------------
+
+
+Presentation by Fred on JSDL Resource attributes: See:
+
+https://forge.gridforum.org/projects/jsdl-wg/document/JSDL-WG_GGF10_Session_3_-_JSDL_Resource_Attributes/en/1
+
+
+Resource Attributes' Presentation and Discussion
+================================================
+
+ o Specifying the attributes for hardware and software requirements.
+
+ o Sources considered:
+   - Job submission on traditional operating systems,
+   - OGSA and Globus' RSL,
+   - DRMs: PBS, Condor, Maui, Platform LSF, (SUN) Grid Engine,
+   - Feedback from JSDL mailing list,
+   - Computer Associates' Job Scheduling Software
+
+ o Should consider further sources:
+   - LoadLeveler,
+   - FlowTracerNC (www.rtda.com),
+   - Grid Job Language (Fraunhofer Institute),
+   - DataSynapse,
+   - XRSL (Poznan).
+
+
+o Host
+  - Order and priority of hosts to consider for scheduling?
+  -  Darren: don't attach policy for now. Just say that it is an ordered 
+     list!
+     - Ordered list is not required, the WS-Policy stuff can be used to 
+       help prioritise it.
+     - Remember that this refers to a single job running on any or all of 
+       the hosts.
+  - Chris and Dan: leave it as it is, i.e. not ordered list.
+  - Chris: Refer back to the Job Terms document for priority of hosts.
+  --> OPEN ISSUE
+
+o CPU
+  - "negation" and "wild-cards" and other operators for JSDL schema.
+  - Other metrics to CPU speed for machine performance, e.g. number of 
+    transactions?
+  - Extensibility set for this: ComplexAttributes from SGE, HostTypes 
+    (general resource attributes) from LSF.
+
+o PhysicalMemory
+  - Typing "256M", "256k", etc. if the type is string.
+  - Will address typing in the specification and the schema work.
+
+o Network
+  - Move to "data attributes"? Because you're specifying a source and 
+    destination.
+  - We need to think about the use of the network for the network 
+    attributes.
+  - Look at use-cases for this and where the network attributes belong in 
+    JSDL.
+  - Chris: this stuff is important for resource management.
+  - Need for remote visualisation and computational steering.
+
+o FileSystem
+  - Change the name since this attribute is referring to directories and 
+    directory structures, not AFS, NFS, etc.
+  - SwapSpace - identified differently on some systems, e.g. Windows 
+    requires paging space.
+  - Set the multiplicity for each of DiskSpace and SwapSpace and TempSpace
+  - Set cardinality of the three attributes.
+  - Set units on each of the three attributes.
+
+o EnvironmentVariable
+  - Specify type for "String"="String", for <EnvVar>=<Value>
+  - Inheritance of environment values, put into specification? Shall we 
+    say that the Environment variables can be inherited, e.g. from 
+    submission environment.
+  - Can specify predefined environments - Need a way to specify predefined 
+    environments? This maybe fulfilled through the job category.
+  - OR do we specify all of the environment variables explicitly. i.e. 
+    leave the predefined environments to be described in JSDL by a higher 
+    level system.
+
+o OperatingSystem
+  - Tackling operations including wild-cards etc. in the schema work.
+
+o VirtualMemory
+  - Need units. Include in the typing.
+
+o ProcessVirtualMemory
+  - Per process value? Should be the aggregate i.e. per job.
+  - Min, Max, Exact issue needs to be addressed.
+  - Chris: request for shell/OS limits.
+  - Telecon for Min, Max, Exact and whether these limits are for the OS or 
+    the shell or the scheduling system.
+
+o ProcessPriority
+  - "execution environment" definition? Target machine? Machine and OS?
+  - For OS or for scheduler?
+
+o ProcessCoreDumpSize
+  - If not defined then max dump limit, OS or shell limit?
+
+o ProcessFileSize
+  - Leave because OS10 has this.
+
+
+o Put in a limit on each output file for the job in the data attributes 
+  category.
+o Data Attributes should include the created output files and can have 
+  limits(?).
+
+
+o ProcessCPUTime
+  - Revisit "process" prefixes on the attributes' names, since this stuff 
+    applies to 'jobs' not 'processes'.
+
+o ProcessWallTime
+  - Equivalent attribute for "I want it done by", in scheduling 
+    attributes.
+
+
+o No default values for the attributes - leave to the implementation on 
+  all attributes!
+
+
+o ProcessQueue
+  - Revisit the use-cases for this.
+
+
+Process Attributes
+------------------
+ - Is it a per process value? Not a sum of the aggregation of the 
+   processes if the job has more than one process?
+ - We need to put in shell limits and also a resource. This discussion 
+   needs to be moved to a phone discussion in the near future.
+ - ProcessPriority = We need "nice" values for the running machine and the 
+   scheduling priority as well.
+ - Process File Time needs to be defined because of X10.
+ - We need to add something to the data transfer and file size as well.
+ - We need to change the names in the Process Attributes area and take 
+   out the "Process" prefixes.
+ - Process Queues needs to be supported for the machine. We need to look 
+   at the use-cases for this again.
+
+

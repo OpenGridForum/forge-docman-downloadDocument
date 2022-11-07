@@ -1,0 +1,1124 @@
+<?xml version="1.0"?>
+<!DOCTYPE datalist PUBLIC "-//VA Software, Inc.//DTD DataList Export 1.1//EN"
+    "http://schema.vasoftware.com/sf/dtd/sf-datalist-export_1_1.dtd">
+
+<datalist>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5671</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Definition of NumberOfProcesses element</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>- NumberOfProcesses element - I'd like the text to be very clear about what
+is meant here (saying &#034;...number of processes (or tasks)...&#034; means you're
+not sure what term to use). Would it be worth describing this in terms of
+the Executable element? Something like &#034;NumberOfProcesses specifies the
+number of instances of Executable that the consuming system MUST start when
+starting this job&#034;. I just think it's important to be clear that these are
+processes as represented by an executable, and can't be inferred to be
+threads or something like that.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>23.01.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5671/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5672</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Definition of ProcessesPerHost</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>- ProcessesPerHost - the definition seems a little thin. Maybe explaining it
+like for NumberOfProcesses (in terms of something like Executable) would be
+appropriate. Repetition is ok in normative specs, I find.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>23.01.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5672/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5673</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Values of SPMDVariation</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>- SPMDVariation:
+  
+  - can we add OpenMPI? You also mention MPICH, but no other common stacks.
+Why is this? Shouldn't LAM at least be added? There are others as well that
+are probably quite common. Some examples: MPICH GM (myrinet), POE (IBM MPI),
+Intel MPI, MPICH shared memory, MVAPICH (M-VIA based), and MPICH MX to name
+a few. These all require something a little different on the consuming
+system side in order to start the job. LSF has integrations with each of
+these, and each requires something a little different.
+
+</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>23.01.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5673/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5674</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Definition of SPMDVariation</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value> - I'm wondering if SPMDVariation can be a URI. This has come up in recent
+discussions between some HPCP participants. If a URI is used, you can still
+have &#034;standard&#034; MPIs defined in the spec (using the jsdl-spmd namespace),
+but it's also easy to add custom types by just using another namespace. From
+the implementer's point of view, they only need to do a string comparison,
+rather than having to check if it's other, and then parse some xsd:any
+content. </field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>23.01.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Stephen McGough</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5674/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5675</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Examples for SPMDApplication element</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>An example should be added in 4.1.7</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>23.01.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5675/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5676</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Number of threads example</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Consider adding an example showing how the number of threads could be added as a non-standard extension.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>23.01.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>14.02.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>14.02.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5676/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5677</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Advice to implementors is needed</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>The important thing that I think is missing is
+advice to implementors (i.e. the final consumer
+of the JSDL document), and advice to users on
+what happens when the final consumer starts the
+parallel application. To take MPI as an example,
+is it assumed that the named executable is started
+using mpirun (or mpiexec or whatever the local
+implementation uses) on the requested number of
+processes? If so, then is there a mechanism that
+allows the user to cause certain things to happen
+before (e.g. set environment variables, create a file)
+or after (e.g. clean up unwanted output) the execution
+of the parallel job? </field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>23.01.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5677/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5678</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>References to SPMDVariation values</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Some references to specifications or implementations of the
+SPMDVariationEnumerationType names would be helpful to
+clarify what is intended by these environments.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>23.01.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5678/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5679</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Typesetting of section 4</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Consider setting off the subsections 4.1, 4.2,
+etc more prominently (e.g. by boldface or underlining).
+Doing this might help the reader.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>23.01.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5679/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5680</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Semantics of Executable andWorkingDirectory</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>9) *** Section 4.1.3. *** 
+I think it would helpful advice to users (and implementors) to
+make a comment on what users can assume (or not) about the semantics
+of &#034;Executable&#034; and &#034;WorkingDirectory&#034;. They might be fairly well defined
+for a (non-parallel) POSIXApplication, but they are potentially ambiguous
+when re-used in the context of SPMD (parallel) applications.
+Thus on a cluster environment, can it be assumed that the pathname of the
+executable is necessarily the same on every worker node?
+More importantly, can it be assumed that every process of the parallel
+application will have WorkingDirectory as its working directory when
+it starts? In general, I think the answer is no.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>23.01.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5680/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5681</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Patterns for actualtotalcpucount</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>11) Section 4.2.4 and related.
+The mechanism around &#034;actualtotalcpucount&#034; to allow
+the consumer to determine the number of cpus is potentially 
+very powerful. However, the class of parallel applications
+which can utilise an arbitrary number of processors is limited.
+As geometry-based decompositions are often used for load-balancing
+purposes, it's often the case that the application can use
+certain numbers of processors but not others. Common patterns
+are:
+* powers of 2
+* powers of 2 and powers of 3 (e.g. 2*3, 2*2*3, 2*3*3)
+* powers of 2, 3, and 5
+* any of the above plus one (or two), where the one
+  processor does some special tasks, like control the
+  others, serve random numbers, access a database etc.
+I know we discussed this in one of the JSDL sessions
+earlier this year. I think it's worth doing if a nice
+way can be found of describing contraints on number
+of processors. But I won't make a fuss if it remains
+out of scope.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>23.01.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>14.02.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>14.02.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5681/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5682</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Definition of Host</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>12) 4.3.1
+Definition of &#034;host&#034;. I think this denotes the same thing
+that I would call a &#034;node [of a cluster]&#034;. (Sometimes I
+might use &#034;host&#034;, rightly or wrongly, to refer to a whole
+cluster.) I suspect that your use of &#034;host&#034; is consistent
+with language used by some (but perhaps not all) MPI implementations.
+If &#034;host&#034; is defined in JSDL 1.0, I suggest referring
+to that definition here to make things clearer. If it isn't,
+then you should define it.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>23.01.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5682/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5683</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Extensibility and including other elements from POSIXApplication</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>At least the jsdl-posix:user element would be useful in this extension.
+
+There is also a question on whether WallClock should be allowed here or whether a different mechanism to define it should be described.
+
+Finally, should this application allow extensibility given that some other features (number of threads, etc) may need to be defined as extensions.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>23.01.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5683/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf5692</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Add a NumberOfThreadsPerProcess element</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>The discussion on whether to add OpenMP/OpenMPI in the  SPMDVariationEnumerationType led to the decision to add this element</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>14.02.2007</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>04.04.2007</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf5692/</field-value>
+    </field>
+  </element>
+</datalist>

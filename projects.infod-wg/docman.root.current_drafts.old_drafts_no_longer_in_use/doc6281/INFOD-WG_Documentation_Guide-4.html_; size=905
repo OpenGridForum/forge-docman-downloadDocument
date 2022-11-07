@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<html>
+  
+This is a static archive of the previous Open Grid Forum GridForge content management system saved from host forge.ogf.org file /sf/docman/do/downloadDocument/projects.infod-wg/docman.root.current_drafts.old_drafts_no_longer_in_use/doc6281/4 at Sun, 06 Nov 2022 13:16:50 GMT
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta name="generator" content="
+    HTML Tidy for Linux/x86 (vers 1st March 2002), see www.w3.org">
+
+    <title>INFOD-WG Documentation Guide</title>
+  </head>
+
+  <body>
+
+    <h1>INFOD-WG Documentation Guide</h1>
+
+    <p>This provides pointers to our current documents</p>
+
+    <ul>
+      <li><a href="../../../../../../../projects/infod-wg/document/INFOD-WG_Chater.html">INFOD-WG_Charter</a>
+      The formal charter</li>
+
+      <li><a href="../../../../../../../projects/infod-wg/document/Motivating_Scenarios_for_Information_Dissemination/index.html">
+      Motivating Scenarios for INFOD
+      </a> GGF14 Version of INFOD Use Cases</li>
+
+      <li><a href="../../../../../../../projects/infod-wg/document/Information_Dissemination_in_the_Grid_Environment.html">
+      Information Dissemination in the Grid Environment - draft
+      </a> The GGF 14 Version of the spec
+      </li>
+
+    </ul>
+  <!-- forge.gridforum.org footer.html -->
+<br> <hr>
+<table width='100%'> 
+ <tr>
+  <td align='left'>   <a href='http://www.ogf.org/' target='_blank' style='border: 0 px;'><img src='../../../../../../../ogf-it/opengridforum.gif' alt='The Open Grid Forum' style='border:0px white solid;'></a><td>
+  <td align='center'> <a href='mailto:webmaster@ogf.org'>Contact Webmaster</a> 
+                    | <a href="../../../../../../tracker/do/createArtifact/projects.ggf-info/tracker.html">Report a problem</a>
+                    | <a href="../../../../../../wiki/do/viewPage/projects.ggf-info/wiki/HomePage.html">GridForge Help</a>
+                    </td>
+  <td align='right'>  
+<!--		<img src='/ogf-it/powered_by_dell.gif' alt='Powered by Dell'> -->
+<!-- Begin DigiCert/ClickID site seal HTML and JavaScript -->
+<div id="DigiCertClickID_sxSDRU4L">
+  <a href="http://www.digicert.com/">SSL Certificates</a>
+</div>
+<script type="text/javascript">
+var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_sxSDRU4L", "10", "m", "black", "sxSDRU4L"]);(function(){var cid=document.createElement("script");cid.type="text/javascript";cid.async=true;cid.src=("https:" === document.location.protocol ? "https://" : "http://")+"seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
+</script>
+<!-- End DigiCert/ClickID site seal HTML and JavaScript -->
+  </td>
+ </tr>
+</table>
+<!-- google analytics code -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6775861-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+
+This is a static archive of the previous Open Grid Forum GridForge content management system saved from host forge.ogf.org file /sf/docman/do/downloadDocument/projects.infod-wg/docman.root.current_drafts.old_drafts_no_longer_in_use/doc6281/4 at Sun, 06 Nov 2022 13:16:50 GMT
+</html>
+

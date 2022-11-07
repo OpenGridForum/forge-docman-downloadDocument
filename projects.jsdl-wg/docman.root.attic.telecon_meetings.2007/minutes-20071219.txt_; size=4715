@@ -1,0 +1,104 @@
+JSDL Teleconference - 19 December 2007
+======================================
+
+* Participants
+
+  Donal Fellows
+  Andreas Savva
+  Philipp Wieder
+  Fred Brisard
+  Steve McGough
+  
+  Minutes: Andreas Savva
+
+* OGF22 sessions
+
+  The deadline for the session proposals is still TBA on the OGF22
+  site. So this discussion was postponed for the next call/meeting.
+  
+  A number of participants will be at Imperial from Jan.9-11 and this
+  seems a good opportunity to plan the sessions.
+
+  At the last OGF it was agreed that the group would decide whether to
+  keep the Activity/instance work in JSDL-WG or go for a new
+  group. There are pros and cons to either approach and it was agreed
+  to postpone the decision till the next meeting.
+  
+  ACTION: Steve and Andreas will arrange a meeting during
+          Jan.9-11 to discuss the OGF22 sessions; Philipp will
+          participate by phone/skype
+
+* Activity schema requirements (cont.)
+
+  Discussed UDAP documents now available on gridforge
+
+** Use cases: https://forge.gridforum.org/sf/go/doc14967?nav=1
+
+   Discussed definition of Activity and agreed that it is broadly
+   acceptable and along the lines of BES. The definition in the
+   document has a NextGRID perspective since it makes a distinction
+   between activity(atomic) and workflow. Other projects/groups might
+   also think of a workflow itself represented as an activity.
+   
+   It was pointed out that thinking about 'activity' as 'instance' (as
+   compared to JSDL 'template') is probably clearer; and in fact the
+   session at OGF21 was named along those lines (initially).
+
+   Agreed to use the BES definition of Activity since that is already
+   published in an OGF document, while keeping in mind the more
+   general concepts. (The eventual goal is not just computational
+   activities.)
+
+** Schema: https://forge.gridforum.org/sf/go/doc14968?nav=1
+
+   - All the top-level structure was implemented by NextGRID. But not
+     necessarily all of the substructures.
+   - The 'Dialect' attribute appears only on ActivityDescription but
+     it should also appear on other xsd:any elements.
+     - String type for this does not seem correct
+   - State values are modeled after BES. But probably an intermediate
+     draft was used because the published BES spec uses different
+     values. In any case it is probably better to avoid duplication
+     and instead refer to other specifications as needed: if the BES
+     spec is referenced by the element then its definitions are used;
+     and so on. (It was also suggested that to base generic top level
+     definitions off the Reference Model instead.)
+   - The values in Dependency may be dynamic and updated over the
+     lifetime of the activity
+   - The meaning of 'Resource' depends on the context or point of
+     view. For NextGRID this element contained the JSDL document since
+     it was used to specify the resources needed by the activity
+     - As a corollary the ActivityDescription does not necessarily
+       contain a JSDL document. The intention is that it could
+       describe more than a job schema.
+   - There is no element to keep a record of the resources consumed by
+     the Activity.  This is a missing piece in the spec. The 'results'
+     element is not meant for this.
+   - Context: May contain the SLA or a reference to the SLA. Security
+     characteristics may be from the viewpoint of who can access or
+     manage which parts of the Activity, rather than which credentials
+     the Activity has.
+   - Since the UDAP spec is open to the content that goes in each
+     element it was suggested that a top level udap element could be
+     introduced to describe which specifications or profiles are
+     used/implemented by the Activity (e.g., HPC Profile, security
+     profiles, etc)
+   - Chronological information (date/time records) is used to relate
+     different parts of the UDAP elements. This was good enough.
+   - Record could contain a snapshot of the activity or a pointer to a
+     snapshot
+
+   NextGRID implemented this Activity specification using WSRF and a
+   resource oriented perspective (WS-Resource) comes through. Philipp
+   also mentioned other implementations.
+
+   It was suggested to hold a session at the next OGF on instance
+   descriptions, inviting projects to describe their implementations
+   for maintaining this kind of information, including how much
+   dynamic information is captured. It is not clear how to convince
+   projects to join such a session though.
+
+* Review of jsdl use case text for ogsa information model architecture
+  - Postponed for next meeting
+
+* AOB - None

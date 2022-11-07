@@ -1,0 +1,99 @@
+JSDL Telecon Minutes
+====================
+November 5th, 2003 - 14:00 GMT
+==============================
+
+
+Attendees:
+==========
+
+Fred Brisard (CA)
+Dan Templeton (Sun)
+Andreas Haas (Sun)
+Tomasz Haupt (Mississippi State)
+Andreas Savva (Fujitsu)
+Ali Anjomshoaa (EPCC)
+Alain Andrieux (ISI)
+Karl Czajkowski (ISI)
+
+
+Discussion:
+===========
+
+Admin:
+------
+
+o Ali to hand over the JSDL spec doc skeleton to Andreas S., he takes over 
+  as the main editor. He "has the pen".
+
+o GridForge: Fred sent the proposed structure of the JSDL GridForge site to 
+  the list. Discussion was helpful and agreeable. He will put the basic 
+  structure up by the next call on 12/11/2003.
+
+o Ali to send Fred the archive material from the JSDL web site at Edinburgh 
+  for the new GridForge site by 14/11/2003.
+
+o Ali to put the telecon info on the JSDL GridForge front page.
+
+
+JSDL Job ID Attributes:
+-----------------------
+
+o Karl feels that the 'job identity attributes' that Ali sent to the list
+  are too general and that there is too much semantics packed into each 
+  attribute.
+
+http://www-unix.gridforum.org/mail_archive/jsdl-wg/msg00142.html
+
+
+o Ali agrees that when he wrote this he was trying to introduce too much 
+  flexibility into the use of each attribute and that this is perhaps the 
+  wrong way to do it.
+
+o SystemJobID was discussed. Karl pointed out that this attribute is several 
+  attributes rolled into one.
+
+  Andreas H. - SystemJobID has a special role, it is not an attribute that 
+  a user can specify.
+
+o Karl -- missing from this list, SystemJobAnnotation, also RelatedJobID - 
+  one-to-many mapping so can be a list.
+
+o Karl - rule of thumb, 'OR' in the definition means different meanings. 
+  Attributes should be more specifically defined.
+
+o Andreas H. - translating between the UserName in the different 
+  environments, 'submitting environment', 'executing environment', 
+  'job management environment' requires mapping.
+
+o Ali - More specific specification of the UserName??
+
+o Karl - 'requestor', 'authenticating credentials', 'username of the account'
+  of the job are different attributes. Credentials delivered as part of the 
+  job.
+
+  Difference between job control and job specification. Job history.
+
+  In terms of views, how we view a job? should group together the set of 
+  attributes. (?)
+
+o Default attributes and optional attributes, local vs. remote UserNames.
+  Use a view of the job that allows submission and provide the information 
+  to do the mapping and translation.
+
+o Ali - Provide the information for the system to do its job.
+
+o Karl - Group, "access control protection group", "etc.", there are other 
+  types of Groups.
+
+
+AOB:
+----
+
+o Andreas - translation is very important, what kind of views are needed is
+  dependent on what kinds of mappings you want to have. Translation is 
+  important.
+
+o Andreas Savva. - can use translation tables as examples of attribute 
+  definitions.
+

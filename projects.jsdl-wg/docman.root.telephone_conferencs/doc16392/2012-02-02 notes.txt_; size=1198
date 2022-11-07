@@ -1,0 +1,39 @@
+JSDL Conference call 
+====================
+
+2 February 2012
+
+Participants
+------------
+- Michael Saravo, UVACSE, XSEDE
+- Etienne Urbah, LAL, EDGI,
+- Michel Drescher, EGI.eu, EGI-InSPIRE
+- Morris Riedel, FZJ, EMI
+- Weizhong Qiang, UIO (University of Oslo), EMI
+- Shiraz Memon, FZJ, EMI
+
+Apologies:
+- Oxana Smirnova, NDGF, EMI
+- Philip Wieder, GWDG
+
+
+2) OGF 34
+- No session request before the deadline
+- PGI/JSDL/BES session requested by PGI (Morris)
+- May extend to a douyble-session if we get material in shape for that
+==> Michel to ask Sergio if there is a GLUE2 session
+==> Michel, Michael, Morris to come up with agenda for joint session at OGF34
+
+
+2) Practical examples for proposed changes
+- PGI Examples: see slides
+- Morris guides the call participants through the slides available at https://forge.gridforum.org/sf/docman/do/downloadDocument/projects.jsdl-wg/docman.root.working_drafts/doc16391
+ 
+The group discusses possible ways forward to make progress and solve the 
+hindering obstacles.
+
+==> Michel Drescher to contact S Crouch as an IGE representative on IGE/Globus position on a GLUE2 orientated profile on JSDL.
+
+
+3) Profiles on JSDL
+- The duscussion was folded into agenda item 2.

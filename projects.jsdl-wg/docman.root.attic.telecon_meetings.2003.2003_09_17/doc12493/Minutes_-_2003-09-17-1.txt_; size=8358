@@ -1,0 +1,244 @@
+JSDL Telecon Meeting
+====================
+September 17th, 2003 - 22:00 GMT
+================================
+
+
+Attendees:
+==========
+
+Ali Anjomshoaa (JSDL, EPCC)
+Steve McGough (JSDL, LeSC)
+Hiro Kishimoto (OGSA, Fujitsu)
+Alian Andrieux (GRAAP, ISI)
+Jim Pruyne (GRAAP, HP)
+
+Apologies:
+==========
+
+Darren Pulsipher (JSDL, Cadence)
+Andreas Savva(JSDL, Fujitsu)
+
+
+Agenda:
+=======
+
+1. Plan of action for the spec doc
+
+  - must change previous plan, which was to
+
+      * scope requirements,
+      * survey various batch systems,
+      * write spec.
+
+  - perhaps can start with an existing language and schema?
+
+      * RSL (from Globus)
+      * JDML (from EDG)
+      * Condor ClassAds (from Condor!)
+      * others possibilities to start with?
+
+  - then can address the deficiencies and extras in the language that 
+    we have chosen as a starting point, in order to attempt to construct 
+    a JSDL that can serve as an abstract job description language.
+
+
+2. GGF9 Sessions
+
+  Session 1:
+  ----------
+
+  - Introduction slides (Ali to draft)
+
+  - Spec Doc slides (Don't know what these should be until 
+    we have a better idea of the structure of the spec.)
+
+  Session 2:
+  ----------
+
+  - 3 talks to lead discussion on:
+
+      * WS-Agreement framework
+      * Program Execution Architecture (based on Grid Services)
+      * Job description terms within the WS-Agreement framework
+
+
+3. AOB
+
+
+Discussion:
+===========
+
+Discussion of Agenda items:
+
+1. Plan of action for the spec doc:
+===================================
+
+Ali: presented the first attempt at the contents:
+
+Contents
+1       Introduction
+2       Notational Conventions
+3       Setting the Context
+3.1     Computational Grids
+3.2     Resource Management in Heterogeneous Grids
+3.3     Grid Languages as Common Interfaces in a Heterogeneous Environment
+4       Computational Jobs
+4.1     Computational Job Requirements
+4.1.1   
+4.2     Satisfying Job Requirements
+4.2.1   
+5       The JSDL Core Set
+5.1.1   Job Identity
+5.1.2   Hardware Requirements
+5.1.3   Software Requirements
+5.1.4   Argument Lists
+5.1.5   Environment Variables
+5.1.6   Temporal Constraints
+5.1.7   Security Requirements
+5.1.8   Dependencies on Other Jobs
+5.1.9   
+6       The JSDL Extension Mechanism
+6.1.1   Specification of the Set of Extended Requirements
+6.1.2   
+7       Editor Information
+8       Contributors
+9       Acknowledgements
+10      References
+10.1    Normative References
+10.2    Informative References
+
+
+Steve M.: Section 5 is missing a section on the requirements of I/O and file 
+          access and manipulation requirements.
+Ali: Will add this in.
+
+
+Jim P.: stated that WS-Agreement in itself can satisfy requirements under 
+        Sections 5.1.1, 5.1.8, and 6
+Ali: made the point that the JSDL will benefit from providing a 
+     comprehensive and self contained set of attributes and features.
+     This is particularly important in cases where the Grid Services Arch 
+     is not being employed and/or use is not being made of the WS-Agreement 
+     framework.
+
+It was generally agreed that the JSDL structure should satisfy both the 
+Agreement framework in terms of the Agreement terms architecture, _as well 
+as_ a more general architecture. Since JSDL will be implemented in, e.g. 
+XML, it is easy to ignore any Agreement Framework attributes that a non Grid 
+Service, or Agreement based, system cannot comply with. In short, it is 
+better at this stage to satisfy the Agreement framework and have more than 
+that requires.
+
+
+Jim P.: GGF explicitly requires a section on security considerations. This 
+        could sit between sections 6 and 7.
+Ali: Will add this in.
+
+
+Steve M.: There's a section missing on the details of the structure of the 
+          JSDL, e.g. detail such as if attribute values are expressed as 
+          Strings or complex types etc. and the motivations behind this.
+          This could sit between sections 4 and 5.
+Ali: Will add this in.
+
+
+Jim: The normative XML Schema should be appended at the end of the document 
+     as an Appendix.
+Ali: Notice that's the case with OGSI spec. Since the JSDL charter promises 
+     the delivery of a separate normative XML schema doc, however, we should 
+     pose the question on the list, or at GGF9.
+
+
+Hiro: Section 4 specifically targets Computational Grid jobs. Why not other 
+      types of jobs too? There's a much wider scope to jobs, why not a JSDL 
+      for this larger scope.
+Ali: It has previously been agreed that the scope of the JSDL is to focus on 
+     conventional batch system jobs, i.e. computational jobs on 
+     Computational Grids. Although any "job" can be defined in terms of the 
+     target executable, and input and output data, e.g. and SQL query, it is 
+     premature to widen the scope of the JSDL, at this stage, to include 
+     "just about any" kind of job. The starting point with focus on current 
+     batch systems, should already begin to answer many questions regarding 
+     how one might want to describe "just about any" kind of job.
+
+Resolution was to float this question onto the list again for discussion. 
+This question has also been raised by An Ly of CA on the JSDL list 
+previously (ref 9th July 2003, also see response from Ali to this).
+
+
+Discussion of plan of attack
+----------------------------
+
+Ali: expressed that at the GGF7 BoF session of JSDL, we had a logical 
+     progression of three deliverables, Requirements Doc, Systems' Survey 
+     Doc, and the final JSDL spec. This was changed in the light of the 
+     requirement on the WG to produce a single clear and concise JSDL spec 
+     as the main deliverable. So how do we tackle the work? Will the group 
+     agree to start on a platform provided by a currently existing language 
+     or schema?
+Alain A.: There's a "Job Terms Proposal" being developed and being made ready
+          for imminent submission to GGF. This work is a collaboration 
+          between Globus and Platform, and addresses a core set of Job 
+          description attributes as surveyed from the LSF, PBS, SGE, and RSL 
+          system languages. This is to be submitted for discussion (possibly
+          at the JSDL-WG session) at GGF9.
+Ali: Stated that, speaking for himself, he'd like the document discussed at 
+     the second GGF9 JSDL-WG session as a dissemination activity for it to 
+     be discussed in order to find out whether it can be built on for JSDL.
+     Also, that this must first be discussed with Steve M. and Darren 
+     Pulsipher as the joint chairs of the JSDL-WG.
+Steve M.: has no objections to discussing the Job Terms Proposal at GGF9.
+
+Ali: stated that EPCC has an ongoing activity to produce a set of common 
+     terms, that can also be fed into the JSDL spec. SGE, Loadleveler, RSL,
+     and Condor, are the systems currently under scrutiny.
+
+Hiro: stated that Andreas Savva is working on the abstraction of the Unicore
+      system language.
+
+It was generally agreed that it is a good idea to start from an existing 
+work and build on top of that to produce the JSDL.
+
+
+Discussion of EDG JDML XML Schema
+---------------------------------
+
+Steve M.: pointed to the fine detail of the description of the JDML job 
+          description language that has been constructed for the EDG. There 
+          is a lot of fine detail that allows much flexibility from this 
+          schema, e.g. in the types for equations etc.
+Ali: Could the documentation be made more complete for the JDML in order to 
+     facilitate discussion?
+Steve M.: will take a look.
+
+It was agreed that this schema could provide a starting point in the 
+structuring of the JSDL XML schema. It will be discussed in due course.
+
+
+2. GGF9 Sessions:
+=================
+
+Agreed that the Session layout as described in the Agenda, above, is OK.
+
+
+3. AOB:
+=======
+
+Possible face-to-face meeting if required, sometime between GGF9 and GGF10?
+
+
+Actions:
+========
+
+Ali: to draft introductory slides for GGF9 Session 1.
+Ali: to make additions suggested by Jim P. and Steve M. to the JSDL 
+     spec doc contents.
+Ali: to float on the list the question of whether the Normative JSDL 
+     XML schema should appear as an appendix to the spec doc, or as a 
+     separate deliverable as set out in the charter.
+Ali: to float the scope of the JSDL re: types of jobs on the list for 
+     discussion
+
+Steve M.: to look at the documentation for JDML.
+

@@ -1,0 +1,117 @@
+Charter
+-------
+
+The JSDL-WG will provide:
+
+    * A specification for an abstract standard Job Submission Description 
+      Language (JSDL) that is independent of language bindings, including;
+          o the JSDL feature set and attribute semantics,
+          o the definition of the relationship between attributes,
+          o and the range of attribute values. 
+    * A normative XML Schema corresponding to the JSDL specification.
+    * A document of translation tables to and from the scheduling languages 
+      of a set of popular batch systems for both the job requirements and 
+      resource description attributes of those languages, which are relevant 
+      to the JSDL. 
+
+In addition to the computational requirements of batch jobs, the JSDL must 
+describe other information such as the locations of required input and 
+output files. Techniques for the transfer of input and output files and data 
+may also be described using the JSDL. The JSDL should also provide a means 
+to enable the description of basic dependencies between jobs, that is, the 
+dependency of a job on the status of other jobs, and any relationships 
+between the input and output of jobs. We do not concern ourselves with job 
+scheduling and the selection of resources on a Grid.
+
+Although it is out-with the scope of the work of this WG to address the 
+issues of a Resource Description Language (RDL), there is a need to provide 
+the semantics for a minimum set of RDL attributes in order that resource 
+requirements may be addressed in the JSDL.
+
+The combination of these three deliverables should aid a speedy uptake of 
+the language by scheduling system implementers and application vendors, in 
+order to provide a platform on which to build simple computational Grids.
+
+
+Introduction
+------------
+
+The Job Submission Description Language (JSDL) is a language for describing 
+the requirements of computational jobs for submission to Grids and other 
+systems. The language contains a vocabulary that facilitates the expression 
+of those requirements as a set of JSDL job attributes. The structure of the 
+language provides the grammar, and therefore, the syntax for the JSDL.
+
+The JSDL language attributes allow the description of the
+
+ o job identification, 
+ o resource,
+ o basic scheduling,
+ o data related, and
+ o security related
+
+requirements of computational jobs. Once the necessary job requirements have 
+been captured in a JSDL document, that job can be submitted for job 
+management and execution. The JSDL document reifies the job, the 
+requirements of which it captures.
+
+Job management systems that may consume the JSDL document of a job may 
+include:
+
+ o Job Submission Clients,
+ o Job/Resource Schedulers,
+ o Job/Resource Brokers,
+ o Accounting Systems,
+ o Security Systems,
+ o Archiving Systems,
+ o Provenance Systems,
+ o etc.
+
+
+Purpose
+-------
+
+The purpose of the JSDL language is to standardise the definition of job 
+requirements, in order to increase interoperability amongst job management 
+systems, as well as between users and such systems. The JSDL Working Group 
+aims to avoid developing a language that is an islands of technology. To 
+this end it is critical that the group keep interoperability as a prime 
+requirement of the JSDL language.
+
+The application of the JSDL language is not limited to Grid systems. The 
+JSDL language may be adopted for use by existing resource management 
+systems, for classic job scheduling, and for more.
+
+
+Definition of a Job
+-------------------
+
+An instance of a JSDL document should represent an instance of an executable 
+to be run. It is not possible, therefore, to make use of an instance of a 
+JSDL document for more than one job, where a job is one instance of a 
+running executable. In the case that a job is to be scheduled to run 
+multiple times, for example, a separate and unique JSDL document instance is 
+required for each instance of that job.
+
+This definition of a job should allow work-flow, scheduling, brokering, 
+accounting, archiving and provenance systems to treat jobs at the finest 
+level of granularity. This will in turn allow the composition of jobs for 
+whatever means, and provide flexibility for the systems that require complex 
+job structures and dependencies on other jobs and data.
+
+
+JSDL Structure and Syntax
+-------------------------
+
+The modus operandi of the JSDL language will, to some extent, be dependent 
+on the underlying job management systems consuming the JSDL. Taking this 
+point into consideration, it would be most useful for the JSDL-WG to provide 
+a general syntax that will set out the definition and the multiplicity of 
+JSDL attributes.
+
+The multiplicity of JSDL attributes serves to identify the number of allowed 
+instances of an attribute in a given instance of a JSDL document. The rules 
+on the allowed values of each of the instances of the same attribute in a 
+document, should also be set out. For example, that no two instances of the 
+same JSDL attribute in a JSDL document can have the same value.
+

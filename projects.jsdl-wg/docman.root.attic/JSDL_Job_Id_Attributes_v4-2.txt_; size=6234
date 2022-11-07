@@ -1,0 +1,182 @@
+The 'Job Identity Attributes' (revision 4):
+
+25th Nov. 2003
+
+----------------------------------
+o UserJobName
+
+  A string specified by a 'user' to identify by 'name' the 'job' that 
+  they are specifying for 'submission'.
+
+  Only one instance of 'UserJobName' is allowed for each 'job description'.
+
+  The 'UserJobName' cannot change for the 'lifetime' of the 'job'.
+
+  The 'UserJobName' is not unique and a 'user' MAY specify the same 
+  'UserJobName' for multiple instances of the same 'job', or indeed for
+  different 'jobs'.
+
+  A 'user' MAY use the 'UserJobName' attribute for their own search and 
+  sort purposes.
+
+----------------------------------
+o SystemJobID
+
+  A string specified by a 'job submission system' to uniquely identify the
+  'job' that it is handling, for that system.
+
+  Only one instance of 'SystemJobID' is allowed for each 'job description'.
+
+  The 'SystemJobID' cannot change for the 'lifetime' of the 'job'.
+
+  The 'SystemJobID' attribute MAY be unique for the 'job submission
+  system'.
+
+  The 'SystemJobID' attribute MAY be unique for all time.
+
+  The 'job submission system' MAY use a 'timestamp' and 'job submission 
+  system ID' for uniquely identifying 'job' instances.
+
+----------------------------------
+o UniqueJobID
+
+  ?
+
+----------------------------------
+o SubmissionUserName
+
+  A string specifying the 'username' of the 'user' in the 'submitting 
+  environment', who is specifying the 'job' for 'submission'.
+
+  Only one instance of 'SubmissionUserName' is allowed for each 
+  'job description'.
+
+  The 'SubmissionUserName' cannot change for the 'lifetime' of the 'job'.
+
+  The 'SubmissionUserName' attribute MAY be specified by a 'user' or a 'job 
+  submission system'.
+
+  The 'SubmissionUserName' attribute MUST represent the 'username' of the 
+  'user' in the 'submitting environment'.
+
+  The resolution and use of the 'SubmissionUserName' attribute SHOULD be 
+  'system' implementation dependent.
+
+  The 'SubmissionUserName' attribute MAY be used for access control and 
+  accounting mechanisms.
+
+----------------------------------
+o ExecutionUserName
+
+  A string specifying the the 'username' of the 'user' in the 'execution 
+  environment'.
+
+  Multiple instances of 'ExecutionUserName' are allowed for each 
+  'job description'. This should satisfy the need for the job to 'spawn' 
+  'tasks' across multiple 'execution environments'.
+
+  The 'ExecutionUserName' can change for the 'lifetime' of the 'job'. 
+  This would satisfy 'migration' of the 'job' between different 
+  'execution environments'.
+
+  The 'ExecutionUserName' attribute MAY be specified by a 'user' or a 'job 
+  submission system', or a 'scheduling system' following mapping from the 
+  'SubmissionUserName'.
+
+  The 'ExecutionUserName' attribute MUST represent the 'username' of the 
+  'user' in the 'execution environment' where the 'job' is currently 
+  'running'.
+
+  The resolution and use of the 'ExecutionUserName' attribute at the 
+  'execution environment' SHOULD be 'scheduling system' implementation 
+  dependent.
+
+  The 'ExecutionUserName' attribute MAY be used for access control and 
+  accounting mechanisms.
+
+----------------------------------
+o UserGroupName
+
+  A string specifying the 'group' or 'department' of the 'user' who is
+  specifying the 'job' for 'submission'.
+
+  Only one instance of 'UserGroupName' is allowed for each 
+  'job description'.
+
+  The 'UserGroupName' cannot change for the 'lifetime' of the 'job'.
+
+  The 'UserGroupName' attribute MAY represent the name of a 'Virtual 
+  Organisation' to which the 'user' belongs.
+
+  The 'UserGroupName' attribute MAY be used for access control and 
+  accounting mechanisms.
+
+----------------------------------
+o JobGroupName
+
+  A string specifying the 'group' or 'department' to which the 'job' 
+  belongs. This attribute can be used when a 'user' 'submits' a 'job' 
+  on behalf of a 'group' to which the 'user' does not belong, i.e. in 
+  such an instance the 'UserGroupName' is not the same as the 
+  'JobGroupName'.
+
+  Only one instance of 'JobGroupName' is allowed for each 
+  'job description'.
+
+  The 'JobGroupName' cannot change for the 'lifetime' of the 'job'.
+
+  The 'JobGroupName' attribute MAY represent the name of a 'Virtual 
+  Organisation' to which the 'job' belongs.
+
+  The 'JobGroupName' attribute MAY be used for access control and 
+  accounting mechanisms.
+
+----------------------------------
+o JobProjectName
+
+  A string specifying the 'project' to which the 'job' belongs.
+
+  Only one instance of 'JobProjectName' is allowed for each 
+  'job description'.
+
+  The 'JobProjectName' cannot change for the 'lifetime' of the 'job'.
+
+  The 'JobProjectName' attribute MAY be used for access control and 
+  accounting mechanisms.
+
+----------------------------------
+o JobCategory
+
+  A string specifying the 'type' of 'job' that is specific to a particular 
+  'scheduling system' or 'execution system'.
+
+  Multiple instances of 'JobCategory' are allowed for each job 
+  description. This should fulfill the need for the job to fall into 
+  a number of categories. The user MUST be able to specify the priority 
+  between the 'JobCategory' instances for the 'job' that they are 
+  specifying for 'submission'.
+
+  The 'JobCategory' instances cannot change for the 'lifetime' of the 
+  'job'. 
+
+  The 'JobCategory' attribute SHOULD be any string that is understood 
+  by a 'scheduling system' or an 'execution system', that MAY enable 
+  that system to associate a pre-defined set of 'policies' with the 'job'.
+
+  The 'JobCategory' attribute SHOULD be any string that is understood 
+  by a 'scheduling system' or an 'execution system', that MAY enable 
+  that system to associate a pre-defined set of 'resource requirements' 
+  with the 'job'.
+
+  The 'policies' and 'resource requirements' that a 'system' may associate 
+  with the 'job' according to the 'JobCategory' attribute, MAY be 
+  'use domain' specific.
+
+  The 'policies' and 'resource requirements' that a system may associate 
+  with the 'job' according to the 'JobCategory' attribute, MAY be 
+  'scheduling system' or 'execution system' specific.
+
+  The 'JobCategory' attribute MAY be used for access control and 
+  accounting mechanisms.
+
+----------------------------------

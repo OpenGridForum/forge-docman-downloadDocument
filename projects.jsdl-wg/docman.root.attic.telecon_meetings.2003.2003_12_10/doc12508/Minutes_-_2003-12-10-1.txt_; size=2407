@@ -1,0 +1,81 @@
+JSDL Telecon Minutes
+====================
+December 10th, 2003 - 07:00 GMT
+===============================
+
+
+Attendees:
+==========
+
+Darren Pulsipher (Cadence)
+Steve McGough (LeSC)
+Andreas Haas (Sun)
+Andreas Savva (Fujitsu)
+Ali Anjomshoaa (EPCC)
+Alain Andrieux (ISI)
+Karl Czajkowski (ISI)
+Lee Cook (IBM)
+
+
+Apologies:
+==========
+
+
+Discussion:
+===========
+
+Administrative:
+---------------
+
+o Milestones: Update milestones to include document versions and dates for 
+              submission to GGF editor and for public review.
+
+              Send out to JSDL-WG chairs and editors for comment.
+
+              Send out to Area Directors.
+
+
+JSDL Job Attributes' Definition Properties:
+-------------------------------------------
+
+o What an attribute definition should include:
+
+    o Should an attribute be 'Required' or 'Optional'?
+      - Required in terms of the JSDL needs it, i.e. it must appear in 
+        every JSDL document; OR
+      - Required in terms of job description needs it, i.e. without this
+        attribute the job cannot be scheduled.
+
+    o Should the attribute be required to have a mapping to existing 
+      DRM systems?
+      - Should this mapping be complete, in other words, semantically 
+        unambiguous?
+      - Should there be mappings from existing DRM systems to JSDL which 
+        are complete, for this attribute?
+
+    o Should the attribute be 'Negotiable' or not?
+      - can the user specify a preliminary value that is open to 
+        negotiation by a job handling system/broker?
+      Andreas H.: "What is the negotiation relationship for existing 
+                   systems?"
+      Ali: "Cannot let the JSDL satisfy only existing DRM systems, we 
+           need a Grid language to satisfy Grid requirements, one of 
+           which is negotiation."
+
+    o Should the attribute have a lifetime?
+      Karl: "Difficult to talk about lifetime in a general abstract way."
+
+    o Does the attribute definition include relationships to other 
+      attributes?
+      - How should this be captured in the JSDL?
+      - Does the attribute have requirements on other attributes
+
+    o What are the attribute value types and ranges, enumeration 
+      of values?
+      Lee: "e.g. Counts should be numeric."
+
+    o What is the multiplicity of the attribute?
+
+    o Is the attribute's value mutable?
+      Ali: "This is not in the scope of JSDL as a submission language."
+

@@ -1,0 +1,168 @@
+
+<!-- ************************************************** -->
+<!-- Draft Pseudo-Schema for JSDL-Lite (for want of a   -->
+<!-- proper name for it).                               -->
+<!-- The default namespace is the jsdl namespace.       -->
+<!-- ************************************************** -->
+
+<xsd:element name="ExecutionUserIdType">
+    <xsd:complexType>
+        <Name> xsd:string </Name>
+        <Group> xsd:string </Group>
+    </xsd:complexType>
+</xsd:element>
+    
+<xsd:element name="OperatingSystemType">
+    <xsd:complexType>
+        <Description> xsd:string </Description>
+        <Version> xsd:string </Version>
+        <any/>*
+    </xsd:complexType>
+</xsd:element>
+    
+<xsd:element name="FileSystemType">
+    <xsd:complexType>
+        <Description> xsd:string </Description>
+        <MountPoint> xsd:string </MountPoint>
+        <DiskSpace urwg:storageUnit="urwg:storageUnit">
+            xsd:integer
+        </DiskSpace>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="NetworkType">
+    <xsd:complexType>
+        <Description> xsd:string </Description>
+        <Connections> xsd:integer </Connections>
+        <Bandwidth> xsd:string </Bandwidth>
+        <Latency> xsd:string </Latency>
+    </xsd:complexType>
+</xsd:element>
+
+<JobDefinition>
+
+    <JobDescriptionSection>
+    
+        <!-- ************************************************** -->
+        <!-- Job Description Section                            -->
+        <!-- ************************************************** -->
+        
+        <!-- ************************************************** -->
+        <!-- Within the Job Description Section, every id URI   -->
+        <!-- MUST be unique.                                    -->
+        <!-- Multiplicity of elements is modeled using Profiles -->
+        <!-- below.                                             -->
+        <!-- ************************************************** -->
+        
+        <JobIdentification>?
+            <Name> xsd:string </Name>?
+            <Description> xsd:string </Description>?
+            <Project> xsd:string </Project>?
+            <Category> xsd:string </Category>?
+            <JobGroupName> xsd:string </JobGroupName>?
+            <Annotation> xsd:string </Annotation>*
+            <xsd:any/>*
+        </JobIdentification>
+        
+        <User id="xsd:uri">?
+            <GridId> xsd:string </GridId>?
+            <ExecutionUserId> UserType </ExecutionUserId>?
+            <UserGroupName> xsd:string </UserGroupName>?
+            <xsd:any/>*
+        </User>
+        
+        <Application id="xsd:uri" >
+            <Name> xsd:string </Name>
+            <Version> xsd:string </Version>?
+            <ApplicationDescription> xsd:string </ApplicationDescription>?
+            <Executable> xsd:string </Executable>?
+            <ExecutablePath> xsd:string </ExecutablePath>?
+            <ExecutableType> xsd:string </ExecutableType>?
+            <Argument> xsd:string </Argument>?
+            <Environment id="xsd:uri"> xsd:string </Environment>*
+            <Stdin> xsd:string </Stdin>?
+            <Stdout> xsd:string </Stdout>?
+            <Stderr> xsd:string </Stderr>?
+            <Log> xsd:string </Log>?
+            <WorkingDir> xsd:string </WorkingDir>?
+        </Application>
+
+        <Resource id="xsd:uri">*
+            <AbstractName> xsd:uri </AbstractName>?
+            <CPUDescription> xsd:string </CPUDescription>?
+            <CPUCount> xsd:integer </CPUCount>?
+            <HostCount> xsd:integer </HostCount>?
+            <CPUTiling> xsd:integer </CPUTiling>?
+            <CPUSpeed> xsd:integer </CPUSpeed>?
+            <VirtualMemory urwg:storageUnit="urwg:storageUnit">
+                xsd:string
+            </VirtualMemory>?
+            <PhysicalMemory urwg:storageUnit="urwg:storageUnit">
+                xsd:string
+            </PhysicalMemory>?
+            <CPUTimeLimit units="xsd:duration">
+                xsd:string
+            </CPUTimeLimit>?
+            <WallTimeLimit units="xsd:duration">
+                xsd:string
+            </WallTimeLimit>?        
+            <FileSystem id="xsd:uri"> FileSystemType </FileSystem>*
+            <Network id="xsd:uri"> NetworkType </Network>*
+            <OperatingSystem> OperatingSystemType </OperatingSystem>?
+            <Queue> xsd:string </Queue>?
+            <xsd:any/>*
+        </Resource>
+        
+        <DataAttribute id="xsd:uri">*
+            <FileName> xsd:string </FileName>
+            <FileSystemId> xsd:uri </FileSystemId>?
+            <CreationFlag> xsd:string </CreationFlag>
+            <DeleteOnTermination> xsd:boolean </DeleteOnTermination>?
+            <Source> xsd:url </Source>?
+            <Target> xsd:url </Target>?
+        </DataAttribute>
+
+    </JobDescriptionSection>
+
+    <JobRefinementSection>?
+
+        <!-- ************************************************** -->
+        <!-- Job Refinement Section                             -->
+        <!-- ************************************************** -->
+    
+        <!-- ************************************************** -->
+        <!-- Multiple <Profile/> elements M  UST be XOR-handled,  -->
+        <!-- i.e. only one Profile can be applied to refine the -->
+        <!-- Job Description.                                   -->
+        <!--                                                    -->
+        <!-- When elements with the same id appear in both the  -->
+        <!-- Profile and the Job Description, the Profile       -->
+        <!-- instance supersedes the Job Description instance.  -->
+        <!--                                                    -->
+        <!-- Note that if multiple Profiles share a number of   -->
+        <!-- common elements, the necessary duplication         -->
+        <!-- required by this approach may be accomplished      -->
+        <!-- using XML element definitions and element refs     -->
+        <!-- within several Profile elements.                   -->
+        <!-- ************************************************** -->
+        
+        <Profile name="xsd:string">*
+            <ProfileDescription> xsd:string </ProfileDescription>?
+            <User id="xsd:uri" .../>?
+            <Application id="xsd:uri" .../>?
+            <Resource id="xsd:uri" .../>*
+            <DataAttribute id="xsd:uri" .../>*
+        </Profile>
+        
+        <!-- ************************************************** -->
+        <!-- Frequently used Profiles may be referenced         -->
+        <!-- externally. The URI MUST refer to an accessable    -->
+        <!-- Profile element.                                   -->
+        <!-- ************************************************** -->
+        
+        <ProfileReference> xsd:uri </ProfileReference>*
+
+    </JobRefinementSection>
+
+</JobDefinition>
+

@@ -1,0 +1,35 @@
+GGF17 JSDL-WG Session 2
+=======================
+
+* Typicla Parallel Job requirements
+
+  Stephen Pickles presented a perspective on what users defining
+  parallel jobs typical require. Two types of jobs
+  - (Majority) Require a specific number of processes, typically power
+    of 2
+  - (Minority) Can adapt to the number of processes actually
+    'allocated' to it at runtime
+
+  ... 
+
+  Keep it simple. Trying to do something with many features may defeat
+  the purpose since many users might not be able to use it. Several
+  (negative) examples of this in existing projects.
+
+* Review of pseudo schema 
+
+  Discussion based on the pseudo schema Steve McGough produced after
+  the previous section.
+
+  - Agreed to define this as an extension to POSIXApplication.
+  - Discussed requirement for multiple executables. It could be
+    defined as a list of POSIXApplications but agreed it may be too
+    complex for too little benefit. (Even when multiple executables
+    are needed they are typically 2). Agreed to name extension
+    SPMDApplication to highlight the single executable nature.
+  - Discussed the need or lack of for 'helper commands' or
+    'arguments'. Agreed that these should be inferable from the type
+    of parallel application and that it is not possible to
+    standardize. Instead we should identify a common set of arguments:
+    NumberOfProcesses and ProcessesPerHost seem to be the two needed.
+  - Identified a set of issues (recorded in the ppt)

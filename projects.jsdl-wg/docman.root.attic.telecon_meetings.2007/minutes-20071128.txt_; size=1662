@@ -1,0 +1,48 @@
+JSDL Teleconference - 28 November 2007
+======================================
+
+* Participants
+
+  Andreas Savva
+  Alexander Papaspyrou
+  Fred Brisard
+  Philipp Wieder
+  Steve McGough
+
+> Proposed agenda:
+> - Updates, if any, on
+>    - SC07 activities
+>    - Experience report     
+
+     - Interop demos went well, showing also data staging
+     - No update on combined experience report. Followup is needed to
+       clarify if JSDL-WG should contribute to the combined report or
+       write up a separate one. There is enough material (and more
+       expected) from the survey.
+
+>   - JSDL 1.0 Errata
+      - No update. Some editorial work remains and then submit to the
+        OGF Editor. Will ask for it to be considered as an errata
+        submission and leave it to the GFSG to decide whether it
+        should go through as a new GFD.
+    
+>   - XQuery extension
+      - No update at this time but there is an OGSA Info Model
+        Architecture call tomorrow where related topics are expected
+        to be discussed.
+
+> - Activity schema requirements discussion (cont.)
+>   - UDAP document available?
+      - Philipp is working through some logistical issues. Hopefully
+        the document can be made available by early next week. If so,
+        then a call will be scheduled next week; otherwise in two
+        weeks time.
+    
+>   - scope of work
+      - The consensus from last week stands.
+
+> - Other business
+  
+    - Update on activities within GSA-RG and relation with JSDL. A
+      JSDL scheduling extensions is being developed. Philipp will copy
+      the JSDL-WG list when there is overlap.

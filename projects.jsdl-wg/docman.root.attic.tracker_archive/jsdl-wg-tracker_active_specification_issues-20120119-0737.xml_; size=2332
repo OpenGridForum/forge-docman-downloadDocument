@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!DOCTYPE datalist PUBLIC "-//VA Software, Inc.//DTD DataList Export 1.1//EN"
+    "http://schema.vasoftware.com/sf/dtd/sf-datalist-export_1_1.dtd">
+
+<datalist>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6523</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>List the required HPC extensions</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>PGI input slides explicitly mention one extension, namely, Network Topology. Clarification is needed whether this is the only extension needed, or others also exist.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Oxana Smirnova</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>21.11.2011</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>21.11.2011</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Open</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>16</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6523/</field-value>
+    </field>
+  </element>
+</datalist>

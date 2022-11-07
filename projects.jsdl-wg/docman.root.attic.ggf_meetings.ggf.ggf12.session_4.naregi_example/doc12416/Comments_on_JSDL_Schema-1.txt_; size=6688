@@ -1,0 +1,172 @@
+Comments of draft JSDL (core set) XML Schema
+
+1. SoftwareRequirements
+
+1.1 Operating System --> Software
+
+    The software requirements is not only a operating system,
+    but contains the libraries and middlewares required by the job.
+    Therefore, we propose the "Software" attibute.
+
+    We have three ideas:
+
+    (1) Adding Software into SoftwareRequirements
+
+       <SoftwareRequirements>
+         <OperatingSystem>
+           <Description dialect="cim:OperatingSystem/OSType">LINUX</Description>
+           <Version dialect="cim:OperatingSystem/Version">4.9.12</Version>
+         </OperatingSystem>
+         <Software>
+           <name dialect="cim:SoftwareElement/Name">MPICH</name>
+           <version dialect="cim:SoftwareElement/Version">1.2.5</version>
+         </Software>
+       </SoftwareRequirements>
+
+    (2) Merging OperatingSystem with Software
+
+       <SoftwareRequirements>
+         <Software>
+           <name dialect="cim:OperatingSystem/OSType">LINUX</name>
+           <version dialect="cim:OperatingSystem/Version">4.9.12</version>
+         </Software>
+         <Software>
+           <name dialect="cim:SoftwareElement/Name">MPICH</name>
+           <version dialect="cim:SoftwareElement/Version">1.2.5</version>
+         </Software>
+       </SoftwareRequirements>
+
+    (3) Temporary solution
+
+       <SoftwareRequirements>
+         <OperatingSystem>
+           <Description dialect="cim:OperatingSystem/OSType">LINUX</Description>
+           <Version dialect="cim:OperatingSystem/Version">4.9.12</Version>
+         </OperatingSystem>
+         <Extend name="Software">
+           <name dialect="cim:SoftwareElement/Name">MPICH</name>
+           <version dialect="cim:SoftwareElement/Version">1.2.5</version>
+         </Extend>
+       </SoftwareRequirements>
+
+1.2 Queue
+
+   The (job) queue represents a particular set of the job scheduling policies
+   in the local job scheduler (or the "executing environment"). The policies are
+   exposed through negotiating the scheduling attributes.
+
+   We think that queue is the implicit set of scheduling attirbutes.
+
+   Generally, the selection of queue bases on the following criteria:
+
+       - user/group limitation
+       - high/low job priority
+       - large/normal resource usage and run-time (space and time)
+       - special handling (non-shared run, check pointing, ...)
+   
+   So, Queue (name of queue) is a supplemental scheduling attribute to find the
+   appropriate underlying queue exactly.
+
+   Also, ExecutionUserID, UserGroupName and ExclusiveExecution are handled by
+   the local job scheduler.
+
+     <SchedulingRequirements>
+       <ExecutionUserID><user>Norma Jean Baker</user><group>nii.ac.jp</group></ExecutionUserID>
+       <UserGroupName>Grid Computing</UserGroupName>
+       <ExclusiveExecution>not_shared</ExclusiveExecution>
+       <Extend name="Queue">GoldQueue</Extend>
+     </SchedulingRequirements>
+
+   These attributes stronglly depend on an user context.
+
+2. Resource
+
+2.1 JSDL-CIM Mapping in Resource Representation
+
+    In the JSDL mailing list, Robert Filepp (ibm) have mentioned about inclusion of a
+    resource specification language within JSDL. We are considering abount a simple
+    resource expression using CIM.
+
+    Legend
+
+     cim:Foo/                Class "CIM_Foo"
+     cim:Foo/Bar             Class property "Bar" of Class "CIM_Foo"
+     numberOfAssociations()  a function of counting the related associations
+     -cim:Baz->              Association "CIM_Baz"
+
+    JSDL Attiributes              CIM Class/Property
+    -----------------------------------------------------------------
+    CPUDescription                cim:Processor/Family or
+                                  cim:Processor/OtherFamilyDescription
+
+                                  (Actually, cim:Processor/Family might be an abstration notation and
+                                  expand a expression like "cim:UnitaryComputerSystem/ -cim:SystemDevice->
+                                  cim:Processor/Family" or "cim:Cluster/ -cim:ParticipatingCS->
+                                  cim:UnitaryComputerSystem/ -cim:SystemDevice-> cim:Processor/Family",
+                                  depending the structure of computer system.)
+
+    CPUCount                      numberOfAssociations(
+                                    cim:UnitaryComputerSystem/ -cim:SystemDevice-> cim:Processor/ )
+
+    CPUSpeed                      cim:Processor/MaxClockSpeed
+
+    PhysicalMemory                cim:OperatingSystem/TotalVisibleMemorySize 
+                                  (rather than cim:Memory/StartingAddress and cim:Memory/EndingAddress)
+
+    Network/NetworkDescription    cim:NetworkPort/LinkTechnology
+
+    Network/NetworkCount          numberOfAssociations(
+                                    cim:UnitaryComputerSystem/ -cim:SystemDevice-> cim:NetworkPort/ )
+
+    Network/NetworkBandwidth      cim:NetworkPort/Speed
+
+
+    FileSystem/Name               cim:FileSystem/Name
+
+    FileSystem/Size               cim:FileSystem/FileSystemSize
+
+    SwapSpace                     cim:OperatingSystem/TotalSwapSpaceSize
+
+    TemporarySpace                cim:FileSystem/FileSystemSize
+                                    when cim:FileSystem/PersistenceType == "Temporary"
+    -----------------------------------------------------------------
+
+    More specifically, "Resource" includes OS-visible hardware resources (CPUCount,
+    PhysicalMemory and NetworkCount) and OS-level logical resources (FileSystem,
+    SwapSpace and TemporarySpace rather than Hard Disk Drive).
+    
+2.2 ExclusiveExecution
+
+    See 1.2 above.
+
+2.3 Cluster
+
+    To submit a MPI job, we propose an additional attribute to require
+    a real "cluster" computer system:
+
+      <jsdl:Cluster>
+        <NumberOfNodes>xsd:integer</NumberOfNodes>
+        <InterConnect><Network /></interConnectType>
+      </jsdl:Cluster>
+
+
+    Ex.  8 Nodes, each node with 4-way board of >1 GHz Intel 80386 Family and
+         a >1 Gbps network adaptor (NIC)
+
+       <jsdl:Resource>
+         <jsdl:Cluster>
+           <NumberOfNodes>8</NumberOfNodes>
+           <InterConnect>
+             <Network><NetworkBandwidth>1Gbps</NetworkBandwidth></Network>
+           </InterConnect>
+         </jsdl:Cluster>
+         <CPUDescription dialect="cim:Processor/Family">Pentium(R) III</CPUDescription>
+         <CPUSpeed>1GHz</CPUSpeed>
+         <CPUCount>4</CPUCount>
+       </jsdl:Resource>
+
+    We think that ProcessTopology provides the mapping between resources
+    (Node/CPU) and processes at parallel processing language middleware level
+    (MPI and PVM), whereas Cluster requires a cluster computer system.
+
+      cf. IBM Lee's "ParallelProcessing" attribute

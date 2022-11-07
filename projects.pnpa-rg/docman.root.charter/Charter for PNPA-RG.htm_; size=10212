@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0065)http://www.ogf.org/gf/group_info/charter.php?review&group=pnpa-rg -->
+<HTML>
+This is a static archive of the previous Open Grid Forum GridForge content management system saved from host forge.ogf.org file /sf/docman/do/downloadDocument/projects.pnpa-rg/docman.root.charter/doc14030 at Sun, 06 Nov 2022 05:27:13 GMT
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<HEAD><TITLE>Charter for PNPA-RG</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252"><LINK 
+href="Charter%20for%20PNPA-RG-Dateien/ogf.html" type=text/css rel=stylesheet>
+<META content="MSHTML 6.00.2900.2963" name=GENERATOR></HEAD>
+<BODY>
+<DIV class=body style="WIDTH: 800px"><STRONG>Charter for 
+PNPA-RG</STRONG><BR>Date 2006-11-20<BR><BR><STRONG>Group 
+Abbreviation:</STRONG><BR>
+<DIV 
+style="PADDING-RIGHT: 20px; PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">pnpa-rg<BR></DIV><STRONG>Group 
+Name:</STRONG><BR>
+<DIV 
+style="PADDING-RIGHT: 20px; PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">Particle 
+and Nuclear Physics Applications Research 
+Group<BR></DIV><STRONG>Area:</STRONG><BR>
+<DIV 
+style="PADDING-RIGHT: 20px; PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">Research 
+Applications<BR><BR></DIV><STRONG>Group Leadership:</STRONG><BR>
+<TABLE 
+style="PADDING-RIGHT: 20px; PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">
+  <TBODY>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD>Chair</TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD>Chair</TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD>Secretary</TD></TR>
+  <TR>
+    <TD>Kilian Schwarz</TD>
+    <TD>k.schwarz@gsi.de</TD>
+    <TD>Chair</TD></TR>
+  <TR>
+    <TD>Rüdiger Berlich</TD>
+    <TD>ruediger.berlich@iwr.fzk.de</TD>
+    <TD>Chair</TD></TR></TBODY></TABLE><BR><STRONG>Group Summary:</STRONG><BR>
+<DIV 
+style="PADDING-RIGHT: 20px; PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">The 
+Particle and Nuclear Physics Applications Research Group provides a forum for 
+discussion of issues related to particle and nuclear physics applications and 
+production grids.<BR><BR></DIV><STRONG>Charter Focus/Purpose and 
+Scope:</STRONG><BR>
+<DIV 
+style="PADDING-RIGHT: 20px; PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">The 
+Particle and Nuclear Physics Applications Research Group provides a forum for 
+discussion of issues related to particle and nuclear physics applications as 
+well as production grids. <BR><BR>There are five specific goals, all with the 
+overarching aim of ensuring that HENP actively participates in setting 
+requirements and defining standards to ensure that its needs are met and to 
+bring its experiences in deploying and using large scale grids to the grid 
+community as a whole. <BR>• To bring the requirements of the HENP community to 
+the GGF in order to explain and inform the wider grid community of the specific 
+needs and issues of HENP, e.g. in the form of documented key points. <BR>• To 
+ensure participation of the HENP community in grid standardization efforts, 
+particularly in those areas and services essential to the successful use of 
+grids in HENP. <BR>• To provide early feedback to GGF technical working groups 
+on the success or failure of various grid software components as used in high 
+performance production activities by HENP experiments. <BR>• To provide early 
+feedback to HENP about ongoing activites in the GGF, relevant to the HENP 
+community, as well as to ease knowledge transfer. This could be done in the form 
+of presentations at relevant HENP meetings. <BR>• To ensure that relevant HENP 
+applications such as PROOF or simulation frameworks (Geant3/4) run on todays 
+Grid environments. <BR>The particle and nuclear physics community has over the 
+past few years provided the driving applications and made significant 
+contributions to several projects. <BR>These projects have been actively 
+involved in deploying production grid applications. Many members of the HENP 
+community are instrumental in existing or new GGF working or research groups. 
+Current areas of interest include security, high throughput data transport, data 
+intensive management and access services, as well as information schema 
+definition. As the community continues to develop and adopt higher level and 
+more comprehensive services it is anticipated that we will further contribute to 
+other areas of work. These include production and operations services, 
+scheduling and job description, databases, frameworks and applications, and also 
+network and resource management.<BR><BR>The PNPA Research Group will provide a 
+venue to bring together HENP application developers with the information 
+scientists and researchers in grid technologies at the OGF. HENP experiments are 
+deploying petascale production grids now. We aim to identify the requirements 
+of, and communicate experiences from, these deployments as they relate to the 
+OGF. We believe there are important commonalities in requirements across the 
+experiments in the field which can be collected and documented as a common set. 
+<BR>Members of this Research Group will include representatives of the grid 
+projects (EGEE, WLCG, OSG, …) in the field. These projects must deliver and 
+deploy production grid middleware and services to enable scientific analysis on 
+a global scale. The research group will also ensure that grid developments 
+driven by the larger HENP projects will also be compatible and useable by other 
+experiments within HENP. <BR><BR><BR></DIV><STRONG>Exit Strategy</STRONG>:<BR>
+<DIV 
+style="PADDING-RIGHT: 20px; PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">Particle 
+Physics Initiatives, with the Large Hadron Collider at CERN being the primary 
+example, have average life times in the range of 20 years. Grid and application 
+development thus has to be an ongoing process and standards being developed as 
+part of this group have to be continuously revised and updated. It is expected 
+that the amount of time needed for standardisation discussions decreases after 
+LHC has reached its design luminosity. However, as Particle Physics experiments 
+with even higher data rates such as the FAIR project at GSI Darmstadt become 
+operational, further significant work will be needed. No fixed life time for 
+this research group is therefore envisaged. 
+<BR><BR></DIV><STRONG>Goals/Deliverables:</STRONG><BR>
+<DIV 
+style="PADDING-RIGHT: 20px; PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px"><STRONG>Title:</STRONG> 
+HENP requirements from OGF<BR>
+<DIV 
+style="PADDING-RIGHT: 20px; PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px"><STRONG>Abstract:</STRONG> 
+<BR>
+<DIV 
+style="PADDING-RIGHT: 40px; PADDING-LEFT: 40px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">informational 
+documents or a set of documented key points which define the requirements of the 
+HENP community at this time from OGF WGs and RGs 
+</DIV><BR><STRONG>Type:</STRONG> Informational Document
+<TABLE 
+style="PADDING-RIGHT: 40px; PADDING-LEFT: 40px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">
+  <TBODY>
+  <TR>
+    <TH align=left>Milestone</TH>
+    <TH align=left>Date (YYYY-MM)</TH>
+    <TH>Completed?</TH>
+    <TH align=left>Completed Date (YYYY-MM)</TH>
+  <TR>
+  <TR>
+    <TD>First Draft</TD>
+    <TD>2007-02</TD>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>Public Comment</TD>
+    <TD>2007-04</TD>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>Publication</TD>
+    <TD>2007-08</TD>
+    <TD></TD>
+    <TD></TD></TR></TBODY></TABLE><BR></DIV><STRONG>Title:</STRONG> summarized OGF 
+activities for the HENP community<BR>
+<DIV 
+style="PADDING-RIGHT: 20px; PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px"><STRONG>Abstract:</STRONG> 
+<BR>
+<DIV 
+style="PADDING-RIGHT: 40px; PADDING-LEFT: 40px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">informational 
+document which is directed to grid designers and users in the HENP community 
+summarizing OGF standards and recommended practices that could be adopted to 
+HENP computing problems </DIV><BR><STRONG>Type:</STRONG> Informational Document
+<TABLE 
+style="PADDING-RIGHT: 40px; PADDING-LEFT: 40px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">
+  <TBODY>
+  <TR>
+    <TH align=left>Milestone</TH>
+    <TH align=left>Date (YYYY-MM)</TH>
+    <TH>Completed?</TH>
+    <TH align=left>Completed Date (YYYY-MM)</TH>
+  <TR>
+  <TR>
+    <TD>First Draft</TD>
+    <TD>2007-08</TD>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>Public Comment</TD>
+    <TD>2007-10</TD>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>Publication</TD>
+    <TD>2008-02</TD>
+    <TD></TD>
+    <TD></TD></TR></TBODY></TABLE><BR></DIV><STRONG>Title:</STRONG> HENP 
+applications and their relationship to current OGF goals<BR>
+<DIV 
+style="PADDING-RIGHT: 20px; PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px"><STRONG>Abstract:</STRONG> 
+<BR>
+<DIV 
+style="PADDING-RIGHT: 40px; PADDING-LEFT: 40px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">informational 
+document which relates the Application Area experiences to the goals and scope 
+of the OGF </DIV><BR><STRONG>Type:</STRONG> Informational Document
+<TABLE 
+style="PADDING-RIGHT: 40px; PADDING-LEFT: 40px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">
+  <TBODY>
+  <TR>
+    <TH align=left>Milestone</TH>
+    <TH align=left>Date (YYYY-MM)</TH>
+    <TH>Completed?</TH>
+    <TH align=left>Completed Date (YYYY-MM)</TH>
+  <TR>
+  <TR>
+    <TD>First Draft</TD>
+    <TD>2008-04</TD>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>Public Comment</TD>
+    <TD>2008-06</TD>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD>Publication</TD>
+    <TD>2008-10</TD>
+    <TD></TD>
+    <TD></TD></TR></TBODY></TABLE><BR></DIV></DIV><STRONG>Group Status:</STRONG><BR>
+<DIV 
+style="PADDING-RIGHT: 20px; PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">Active<BR><BR></DIV><STRONG>Public 
+Description (for print &amp; web site):</STRONG><BR>
+<DIV 
+style="PADDING-RIGHT: 20px; PADDING-LEFT: 20px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">The 
+Particle and Nuclear Physics Applications Research Group provides a forum for 
+discussion of issues related to particle and nuclear physics applications and 
+production grids.<BR></DIV></DIV><!-- forge.gridforum.org footer.html -->
+<br> <hr>
+<table width='100%'> 
+ <tr>
+  <td align='left'>   <a href='http://www.ogf.org/' target='_blank' style='border: 0 px;'><img src='../../../../../../ogf-it/opengridforum.gif' alt='The Open Grid Forum' style='border:0px white solid;'></a><td>
+  <td align='center'> <a href='mailto:webmaster@ogf.org'>Contact Webmaster</a> 
+                    | <a href="../../../../../tracker/do/createArtifact/projects.ggf-info/tracker.html">Report a problem</a>
+                    | <a href="../../../../../wiki/do/viewPage/projects.ggf-info/wiki/HomePage.html">GridForge Help</a>
+                    </td>
+  <td align='right'>  
+<!--		<img src='/ogf-it/powered_by_dell.gif' alt='Powered by Dell'> -->
+<!-- Begin DigiCert/ClickID site seal HTML and JavaScript -->
+<div id="DigiCertClickID_sxSDRU4L">
+  <a href="http://www.digicert.com/">SSL Certificates</a>
+</div>
+<script type="text/javascript">
+var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_sxSDRU4L", "10", "m", "black", "sxSDRU4L"]);(function(){var cid=document.createElement("script");cid.type="text/javascript";cid.async=true;cid.src=("https:" === document.location.protocol ? "https://" : "http://")+"seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
+</script>
+<!-- End DigiCert/ClickID site seal HTML and JavaScript -->
+  </td>
+ </tr>
+</table>
+<!-- google analytics code -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6775861-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</BODY>
+This is a static archive of the previous Open Grid Forum GridForge content management system saved from host forge.ogf.org file /sf/docman/do/downloadDocument/projects.pnpa-rg/docman.root.charter/doc14030 at Sun, 06 Nov 2022 05:27:14 GMT
+</HTML>

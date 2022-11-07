@@ -1,0 +1,66 @@
+JSDL conference call
+====================
+
+17 November 2011
+
+1) Roll call
+------------
+- Michael Saravo
+- Michel Drescher
+- Etienne Urbah
+- Oxana Smirnova
+- Philip Wieder
+
+Apologies:
+- Morris Riedel
+
+
+2) Minutes of last meeting
+--------------------------
+Last meeting's minutes (http://forge.gridforum.org/sf/go/doc16355?nav=1) are approved without further changes.
+
+
+3) Action review
+----------------
+Actions will be reviewed online on Gridforge during the call. Proceedings and 
+new state are recorded with the actions themselves, not in the minutes.
+
+
+4) GridForge Tracker status
+---------------------------
+Discuss and agree on which trackers should be archived and removed:
+http://forge.gridforum.org/sf/tracker/do/listTrackers/projects.jsdl-wg/tracker
+
+- According to Action reviews the gorup decided to archive all existing trackers, and start anew with artefacts coming out of the document reviews.
+
+
+5) Gridforge documents status
+-----------------------------
+http://forge.gridforum.org/sf/docman/do/listDocuments/projects.jsdl-wg/docman.root
+Discuss and agree on a document tree structure
+
+- Group decides to move a Word copy of the latest JSDL spec (plus the schema) to the File Releases area, and archive the "Published Documents" section.
+    -- EU: Not only the JSDL spec should be stored in File Releases, buyt also 
+       HPCP, SPMD Application and Parameter Sweep.
+==> ACTION Michel to cross check the status of those extensions.
+
+- PW aspires to finish the activity schema specification before Christmas 2011.
+    -- After that he is fine with moving this to the Fole Relelases and removing 
+       the "Working Drafts" section in the Documents space.
+    
+
+6) JSDL specification issues
+----------------------------
+The existing tracker artifacts were briefly discussed, and accordingly updated during the call.
+
+
+7) AOB
+------
+Three new issues/actions were discovered to be sorted out:
+- Forward the OGSA Information document to JSDL, BES, PGI and GLUE (Michel)
+- Request Joel to manually disable approval of task updates (Michel)
+- Store the agenda of conference calls in Grodforge rather in the JSDL calendar. (Michel)
+
+- The conference call on 24 Nov was cancelled due to attendants being engaged otherwise.
+- Michael Saravo will chair the call on 1 Dec as Michel will be unavailable at that day.
+

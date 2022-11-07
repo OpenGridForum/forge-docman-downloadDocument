@@ -1,0 +1,64 @@
+JSDL Telecon 28th June 2006
+===========================
+
+Present:
+ Donal
+ Andreas
+ An
+ Stephen
+
+Items:
+
+1) Parallel Application extension. We need some results for queries.
+ Andreas: To chase up Naregi People. Two issues previously identified.
+ Andreas: To write up as straw man document.
+ Ivan: Still to come up with use cases.
+
+ Andreas: Experimental status? namespace: jsdl-experimental
+ Also list them on the grid-jsdl.org webpage
+ namespace experimental.grid-jsdl.org
+ Give people space on the Wiki after a presentation at a JSDL event
+
+2) Parameter Sweep application extension. After the opportunity for everyone
+  to read the proposal sent out by Michel and the revised examples.
+
+ Michel is comming up with a second draft which is quite different.
+ Andreas: Need to scope out exactly what we want this to do
+ Need some use cases and senarios
+
+ Donal: Some sort of XSLT mangaler?
+
+ Andreas: Do we say where people put things?
+ Donal: Lets see what happens
+
+ The outermost xsd:any - what should go there?
+ Not clear if we can say that yet.
+
+3) Further discussion of how we will deal with a base profile for JSDL.
+
+ Needs to handle job without any extensions
+ Base profile for computational jobs?
+4) Meeting at OGSA f2f next month? Will there be enough people attending
+  the f2f to make a JSDL break-out worth while. [This may end up being
+  a JSDL meal out]
+
+ Andreas: To check if we could get a breakout
+
+5) Preparation for GGF18 or should that be OGF1?
+
+ Deadline is July 7th.
+ No of Sessions?
+ OGSA is doing Information Model and BES / JSDL / RSS integration
+ Suggested 2 sessions
+ Subjects to discuss:
+  - Parallel Job
+  - Parameter sweep
+  - Base profile?
+  - General outreach
+    - what is JSDL?
+    - Plan for JSDL sessions
+    - Spec errata
+
+6) AOB
+
+None 

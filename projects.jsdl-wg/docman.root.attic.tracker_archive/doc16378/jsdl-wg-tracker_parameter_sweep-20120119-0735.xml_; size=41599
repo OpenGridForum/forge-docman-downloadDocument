@@ -1,0 +1,1394 @@
+<?xml version="1.0"?>
+<!DOCTYPE datalist PUBLIC "-//VA Software, Inc.//DTD DataList Export 1.1//EN"
+    "http://schema.vasoftware.com/sf/dtd/sf-datalist-export_1_1.dtd">
+
+<datalist>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6145</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>sweeping of parameters within input file</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>[From the list, posted by Geoff]
+
+Dear Michel, Andreas, and others group members,
+
+
+A group of us currently meeting in KISTI, S.Korea have been sharing
+ideas and considerations for the implementation of a parameter sweeping
+mechanism to support the research community. Input has principally come
+from David Meredith (NGS), Soonwook Hwang and Byungsang (KISTI) and
+myself. David is the creator of the UK National Grid Service JSDL
+Application Repository portal (https://portal.ngs.ac.uk), and has been
+tasked with creating a parameter sweeping mechanism for the NGS portal
+(I am currently working with David on implementing this functionality).
+Naturally we would like to adopt JSDL sweep related standards. Soonwook
+and Byungsang are in charge of development of KISTI's AURORA Application
+Repository (http://aurora.kisti.re.kr), which has been in use for some
+time and uses its own schema definition for parameter sweeping.
+
+
+AURORA's mechanism is loosely aligned with JSDL, but focuses on the
+sweeping of parameters within input files, rather than sweeping over
+elements defined within the JSDL document itself. We consider this to be
+an important additional functionality. Indeed, David has already
+reported on a number of (bespoke) parametric job definition schemes used
+to sweep over parameters within input files which have been developed as
+a matter of requirement by a number of different NGS user communities. 
+
+
+The JSDL parameter sweeping specification in its current draft form
+appears to provide the flexibility to sweep over any element within a
+JSDL document, and as such provides powerful flexibility to the user.
+&gt;From our experience however, many applications (for example KISTI and
+NGS supported NSCCS applications, e.g. CFD Solver, AutoDock) require the
+ability to sweep over values within input files. Consequently, where
+possible, we would like to propose further extensions to the existing
+draft sweep schema specification for including; a) the definition of
+parametric variables that can exist within input files, and b) referral
+to the associated data\input files. 
+
+
+
+We were therefore wondering whether the same conclusion had been reached
+by those contributors to the original draft specification or indeed,
+whether you all feel that such an approach falls outside the remit of
+the OGF standard specification. Maybe we could organize a joint phone
+chat to discuss some of these issues and offer ideas and suggestions. We
+will working together until late Friday so if it's possible to have some
+feedback to these queries during this period it would be very much
+appreciated.
+
+
+Best wishes,
+
+
+Geoff, Byungsang, David, Soonwook. 
+
+
+Note,
+
+**KISTI – Korea Institute for Science Technology Information
+
+**NSCCS – National Service for Computational Chemistry
+
+
+
+</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>10.03.2008</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>21.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>21.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6145/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6147</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Explanation for matching on part of element content</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>[OGF22 minutes]
+
+  - Is it possible to match on part of the element content; so as to
+    replace for example an argument fragment? Example use case: log.$1
+    - XPath can do this but it is not spelled out in the specification
+
+  Issue: Add explanation to the spec on partial matching.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>12.03.2008</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>21.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>21.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6147/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6148</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Matching output with sweep indexes?</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>[OGF22 minutes]
+
+  Issue: How do you match the output files or results with the
+         parameter sweep indexes?</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>12.03.2008</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>29.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>29.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>geoff williams</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6148/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6149</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>make use cases clearer</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>[OGF22 minutes]
+
+  - Functionality of the extension seems to be a superset of what
+    Platform, SGE have.
+  - How does it match with what's in other tools: glite, globus etc?
+  - What are the use cases this extension is designed for?
+   :
+  Issue: Need to make the use cases it addresses clear
+</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>12.03.2008</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>30.07.2008</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>30.07.2008</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Deferred</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6149/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6150</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>representing instances of parameter sweep</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>[OGF22 minutes]
+
+  - What are the semantics for this: single activity or multiple; what
+    happens if some fail?
+  - Would have to also define a BES extension to define how to tackle
+    such cases
+
+  Issue: For BES or some other group to consider semantics on managing
+         parameter sweep jobs</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>12.03.2008</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>21.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>21.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6150/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6151</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Self modifying sweeps</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>[OGF22 minutes]
+
+  - Is it allowed to modify the sweep as it executes, i.e.,
+    self-modifying code
+    - Should not be able to do; and need to disallow in the
+      specification
+
+  Issue: Explicitly disallow self-modifying sweeps in the
+         specification</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>12.03.2008</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>21.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>21.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6151/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6152</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Extension relation to JSDL and context for XPath expressions</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>  - Should the extension be inside the JSDL document or not?
+  - Would it be possible to have this spec independent of JSDL?
+    - If it is outside then have to specify the context for the XPath
+      extension in some other way.
+
+  Issue: Consider alternative packaging approaches and how to specify
+         the XPath context in such cases</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>12.03.2008</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>30.07.2008</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>30.07.2008</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Deferred</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6152/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6183</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>loop over decimal / float values</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Many variables for sweeping are decimal / float type values e.g. 0.1, 0.2, 0.3, 0.4 and so could appear in a looping function.
+
+Additional data such as rounding rules (up, down, truncate) and significant digits / figures may be specified.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>geoff williams</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>03.04.2008</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>25.06.2008</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>25.06.2008</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>geoff williams</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6183/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6184</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>loop function naming</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Currently the specification defines the element Loop which extends the abstract Function. Should a naming convention be used to specify the nature of the element types being looped over, e.g. LoopInteger, LoopDecimal, LoopCharacter?</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>geoff williams</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>03.04.2008</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>21.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>21.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6184/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6185</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Schema representation for &#034;any non-zero value&#034; for a type</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Currently xsd:positiveInteger is used as the step attribute for the Loop element. Could instead a type be defined for loop-based elements which represents any non-zero value of a type, to allow for incrementing and decrementing steps?</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>geoff williams</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>03.04.2008</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>06.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>06.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>geoff williams</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6185/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6186</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>random numbers as parameters</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>Some parameters can be random numbers e.g. Monte Carlo simulations</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>geoff williams</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>03.04.2008</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>06.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>06.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>geoff williams</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6186/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6187</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>constraint specification</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>There may be a requirement for sweeping to adhere to constraints e.g. the sum of the third and fourth parameter (which are being swept) should be less than a specified value.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>geoff williams</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>03.04.2008</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>13.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>13.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Deferred</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>geoff williams</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6187/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6188</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>remove min/maxOccurs attrs if value is default i.e. 1</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>The default values for the minOccurs and maxOccurs attributes are &#034;1&#034;, so do these values need to be defined in the specification?</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>geoff williams</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>07.04.2008</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>14.05.2008</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>14.05.2008</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>geoff williams</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6188/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6189</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>prioritising when sweeping data staging elements</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>In the situation where there may be many data staging files to be copied prior to or following application execution could a
+prioritisation mechanism be assigned to a sweep e.g.
+
+&lt;jsdl:DataStaging&gt;
+  &lt;jsdl:FileName&gt;stagefile.dat&lt;/jsdl:FileName&gt;
+  :
+&lt;/jsdl:DataStaging&gt;
+
+&lt;sweep:Sweep priority=&#034;stage&#034;&gt;    &lt;-- indicates batch staging
+  &lt;sweep:Assignment&gt;
+    &lt;sweep:Parameter&gt;/*//jsdl:DataStaging/jsdl:FileName&lt;/sweep:Parameter&gt;
+    &lt;sweepfunc:Values&gt;
+      &lt;sweepfunc:Value&gt;stagefile2.dat&lt;/sweepfunc:Value&gt;
+      &lt;sweepfunc:Value&gt;stagefile4.dat&lt;/sweepfunc:Value&gt;
+      &lt;sweepfunc:Value&gt;stagefile5.dat&lt;/sweepfunc:Value&gt;
+      :
+    &lt;/sweepfunc:Values&gt;
+  &lt;/sweep:Assignment&gt;
+&lt;/sweep:Sweep&gt;
+
+This may cater for a more selective approach compared to the recursive copying mentioned in section 6.5.1.1 of the DataStaging Element definition.</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>geoff williams</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>08.04.2008</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>14.05.2008</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>14.05.2008</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>geoff williams</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6189/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6264</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>sweeping of parameters within input file extension</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>refer to wiki for schema proposal
+decide whether this goes in the spec or done separately</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>30.07.2008</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>21.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>21.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6264/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6269</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Check required extensibility to support constraints</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>What extensibility is required in the spec to support constraints in the future?</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Andreas Savva</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>13.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>29.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>29.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>geoff williams</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6269/</field-value>
+    </field>
+  </element>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6271</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>DocumentNode needs explicit namespace bindings</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>From an E-Mail to the list: 
+&#034;[...] XML tooling does not universally provide namespace bindings declared in the containing XML document ([XML Namespace] spec is in complete silence whether namespace bindings are in scope for XML *content*), or do not guarantee that namespace bindings are up to date to match the prefixes used in the XPath expression. That means that the XPath processor has no guarantee that it can resolve all prefixes used in the XPath expression can be resolved to the correct namespaces, or even to any namespace at all.
+
+The solution is to make the namespace bindings explicit that have been used to construct the XPath expression.&#034;</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Michel Drescher</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>21.08.2008</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>05.09.2008</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>04.09.2008</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>1</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>geoff williams</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6271/</field-value>
+    </field>
+  </element>
+</datalist>

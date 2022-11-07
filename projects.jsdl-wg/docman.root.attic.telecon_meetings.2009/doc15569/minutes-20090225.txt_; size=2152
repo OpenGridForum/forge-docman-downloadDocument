@@ -1,0 +1,65 @@
+JSDL Teleconference - 25 February 2009
+======================================
+
+* Participants
+
+  Donal Fellows
+  David Meredith
+  Andreas Savva
+  Geoff Williams
+  Philipp Wieder
+
+* Parameter sweep
+
+  - Agreed to 
+    - Exceptions being type double
+    - Accuracy using decimal
+    - Step accuracy suggestion
+      - Donal will send Geoff text
+    - Delete "determine an acceptable ..."
+    - "Respond appropriately" 
+
+  - Update the text and have a version ready before OGF25 for review
+    during the session
+
+* Activity schema
+
+> - R008b: Does the access control info change during the lifetime of an
+> activity?
+
+It can change during the lifetime of the activity. But access control
+does not sound as something to have in the activity document itself
+
+> - R022: Which exceptions are to be captured. Those between the last
+> historical record has been written and the current one? All until
+> now?
+
+  Capturing state changes as new records. If more granularity is
+  needed it is up to implementation
+
+> - Currently I just import the bes-factory:ActivityStatusType. Is this
+> sufficient?
+> - Currently the schema imports bes-factory and ws-adressing. Dow we want
+> this dependencies?
+
+It is ok to import all schemas that are needed.
+
+> - The current draft contains a number of xsd:any elements. The question
+> is whether we want to become more concrete and e.g. force the activity
+> description to be JSDL and the resource usage to be RUS? [Note: During
+> today's discussion people expressed their preference for a more concrete
+> schema where OGF standards are used for the different elements.]
+> 
+
+- In general:
+  - Use OGF specs
+  - Make schema more concrete while allowing extensibility
+    - xsd:other is one way to allow extensibility. There are a couple
+      (at least) more including using substitution groups and the way
+      cim schema is defined (xsi:type?)
+    - Andreas will send Philipp examples as input before making a
+      decision
+
+- Records are marked as "original / interim / ..."  but later change
+  also change the marking on previous ones which is not good. 
+

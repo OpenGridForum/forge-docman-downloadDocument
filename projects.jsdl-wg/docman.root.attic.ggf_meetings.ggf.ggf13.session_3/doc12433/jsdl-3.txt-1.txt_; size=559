@@ -1,0 +1,16 @@
+- a tag to indicate what the client wants to be understood or not?
+  - everthing should be understood vs
+
+- In application
+  - xsd::any##other that is cardinality 1
+	vs doing an jsdl:applicationtype that is defined to be
+	any##other
+  - and list all applications that are defined separately
+
+- need some tie-in to acs wrt application definitions
+
+- limits lose all tags and the limit name becomes the tag name
+- and these limits should be under application executable
+- and the limits are not used for resource selection ; they are set in
+  the environment.
+

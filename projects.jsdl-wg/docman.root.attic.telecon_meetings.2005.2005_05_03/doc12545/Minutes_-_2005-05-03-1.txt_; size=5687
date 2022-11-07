@@ -1,0 +1,253 @@
+May 3, 2005
+
+Attendees
+	Darren
+	Steve
+	Ali
+	Bill
+	Donal
+	Michel
+
+Apologies
+        Andreas
+        Fred
+
+Agenda
+	Action Items from last call
+	Document Status
+	
+
+===============================================
+
+Other
+-----
+Possible JSDL meeting to go with the OGSA F2F meeting in London.
+
+
+Agenda & Minutes
+----------------
+
+ 5) Section 3 (spec doc) general revision and polishing up
+
+    - To be done...
+
+    - Action: Andreas
+
+    - Owners for: Glossary
+                : Extending JSDL
+
+    --> On Going
+    --> On Going
+    --> On Going
+
+
+ 6) Update explanation for jsdl:other usage
+
+    - jsdl:other is the value for e.g. other arch and OS name etc.
+
+    - Have defined this and behaviours - have to be able to process it and 
+      must reject the document if can't be processed.
+
+    - To add extra information that is allowed to be ignored if can't be 
+      processed, but, jsdl:any can't be ignored.
+
+    - Section 4.2 - placeholder (maybe better in the Extending JSDL section).
+
+    --> Action: Steve (with Michel) - as number 17
+
+    --> On Going (03-May-2005)
+    --> On Going (Almost Done)
+
+
+ 8) JSDL compliance levels
+    How much of jsdl a system must support, not just process.
+    Probably a topic for later.
+
+    - Placeholder, will come up later!
+
+    [DONE] - Action: Michel
+
+    --> Action: ALL to review Michel's e-mail to list: JSDL compliance levels
+    http://www-unix.gridforum.org/mail_archive/jsdl-wg/2005/04/msg00111.html
+
+    --> Action: Ali to edit Michel's proposed entry (03-May-2005)
+
+    --> On Going
+
+
+ 9) The statement "If not supported then the consuming system MUST reject
+    the document." needs a bit more explanation or re-write.
+
+    - Related to number 8 above.
+
+    - Refer to notational convention
+
+    [DONE] - Action: Michel
+
+    --> Action: ALL to review Michel's e-mail to list: JSDL compliance levels
+    http://www-unix.gridforum.org/mail_archive/jsdl-wg/2005/04/msg00111.html
+
+    --> Action: Ali to edit Michel's proposed entry (03-May-2005)
+
+    --> On Going
+
+
+11) Filesystem name and type and filesystem reference in DataStaging
+
+    - This needs to be specified? Needs more explanation?
+
+    - Action: Andreas
+
+    - FileSystemID changed to FileSystemName
+    - Define well known filesystem names: HOME and TMP
+
+    --> On Going
+    --> On Going
+    --> On Going
+
+
+*** 12) Mountpoint environment variable. Is the current approach ok, or
+    should we provide a separate mechanism, e.g, a tag that if present
+    provides the name of the environment variable in which the
+    MountPoint value must be present.
+
+    - If a Mountpoint environment variable is not specified, then the name 
+      of the filesystem is used for the value of the env var.
+
+    - Action: ALL to review spec section 5.5.12 and get back to the list
+
+    - Issue to be discussed on the list.
+
+    --> On Going
+    --> On Going
+    --> On Going
+
+    *** Can leave out of v1.0
+
+
+14) DRMAA use case for defining filenames. We have to at least be able
+    to show an example of how to define and stage out an <Output> file.
+
+    - Action: Andreas
+
+    [DONE]- Action: Donal to suggest alternative
+
+    - Action: ALL to review Donal's suggestion on the mailing list.
+
+    - Action: Donal to chase this on the list...
+
+    --> On Going
+    --> On Going
+
+
+16) Process Topology needs review. In particular are the examples ok or
+    not, are the definition correct and so on. Delete the yellow
+    comments once that is done. Not sure if we should define the precise
+    allocation behaviour or allow for that to be defined instead.
+
+    - Action: ALL to review this section (Section 6 in 0.9.5-01).
+        - ProcessCount to be put back into POSIX Application.
+        - ProcessCountLimit in the POSIX Application.
+
+    [DONE] --> Action: Chris to bring issues to list if any
+
+    - Action: ALL to review discussion on this on the list
+
+    - Action: Karl to send summary of discussion to the list
+
+    - Action: Andreas to put final recommendation from Karl's summary in the spec.
+
+    --> On Going
+    --> On Going
+    --> On Going
+
+
+17) Section "Extending JSDL" needs an owner. I expect this section to be
+    about 1 page long so should not be too much trouble.
+
+    - Action: Steve (with Michel as wingman)
+
+    --> On Going
+    --> On Going (03-May-2005)
+    --> On Going (Almost Done)
+
+
+19) Re-check terminology for process topology and delete comments
+
+    - Part of 16 Review
+
+    --> See 16 above - On Going
+
+
+24) Complete author information (see my entry as reference)
+
+    - Leave to last... Placeholder
+
+    --> Action: Ali to pick this up.
+
+    --> On Going
+    --> On Going
+    --> On Going
+
+
+25) Update contributors and acknowledgements
+
+    - Leave to last... Placeholder
+
+    --> Action: Ali to pick this up.
+
+    --> On Going
+    --> On Going
+    --> On Going
+
+
+26) Complete list of Normative references, e.g., CIM is still missing.
+
+    - Leave to last... Placeholder
+
+    --> One for CIM (http://www.dmtf.org/standards/cim/) version 2.8
+
+    --> Action: Donal, pass ref for lists from CIM to Andreas.
+
+    - Action: Donal - Add reference for POSIX.
+
+    --> On Going
+    --> On Going
+    --> On Going
+
+
+31) Complete example sub-sections
+
+    - Need examples for elements.
+
+    --> On Going
+    --> On Going
+    --> On Going
+
+
+v1.0 GridForge Trackers
+-----------------------
+1271 - post-1.0
+1272 - post-1.0
+1273 - DONE
+1275 - Steve
+1277 - DONE, CLOSE
+1279 - DONE
+1280 - DONE
+1281 - DONE
+1282 - post-1.0
+1283 - post-1.0
+1284 - post-1.0
+1285 - Michel: Andreas' Intro Slides
+1286 - post-1.0
+1310 - DONE
+1326 - DONE
+1327 - Ali: Andreas' Intro Slides
+1330 - post-1.0
+1331 - DONE
+1332 - post-1.0
+1334 - DONE
+1335 - DONE
+1358 - post-1.0
+1391 - Donal
+

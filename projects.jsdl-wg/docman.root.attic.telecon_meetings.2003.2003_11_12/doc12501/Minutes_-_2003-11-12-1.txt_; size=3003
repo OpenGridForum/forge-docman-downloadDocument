@@ -1,0 +1,106 @@
+JSDL Telecon Minutes
+====================
+November 12th, 2003 - 14:00 GMT
+===============================
+
+
+Attendees:
+==========
+
+Dan Templeton (Sun)
+Fred Brisard (CA)
+Andreas Haas (Sun)
+Andreas Savva (Fujitsu)
+Darren Pulsipher (Cadence)
+An Ly (CA)
+Ali Anjomshoaa (EPCC)
+Alain Andrieux (ISI)
+
+Apologies:
+==========
+
+Steve McGough (LeSC)
+
+
+Discussion:
+===========
+
+Administrative:
+---------------
+
+o Ali - Migration to GridForge making good progress.
+
+o Andreas S. - Put spec. under "Working Drafts" in GridForge
+               Use file publisher on GridForge?
+
+o Ali - Should keep it simple and not complicate matters with tools that 
+        we don't understand, if we don't need to use them.
+
+o Ali - Spec. now lies with Andreas S.
+
+o Ali - Will add meeting info to front page of the GridForge site.
+
+
+JSDL Job ID Attributes:
+-----------------------
+
+o UserJobName
+
+  Darren - External to JSDL, will be used for tie in for applications.
+  Andreas S. - Suggest JobAnnotation instead.
+  Fred - Agree with JobAnnotation.
+  Darren - "properties" ?
+  Ali - Properties is external set? Use extension mechanism for them?
+  Andreas H. - What is the translation/mapping of attribute?
+  Ali - Use for "search and sort"; is not JSDL bound. i.e. no semantics.
+  Andreas S. - JobAnnotation is a wider scope than a JobName.
+  Ali - Propose to postpone JobAnnotation attribute for later consideration.
+
+
+o SystemJobID
+
+  Andreas S. - Should provide a unique system specific job ID.
+  Ali - should have another attribute, "UniqueSystemJobID"?
+  Andreas H. - No.
+  Andreas S. - Would like to be able to identify uniqueness of 
+               system job ID, perhaps an attribute of SystemJobID.
+  Ali - Add an optional UniqueSystemJobID to the list of attributes.
+
+
+o SubmissionUserName
+
+  Andreas S. - Does it need to be bound to other attributes to make an 
+               assumption about it?
+  Ali - Do we need this attribute to be associated to other attributes?
+        A JSDL defines a job and we shouldn't be trying to make every 
+        attribute uniquely identifiable for each job.
+
+
+o ExecutionUserName
+
+  Andreas H. - Optional attribute. May need multiple ExecutionUserName(s)
+  Andreas H. - multiple ExecutionUserName(s), then must specify domain(s) 
+               to map them to for their use.
+  Andreas S. - Pre-defined configuration? Intelligent broker can map to the 
+               system using configuration.
+  Ali - Propose only one user name, that is, the local user name that is 
+        mapped by the implementation of the system to where it is needed.
+  Andreas S. - ExecutionUserName is useful and we should keep it in, though 
+               the definition needs work.
+  Andreas H. - The system should be able to assign an ExecutionUserName to 
+               a running job. Possible definition of ExecutionUserName 
+               tied to a running job?
+  Ali - Action to think about what this attribute is trying to achieve.
+
+
+AOB:
+----
+
+o NO
+
+
+DONM:
+-----
+
+o 19th Nov. 2003 - 14:00 GMT
+

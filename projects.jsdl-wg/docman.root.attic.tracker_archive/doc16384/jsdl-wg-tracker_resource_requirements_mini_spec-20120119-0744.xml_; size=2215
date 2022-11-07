@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!DOCTYPE datalist PUBLIC "-//VA Software, Inc.//DTD DataList Export 1.1//EN"
+    "http://schema.vasoftware.com/sf/dtd/sf-datalist-export_1_1.dtd">
+
+<datalist>
+  <element>
+    <field>
+      <field-name>Artifact ID</field-name>
+      <field-value>artf6416</field-value>
+    </field>
+    <field>
+      <field-name>Title</field-name>
+      <field-value>Glue specification delivery</field-value>
+    </field>
+    <field>
+      <field-name>Description</field-name>
+      <field-value>When will the GLUE specification be ready?</field-value>
+    </field>
+    <field>
+      <field-name>Submitted By</field-name>
+      <field-value>Philipp Wieder</field-value>
+    </field>
+    <field>
+      <field-name>Submitted On</field-name>
+      <field-value>30.11.2009</field-value>
+    </field>
+    <field>
+      <field-name>Last Modified</field-name>
+      <field-value>17.11.2011</field-value>
+    </field>
+    <field>
+      <field-name>Closed</field-name>
+      <field-value>17.11.2011</field-value>
+    </field>
+    <field>
+      <field-name>Group</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Status</field-name>
+      <field-value>Closed</field-value>
+    </field>
+    <field>
+      <field-name>Category</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Customer</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Priority</field-name>
+      <field-value>4</field-value>
+    </field>
+    <field>
+      <field-name>Assigned To</field-name>
+      <field-value>None</field-value>
+    </field>
+    <field>
+      <field-name>Reported in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Fixed in Release</field-name>
+      <field-value></field-value>
+    </field>
+    <field>
+      <field-name>Estimated Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Actual Hours</field-name>
+      <field-value>0</field-value>
+    </field>
+    <field>
+      <field-name>Item Link</field-name>
+      <field-value>https://forge.ogf.org/sf/go/artf6416/</field-value>
+    </field>
+  </element>
+</datalist>

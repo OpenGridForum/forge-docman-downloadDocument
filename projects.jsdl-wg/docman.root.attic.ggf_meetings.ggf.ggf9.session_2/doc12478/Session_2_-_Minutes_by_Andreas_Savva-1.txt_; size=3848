@@ -1,0 +1,118 @@
+JSDL-WG, GGF9, session 2, 2003/10/8
+===================================
+
+* Intro 
+
+* OGSA program execution (Chris Smith, Platform)
+
+  - WS-A based
+  - factoring high level components into services
+  - ogsi not enough (createService is common but arguments are service
+    specific.)
+  - leading to WS-A adoption (together with common terms definition)
+  - Agreement factory exposes terms supported
+
+* CSF (Chris Smith, Platform)
+
+  - Advance reservation (main experience with WS-A)
+  - RM interoperability
+  - CSF - meta-scheduler framework
+    - job service (proxy) <- jsdl job terms to end rm translation +
+			     job control
+    - reservation
+    - queueing (at VO level)
+    - RM adapter (bridge to underlying? systems)
+      - similar in concept to GRAM, but not same i/f, protocol (yet)
+
+    - scheduler framework API  (for 3rd party)
+      - (4 call-back functions and plugin?)
+
+    - open source (to be rolled in GT3 (GTPL))
+      - still some administrative hurdles (distribution)
+
+    - advance reservation as agreements 
+      - restricted (agreement still being defined)
+      - multicluster leasing
+
+    - WS-agreement
+      - main protocol; not just for program execution but also for
+        data transfers.
+      - RM adaptors disappear when agreement protocol becomes the main
+        protocol to negotiate for things.
+
+    - Bridging to LSF
+      - GABD (Grid Access Bridge Daemon): soap access i/f to LSF
+      - native support for jsdl is unlikely; briding/translation more
+        likely due to large body of existing code.
+
+    - Re-negotiation is still not well defined yet.
+
+* WS-A framework (Karl, Globus/ISI)
+
+  - envelope protocol for negotiation
+  - generalize from advance reservation
+  - initial stages
+  - term neutral (define domain specific terms)
+  - proposal: define jsdl in terms of WS-A. 
+  - Q: does this proposal narrow jsdl range? not according to what's
+    in the charter.
+
+* Job terms proposal (Alain, Globus/ISI)
+
+  - term definition
+    - would like to be able to extend terms; open content model
+    - required or optional, ...
+    - negotiable
+    - allowable ranges
+    - ...
+  - terms as XML elements
+  - composed in WS-A (document)
+  - each provider (scheduler) can specialize terms further
+    - e.g., a file transfer might have to include protocol
+      information. 
+  - 2 dimensions: usage, negotiability -> 8 states
+  - wsp:compositor rather than enumeration
+  - behavioural constraints during runtime.
+  - minimize number of standard terms by including constraints in terms.
+  - ditto for negotiability constraints (used for advertisements)
+  - Term violation 
+    - action to take if a term is violated, e.g terminate, if not
+      finished by specified time.
+    - Q: Is it necessary to support this feature? 
+      - Does not have to be supported necessarily by all ---
+        discover/negotiate its existence.
+      - Seems to be moving jsdl focus (from common subset).
+      - Focusing on just common subset is too restrictive. (No one
+        will support it)
+      - generic vs extensible: where to draw the line. One common
+        approach is to put down base + extensions.
+	- profiles to define what gets supported
+	- but this is separate to the standard
+      - mismatch might indicate that the application won't run in any
+        case (in this environment).
+  - list of proposed terms
+    - input: pbs, rsl, sge, lsf. 
+    - And tried to minimize their number.
+    - Agreed: Discuss terms proposal in more detail on mailing list.
+
+  - Proposal: consider WS-agreement and decide how we can use it.
+  - Especially get input from people not working in a WS setting.
+  - Meanwhile continue work on determining what are the core terms
+  - DRMAA has done work on essential terms: it is part of the spec
+    (p12-14). Submit separately as informational document.
+  - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

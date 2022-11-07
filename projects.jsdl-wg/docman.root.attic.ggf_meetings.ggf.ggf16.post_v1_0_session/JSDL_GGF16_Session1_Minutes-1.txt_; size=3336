@@ -1,0 +1,123 @@
+JSDL-WG GGF16 Session
+---------------------
+Post v1.0 Issues
+----------------
+
+15th Feb 2006, Athens, Greece
+-----------------------------
+
+JSDL-post-v1 Tracker Review
+===========================
+
+See: https://forge.gridforum.org/tracker/?atid=784&group_id=122&func=browse
+
+* 1271: Web Service Invocation Extension
+
+  - extension of application type
+
+* 1272: Extension of Software Requirements 
+
+  - Need a more robust resource description language?
+  - Static extension of current elements, i.e. keep adding normative elements?
+  - How does this fit with the OGSA-Information Model work?
+
+* 1282: Translation Tables
+
+  - Primer work, informational
+
+* 1283: Multi Process Example
+
+  - An MPI extension?
+
+* 1284: Closed in favor of 1271 (same issue)
+
+* 1286: SQL, DB Access
+  
+  - Another application type (have to explore potential relation to
+    DAIS)
+  - Could this be Web Service invocation if use DAIS, OGSA-DATA services? 
+    If so, see 1271
+
+* 1330: qname vs. string
+
+  - Primer issue
+
+* 1332: References in the Spec
+
+  - For referencing from outside docs; or
+  - The idea of JSDL template descriptions (recall profiles issue)
+
+* 1358: Ontology: done in v1.0 (closed)
+
+
+Barcelona Supercomputing Centre Presentation - Ivan Rodero
+==========================================================
+
+- Also a requirement that same level might have different parallelism
+  models (not supported here)
+
+- Moldable: for scheduling (it can be fitted to different number of CPUs)
+- Malleable: can this be changed (or can change) at runtime?
+
+- Any additional "resource elements" required to describe the
+  requirements for the parallel application description
+  - (Add tracker)
+
+- As a starting point: probably sufficient interest in parallel job/application type 
+  to start a 'design team' to work on something
+
+==
+
+
+Other Issues Discussed (Steve)
+==============================
+
+- Workflow: no specific extension for workflow but JSDL could be used
+  - And decide relation with data staging
+  - More general 'job collection' document with JSDL for each bit and
+    a document describing relations (which could be in BPEL)
+
+- Relationship with CDDLM (provisioning, deployment and configuration)
+- Connection with a Grid File System (GFS) to make some file resource available
+- Reservation and co-allocation
+- The ability to reference elements from inside or outside a JSDL doc?
+  Say for "signing" an element.
+- Variable substitutions
+- Data staging, partial data staging?
+
+
+Show of Hands for Work to do Next?
+==================================
+
+- Parallel Jobs: Yes
+- Web Service Invocations: No
+- Reservation and Co-allocation: Yes
+- Resource Desc. Language: No
+  - Would have to be in JSDL v2.0 if at all.
+  - Use Condor ClassAds
+
+
+How to Organise Work
+====================
+
+- Group into 'buckets'
+- Do a survey and send an e-mail out of work
+
+1) Request from the list items that were missed out from the session.
+2) Classify these items as:
+   a) Out of Scope (TM)
+   b) Extensions for JSDL 1.0
+   c) New functionality for JSDL 1.x, 2.0, ...
+   d) Separate to JSDL versions (e.g. items for a primer document)
+
+3) Prioritise the items. From the session parallel jobs seemed to be the 
+   thing most people wanted next.
+
+
+-- (didn't organize these)
+  - Parallel jobs
+  - Software requirements
+  - Reservation
+  - Resource specification
+
+--
