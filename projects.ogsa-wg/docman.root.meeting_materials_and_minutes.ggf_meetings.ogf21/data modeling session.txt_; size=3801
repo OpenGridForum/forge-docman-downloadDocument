@@ -1,0 +1,64 @@
+OGF 21 - OGSA Information Model session minutes
+
+* Summary of New Actions
+
+ACTION: Ellen Stokes to revise Figure 1 by creating a new bubble for CIM
+ACTION: Ellen Stokes to change all figures' colors to be readable on B/W
+ACTION: Sergio to send a simple diagram based on GLUE discussion in 
+        previous sessions
+ACTION: Steven Newhouse, Ellen, and Sergio to check among GLUE/CIM/BES
+        attributes
+ACTION: Sergio, Andreas and Michel to rewrite section 5 with examples 
+        using XQuery based on  GLUE attributes
+ACTION: Ellen and Donal to provide complex usecases of Appendix
+ACTION: Andreas and Steve McGough to provide simple usecases of 
+        Appendix
+
+Discussion on Figure 1:
+- Sergio: given the current figure, should all the information models inherit from Reference Model?
+- Ellen: this is informational document, should be taken as guideline
+- Paul: as regards CIM, it is better to create a new bubble and separate it from the information models, otherwise this would imply that CIM inherits from RM
+- Colours should be changed to be readable on B/W
+
+ACTION: Ellen Stokes to revise Figure 1 by creating a new bubble for CIM
+ACTION: Ellen Stokes to change all figures' colors to be readable on B/W
+
+Discussion on Figure 2 (no comments)
+
+Discussion on Figure 3:
+- Colours should be changed to be readable on B/W
+- Sergio suggests that there should be a bubble (information model) below the reference model; red bubble and blue buble inherits from this new bubble
+- Ellen asks Sergio to send a simple diagram based on GLUE discussion in previous sessions
+
+ACTION: Sergio to send a simple diagram based on GLUE discussion in 
+        previous sessions
+
+Discussion on examples 4.2/4.3: :
+- Sergio: in GLUE WG vision, the requirements should be expressed as constraints on the capabilities exposed by resources; not by using a different dictionary that requires to reconcile the different attributes;
+the situation before GLUE WG was that BES exposes a set of capabilities and JSDL enable to express requirements using a different set of terms; with the possibility to add XQuery to JSDL, you can rely on the resource capabilities therefore you solve the problems of consistencies among capabilities and requirement terms
+- Hiro: the consistency among GLUE 2.0 terms and BES 1.0 terms is up to the implementors?
+- Sergio: yes
+- Hiro asks Stephen if it is possible to have BES 2.0 adopting GLUE 2.0
+- Stephen Newhouse says that there is a strong dependency on the management system and the attributes that this provides;
+- Ellen suggests that there should be a check among GLUE/CIM/BES attributes
+
+ACTION: Steven Newhouse, Ellen, and Sergio to check among GLUE/CIM/BES
+        attributes
+
+Discussion on Section 5
+295-305: Sergio, Andreas and Michel will rewrite this session with examples using XQuery based on  GLUE attributes
+
+ACTION: Sergio, Andreas and Michel to rewrite section 5 with examples 
+        using XQuery based on  GLUE attributes
+
+Appendix:
+- Ellen: should we have a profiling of how use XQuery/XPath?
+- Hiro: this is informational doc, therefore probably should provide examples, while normative profile should be provided by JSDL
+- Andreas: it is ok to have use cases, nevertheless the normative part should part of JSDL or other WG work
+- Ellen asks help to write Appendix 7.A; Donal will help; JSDL people will provide some help
+- On the XQuery/XPath profile, Donal comments that this could be difficult since many pieces of info are needed for resource selection; we do not know yet the complexity
+- Ellen states that than the profile could be by topic 
+
+ACTION: Ellen and Donal to provide complex usecases of Appendix
+ACTION: Andreas and Steve McGough to provide simple usecases of 
+        Appendix

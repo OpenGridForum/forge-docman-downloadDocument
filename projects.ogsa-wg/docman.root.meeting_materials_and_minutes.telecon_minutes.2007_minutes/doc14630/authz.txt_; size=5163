@@ -1,0 +1,109 @@
+Minutes of OGSA-WG AuthN/AuthZ joint call 2007-06-21
+
+Chris Kantarjiev (Oracle)
+David Chadwick (Manchester)
+Mark Morgan (UVa)
+Andrew Grimshaw (UVa)
+FrankSiebenlist (Argonne)
+Hiro Kishimoto (Fujitsu)
+Alan Sill (TTU)
+Andreas Savva (Fujitsu)
+Stephen Newhouse (Microsoft)
+ZackK
+
+MInutes: Alan Sill
+
+Agenda items:
+
+OGSA-AuthZ update (David Chadwick)
+OGSA-AuthN update (Alan Sill)
+
+David summarized the current state of the OGSA-AuthZ work.  No 
+progress or changes have taken place since OGF-20 on the document 
+set from the AuthZ work groupl
+
+Jargon for below: PDP = policy decision point PEP = policy 
+enforcement point PIP = policy information point
+
+GFD-66 and 67 (65?) status GFD-66 was intended to describe the 
+relation between PDPs and PEPs Previous version of GFD-66 based on 
+SAML 1.1 was implemented by several groups and found to be 
+insufficient.  
+
+An architecture document was written by David and others to propose 
+3 protocols: one for pull of credentials from an IdP or AA according 
+to any of several protocols profiled by OASIS and others, an XACML 
+protocol, and a credential validation service profile defined 
+according to WS-trust.  Alan requested that David get a document 
+number for this architecture document and David agreed to move this 
+along the path to formalization.  It would be good to publish this 
+as an informational document, with the 3 protocols pulled into 
+separate documents.  
+
+Frank said that progress at Argonne on this has been slowed by work 
+being done for GT4.2 - all security programmers have been pulled 
+onto that work and have not had sufficient time available for 
+standards work.  
+
+GFD-66 had value but does not extend to sufficiently realistic 
+complex real-world use case requirements, for example validating 
+signed credentials, interactions with PIPs, etc.
+
+For requirements gathering, David put up a wiki but got very few 
+submissions.  Stephen points out that people see a need for security 
+but do not see the relevance of the work done here, and 
+socialization of the work being done here is not sufficiently seen 
+as connected to real-world needs.  Alan agreed that this is an 
+important component of the work and is exactly what Duane, mark and 
+Andrew have been trying to do in the requirements-gathering work 
+they have been doing for the short-term AuthN documentation work 
+they have been done.
+
+Frank did not understand the disconnect, as the XACML work for 
+example has been driven by strong communication between developers 
+and community segments that have requested this work.  Andrew says 
+that the exercise of writing a use-case document has proven itself 
+even in circumstances in which the use cases are thought to be 
+well-known.  Stephen and Alan felt this to be true even though 
+writing such documents can be a chore.  
+
+People are often stuck on simple cases when the community doing work 
+on standards is often focused on more advanced use cases.    Andrew 
+pointed out that documenting even the simple use cases is of value 
+and must be written down to get rid of this barrier for users; some 
+of the work being done for the HPC profile was driven by this need.
+
+Last week David sent out a document written from the point of view 
+of Authorization meant to match some of the current "simple AuthN" 
+work.  Mark more or less simultaneously requested such a document.    
+Discussion followed as to whether AuthZ can be folded into the 
+current security profile "express" documentation work being done, or 
+instead whether another document to address "express authZ" should 
+be written.  Andrew prefers simple short documents over grand scheme 
+documents at this stage.  Another document in this series entitled "
+OGSA Security Profile 2.0 - Authorization" would be helpful.  David 
+agreed to look at this and will go through the current set from this 
+perspective.
+
+Moving on to authentication topics Alan is ready now to restart work 
+on the OGSA-AuthN topics.  Motivations here include examining the 
+technical requirements of implementations and ensuring that the 
+documentation and standards set offered by OGSA is sufficiently 
+flexible and well-specified to allow interoperable implementations 
+based on different technologies.  As an example, Alan asks why 
+Ws-Security is so SOAP-oriented, when grid implementations can be 
+written based on the same WSDL and XML that could provide code using 
+different RPC methods?  Other motivations include ensuring that 
+Shibboleth grid integration can be done on a well-defined standards 
+basis within OGSA, and while this is largely an AuthZ question, we 
+need to make sure that the OGSA-AuthN pieces and basis for this work 
+are sufficiently documented, understood and specified.  A 
+documentation call series will be started sometime in July to get 
+this work going.  
+
+Simultaneously, work should be continued to complete the "express 
+profile" documentation series.
+
+Hiro asked about the timing of the next joint call.  David has Sep. 
+13 down as the next joint call.  Hiro offered time at the Sunnyvale 
+F2F Aug. 13-16.  
